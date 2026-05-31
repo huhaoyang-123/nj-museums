@@ -1,9 +1,10 @@
 import os
+import json
 from flask import Flask, jsonify, request, render_template
 from flask_cors import CORS
-from services.museum_service import get_all_museums
 from dotenv import load_dotenv
 import requests
+from services.museum_service import get_all_museums
 
 load_dotenv()
 
@@ -72,4 +73,4 @@ def ask_ai():
         return jsonify({"answer": f"AI 服务出错: {str(e)}"}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True, port=APP_PORT)
+    app.run(use_reloader=False, port=APP_PORT)

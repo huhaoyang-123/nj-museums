@@ -3,228 +3,772 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>博物南京 · 水墨长卷</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博物金陵 · 阅古通今</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
     <style>
+        /* ========== CSS Variables & Reset ========== */
+        :root {
+            --bg-deep: #0a0505;
+            --bg-wall: #1a0808;
+            --bg-card: rgba(212, 175, 55, 0.04);
+            --gold: #d4af37;
+            --gold-light: #e8d5a3;
+            --gold-pale: #c9a96e;
+            --vermillion: #c7000a;
+            --vermillion-bright: #d44;
+            --text-body: #c9b896;
+            --text-dim: #886655;
+            --text-muted: #554433;
+            --border-gold: rgba(212, 175, 55, 0.18);
+            --border-gold-light: rgba(212, 175, 55, 0.3);
+            --glow-gold: rgba(212, 175, 55, 0.25);
+            --glow-red: rgba(199, 0, 10, 0.15);
+            --font-display: 'Georgia', 'Noto Serif SC', 'STSong', 'SimSun', 'Songti SC', serif;
+            --font-body: 'Georgia', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            --font-kai: 'KaiTi', 'STKaiti', '楷体', serif;
+            --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            --transition-med: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        body {
-            font-family: "PingFang SC", "STKaiti", serif;
-            background: #f8f5f0;
-            overflow: hidden;
-            position: relative;
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            background: var(--bg-deep);
+            color: var(--text-body);
         }
 
-        /* 水墨纹理背景 */
-        body::before {
-            content: '';
-            position: absolute;
+        body {
+            font-family: var(--font-body);
+            background: var(--bg-deep);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        /* ========== Scroll Progress Bar ========== */
+        .scroll-progress {
+            position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            background-image:
-                radial-gradient(circle at 20% 30%, rgba(0, 0, 0, 0.03) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(0, 0, 0, 0.02) 0%, transparent 50%);
-            pointer-events: none;
-            z-index: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--gold), var(--vermillion));
+            z-index: 10001;
+            transition: width 0.1s linear;
         }
 
-        #container {
-            width: 100vw;
-            height: 100vh;
+        /* ========== Grain Texture Overlay ========== */
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            pointer-events: none;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E");
+        }
+
+        /* ========== Scrollbar ========== */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-deep);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(212, 175, 55, 0.3);
+            border-radius: 3px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(212, 175, 55, 0.5);
+        }
+
+        /* ========== Top Navigation ========== */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 10000;
+            background: rgba(10, 5, 5, 0.92);
+            -webkit-backdrop-filter: blur(16px);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-gold);
+            padding: 0 24px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transform: translateY(-100%);
+            transition: transform var(--transition-slow);
+        }
+
+        .nav.visible {
+            transform: translateY(0);
+        }
+
+        .nav-title {
+            font-family: var(--font-display);
+            font-size: 18px;
+            color: var(--gold);
+            letter-spacing: 4px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 13px;
+            letter-spacing: 2px;
+            transition: color var(--transition-med);
+            position: relative;
+            cursor: pointer;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transition: transform var(--transition-med);
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-links a:hover::after {
+            transform: scaleX(1);
+        }
+
+        /* ========== Hero Section ========== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            padding: 40px 20px;
+            background:
+                radial-gradient(ellipse at 50% 30%, rgba(212, 175, 55, 0.10) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 70%, rgba(199, 0, 10, 0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at 20% 40%, rgba(212, 175, 55, 0.04) 0%, transparent 40%),
+                linear-gradient(180deg, #0a0505 0%, #120606 30%, #1a0808 50%, #0f0505 100%);
+        }
+
+        /* Decorative pattern overlay */
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(212, 175, 55, 0.015) 3px, rgba(212, 175, 55, 0.015) 6px);
+            pointer-events: none;
+        }
+
+        /* Corner ornaments */
+        .hero-corners {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+        }
+
+        .hero-corner {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border-color: rgba(212, 175, 55, 0.2);
+            border-style: solid;
+        }
+
+        .hero-corner.tl {
+            top: 30px;
+            left: 30px;
+            border-width: 1px 0 0 1px;
+        }
+
+        .hero-corner.tr {
+            top: 30px;
+            right: 30px;
+            border-width: 1px 1px 0 0;
+        }
+
+        .hero-corner.bl {
+            bottom: 30px;
+            left: 30px;
+            border-width: 0 0 1px 1px;
+        }
+
+        .hero-corner.br {
+            bottom: 30px;
+            right: 30px;
+            border-width: 0 1px 1px 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 720px;
+        }
+
+        .hero-loc {
+            font-size: 11px;
+            color: rgba(212, 175, 55, 0.5);
+            letter-spacing: 6px;
+            margin-bottom: 20px;
+        }
+
+        .hero-crest {
+            width: 4px;
+            height: 40px;
+            background: var(--gold);
+            margin: 0 auto 20px;
+            opacity: 0.5;
+        }
+
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(36px, 6vw, 60px);
+            color: var(--gold);
+            letter-spacing: clamp(8px, 2vw, 16px);
+            text-shadow: 0 0 60px var(--glow-gold);
+            margin-bottom: 4px;
+            line-height: 1.2;
+        }
+
+        .hero-divider {
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            margin: 20px auto;
+        }
+
+        .hero-subtitle {
+            font-family: var(--font-kai);
+            font-size: clamp(16px, 2.5vw, 20px);
+            color: var(--gold-pale);
+            letter-spacing: 6px;
+            margin-bottom: 10px;
+        }
+
+        .hero-desc {
+            font-size: 14px;
+            color: var(--text-dim);
+            letter-spacing: 2px;
+            margin-bottom: 32px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 12px 40px;
+            font-size: 14px;
+            letter-spacing: 6px;
+            text-decoration: none;
+            transition: all var(--transition-med);
+            position: relative;
+            overflow: hidden;
+            font-family: var(--font-display);
+            cursor: pointer;
+            background: transparent;
+        }
+
+        .hero-cta::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(212, 175, 55, 0.08);
+            transform: translateX(-100%);
+            transition: transform var(--transition-med);
+        }
+
+        .hero-cta:hover::before {
+            transform: translateX(0);
+        }
+
+        .hero-cta:hover {
+            box-shadow: 0 0 30px var(--glow-gold);
+        }
+
+        .hero-scroll-hint {
+            margin-top: 48px;
+            font-size: 10px;
+            color: var(--text-muted);
+            letter-spacing: 3px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+                opacity: 0.4;
+            }
+
+            50% {
+                transform: translateY(8px);
+                opacity: 0.8;
+            }
+        }
+
+        /* ========== Section Common ========== */
+        .section {
+            min-height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 20px;
+            position: relative;
+            border-top: 1px solid var(--border-gold);
+            background:
+                radial-gradient(ellipse at 50% 50%, var(--glow-red) 0%, transparent 70%),
+                var(--bg-wall);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 48px;
+            max-width: 600px;
+        }
+
+        .section-label {
+            font-size: 10px;
+            color: var(--gold);
+            letter-spacing: 4px;
+            margin-bottom: 8px;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(24px, 4vw, 34px);
+            color: var(--gold-light);
+            letter-spacing: 6px;
+            margin-bottom: 10px;
+        }
+
+        .section-divider {
+            width: 50px;
+            height: 1px;
+            background: var(--gold);
+            margin: 14px auto;
+            opacity: 0.5;
+        }
+
+        /* ========== Museum Type Tags ========== */
+        .type-grid {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 600px;
+        }
+
+        .type-tag {
+            background: rgba(212, 175, 55, 0.05);
+            border: 1px solid var(--border-gold-light);
+            color: var(--gold-pale);
+            padding: 6px 16px;
+            font-size: 12px;
+            letter-spacing: 2px;
+            font-family: var(--font-display);
+            transition: all var(--transition-med);
+            cursor: pointer;
+        }
+
+        .type-tag:hover {
+            background: rgba(212, 175, 55, 0.12);
+            border-color: var(--gold);
+            color: var(--gold);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px var(--glow-gold);
+        }
+
+        .type-tag.active {
+            background: rgba(212, 175, 55, 0.15);
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        /* ========== Museum Cards ========== */
+        .museum-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        .museum-card {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.04), rgba(199, 0, 10, 0.04));
+            border: 1px solid var(--border-gold-light);
+            padding: 24px;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all var(--transition-med);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .museum-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(212, 175, 55, 0.06), transparent);
+            opacity: 0;
+            transition: opacity var(--transition-med);
+        }
+
+        .museum-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--gold);
+            box-shadow: 0 8px 32px var(--glow-gold);
+        }
+
+        .museum-card:hover::before {
+            opacity: 1;
+        }
+
+        .museum-card-icon {
+            font-size: 36px;
+            margin-bottom: 12px;
             position: relative;
             z-index: 1;
         }
 
-        /* 入场动画遮罩 */
-        .entrance-overlay {
+        .museum-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .museum-card-level {
+            font-size: 10px;
+            color: var(--gold);
+            background: rgba(212, 175, 55, 0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .museum-card-name {
+            font-family: var(--font-display);
+            font-size: 18px;
+            color: var(--gold-light);
+            margin-bottom: 4px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .museum-card-category {
+            font-size: 12px;
+            color: var(--text-dim);
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .museum-card-desc {
+            font-size: 13px;
+            color: var(--text-dim);
+            line-height: 1.5;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 16px;
+        }
+
+        .museum-card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            padding-top: 12px;
+            border-top: 1px solid var(--border-dark);
+        }
+
+        .museum-card-address {
+            font-size: 12px;
+            color: var(--text-dim);
+            flex: 1;
+            text-align: left;
+        }
+
+        .museum-card-arrow {
+            font-size: 20px;
+            color: var(--gold);
+            transition: transform var(--transition-fast);
+        }
+
+        .museum-card:hover .museum-card-arrow {
+            transform: translateX(4px);
+        }
+
+        .museum-card-seal {
+            display: none;
+        }
+
+        /* ========== Museum Detail Modal ========== */
+        .modal-overlay {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: linear-gradient(135deg, #f8f5f0 0%, #e8e0d6 100%);
-            z-index: 9999;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background: linear-gradient(135deg, var(--bg-card), var(--bg-wall));
+            border: 1px solid var(--border-gold);
+            border-radius: 12px;
+            max-width: 600px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 20px 60px var(--glow-gold);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 36px;
+            height: 36px;
+            border: 1px solid var(--border-gold);
+            background: transparent;
+            color: var(--gold);
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition-fast);
+            z-index: 10;
+        }
+
+        .modal-close:hover {
+            background: rgba(212, 175, 55, 0.1);
+            box-shadow: 0 0 12px var(--glow-gold);
+        }
+
+        .modal-body {
+            padding: 32px;
+        }
+
+        .modal-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 24px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-dark);
+        }
+
+        .modal-icon {
+            font-size: 48px;
+        }
+
+        .modal-title-area {
+            flex: 1;
+        }
+
+        .modal-title-area h2 {
+            font-family: var(--font-display);
+            font-size: 24px;
+            color: var(--gold-light);
+            margin: 0 0 4px 0;
+        }
+
+        .modal-category {
+            font-size: 14px;
+            color: var(--text-dim);
+        }
+
+        .modal-level {
+            font-size: 12px;
+            color: var(--gold);
+            background: rgba(212, 175, 55, 0.1);
+            padding: 4px 12px;
+            border-radius: 4px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .modal-info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .info-item {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            opacity: 1;
-            transition: opacity 1.5s ease-out, visibility 1.5s ease-out;
+            gap: 4px;
         }
 
-        .entrance-overlay.hidden {
-            opacity: 0;
-            visibility: hidden;
-            pointer-events: none;
+        .info-label {
+            font-size: 12px;
+            color: var(--text-dim);
         }
 
-        .entrance-title {
-            font-family: "STXingkai", "STKaiti", cursive;
-            font-size: 48px;
-            color: #2c3e50;
-            margin-bottom: 20px;
-            letter-spacing: 8px;
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 1.2s ease-out forwards;
+        .info-value {
+            font-size: 14px;
+            color: var(--text-primary);
+            font-weight: 500;
         }
 
-        .entrance-subtitle {
-            font-size: 18px;
-            color: #666;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 1.2s ease-out 0.5s forwards;
-        }
-
-        .entrance-seal {
-            width: 80px;
-            height: 80px;
-            background: #c7000a;
+        .modal-description {
+            margin-bottom: 24px;
+            padding: 16px;
+            background: rgba(212, 175, 55, 0.04);
             border-radius: 8px;
+            border: 1px solid var(--border-dark);
+        }
+
+        .modal-description h3 {
+            font-size: 16px;
+            color: var(--gold);
+            margin: 0 0 12px 0;
+        }
+
+        .modal-description p {
+            font-size: 14px;
+            color: var(--text-primary);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .modal-actions {
             display: flex;
-            align-items: center;
+            gap: 12px;
             justify-content: center;
-            color: white;
-            font-family: "STLiti", serif;
-            font-size: 22px;
-            transform: rotate(15deg);
-            margin-top: 30px;
-            opacity: 0;
-            animation: fadeInRotate 1.5s ease-out 1s forwards;
-            box-shadow: 0 8px 25px rgba(199, 0, 10, 0.3);
         }
 
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .btn-map,
+        .btn-reserve {
+            padding: 12px 24px;
+            border: 1px solid var(--border-gold);
+            background: transparent;
+            color: var(--gold);
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all var(--transition-fast);
         }
 
-        @keyframes fadeInRotate {
-            to {
-                opacity: 1;
-                transform: rotate(15deg);
-            }
+        .btn-map:hover,
+        .btn-reserve:hover {
+            background: rgba(212, 175, 55, 0.1);
+            box-shadow: 0 0 12px var(--glow-gold);
         }
 
-        /* 顶部标题栏 */
-        .header {
+        /* ========== Map Section ========== */
+        .map-section {
+            background: var(--bg-wall);
+            border-top: 1px solid var(--border-gold);
+            padding: 0;
+            position: relative;
+            height: 70vh;
+            min-height: 500px;
+        }
+
+        .map-section::before {
+            content: '';
             position: absolute;
-            top: 20px;
-            left: 20px;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            opacity: 0;
-            transform: translateY(-20px);
-            transition: all 1s ease-out 1.8s;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: linear-gradient(to bottom, var(--bg-wall), transparent);
+            pointer-events: none;
+            z-index: 100;
         }
 
-        .header.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .title {
-            font-family: "STXingkai", "STKaiti", cursive;
-            font-size: 28px;
-            color: #2c3e50;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-            letter-spacing: 3px;
+        #map-container {
+            width: 100%;
+            height: 100%;
             position: relative;
         }
 
-        .title::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, #c7000a, transparent);
+        /* ========== Footer ========== */
+        .footer {
+            background: var(--bg-deep);
+            border-top: 1px solid var(--border-gold);
+            padding: 60px 20px;
+            text-align: center;
         }
 
-        .seal {
-            width: 50px;
-            height: 50px;
-            background: #c7000a;
-            border-radius: 5px;
-            display: flex;
+        .footer-seal {
+            width: 56px;
+            height: 56px;
+            border: 2px solid var(--vermillion);
+            display: inline-flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-family: "STLiti", serif;
-            font-size: 14px;
-            transform: rotate(15deg);
-            box-shadow: 2px 2px 8px rgba(199, 0, 10, 0.3);
+            font-size: 18px;
+            color: var(--vermillion);
+            font-family: var(--font-display);
+            margin-bottom: 16px;
         }
 
-        /* 地图控制提示 */
-        .map-hint {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 14px;
-            color: #666;
-            border: 1px solid #e0d6cc;
-            backdrop-filter: blur(10px);
+        .footer-text {
+            font-size: 12px;
+            color: var(--text-muted);
+            letter-spacing: 2px;
+            line-height: 1.8;
+        }
+
+        /* ========== Animations ========== */
+        .fade-up {
             opacity: 0;
-            transform: translateY(-20px);
-            transition: all 1s ease-out 2s;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
         }
 
-        .map-hint.visible {
+        .fade-up.visible {
             opacity: 1;
             transform: translateY(0);
         }
 
-        /* 水墨装饰元素 */
-        .ink-decoration {
-            position: absolute;
-            pointer-events: none;
-            z-index: 999;
-            opacity: 0.6;
-        }
-
-        .mountain-shape {
-            bottom: 100px;
-            left: 30px;
-            width: 120px;
-            height: 80px;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 80"><path d="M0 80 L30 20 L60 50 L90 10 L120 80 Z" fill="%23e8e0d6" fill-opacity="0.3"/></svg>');
-            opacity: 0;
-            animation: fadeIn 2s ease-out 2.5s forwards;
-        }
-
-        .bamboo-shape {
-            top: 100px;
-            right: 100px;
-            width: 40px;
-            height: 150px;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 150"><rect x="18" y="0" width="4" height="150" fill="%23d4c4b0" fill-opacity="0.4"/><circle cx="20" cy="30" r="8" fill="%23c7000a" fill-opacity="0.3"/></svg>');
-            opacity: 0;
-            animation: fadeIn 2s ease-out 2.8s forwards;
-        }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 0.6;
-            }
-        }
-
-        /* ----- 元宝风格 AI 对话框 ----- */
+        /* ========== Chat Container (Adapted) ========== */
         #chat-container {
             position: fixed;
             bottom: 0;
@@ -233,16 +777,14 @@
             z-index: 1000;
             display: flex;
             flex-direction: column;
-            background: linear-gradient(to top, rgba(255, 253, 250, 0.98) 80%, transparent);
+            background: linear-gradient(to top, rgba(10, 5, 5, 0.98) 80%, transparent);
             padding: 20px;
+            -webkit-backdrop-filter: blur(15px);
             backdrop-filter: blur(15px);
-            border-top-left-radius: 25px;
-            border-top-right-radius: 25px;
-            box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.08);
-            border-top: 1px solid rgba(224, 214, 204, 0.5);
+            border-top: 1px solid var(--border-gold);
             opacity: 0;
             transform: translateY(30px);
-            transition: all 1s ease-out 2.2s;
+            transition: all 1s ease-out;
         }
 
         #chat-container.visible {
@@ -281,17 +823,17 @@
         }
 
         .message.user .bubble {
-            background: linear-gradient(135deg, #c7000a, #a50008);
+            background: linear-gradient(135deg, var(--vermillion), #a50008);
             color: white;
             border-bottom-right-radius: 5px;
             box-shadow: 0 4px 15px rgba(199, 0, 10, 0.2);
         }
 
         .message.bot .bubble {
-            background: rgba(255, 255, 255, 0.95);
-            color: #333;
+            background: rgba(26, 8, 8, 0.95);
+            color: var(--text-body);
             border-bottom-left-radius: 5px;
-            border: 1px solid #e8e0d6;
+            border: 1px solid var(--border-gold-light);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
 
@@ -299,11 +841,10 @@
             display: flex;
             gap: 12px;
             align-items: center;
-            background: white;
+            background: rgba(10, 5, 5, 0.8);
             padding: 8px;
             border-radius: 30px;
-            border: 1px solid #e8e0d6;
-            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-gold);
         }
 
         #questionInput {
@@ -314,10 +855,11 @@
             font-size: 14px;
             background: transparent;
             font-family: inherit;
+            color: var(--text-body);
         }
 
         #questionInput::placeholder {
-            color: #999;
+            color: var(--text-muted);
             font-style: italic;
         }
 
@@ -325,8 +867,8 @@
             width: 48px;
             height: 48px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #c7000a, #a50008);
-            color: white;
+            background: linear-gradient(135deg, var(--gold), #a68a2e);
+            color: var(--bg-deep);
             border: none;
             cursor: pointer;
             display: flex;
@@ -335,61 +877,154 @@
             font-size: 18px;
             flex-shrink: 0;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(199, 0, 10, 0.3);
+            box-shadow: 0 4px 15px var(--glow-gold);
         }
 
         #sendButton:hover {
             transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(199, 0, 10, 0.4);
+            box-shadow: 0 6px 20px var(--glow-gold);
         }
 
-        /* 滚动条样式 */
-        ::-webkit-scrollbar {
-            width: 6px;
-        }
+        /* ========== Responsive ========== */
+        @media (max-width: 768px) {
+            .museum-cards-grid {
+                grid-template-columns: 1fr;
+            }
 
-        ::-webkit-scrollbar-track {
-            background: rgba(0, 0, 0, 0.05);
-            border-radius: 3px;
-        }
+            .nav-links {
+                gap: 12px;
+            }
 
-        ::-webkit-scrollbar-thumb {
-            background: rgba(199, 0, 10, 0.3);
-            border-radius: 3px;
+            .nav-links a {
+                font-size: 11px;
+                letter-spacing: 1px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <!-- 入场动画遮罩 -->
-    <div class="entrance-overlay" id="entranceOverlay">
-        <div class="entrance-title">博物南京</div>
-        <div class="entrance-subtitle">水墨长卷 · 文化寻踪</div>
-        <div class="entrance-seal">金陵</div>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Top Navigation -->
+    <nav class="nav" id="topNav">
+        <span class="nav-title">博物金陵</span>
+        <ul class="nav-links">
+            <li><a onclick="scrollToSection('hero')">首页</a></li>
+            <li><a onclick="scrollToSection('museums')">博物馆</a></li>
+            <li><a onclick="scrollToSection('map-section')">地图</a></li>
+        </ul>
+    </nav>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="hero">
+        <div class="hero-corners">
+            <div class="hero-corner tl"></div>
+            <div class="hero-corner tr"></div>
+            <div class="hero-corner bl"></div>
+            <div class="hero-corner br"></div>
+        </div>
+        <div class="hero-content fade-up visible">
+            <div class="hero-loc">◇ 中国 · 南京 ◇</div>
+            <div class="hero-crest"></div>
+            <h1>博物金陵</h1>
+            <div class="hero-divider"></div>
+            <div class="hero-subtitle">水墨长卷 · 文化寻踪</div>
+            <p class="hero-desc">金陵文脉，千年传承。探索南京的博物馆，触摸历史的温度。</p>
+            <button class="hero-cta" onclick="scrollToSection('museums')">开始探索</button>
+            <div class="hero-scroll-hint">⌄ 向下探索 ⌄</div>
+        </div>
+    </section>
+
+    <!-- ==================== MUSEUMS SECTION ==================== -->
+    <section class="section" id="museums">
+        <div class="section-header fade-up">
+            <div class="section-label">— 博物馆类型 —</div>
+            <h2 class="section-title">中国·南京</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="type-grid fade-up" id="typeGrid">
+            <span class="type-tag active" data-type="all">全部</span>
+            <span class="type-tag" data-type="history">历史人文</span>
+            <span class="type-tag" data-type="art">艺术文化</span>
+            <span class="type-tag" data-type="science">科学教育</span>
+            <span class="type-tag" data-type="specialty">专题特色</span>
+        </div>
+
+        <div class="museum-cards-grid" id="museumCardsGrid">
+            <!-- 博物馆卡片将通过JS动态加载 -->
+        </div>
+    </section>
+
+    <!-- ==================== MAP SECTION ==================== -->
+    <section class="map-section" id="map-section">
+        <div id="map-container"></div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="footer-seal">金陵</div>
+        <div class="footer-text">
+            博物金陵 · 阅古通今<br>
+            数据来源：南京文化旅游<br>
+            © 2026 博物金陵
+        </div>
+    </footer>
+
+    <!-- ==================== Museum Detail Modal ==================== -->
+    <div id="museumModal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeMuseumDetail()">×</button>
+            <div class="modal-body">
+                <div class="modal-header">
+                    <div class="modal-icon" id="modalIcon">🏛️</div>
+                    <div class="modal-title-area">
+                        <h2 id="modalName">博物馆名称</h2>
+                        <div class="modal-category" id="modalCategory">分类</div>
+                    </div>
+                    <div class="modal-level" id="modalLevel"></div>
+                </div>
+
+                <div class="modal-info-grid">
+                    <div class="info-item">
+                        <span class="info-label">📍 地址</span>
+                        <span class="info-value" id="modalAddress">地址信息</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">⏰ 开放时间</span>
+                        <span class="info-value" id="modalOpenTime">开放时间</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">🎫 门票信息</span>
+                        <span class="info-value" id="modalTicket">门票信息</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">📞 联系电话</span>
+                        <span class="info-value" id="modalPhone">联系电话</span>
+                    </div>
+                </div>
+
+                <div class="modal-description">
+                    <h3>📖 博物馆介绍</h3>
+                    <p id="modalDesc">详细介绍内容...</p>
+                </div>
+
+                <div class="modal-actions">
+                    <button class="btn-map" onclick="navigateToMap()">📍 在地图上查看</button>
+                    <button class="btn-reserve" id="btnReserve" style="display: none;">🔗 预约参观</button>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- 水墨装饰 -->
-    <div class="ink-decoration mountain-shape"></div>
-    <div class="ink-decoration bamboo-shape"></div>
-
-    <!-- 顶部标题栏 -->
-    <div class="header" id="header">
-        <div class="title">博物南京</div>
-        <div class="seal">金陵</div>
-    </div>
-
-    <!-- 地图控制提示 -->
-    <div class="map-hint" id="mapHint">🖱️ 拖拽漫游 · 滚轮缩放 · 点击探索</div>
-
-    <!-- 地图容器 -->
-    <div id="container"></div>
-
-    <!-- 元宝风格 AI 对话框 -->
+    <!-- ==================== AI Chat Container ==================== -->
     <div id="chat-container">
         <div id="chat-messages">
             <div class="message bot">
-                <div class="bubble">🌿 欢迎来到水墨金陵！我是您的博物向导，请在这幅长卷中探索南京的文化瑰宝。</div>
+                <div class="bubble">🌿 欢迎来到水墨金陵！我是您的博物向导，请探索南京的文化瑰宝。</div>
             </div>
         </div>
         <div id="chat-input-area">
@@ -403,37 +1038,210 @@
         src="https://webapi.amap.com/maps?v=2.0&key=d0362079a5ba7399b60c9e98505e1ec1&plugin=AMap.DistrictSearch"></script>
 
     <script>
-        // ---------- 入场动画控制 ----------
-        window.addEventListener('load', function () {
-            setTimeout(() => {
-                document.getElementById('entranceOverlay').classList.add('hidden');
-                document.getElementById('header').classList.add('visible');
-                document.getElementById('mapHint').classList.add('visible');
-                document.getElementById('chat-container').classList.add('visible');
-            }, 3500); // 3.5秒后隐藏入场动画
+        // ========== Scroll Progress Bar ==========
+        const scrollProgress = document.getElementById('scrollProgress');
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            scrollProgress.style.width = progress + '%';
+        }, { passive: true });
+
+        // ========== Navigation visibility on scroll ==========
+        const nav = document.getElementById('topNav');
+        const hero = document.querySelector('.hero');
+
+        function updateNav() {
+            const heroBottom = hero.getBoundingClientRect().bottom;
+            if (heroBottom < 0) {
+                nav.classList.add('visible');
+            } else {
+                nav.classList.remove('visible');
+            }
+        }
+        window.addEventListener('scroll', updateNav, { passive: true });
+
+        // ========== Scroll to section ==========
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // ========== Fade-up on scroll ==========
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px 0px -60px 0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+        // ========== Museum Data ==========
+        let museumsData = [];
+
+        // ========== Museum Type Icons ==========
+        const typeIcons = {
+            'history': '🏛️',
+            'art': '🎨',
+            'science': '🔬',
+            'specialty': '✨'
+        };
+
+        // ========== Render Museum Cards ==========
+        function renderMuseumCards(museums) {
+            const grid = document.getElementById('museumCardsGrid');
+            if (!grid) {
+                console.error('museumCardsGrid element not found');
+                return;
+            }
+            grid.innerHTML = '';
+
+            museums.forEach((museum, index) => {
+                const card = document.createElement('div');
+                card.className = 'museum-card fade-up visible';
+                card.dataset.type = museum.type || 'all';
+
+                const desc = museum.desc || museum.intro_short || '暂无介绍';
+                const shortDesc = desc.length > 60 ? desc.substring(0, 60) + '...' : desc;
+
+                const address = museum.address || museum.district || '暂无地址';
+                const shortAddress = address.length > 10 ? address.substring(0, 10) + '...' : address;
+
+                card.innerHTML = `
+                    <div class="museum-card-header">
+                        <div class="museum-card-icon">${typeIcons[museum.type] || '🏛️'}</div>
+                        <div class="museum-card-level">${museum.level || ''}</div>
+                    </div>
+                    <div class="museum-card-name">${museum.name}</div>
+                    <div class="museum-card-category">${museum.category || '未分类'}</div>
+                    <div class="museum-card-desc">${shortDesc}</div>
+                    <div class="museum-card-footer">
+                        <span class="museum-card-address">📍 ${museum.district || shortAddress}</span>
+                        <span class="museum-card-arrow">›</span>
+                    </div>
+                `;
+
+                card.onclick = () => {
+                    showMuseumDetail(museum);
+                };
+
+                grid.appendChild(card);
+            });
+        }
+
+        // ========== Museum Detail Modal ==========
+        let currentMuseum = null;
+
+        function showMuseumDetail(museum) {
+            currentMuseum = museum;
+
+            document.getElementById('modalIcon').textContent = typeIcons[museum.type] || '🏛️';
+            document.getElementById('modalName').textContent = museum.name;
+            document.getElementById('modalCategory').textContent = museum.category || '未分类';
+            document.getElementById('modalLevel').textContent = museum.level || '';
+            document.getElementById('modalAddress').textContent = museum.address || '暂无地址';
+            document.getElementById('modalOpenTime').textContent = museum.open_time || '暂无信息';
+            document.getElementById('modalTicket').textContent = museum.ticket_info || '暂无信息';
+            document.getElementById('modalPhone').textContent = museum.phone || '暂无电话';
+            document.getElementById('modalDesc').textContent = museum.desc || museum.intro_short || '暂无介绍';
+
+            const reserveBtn = document.getElementById('btnReserve');
+            if (museum.reserve_link) {
+                reserveBtn.style.display = 'inline-block';
+                reserveBtn.onclick = () => {
+                    window.open(museum.reserve_link, '_blank');
+                };
+            } else {
+                reserveBtn.style.display = 'none';
+            }
+
+            document.getElementById('museumModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMuseumDetail() {
+            document.getElementById('museumModal').style.display = 'none';
+            document.body.style.overflow = '';
+            currentMuseum = null;
+        }
+
+        function navigateToMap() {
+            if (currentMuseum && map) {
+                map.setZoomAndCenter(14, [currentMuseum.lng, currentMuseum.lat]);
+                closeMuseumDetail();
+                scrollToSection('map-section');
+            }
+        }
+
+        // Close modal when clicking overlay
+        document.getElementById('museumModal').addEventListener('click', (e) => {
+            if (e.target.id === 'museumModal') {
+                closeMuseumDetail();
+            }
         });
 
-        // ---------- 1. 南京行政区自然边界 ----------
+        // Close modal with ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && document.getElementById('museumModal').style.display === 'flex') {
+                closeMuseumDetail();
+            }
+        });
+
+        // ========== Type Filter ==========
+        document.querySelectorAll('.type-tag').forEach(tag => {
+            tag.addEventListener('click', () => {
+                if (!museumsData || museumsData.length === 0) {
+                    console.log('博物馆数据尚未加载完成，请稍候...');
+                    return;
+                }
+
+                document.querySelectorAll('.type-tag').forEach(t => t.classList.remove('active'));
+                tag.classList.add('active');
+
+                const type = tag.dataset.type;
+                const filtered = type === 'all'
+                    ? museumsData
+                    : museumsData.filter(m => m.type === type);
+
+                renderMuseumCards(filtered);
+            });
+        });
+
+        // ========== Map Initialization ==========
+        let map = null;
         let nanjingBoundary = null;
         let boundaryPolygon = null;
 
-        // ---------- 2. 水墨风格地图初始化 ----------
-        const map = new AMap.Map('container', {
-            zoom: 10.5,
-            center: [118.78, 32.04],
-            features: ['bg', 'road', 'building'],
-            viewMode: '2D',
-            wallColor: '#f5f1eb',
-            roofColor: '#faf7f2',
-            showIndoorMap: false,
-            skyColor: '#f8f5f0',
-            zoomEnable: true,
-            dragEnable: true,
-            scrollWheel: true,
-            doubleClickZoom: true
-        });
+        function initMap() {
+            map = new AMap.Map('map-container', {
+                zoom: 10.5,
+                center: [118.78, 32.04],
+                features: ['bg', 'road', 'building'],
+                viewMode: '2D',
+                wallColor: '#1a0808',
+                roofColor: '#2a1818',
+                showIndoorMap: false,
+                skyColor: '#0a0505',
+                zoomEnable: true,
+                dragEnable: true,
+                scrollWheel: true,
+                doubleClickZoom: true
+            });
 
-        // ---------- 3. 绘制南京行政区边界（高德API原生能力） ----------
+            drawNanjingBoundary();
+        }
+
         function drawNanjingBoundary() {
             const district = new AMap.DistrictSearch({
                 subdistrict: 0,
@@ -442,17 +1250,21 @@
 
             district.search('南京市', function (status, result) {
                 if (!result.districtList || result.districtList.length === 0) {
-                    console.error('未获取到南京边界数据');
+                    console.error('未获取到南京边界数据，但仍将加载博物馆数据');
+                    loadMuseumData();
                     return;
                 }
 
                 const bounds = result.districtList[0].boundaries;
-                if (!bounds || bounds.length === 0) return;
+                if (!bounds || bounds.length === 0) {
+                    console.error('边界数据为空，但仍将加载博物馆数据');
+                    loadMuseumData();
+                    return;
+                }
 
-                // 创建行政区边界多边形
                 boundaryPolygon = new AMap.Polygon({
                     path: bounds,
-                    strokeColor: "#8b4513",
+                    strokeColor: "#d4af37",
                     strokeWeight: 3,
                     strokeStyle: "solid",
                     fillColor: 'transparent',
@@ -460,25 +1272,21 @@
                 });
 
                 map.add(boundaryPolygon);
-
-                // 自动适应边界范围
                 map.setFitView([boundaryPolygon], false, [50, 50, 50, 50]);
 
-                // 设置自然边界限制
                 const southWest = boundaryPolygon.getBounds().southwest;
                 const northEast = boundaryPolygon.getBounds().northeast;
                 nanjingBoundary = new AMap.Bounds(southWest, northEast);
 
-                // 监听地图移动，限制在边界内
                 map.on('moveend', checkBoundary);
                 map.on('zoomend', checkBoundary);
+
+                loadMuseumData();
             });
         }
 
-        // 边界检查函数
         function checkBoundary() {
             if (!nanjingBoundary) return;
-
             const center = map.getCenter();
             if (!nanjingBoundary.contains(center)) {
                 const bounds = nanjingBoundary;
@@ -488,7 +1296,6 @@
                 let lat = center.lat;
                 let lng = center.lng;
 
-                // 限制在边界内
                 lat = Math.max(sw.lat, Math.min(ne.lat, lat));
                 lng = Math.max(sw.lng, Math.min(ne.lng, lng));
 
@@ -496,7 +1303,6 @@
             }
         }
 
-        // ---------- 4. 水墨风格博物馆标记 ----------
         function createMuseumMarker(museum) {
             const markerContent = document.createElement('div');
             markerContent.innerHTML = `
@@ -509,10 +1315,10 @@
                     top: 50%; left: 50%;
                     transform: translate(-50%, -50%);
                     width: 16px; height: 16px;
-                    background: radial-gradient(circle, #c7000a 0%, #8b0000 100%);
+                    background: radial-gradient(circle, #d4af37 0%, #a68a2e 100%);
                     border-radius: 50%;
                     box-shadow: 
-                        0 0 0 3px rgba(199, 0, 10, 0.3),
+                        0 0 0 3px rgba(212, 175, 55, 0.3),
                         0 2px 8px rgba(0,0,0,0.2);
                     transition: all 0.3s ease;
                 "></div>
@@ -520,14 +1326,14 @@
                     position: absolute;
                     top: -30px; left: 50%;
                     transform: translateX(-50%);
-                    background: rgba(255,255,255,0.95);
+                    background: rgba(26, 8, 8, 0.95);
                     padding: 4px 10px;
                     border-radius: 6px;
                     font-size: 13px;
                     font-weight: 500;
-                    color: #333;
+                    color: #c9b896;
                     white-space: nowrap;
-                    border: 1px solid #e8e0d6;
+                    border: 1px solid rgba(212, 175, 55, 0.3);
                     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
                     opacity: 0;
                     transition: opacity 0.3s ease;
@@ -556,32 +1362,32 @@
                 <div style="
                     padding: 20px;
                     min-width: 220px;
-                    font-family: 'STKaiti', serif;
-                    background: linear-gradient(135deg, #fffefc 0%, #faf7f2 100%);
+                    font-family: 'Georgia', 'Noto Serif SC', serif;
+                    background: linear-gradient(135deg, #1a0808 0%, #0f0505 100%);
                     border-radius: 12px;
-                    border: 1px solid #e8e0d6;
-                    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+                    border: 1px solid rgba(212, 175, 55, 0.3);
+                    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
                 ">
                     <h3 style="
                         margin: 0 0 12px 0;
-                        color: #c7000a;
+                        color: #d4af37;
                         font-size: 18px;
                         font-weight: normal;
-                        border-bottom: 1px solid #e8e0d6;
+                        border-bottom: 1px solid rgba(212, 175, 55, 0.2);
                         padding-bottom: 8px;
                     ">${museum.name}</h3>
                     <p style="
                         margin: 0;
-                        color: #555;
+                        color: #c9b896;
                         font-size: 14px;
                         line-height: 1.6;
                     ">${museum.desc}</p>
                     <div style="
                         margin-top: 15px;
                         padding-top: 10px;
-                        border-top: 1px dashed #e8e0d6;
+                        border-top: 1px dashed rgba(212, 175, 55, 0.2);
                         font-size: 12px;
-                        color: #888;
+                        color: #886655;
                         text-align: right;
                     ">📍 金陵文化地标</div>
                 </div>
@@ -594,24 +1400,40 @@
             return marker;
         }
 
-        // ---------- 5. 加载博物馆数据 ----------
-        fetch('/api/museums')
-            .then(res => {
-                if (!res.ok) throw new Error('HTTP ' + res.status);
-                return res.json();
-            })
-            .then(museums => {
-                const markers = museums.map(museum => createMuseumMarker(museum));
-                map.add(markers);
-            })
-            .catch(err => {
-                console.error('加载博物馆数据失败:', err);
-            });
+        // ========== Load Museum Data ==========
+        function loadMuseumData() {
+            console.log('开始加载博物馆数据...');
+            fetch('/api/museums')
+                .then(res => {
+                    if (!res.ok) throw new Error('HTTP ' + res.status);
+                    return res.json();
+                })
+                .then(museums => {
+                    console.log('获取到博物馆数据:', museums.length, '个');
+                    museumsData = museums.map((m, i) => ({
+                        ...m,
+                        type: m.type || ['history', 'art', 'heritage'][i % 3],
+                        desc: m.desc || m.intro_short || '暂无详细介绍'
+                    }));
 
-        // ---------- 6. 初始化边界 ----------
-        drawNanjingBoundary();
+                    console.log('渲染博物馆卡片...');
+                    renderMuseumCards(museumsData);
 
-        // ---------- 7. 元宝风格 AI 对话逻辑 ----------
+                    if (map) {
+                        console.log('添加地图标记...');
+                        const markers = museumsData.map(museum => createMuseumMarker(museum));
+                        map.add(markers);
+                        console.log('已添加', markers.length, '个标记');
+                    } else {
+                        console.error('地图未初始化');
+                    }
+                })
+                .catch(err => {
+                    console.error('加载博物馆数据失败:', err);
+                });
+        }
+
+        // ========== AI Chat Logic ==========
         function askAI() {
             const input = document.getElementById('questionInput');
             const question = input.value.trim();
@@ -619,7 +1441,7 @@
 
             appendMessage('user', question);
             input.value = '';
-            appendMessage('bot', '<span style="color: #999;">正在为您查询金陵文脉...</span>');
+            appendMessage('bot', '<span style="color: #886655;">正在为您查询金陵文脉...</span>');
 
             fetch('/api/ask', {
                 method: 'POST',
@@ -653,9 +1475,42 @@
             if (lastBotMsg) lastBotMsg.innerHTML = text;
         }
 
-        // 回车发送
         document.getElementById('questionInput').addEventListener('keypress', (e) => {
             if (e.key === 'Enter') askAI();
+        });
+
+        // ========== Initialize ==========
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('chat-container').classList.add('visible');
+            }, 1000);
+
+            // 立即加载博物馆数据（不依赖地图）
+            console.log('页面加载完成，立即加载博物馆数据...');
+            loadMuseumData();
+
+            // 检查高德地图 API 是否加载成功
+            if (typeof AMap === 'undefined') {
+                const mapContainer = document.getElementById('map-container');
+                mapContainer.innerHTML = `
+                    <div style="
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        height: 100%;
+                        text-align: center;
+                        padding: 20px;
+                    ">
+                        <div style="font-size: 48px; margin-bottom: 20px;">🗺️</div>
+                        <div style="color: #c9b896; font-size: 18px; margin-bottom: 10px;">地图加载失败</div>
+                        <div style="color: #886655; font-size: 14px;">请检查网络连接或稍后重试</div>
+                    </div>
+                `;
+            } else {
+                initMap();
+            }
+            updateNav();
         });
     </script>
 </body>
