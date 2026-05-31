@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>博物南京 · 水墨长卷</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "PingFang SC", "STKaiti", serif;
+            background: #f8f5f0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* 水墨纹理背景 */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                radial-gradient(circle at 20% 30%, rgba(0, 0, 0, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(0, 0, 0, 0.02) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        #container {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* 入场动画遮罩 */
+        .entrance-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(135deg, #f8f5f0 0%, #e8e0d6 100%);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            transition: opacity 1.5s ease-out, visibility 1.5s ease-out;
+        }
+
+        .entrance-overlay.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .entrance-title {
+            font-family: "STXingkai", "STKaiti", cursive;
+            font-size: 48px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            letter-spacing: 8px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1.2s ease-out forwards;
+        }
+
+        .entrance-subtitle {
+            font-size: 18px;
+            color: #666;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1.2s ease-out 0.5s forwards;
+        }
+
+        .entrance-seal {
+            width: 80px;
+            height: 80px;
+            background: #c7000a;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: "STLiti", serif;
+            font-size: 22px;
+            transform: rotate(15deg);
+            margin-top: 30px;
+            opacity: 0;
+            animation: fadeInRotate 1.5s ease-out 1s forwards;
+            box-shadow: 0 8px 25px rgba(199, 0, 10, 0.3);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInRotate {
+            to {
+                opacity: 1;
+                transform: rotate(15deg);
+            }
+        }
+
+        /* 顶部标题栏 */
+        .header {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: all 1s ease-out 1.8s;
+        }
+
+        .header.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .title {
+            font-family: "STXingkai", "STKaiti", cursive;
+            font-size: 28px;
+            color: #2c3e50;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            letter-spacing: 3px;
+            position: relative;
+        }
+
+        .title::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #c7000a, transparent);
+        }
+
+        .seal {
+            width: 50px;
+            height: 50px;
+            background: #c7000a;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: "STLiti", serif;
+            font-size: 14px;
+            transform: rotate(15deg);
+            box-shadow: 2px 2px 8px rgba(199, 0, 10, 0.3);
+        }
+
+        /* 地图控制提示 */
+        .map-hint {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #666;
+            border: 1px solid #e0d6cc;
+            backdrop-filter: blur(10px);
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: all 1s ease-out 2s;
+        }
+
+        .map-hint.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 水墨装饰元素 */
+        .ink-decoration {
+            position: absolute;
+            pointer-events: none;
+            z-index: 999;
+            opacity: 0.6;
+        }
+
+        .mountain-shape {
+            bottom: 100px;
+            left: 30px;
+            width: 120px;
+            height: 80px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 80"><path d="M0 80 L30 20 L60 50 L90 10 L120 80 Z" fill="%23e8e0d6" fill-opacity="0.3"/></svg>');
+            opacity: 0;
+            animation: fadeIn 2s ease-out 2.5s forwards;
+        }
+
+        .bamboo-shape {
+            top: 100px;
+            right: 100px;
+            width: 40px;
+            height: 150px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 150"><rect x="18" y="0" width="4" height="150" fill="%23d4c4b0" fill-opacity="0.4"/><circle cx="20" cy="30" r="8" fill="%23c7000a" fill-opacity="0.3"/></svg>');
+            opacity: 0;
+            animation: fadeIn 2s ease-out 2.8s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 0.6;
+            }
+        }
+
+        /* ----- 元宝风格 AI 对话框 ----- */
+        #chat-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(to top, rgba(255, 253, 250, 0.98) 80%, transparent);
+            padding: 20px;
+            backdrop-filter: blur(15px);
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+            box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.08);
+            border-top: 1px solid rgba(224, 214, 204, 0.5);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s ease-out 2.2s;
+        }
+
+        #chat-container.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #chat-messages {
+            max-height: 25vh;
+            overflow-y: auto;
+            margin-bottom: 15px;
+            padding-right: 5px;
+        }
+
+        .message {
+            margin-bottom: 12px;
+            display: flex;
+        }
+
+        .message.user {
+            justify-content: flex-end;
+        }
+
+        .message.bot {
+            justify-content: flex-start;
+        }
+
+        .bubble {
+            padding: 12px 18px;
+            border-radius: 20px;
+            max-width: 80%;
+            font-size: 14px;
+            line-height: 1.6;
+            word-break: break-word;
+            position: relative;
+        }
+
+        .message.user .bubble {
+            background: linear-gradient(135deg, #c7000a, #a50008);
+            color: white;
+            border-bottom-right-radius: 5px;
+            box-shadow: 0 4px 15px rgba(199, 0, 10, 0.2);
+        }
+
+        .message.bot .bubble {
+            background: rgba(255, 255, 255, 0.95);
+            color: #333;
+            border-bottom-left-radius: 5px;
+            border: 1px solid #e8e0d6;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        #chat-input-area {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            background: white;
+            padding: 8px;
+            border-radius: 30px;
+            border: 1px solid #e8e0d6;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        #questionInput {
+            flex: 1;
+            padding: 10px 15px;
+            border: none;
+            outline: none;
+            font-size: 14px;
+            background: transparent;
+            font-family: inherit;
+        }
+
+        #questionInput::placeholder {
+            color: #999;
+            font-style: italic;
+        }
+
+        #sendButton {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #c7000a, #a50008);
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(199, 0, 10, 0.3);
+        }
+
+        #sendButton:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(199, 0, 10, 0.4);
+        }
+
+        /* 滚动条样式 */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 3px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(199, 0, 10, 0.3);
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 入场动画遮罩 -->
+    <div class="entrance-overlay" id="entranceOverlay">
+        <div class="entrance-title">博物南京</div>
+        <div class="entrance-subtitle">水墨长卷 · 文化寻踪</div>
+        <div class="entrance-seal">金陵</div>
+    </div>
+
+    <!-- 水墨装饰 -->
+    <div class="ink-decoration mountain-shape"></div>
+    <div class="ink-decoration bamboo-shape"></div>
+
+    <!-- 顶部标题栏 -->
+    <div class="header" id="header">
+        <div class="title">博物南京</div>
+        <div class="seal">金陵</div>
+    </div>
+
+    <!-- 地图控制提示 -->
+    <div class="map-hint" id="mapHint">🖱️ 拖拽漫游 · 滚轮缩放 · 点击探索</div>
+
+    <!-- 地图容器 -->
+    <div id="container"></div>
+
+    <!-- 元宝风格 AI 对话框 -->
+    <div id="chat-container">
+        <div id="chat-messages">
+            <div class="message bot">
+                <div class="bubble">🌿 欢迎来到水墨金陵！我是您的博物向导，请在这幅长卷中探索南京的文化瑰宝。</div>
+            </div>
+        </div>
+        <div id="chat-input-area">
+            <input type="text" id="questionInput" placeholder="问一问金陵文脉...">
+            <button id="sendButton" onclick="askAI()">➤</button>
+        </div>
+    </div>
+
+    <!-- 高德地图 API -->
+    <script
+        src="https://webapi.amap.com/maps?v=2.0&key=d0362079a5ba7399b60c9e98505e1ec1&plugin=AMap.DistrictSearch"></script>
+
+    <script>
+        // ---------- 入场动画控制 ----------
+        window.addEventListener('load', function () {
+            setTimeout(() => {
+                document.getElementById('entranceOverlay').classList.add('hidden');
+                document.getElementById('header').classList.add('visible');
+                document.getElementById('mapHint').classList.add('visible');
+                document.getElementById('chat-container').classList.add('visible');
+            }, 3500); // 3.5秒后隐藏入场动画
+        });
+
+        // ---------- 1. 南京行政区自然边界 ----------
+        let nanjingBoundary = null;
+        let boundaryPolygon = null;
+
+        // ---------- 2. 水墨风格地图初始化 ----------
+        const map = new AMap.Map('container', {
+            zoom: 10.5,
+            center: [118.78, 32.04],
+            features: ['bg', 'road', 'building'],
+            viewMode: '2D',
+            wallColor: '#f5f1eb',
+            roofColor: '#faf7f2',
+            showIndoorMap: false,
+            skyColor: '#f8f5f0',
+            zoomEnable: true,
+            dragEnable: true,
+            scrollWheel: true,
+            doubleClickZoom: true
+        });
+
+        // ---------- 3. 绘制南京行政区边界（高德API原生能力） ----------
+        function drawNanjingBoundary() {
+            const district = new AMap.DistrictSearch({
+                subdistrict: 0,
+                extensions: 'all'
+            });
+
+            district.search('南京市', function (status, result) {
+                if (!result.districtList || result.districtList.length === 0) {
+                    console.error('未获取到南京边界数据');
+                    return;
+                }
+
+                const bounds = result.districtList[0].boundaries;
+                if (!bounds || bounds.length === 0) return;
+
+                // 创建行政区边界多边形
+                boundaryPolygon = new AMap.Polygon({
+                    path: bounds,
+                    strokeColor: "#8b4513",
+                    strokeWeight: 3,
+                    strokeStyle: "solid",
+                    fillColor: 'transparent',
+                    zIndex: 100
+                });
+
+                map.add(boundaryPolygon);
+
+                // 自动适应边界范围
+                map.setFitView([boundaryPolygon], false, [50, 50, 50, 50]);
+
+                // 设置自然边界限制
+                const southWest = boundaryPolygon.getBounds().southwest;
+                const northEast = boundaryPolygon.getBounds().northeast;
+                nanjingBoundary = new AMap.Bounds(southWest, northEast);
+
+                // 监听地图移动，限制在边界内
+                map.on('moveend', checkBoundary);
+                map.on('zoomend', checkBoundary);
+            });
+        }
+
+        // 边界检查函数
+        function checkBoundary() {
+            if (!nanjingBoundary) return;
+
+            const center = map.getCenter();
+            if (!nanjingBoundary.contains(center)) {
+                const bounds = nanjingBoundary;
+                const sw = bounds.southwest;
+                const ne = bounds.northeast;
+
+                let lat = center.lat;
+                let lng = center.lng;
+
+                // 限制在边界内
+                lat = Math.max(sw.lat, Math.min(ne.lat, lat));
+                lng = Math.max(sw.lng, Math.min(ne.lng, lng));
+
+                map.panTo([lng, lat]);
+            }
+        }
+
+        // ---------- 4. 水墨风格博物馆标记 ----------
+        function createMuseumMarker(museum) {
+            const markerContent = document.createElement('div');
+            markerContent.innerHTML = `
+            <div style="
+                position: relative;
+                width: 24px; height: 24px;
+            ">
+                <div style="
+                    position: absolute;
+                    top: 50%; left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 16px; height: 16px;
+                    background: radial-gradient(circle, #c7000a 0%, #8b0000 100%);
+                    border-radius: 50%;
+                    box-shadow: 
+                        0 0 0 3px rgba(199, 0, 10, 0.3),
+                        0 2px 8px rgba(0,0,0,0.2);
+                    transition: all 0.3s ease;
+                "></div>
+                <div style="
+                    position: absolute;
+                    top: -30px; left: 50%;
+                    transform: translateX(-50%);
+                    background: rgba(255,255,255,0.95);
+                    padding: 4px 10px;
+                    border-radius: 6px;
+                    font-size: 13px;
+                    font-weight: 500;
+                    color: #333;
+                    white-space: nowrap;
+                    border: 1px solid #e8e0d6;
+                    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                " class="marker-label">${museum.name}</div>
+            </div>
+        `;
+
+            const marker = new AMap.Marker({
+                position: [museum.lng, museum.lat],
+                content: markerContent,
+                offset: new AMap.Pixel(-12, -12)
+            });
+
+            marker.on('mouseover', () => {
+                const label = markerContent.querySelector('.marker-label');
+                label.style.opacity = '1';
+            });
+
+            marker.on('mouseout', () => {
+                const label = markerContent.querySelector('.marker-label');
+                label.style.opacity = '0';
+            });
+
+            const infoWindow = new AMap.InfoWindow({
+                content: `
+                <div style="
+                    padding: 20px;
+                    min-width: 220px;
+                    font-family: 'STKaiti', serif;
+                    background: linear-gradient(135deg, #fffefc 0%, #faf7f2 100%);
+                    border-radius: 12px;
+                    border: 1px solid #e8e0d6;
+                    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+                ">
+                    <h3 style="
+                        margin: 0 0 12px 0;
+                        color: #c7000a;
+                        font-size: 18px;
+                        font-weight: normal;
+                        border-bottom: 1px solid #e8e0d6;
+                        padding-bottom: 8px;
+                    ">${museum.name}</h3>
+                    <p style="
+                        margin: 0;
+                        color: #555;
+                        font-size: 14px;
+                        line-height: 1.6;
+                    ">${museum.desc}</p>
+                    <div style="
+                        margin-top: 15px;
+                        padding-top: 10px;
+                        border-top: 1px dashed #e8e0d6;
+                        font-size: 12px;
+                        color: #888;
+                        text-align: right;
+                    ">📍 金陵文化地标</div>
+                </div>
+            `,
+                offset: new AMap.Pixel(0, -20),
+                closeWhenClickMap: true
+            });
+
+            marker.on('click', () => infoWindow.open(map, marker.getPosition()));
+            return marker;
+        }
+
+        // ---------- 5. 加载博物馆数据 ----------
+        fetch('/api/museums')
+            .then(res => {
+                if (!res.ok) throw new Error('HTTP ' + res.status);
+                return res.json();
+            })
+            .then(museums => {
+                const markers = museums.map(museum => createMuseumMarker(museum));
+                map.add(markers);
+            })
+            .catch(err => {
+                console.error('加载博物馆数据失败:', err);
+            });
+
+        // ---------- 6. 初始化边界 ----------
+        drawNanjingBoundary();
+
+        // ---------- 7. 元宝风格 AI 对话逻辑 ----------
+        function askAI() {
+            const input = document.getElementById('questionInput');
+            const question = input.value.trim();
+            if (!question) return;
+
+            appendMessage('user', question);
+            input.value = '';
+            appendMessage('bot', '<span style="color: #999;">正在为您查询金陵文脉...</span>');
+
+            fetch('/api/ask', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ question: question })
+            })
+                .then(r => {
+                    if (!r.ok) throw new Error('HTTP ' + r.status);
+                    return r.json();
+                })
+                .then(d => {
+                    updateLastBotMessage(d.answer);
+                })
+                .catch(() => {
+                    updateLastBotMessage('抱歉，暂时无法为您解答，请稍后再试。');
+                });
+        }
+
+        function appendMessage(sender, text) {
+            const messagesDiv = document.getElementById('chat-messages');
+            const msgDiv = document.createElement('div');
+            msgDiv.className = `message ${sender}`;
+            msgDiv.innerHTML = `<div class="bubble">${text}</div>`;
+            messagesDiv.appendChild(msgDiv);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+
+        function updateLastBotMessage(text) {
+            const messagesDiv = document.getElementById('chat-messages');
+            const lastBotMsg = messagesDiv.querySelector('.message.bot:last-child .bubble');
+            if (lastBotMsg) lastBotMsg.innerHTML = text;
+        }
+
+        // 回车发送
+        document.getElementById('questionInput').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') askAI();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "启动 Flask 项目",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "flask",
+            "env": {
+                "FLASK_APP": "app.py"
+            },
+            "args": [
+                "run",
+                "--host=127.0.0.1",
+                "--port=5000"
+            ],
+            "serverReadyAction": {
+                "action": "openExternally",
+                "url": "http://127.0.0.1:5000"
+            }
+        }
+    ]
+}
