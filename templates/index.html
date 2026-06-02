@@ -590,7 +590,42 @@
         }
 
         .modal-body {
-            padding: 32px;
+            padding: 0;
+        }
+
+        .modal-photo {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 12px 12px 0 0;
+            display: block;
+            background: linear-gradient(135deg, rgba(212,175,55,0.08), rgba(199,0,10,0.06));
+        }
+
+        .modal-photo-placeholder {
+            width: 100%;
+            height: 200px;
+            border-radius: 12px 12px 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(212,175,55,0.06), rgba(26,8,8,0.8));
+            border-bottom: 1px solid var(--border-gold);
+        }
+        .modal-photo-placeholder .ph-icon {
+            font-size: 56px;
+            opacity: 0.5;
+        }
+        .modal-photo-placeholder .ph-text {
+            position: absolute;
+            bottom: 24px;
+            font-size: 11px;
+            color: var(--text-muted);
+            letter-spacing: 2px;
+        }
+
+        .modal-body-inner {
+            padding: 24px 32px 32px;
         }
 
         .modal-header {
@@ -768,104 +803,503 @@
             transform: translateY(0);
         }
 
-        /* ========== Chat Container (Adapted) ========== */
-        #chat-container {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
+        /* ========== Chat Quick Actions ========== */
+        .chat-quick-actions {
             display: flex;
-            flex-direction: column;
-            background: linear-gradient(to top, rgba(10, 5, 5, 0.98) 80%, transparent);
-            padding: 20px;
-            -webkit-backdrop-filter: blur(15px);
-            backdrop-filter: blur(15px);
-            border-top: 1px solid var(--border-gold);
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 1s ease-out;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+            justify-content: center;
         }
 
-        #chat-container.visible {
+        .quick-action-chip {
+            background: rgba(212, 175, 55, 0.06);
+            border: 1px solid var(--border-gold-light);
+            color: var(--gold-pale);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            cursor: pointer;
+            letter-spacing: 1px;
+            transition: all var(--transition-med);
+            white-space: nowrap;
+        }
+
+        .quick-action-chip:hover {
+            background: rgba(212, 175, 55, 0.15);
+            border-color: var(--gold);
+            color: var(--gold);
+            box-shadow: 0 2px 10px var(--glow-gold);
+        }
+
+        /* ========== Chat Action Buttons in Messages ========== */
+        .chat-actions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .chat-action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 6px 14px;
+            border-radius: 18px;
+            font-size: 12px;
+            cursor: pointer;
+            letter-spacing: 1px;
+            transition: all var(--transition-med);
+            border: 1px solid;
+            background: transparent;
+            text-decoration: none;
+        }
+
+        .chat-action-btn.reserve {
+            color: #4caf50;
+            border-color: rgba(76, 175, 80, 0.5);
+            background: rgba(76, 175, 80, 0.08);
+        }
+
+        .chat-action-btn.reserve:hover {
+            background: rgba(76, 175, 80, 0.18);
+            box-shadow: 0 2px 12px rgba(76, 175, 80, 0.2);
+        }
+
+        .chat-action-btn.map {
+            color: #42a5f5;
+            border-color: rgba(66, 165, 245, 0.5);
+            background: rgba(66, 165, 245, 0.08);
+        }
+
+        .chat-action-btn.map:hover {
+            background: rgba(66, 165, 245, 0.18);
+            box-shadow: 0 2px 12px rgba(66, 165, 245, 0.2);
+        }
+
+        .chat-action-btn.detail {
+            color: var(--gold);
+            border-color: var(--border-gold-light);
+            background: rgba(212, 175, 55, 0.08);
+        }
+
+        .chat-action-btn.detail:hover {
+            background: rgba(212, 175, 55, 0.18);
+            box-shadow: 0 2px 12px var(--glow-gold);
+        }
+
+        /* ========== Map Marker Styles ========== */
+        .museum-marker-wrapper {
+            cursor: pointer;
+        }
+
+        .mkr-container {
+            position: relative;
+            width: 40px;
+            height: 56px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Pulse ring */
+        .mkr-pulse {
+            position: absolute;
+            top: 4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 2px solid;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        .mkr-pulse.active {
+            animation: mkrPulse 1.2s ease-out infinite;
+        }
+        @keyframes mkrPulse {
+            0% { transform: translateX(-50%) scale(0.8); opacity: 0.8; }
+            100% { transform: translateX(-50%) scale(1.8); opacity: 0; }
+        }
+
+        /* Outer glow ring */
+        .mkr-outer-ring {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+        }
+
+        /* Main pin */
+        .mkr-pin {
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 28px;
+            height: 28px;
+            border-radius: 50% 50% 50% 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.25s ease;
+            border: 2px solid rgba(255,255,255,0.25);
+            z-index: 2;
+        }
+        .mkr-icon {
+            font-size: 14px;
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        /* Pin tip */
+        .mkr-tip {
+            position: absolute;
+            top: 33px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 8px solid;
+            z-index: 1;
+        }
+
+        /* Label on hover */
+        .mkr-label {
+            position: absolute;
+            top: -38px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(10, 5, 5, 0.95);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            border-radius: 8px;
+            padding: 5px 10px;
+            text-align: center;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s ease, top 0.25s ease;
+            z-index: 10;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+        }
+        .mkr-label.show {
             opacity: 1;
-            transform: translateY(0);
+            top: -44px;
+        }
+        .mkr-label-name {
+            display: block;
+            font-size: 12px;
+            color: #e8d5a3;
+            font-family: 'Georgia', 'Noto Serif SC', serif;
+            letter-spacing: 1px;
+        }
+        .mkr-label-cat {
+            display: block;
+            font-size: 10px;
+            color: #886655;
+        }
+        .mkr-level {
+            display: inline-block;
+            font-size: 9px;
+            color: #d4af37;
+            background: rgba(212,175,55,0.12);
+            padding: 1px 5px;
+            border-radius: 3px;
+            margin: 2px 0;
+        }
+
+        /* ========== Info Window Styles ========== */
+        .iw-card {
+            padding: 16px;
+            min-width: 260px;
+            max-width: 320px;
+            font-family: 'Georgia', 'Noto Serif SC', 'PingFang SC', 'Microsoft YaHei', serif;
+            background: linear-gradient(160deg, #1a0808 0%, #0f0505 100%);
+            border-radius: 12px;
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+        }
+        .iw-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .iw-icon {
+            font-size: 28px;
+            flex-shrink: 0;
+        }
+        .iw-title-area {
+            flex: 1;
+            min-width: 0;
+        }
+        .iw-name {
+            font-size: 16px;
+            color: #e8d5a3;
+            letter-spacing: 1px;
+            font-weight: bold;
+            margin-bottom: 2px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .iw-category {
+            font-size: 11px;
+            color: #886655;
+        }
+        .iw-divider {
+            height: 1px;
+            background: rgba(212, 175, 55, 0.15);
+            margin: 12px 0;
+        }
+        .iw-info-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 10px;
+        }
+        .iw-info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 6px;
+            font-size: 12px;
+            color: #c9b896;
+            line-height: 1.5;
+        }
+        .iw-info-icon {
+            flex-shrink: 0;
+            font-size: 13px;
+        }
+        .iw-desc {
+            margin: 0 0 12px 0;
+            font-size: 12px;
+            color: #886655;
+            line-height: 1.6;
+        }
+        .iw-actions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .iw-action-btn {
+            padding: 6px 14px;
+            border-radius: 16px;
+            font-size: 11px;
+            cursor: pointer;
+            letter-spacing: 1px;
+            transition: all 0.2s ease;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            background: rgba(212, 175, 55, 0.06);
+            color: #d4af37;
+            text-decoration: none;
+            display: inline-block;
+            font-family: inherit;
+        }
+        .iw-action-btn:hover {
+            background: rgba(212, 175, 55, 0.15);
+            border-color: #d4af37;
+            box-shadow: 0 2px 10px rgba(212, 175, 55, 0.2);
+        }
+        .iw-action-btn.iw-reserve {
+            color: #4caf50;
+            border-color: rgba(76, 175, 80, 0.3);
+            background: rgba(76, 175, 80, 0.06);
+        }
+        .iw-action-btn.iw-reserve:hover {
+            background: rgba(76, 175, 80, 0.15);
+            border-color: #4caf50;
+            box-shadow: 0 2px 10px rgba(76, 175, 80, 0.2);
+        }
+
+        /* ========== Chat Container (Adapted) ========== */
+        /* ========== Floating Chat Toggle Button ========== */
+        #chat-toggle-btn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 1001;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--gold), #a68a2e);
+            color: var(--bg-deep);
+            border: 2px solid rgba(255,255,255,0.15);
+            cursor: pointer;
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px var(--glow-gold);
+            transition: all var(--transition-med);
+        }
+        #chat-toggle-btn:hover {
+            transform: scale(1.08);
+            box-shadow: 0 6px 28px rgba(212, 175, 55, 0.4);
+        }
+        #chat-toggle-btn.hidden {
+            opacity: 0;
+            pointer-events: none;
+            transform: scale(0.5);
+        }
+
+        /* ========== Chat Side Panel ========== */
+        #chat-container {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 420px;
+            max-width: 92vw;
+            z-index: 1002;
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(180deg, rgba(10,5,5,0.99) 0%, rgba(18,6,6,0.99) 100%);
+            border-left: 1px solid var(--border-gold);
+            box-shadow: -8px 0 40px rgba(0,0,0,0.5);
+            transform: translateX(100%);
+            transition: transform var(--transition-slow);
+            padding: 0;
+        }
+
+        #chat-container.open {
+            transform: translateX(0);
+        }
+
+        .chat-panel-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 18px;
+            border-bottom: 1px solid var(--border-gold);
+            flex-shrink: 0;
+        }
+        .chat-panel-title {
+            font-family: var(--font-display);
+            font-size: 16px;
+            color: var(--gold);
+            letter-spacing: 3px;
+        }
+        .chat-panel-close {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 1px solid var(--border-gold);
+            background: transparent;
+            color: var(--gold);
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition-fast);
+        }
+        .chat-panel-close:hover {
+            background: rgba(212, 175, 55, 0.1);
+            box-shadow: 0 0 12px var(--glow-gold);
+        }
+
+        .chat-quick-actions {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            padding: 12px 18px;
+            border-bottom: 1px solid var(--border-gold);
+            flex-shrink: 0;
+        }
+
+        .quick-action-chip {
+            background: rgba(212, 175, 55, 0.04);
+            border: 1px solid var(--border-gold-light);
+            color: var(--gold-pale);
+            padding: 5px 12px;
+            border-radius: 16px;
+            font-size: 11px;
+            cursor: pointer;
+            letter-spacing: 1px;
+            transition: all var(--transition-med);
+            white-space: nowrap;
+        }
+        .quick-action-chip:hover {
+            background: rgba(212, 175, 55, 0.12);
+            border-color: var(--gold);
+            color: var(--gold);
         }
 
         #chat-messages {
-            max-height: 25vh;
+            flex: 1;
             overflow-y: auto;
-            margin-bottom: 15px;
-            padding-right: 5px;
+            padding: 14px 18px;
         }
 
         .message {
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             display: flex;
         }
-
         .message.user {
             justify-content: flex-end;
         }
-
         .message.bot {
             justify-content: flex-start;
         }
 
         .bubble {
-            padding: 12px 18px;
-            border-radius: 20px;
-            max-width: 80%;
-            font-size: 14px;
+            padding: 10px 14px;
+            border-radius: 16px;
+            max-width: 85%;
+            font-size: 13px;
             line-height: 1.6;
             word-break: break-word;
-            position: relative;
         }
-
         .message.user .bubble {
             background: linear-gradient(135deg, var(--vermillion), #a50008);
             color: white;
-            border-bottom-right-radius: 5px;
-            box-shadow: 0 4px 15px rgba(199, 0, 10, 0.2);
+            border-bottom-right-radius: 4px;
+            box-shadow: 0 2px 10px rgba(199, 0, 10, 0.2);
         }
-
         .message.bot .bubble {
             background: rgba(26, 8, 8, 0.95);
             color: var(--text-body);
-            border-bottom-left-radius: 5px;
+            border-bottom-left-radius: 4px;
             border: 1px solid var(--border-gold-light);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         #chat-input-area {
             display: flex;
-            gap: 12px;
+            gap: 10px;
             align-items: center;
-            background: rgba(10, 5, 5, 0.8);
-            padding: 8px;
-            border-radius: 30px;
-            border: 1px solid var(--border-gold);
+            padding: 10px 18px;
+            border-top: 1px solid var(--border-gold);
+            flex-shrink: 0;
+            background: rgba(10, 5, 5, 0.95);
         }
-
         #questionInput {
             flex: 1;
-            padding: 10px 15px;
-            border: none;
+            padding: 10px 14px;
+            border: 1px solid var(--border-gold-light);
+            border-radius: 20px;
             outline: none;
-            font-size: 14px;
-            background: transparent;
+            font-size: 13px;
+            background: rgba(212, 175, 55, 0.04);
             font-family: inherit;
             color: var(--text-body);
         }
-
         #questionInput::placeholder {
             color: var(--text-muted);
-            font-style: italic;
+        }
+        #questionInput:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 10px var(--glow-gold);
         }
 
         #sendButton {
-            width: 48px;
-            height: 48px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             background: linear-gradient(135deg, var(--gold), #a68a2e);
             color: var(--bg-deep);
@@ -874,15 +1308,28 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 18px;
+            font-size: 16px;
             flex-shrink: 0;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px var(--glow-gold);
+            transition: all var(--transition-fast);
+            box-shadow: 0 2px 10px var(--glow-gold);
+        }
+        #sendButton:hover {
+            transform: scale(1.06);
         }
 
-        #sendButton:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px var(--glow-gold);
+        /* Chat panel overlay backdrop */
+        #chat-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.4);
+            z-index: 1001;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity var(--transition-med);
+        }
+        #chat-backdrop.show {
+            opacity: 1;
+            pointer-events: auto;
         }
 
         /* ========== Responsive ========== */
@@ -915,6 +1362,7 @@
             <li><a onclick="scrollToSection('hero')">首页</a></li>
             <li><a onclick="scrollToSection('museums')">博物馆</a></li>
             <li><a onclick="scrollToSection('map-section')">地图</a></li>
+            <li><a href="/chat">AI 导览</a></li>
         </ul>
     </nav>
 
@@ -933,7 +1381,10 @@
             <div class="hero-divider"></div>
             <div class="hero-subtitle">水墨长卷 · 文化寻踪</div>
             <p class="hero-desc">金陵文脉，千年传承。探索南京的博物馆，触摸历史的温度。</p>
-            <button class="hero-cta" onclick="scrollToSection('museums')">开始探索</button>
+            <div style="display:flex;justify-content:center;align-items:center;gap:20px;flex-wrap:wrap;">
+                <button class="hero-cta" onclick="scrollToSection('museums')">开始探索</button>
+                <a href="/chat" class="hero-cta">AI 导览</a>
+            </div>
             <div class="hero-scroll-hint">⌄ 向下探索 ⌄</div>
         </div>
     </section>
@@ -979,6 +1430,13 @@
         <div class="modal-content">
             <button class="modal-close" onclick="closeMuseumDetail()">×</button>
             <div class="modal-body">
+                <!-- 正门照片 -->
+                <img id="modalPhoto" class="modal-photo" src="" alt="" style="display:none;">
+                <div id="modalPhotoPlaceholder" class="modal-photo-placeholder" style="display:none;">
+                    <span class="ph-icon" id="modalPhotoIcon">🏛️</span>
+                    <span class="ph-text">博物金陵</span>
+                </div>
+                <div class="modal-body-inner">
                 <div class="modal-header">
                     <div class="modal-icon" id="modalIcon">🏛️</div>
                     <div class="modal-title-area">
@@ -1016,15 +1474,32 @@
                     <button class="btn-map" onclick="navigateToMap()">📍 在地图上查看</button>
                     <button class="btn-reserve" id="btnReserve" style="display: none;">🔗 预约参观</button>
                 </div>
+                </div><!-- /modal-body-inner -->
             </div>
         </div>
     </div>
 
-    <!-- ==================== AI Chat Container ==================== -->
+    <!-- ==================== Floating Chat Toggle Button ==================== -->
+    <button id="chat-toggle-btn" onclick="toggleChatPanel()" title="AI 博物导览">💬</button>
+
+    <!-- Chat Backdrop -->
+    <div id="chat-backdrop" onclick="closeChatPanel()"></div>
+
+    <!-- ==================== AI Chat Side Panel ==================== -->
     <div id="chat-container">
+        <div class="chat-panel-header">
+            <span class="chat-panel-title">🏛️ AI 博物导览</span>
+            <button class="chat-panel-close" onclick="closeChatPanel()">×</button>
+        </div>
+        <div class="chat-quick-actions" id="chatQuickActions">
+            <span class="quick-action-chip" onclick="quickAsk('推荐几个必去的博物馆')">🏛️ 必去推荐</span>
+            <span class="quick-action-chip" onclick="quickAsk('有没有免费的博物馆？')">🎫 免费参观</span>
+            <span class="quick-action-chip" onclick="quickAsk('南京博物院怎么预约？')">📅 如何预约</span>
+            <span class="quick-action-chip" onclick="quickAsk('推荐适合亲子的博物馆')">👶 亲子游玩</span>
+        </div>
         <div id="chat-messages">
             <div class="message bot">
-                <div class="bubble">🌿 欢迎来到水墨金陵！我是您的博物向导，请探索南京的文化瑰宝。</div>
+                <div class="bubble">🌿 欢迎来到水墨金陵！我是您的博物向导，请探索南京的文化瑰宝。<br>点击下方快捷按钮快速提问，也可以直接输入您想了解的内容 ~</div>
             </div>
         </div>
         <div id="chat-input-area">
@@ -1146,6 +1621,20 @@
         function showMuseumDetail(museum) {
             currentMuseum = museum;
 
+            // 正门照片
+            const photoImg = document.getElementById('modalPhoto');
+            const photoPlaceholder = document.getElementById('modalPhotoPlaceholder');
+            const photoIcon = document.getElementById('modalPhotoIcon');
+            if (museum.photo_url) {
+                photoImg.src = museum.photo_url;
+                photoImg.style.display = 'block';
+                photoPlaceholder.style.display = 'none';
+            } else {
+                photoImg.style.display = 'none';
+                photoIcon.textContent = typeIcons[museum.type] || '🏛️';
+                photoPlaceholder.style.display = 'flex';
+            }
+
             document.getElementById('modalIcon').textContent = typeIcons[museum.type] || '🏛️';
             document.getElementById('modalName').textContent = museum.name;
             document.getElementById('modalCategory').textContent = museum.category || '未分类';
@@ -1157,10 +1646,22 @@
             document.getElementById('modalDesc').textContent = museum.desc || museum.intro_short || '暂无介绍';
 
             const reserveBtn = document.getElementById('btnReserve');
-            if (museum.reserve_link) {
+            const reserveLink = museum.reserve_link || museum.website || '';
+            if (reserveLink && reserveLink.startsWith('http')) {
                 reserveBtn.style.display = 'inline-block';
+                reserveBtn.textContent = '🔗 前往预约';
+                reserveBtn.onclick = () => { window.open(reserveLink, '_blank'); };
+            } else if (museum.reserve_link) {
+                reserveBtn.style.display = 'inline-block';
+                reserveBtn.textContent = '📱 查看预约方式';
                 reserveBtn.onclick = () => {
-                    window.open(museum.reserve_link, '_blank');
+                    alert('「' + museum.name + '」预约方式：\n\n' + museum.reserve_link + '\n\n💡 部分博物馆需通过微信公众号预约');
+                };
+            } else if (museum.wechat) {
+                reserveBtn.style.display = 'inline-block';
+                reserveBtn.textContent = '📱 公众号预约';
+                reserveBtn.onclick = () => {
+                    alert('「' + museum.name + '」\n请搜索微信公众号：' + museum.wechat + '\n通过公众号菜单进行预约');
                 };
             } else {
                 reserveBtn.style.display = 'none';
@@ -1227,16 +1728,14 @@
             map = new AMap.Map('map-container', {
                 zoom: 10.5,
                 center: [118.78, 32.04],
-                features: ['bg', 'road', 'building'],
+                features: ['bg', 'road', 'building', 'point'],
                 viewMode: '2D',
-                wallColor: '#1a0808',
-                roofColor: '#2a1818',
-                showIndoorMap: false,
-                skyColor: '#0a0505',
+                showIndoorMap: true,
                 zoomEnable: true,
                 dragEnable: true,
                 scrollWheel: true,
-                doubleClickZoom: true
+                doubleClickZoom: true,
+                zooms: [9, 18],
             });
 
             drawNanjingBoundary();
@@ -1272,7 +1771,9 @@
                 });
 
                 map.add(boundaryPolygon);
-                map.setFitView([boundaryPolygon], false, [50, 50, 50, 50]);
+                map.setFitView([boundaryPolygon], false, [80, 80, 80, 80]);
+                // 确保初始缩放不低于9
+                if (map.getZoom() < 9) map.setZoom(9);
 
                 const southWest = boundaryPolygon.getBounds().southwest;
                 const northEast = boundaryPolygon.getBounds().northeast;
@@ -1289,9 +1790,8 @@
             if (!nanjingBoundary) return;
             const center = map.getCenter();
             if (!nanjingBoundary.contains(center)) {
-                const bounds = nanjingBoundary;
-                const sw = bounds.southwest;
-                const ne = bounds.northeast;
+                const sw = nanjingBoundary.southwest;
+                const ne = nanjingBoundary.northeast;
 
                 let lat = center.lat;
                 let lng = center.lng;
@@ -1299,106 +1799,134 @@
                 lat = Math.max(sw.lat, Math.min(ne.lat, lat));
                 lng = Math.max(sw.lng, Math.min(ne.lng, lng));
 
-                map.panTo([lng, lat]);
+                // 直接跳回边界内，防止拖出南京
+                map.setCenter([lng, lat]);
             }
+
+            // 限制缩放范围
+            const zoom = map.getZoom();
+            if (zoom < 9) map.setZoom(9);
+            if (zoom > 18) map.setZoom(18);
         }
 
-        function createMuseumMarker(museum) {
-            const markerContent = document.createElement('div');
-            markerContent.innerHTML = `
-            <div style="
-                position: relative;
-                width: 24px; height: 24px;
-            ">
-                <div style="
-                    position: absolute;
-                    top: 50%; left: 50%;
-                    transform: translate(-50%, -50%);
-                    width: 16px; height: 16px;
-                    background: radial-gradient(circle, #d4af37 0%, #a68a2e 100%);
-                    border-radius: 50%;
-                    box-shadow: 
-                        0 0 0 3px rgba(212, 175, 55, 0.3),
-                        0 2px 8px rgba(0,0,0,0.2);
-                    transition: all 0.3s ease;
-                "></div>
-                <div style="
-                    position: absolute;
-                    top: -30px; left: 50%;
-                    transform: translateX(-50%);
-                    background: rgba(26, 8, 8, 0.95);
-                    padding: 4px 10px;
-                    border-radius: 6px;
-                    font-size: 13px;
-                    font-weight: 500;
-                    color: #c9b896;
-                    white-space: nowrap;
-                    border: 1px solid rgba(212, 175, 55, 0.3);
-                    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-                    opacity: 0;
-                    transition: opacity 0.3s ease;
-                " class="marker-label">${museum.name}</div>
-            </div>
-        `;
+        // ========== Category Colors for Markers ==========
+        const categoryColors = {
+            'history': { bg: '#d4af37', glow: 'rgba(212,175,55,0.5)', inner: '#8b6914' },
+            'art': { bg: '#c9a96e', glow: 'rgba(201,169,110,0.5)', inner: '#8b7355' },
+            'science': { bg: '#5b9bd5', glow: 'rgba(91,155,213,0.5)', inner: '#2e6b9e' },
+            'specialty': { bg: '#c7000a', glow: 'rgba(199,0,10,0.5)', inner: '#8b0006' },
+        };
 
+        function createMuseumMarker(museum) {
+            const colors = categoryColors[museum.type] || categoryColors['history'];
+            const icon = typeIcons[museum.type] || '🏛️';
+            const levelBadge = museum.level ? `<span class="mkr-level">${museum.level.replace('国家', '').replace('博物馆', '')}</span>` : '';
+
+            const markerContent = document.createElement('div');
+            markerContent.className = 'museum-marker-wrapper';
+            markerContent.innerHTML = `
+            <div class="mkr-container">
+                <!-- Pulse ring -->
+                <div class="mkr-pulse" style="border-color:${colors.glow};"></div>
+                <!-- Outer ring -->
+                <div class="mkr-outer-ring" style="
+                    background: radial-gradient(circle, ${colors.glow} 0%, transparent 70%);
+                "></div>
+                <!-- Main pin body -->
+                <div class="mkr-pin" style="
+                    background: linear-gradient(135deg, ${colors.bg}, ${colors.inner});
+                    box-shadow: 0 0 12px ${colors.glow}, 0 2px 6px rgba(0,0,0,0.3);
+                ">
+                    <span class="mkr-icon">${icon}</span>
+                </div>
+                <!-- Pin tip -->
+                <div class="mkr-tip" style="
+                    border-top-color: ${colors.inner};
+                "></div>
+                <!-- Label (hidden by default) -->
+                <div class="mkr-label">
+                    <span class="mkr-label-name">${museum.name}</span>
+                    ${levelBadge}
+                    <span class="mkr-label-cat">${museum.category || ''}</span>
+                </div>
+            </div>`;
+
+            // Create marker
             const marker = new AMap.Marker({
                 position: [museum.lng, museum.lat],
                 content: markerContent,
-                offset: new AMap.Pixel(-12, -12)
+                offset: new AMap.Pixel(-20, -44),
+                zIndex: museum.level && museum.level.includes('一级') ? 120 : 100,
             });
 
-            marker.on('mouseover', () => {
-                const label = markerContent.querySelector('.marker-label');
-                label.style.opacity = '1';
+            // Hover effects
+            markerContent.addEventListener('mouseenter', () => {
+                markerContent.querySelector('.mkr-label').classList.add('show');
+                markerContent.querySelector('.mkr-pin').style.transform = 'translate(-50%, 0) scale(1.2)';
+                markerContent.querySelector('.mkr-pulse').classList.add('active');
+            });
+            markerContent.addEventListener('mouseleave', () => {
+                markerContent.querySelector('.mkr-label').classList.remove('show');
+                markerContent.querySelector('.mkr-pin').style.transform = 'translate(-50%, 0) scale(1)';
+                markerContent.querySelector('.mkr-pulse').classList.remove('active');
             });
 
-            marker.on('mouseout', () => {
-                const label = markerContent.querySelector('.marker-label');
-                label.style.opacity = '0';
-            });
+            // Info window
+            const ticketShort = (museum.ticket_info || '暂无信息').replace('免费', '<span style="color:#4caf50;">免费</span>');
+            const reserveAction = museum.reserve_link
+                ? (museum.reserve_link.startsWith('http')
+                    ? `<a href="${museum.reserve_link}" target="_blank" class="iw-action-btn iw-reserve">🔗 前往预约</a>`
+                    : `<span class="iw-action-btn iw-reserve" style="cursor:default;opacity:0.6;">📱 ${museum.reserve_link.substring(0,15)}...</span>`)
+                : '';
 
             const infoWindow = new AMap.InfoWindow({
                 content: `
-                <div style="
-                    padding: 20px;
-                    min-width: 220px;
-                    font-family: 'Georgia', 'Noto Serif SC', serif;
-                    background: linear-gradient(135deg, #1a0808 0%, #0f0505 100%);
-                    border-radius: 12px;
-                    border: 1px solid rgba(212, 175, 55, 0.3);
-                    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
-                ">
-                    <h3 style="
-                        margin: 0 0 12px 0;
-                        color: #d4af37;
-                        font-size: 18px;
-                        font-weight: normal;
-                        border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-                        padding-bottom: 8px;
-                    ">${museum.name}</h3>
-                    <p style="
-                        margin: 0;
-                        color: #c9b896;
-                        font-size: 14px;
-                        line-height: 1.6;
-                    ">${museum.desc}</p>
-                    <div style="
-                        margin-top: 15px;
-                        padding-top: 10px;
-                        border-top: 1px dashed rgba(212, 175, 55, 0.2);
-                        font-size: 12px;
-                        color: #886655;
-                        text-align: right;
-                    ">📍 金陵文化地标</div>
-                </div>
-            `,
-                offset: new AMap.Pixel(0, -20),
-                closeWhenClickMap: true
+                <div class="iw-card">
+                    <div class="iw-header">
+                        <span class="iw-icon">${icon}</span>
+                        <div class="iw-title-area">
+                            <div class="iw-name">${museum.name}</div>
+                            <div class="iw-category">${museum.category || ''} · ${museum.level || ''}</div>
+                        </div>
+                    </div>
+                    <div class="iw-divider"></div>
+                    <div class="iw-info-grid">
+                        <div class="iw-info-item">
+                            <span class="iw-info-icon">📍</span>
+                            <span>${museum.address || museum.district || '暂无地址'}</span>
+                        </div>
+                        <div class="iw-info-item">
+                            <span class="iw-info-icon">🕐</span>
+                            <span>${museum.open_time || '暂无信息'}</span>
+                        </div>
+                        <div class="iw-info-item">
+                            <span class="iw-info-icon">🎫</span>
+                            <span>${ticketShort}</span>
+                        </div>
+                    </div>
+                    <p class="iw-desc">${(museum.intro_short || museum.desc || '').substring(0, 80)}...</p>
+                    <div class="iw-actions">
+                        <button class="iw-action-btn iw-detail" onclick="window._openMuseumDetail(${museum.id})">📖 查看详情</button>
+                        ${reserveAction}
+                    </div>
+                </div>`,
+                offset: new AMap.Pixel(0, -40),
+                closeWhenClickMap: true,
             });
 
-            marker.on('click', () => infoWindow.open(map, marker.getPosition()));
+            marker.on('click', () => {
+                window._currentInfoWindowMuseum = museum;
+                infoWindow.open(map, marker.getPosition());
+            });
+
             return marker;
         }
+
+        // Helper for info window detail button
+        window._openMuseumDetail = function(id) {
+            const museum = museumsData.find(m => m.id === id);
+            if (museum) showMuseumDetail(museum);
+        };
 
         // ========== Load Museum Data ==========
         function loadMuseumData() {
@@ -1441,7 +1969,7 @@
 
             appendMessage('user', question);
             input.value = '';
-            appendMessage('bot', '<span style="color: #886655;">正在为您查询金陵文脉...</span>');
+            appendBotMessageWithActions('正在为您查询金陵文脉...', null);
 
             fetch('/api/ask', {
                 method: 'POST',
@@ -1449,15 +1977,32 @@
                 body: JSON.stringify({ question: question })
             })
                 .then(r => {
-                    if (!r.ok) throw new Error('HTTP ' + r.status);
+                    if (!r.ok) {
+                        return r.json().then(d => {
+                            throw new Error(d.answer || '服务异常');
+                        }).catch(e => {
+                            if (e.message && e.message !== '服务异常') throw e;
+                            throw new Error('服务异常 (' + r.status + ')');
+                        });
+                    }
                     return r.json();
                 })
                 .then(d => {
-                    updateLastBotMessage(d.answer);
+                    updateLastBotMessage(d.answer, d.actions || []);
                 })
-                .catch(() => {
-                    updateLastBotMessage('抱歉，暂时无法为您解答，请稍后再试。');
+                .catch(err => {
+                    const errMsg = err.message || 'AI 服务暂时不可用';
+                    if (errMsg.includes('未配置')) {
+                        updateLastBotMessage('AI 服务尚未配置，请在 .env 文件中设置有效的 API 密钥后重启服务。', []);
+                    } else {
+                        updateLastBotMessage('抱歉，' + errMsg + '。', []);
+                    }
                 });
+        }
+
+        function quickAsk(question) {
+            document.getElementById('questionInput').value = question;
+            askAI();
         }
 
         function appendMessage(sender, text) {
@@ -1469,10 +2014,81 @@
             messagesDiv.scrollTop = messagesDiv.scrollHeight;
         }
 
-        function updateLastBotMessage(text) {
+        function appendBotMessageWithActions(text, actions) {
             const messagesDiv = document.getElementById('chat-messages');
-            const lastBotMsg = messagesDiv.querySelector('.message.bot:last-child .bubble');
-            if (lastBotMsg) lastBotMsg.innerHTML = text;
+            const msgDiv = document.createElement('div');
+            msgDiv.className = 'message bot';
+            let html = `<div class="bubble">${text}</div>`;
+            if (actions) {
+                html += renderActions(actions);
+            }
+            msgDiv.innerHTML = html;
+            messagesDiv.appendChild(msgDiv);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+
+        function renderActions(actions) {
+            if (!actions || actions.length === 0) return '';
+            let html = '<div class="chat-actions">';
+            actions.forEach(a => {
+                if (a.reserve_link) {
+                    html += `<button class="chat-action-btn reserve" onclick="openReserveLink('${escapeHtml(a.museum_name)}', '${escapeHtml(a.reserve_link)}')">📅 预约「${escapeHtml(a.museum_name)}」</button>`;
+                }
+                if (a.lat && a.lng) {
+                    html += `<button class="chat-action-btn map" onclick="navigateToMuseum(${a.lat}, ${a.lng}, '${escapeHtml(a.museum_name)}')">📍 在地图上查看</button>`;
+                }
+                html += `<button class="chat-action-btn detail" onclick="openMuseumDetailById(${a.museum_id})">📖 查看详情</button>`;
+            });
+            html += '</div>';
+            return html;
+        }
+
+        function escapeHtml(str) {
+            if (!str) return '';
+            const div = document.createElement('div');
+            div.textContent = str;
+            return div.innerHTML;
+        }
+
+        function updateLastBotMessage(text, actions) {
+            const messagesDiv = document.getElementById('chat-messages');
+            const lastBotMsg = messagesDiv.querySelector('.message.bot:last-child');
+            if (lastBotMsg) {
+                let html = `<div class="bubble">${text}</div>`;
+                html += renderActions(actions || []);
+                lastBotMsg.innerHTML = html;
+            }
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }
+
+        function openReserveLink(name, link) {
+            if (!link) return;
+            // 如果链接以 http 开头，直接打开；否则显示详情弹窗
+            if (link.startsWith('http')) {
+                window.open(link, '_blank');
+            } else {
+                // 文本类预约信息，在聊天中回复
+                appendBotMessageWithActions(`📅 <b>「${escapeHtml(name)}」的预约方式</b>：<br><br>${escapeHtml(link)}`, null);
+            }
+        }
+
+        function navigateToMuseum(lat, lng, name) {
+            if (map) {
+                map.setZoomAndCenter(15, [lng, lat]);
+                scrollToSection('map-section');
+            }
+            // 查找并打开对应博物馆详情
+            const museum = museumsData.find(m => m.name === name);
+            if (museum) {
+                setTimeout(() => showMuseumDetail(museum), 600);
+            }
+        }
+
+        function openMuseumDetailById(id) {
+            const museum = museumsData.find(m => m.id === id);
+            if (museum) {
+                showMuseumDetail(museum);
+            }
         }
 
         document.getElementById('questionInput').addEventListener('keypress', (e) => {
@@ -1480,10 +2096,36 @@
         });
 
         // ========== Initialize ==========
+        // ========== Chat Panel Toggle ==========
+        function toggleChatPanel() {
+            const container = document.getElementById('chat-container');
+            const backdrop = document.getElementById('chat-backdrop');
+            const isOpen = container.classList.contains('open');
+            if (isOpen) {
+                closeChatPanel();
+            } else {
+                container.classList.add('open');
+                backdrop.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+        function closeChatPanel() {
+            document.getElementById('chat-container').classList.remove('open');
+            document.getElementById('chat-backdrop').classList.remove('show');
+            document.body.style.overflow = '';
+        }
+        // ESC key closes chat panel
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                const container = document.getElementById('chat-container');
+                if (container.classList.contains('open')) {
+                    closeChatPanel();
+                }
+            }
+        });
+
         window.addEventListener('load', () => {
-            setTimeout(() => {
-                document.getElementById('chat-container').classList.add('visible');
-            }, 1000);
+            // 不再自动弹出聊天框
 
             // 立即加载博物馆数据（不依赖地图）
             console.log('页面加载完成，立即加载博物馆数据...');
@@ -1511,7 +2153,42 @@
                 initMap();
             }
             updateNav();
+
+            // ========== URL参数处理：从AI导览页跳转过来的博物馆定位 ==========
+            handleUrlParams();
         });
+
+        function handleUrlParams() {
+            const params = new URLSearchParams(window.location.search);
+            const museumId = params.get('museum_id');
+            const museumName = params.get('museum');
+            const lat = params.get('lat');
+            const lng = params.get('lng');
+
+            if (museumId || museumName) {
+                // 等待数据加载完成后处理
+                const checkAndShow = setInterval(() => {
+                    if (museumsData && museumsData.length > 0) {
+                        clearInterval(checkAndShow);
+                        let museum;
+                        if (museumId) {
+                            museum = museumsData.find(m => m.id === parseInt(museumId));
+                        } else if (museumName) {
+                            museum = museumsData.find(m => m.name === museumName);
+                        }
+                        if (museum) {
+                            if (lat && lng && map) {
+                                map.setZoomAndCenter(15, [parseFloat(lng), parseFloat(lat)]);
+                                scrollToSection('map-section');
+                            }
+                            setTimeout(() => showMuseumDetail(museum), 300);
+                        }
+                    }
+                }, 200);
+                // 超时停止
+                setTimeout(() => clearInterval(checkAndShow), 5000);
+            }
+        }
     </script>
 </body>
 

@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 博物导览 · 博物金陵</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
+    <style>
+        :root {
+            --bg-deep: #0a0505;
+            --bg-wall: #1a0808;
+            --bg-card: rgba(212, 175, 55, 0.04);
+            --gold: #d4af37;
+            --gold-light: #e8d5a3;
+            --gold-pale: #c9a96e;
+            --vermillion: #c7000a;
+            --vermillion-bright: #d44;
+            --text-body: #c9b896;
+            --text-dim: #886655;
+            --text-muted: #554433;
+            --border-gold: rgba(212, 175, 55, 0.18);
+            --border-gold-light: rgba(212, 175, 55, 0.3);
+            --glow-gold: rgba(212, 175, 55, 0.25);
+            --glow-red: rgba(199, 0, 10, 0.15);
+            --font-display: 'Georgia', 'Noto Serif SC', 'STSong', 'SimSun', 'Songti SC', serif;
+            --font-body: 'Georgia', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            --font-kai: 'KaiTi', 'STKaiti', '楷体', serif;
+            --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            --transition-med: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--bg-deep);
+            color: var(--text-body);
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        /* Grain overlay */
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            pointer-events: none;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E");
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(212, 175, 55, 0.2);
+            border-radius: 2px;
+        }
+
+        /* ========== Page Background ========== */
+        .page-bg {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            background:
+                radial-gradient(ellipse at 50% 0%, rgba(212, 175, 55, 0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 40%, rgba(199, 0, 10, 0.04) 0%, transparent 40%),
+                radial-gradient(ellipse at 20% 70%, rgba(212, 175, 55, 0.03) 0%, transparent 35%),
+                linear-gradient(180deg, #0a0505 0%, #120606 40%, #1a0808 70%, #0f0505 100%);
+        }
+
+        .page-bg-lines {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            background-image:
+                repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(212, 175, 55, 0.012) 2px, rgba(212, 175, 55, 0.012) 4px);
+        }
+
+        /* Corner decor */
+        .corner-decor {
+            position: fixed;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .corner-decor.tl {
+            top: 0;
+            left: 0;
+            width: 80px;
+            height: 80px;
+            border-top: 1px solid rgba(212, 175, 55, 0.15);
+            border-left: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        .corner-decor.br {
+            bottom: 0;
+            right: 0;
+            width: 80px;
+            height: 80px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+            border-right: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        /* ========== Header ========== */
+        .header {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 24px;
+            border-bottom: 1px solid var(--border-gold);
+            background: rgba(10, 5, 5, 0.95);
+            backdrop-filter: blur(16px);
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .header-back {
+            color: var(--gold-pale);
+            text-decoration: none;
+            font-size: 20px;
+            transition: color var(--transition-fast);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .header-back:hover {
+            color: var(--gold);
+        }
+        .header-back span {
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .header-crest {
+            width: 3px;
+            height: 28px;
+            background: var(--gold);
+            opacity: 0.6;
+        }
+
+        .header-title {
+            font-family: var(--font-display);
+            font-size: 18px;
+            color: var(--gold);
+            letter-spacing: 4px;
+        }
+
+        .header-subtitle {
+            font-family: var(--font-kai);
+            font-size: 11px;
+            color: var(--text-dim);
+            letter-spacing: 3px;
+        }
+
+        .header-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            color: var(--text-dim);
+        }
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #4caf50;
+            box-shadow: 0 0 6px rgba(76, 175, 80, 0.5);
+            animation: pulse-dot 2s ease-in-out infinite;
+        }
+        @keyframes pulse-dot {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.3;
+            }
+        }
+
+        /* ========== Main Layout ========== */
+        .main-container {
+            position: relative;
+            z-index: 10;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px 20px;
+            display: flex;
+            flex-direction: column;
+            height: calc(100vh - 73px);
+        }
+
+        /* ========== Welcome Area (shown when no history) ========== */
+        .welcome-area {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+            transition: all var(--transition-slow);
+        }
+
+        .welcome-area.hidden {
+            display: none;
+        }
+
+        .welcome-icon {
+            font-size: 56px;
+            margin-bottom: 20px;
+            animation: float 4s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .welcome-title {
+            font-family: var(--font-display);
+            font-size: 28px;
+            color: var(--gold-light);
+            letter-spacing: 6px;
+            margin-bottom: 8px;
+        }
+
+        .welcome-divider {
+            width: 60px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            margin: 16px auto;
+        }
+
+        .welcome-subtitle {
+            font-family: var(--font-kai);
+            font-size: 15px;
+            color: var(--text-dim);
+            letter-spacing: 3px;
+            margin-bottom: 32px;
+        }
+
+        /* Suggestion Grid */
+        .suggestion-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            max-width: 460px;
+            width: 100%;
+        }
+        @media (max-width: 480px) {
+            .suggestion-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .suggestion-card {
+            background: rgba(212, 175, 55, 0.04);
+            border: 1px solid var(--border-gold);
+            border-radius: 12px;
+            padding: 16px;
+            cursor: pointer;
+            transition: all var(--transition-med);
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+        }
+        .suggestion-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(212, 175, 55, 0.06), transparent);
+            opacity: 0;
+            transition: opacity var(--transition-med);
+        }
+        .suggestion-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px var(--glow-gold);
+        }
+        .suggestion-card:hover::after {
+            opacity: 1;
+        }
+        .suggestion-card-icon {
+            font-size: 22px;
+            margin-bottom: 6px;
+            position: relative;
+            z-index: 1;
+        }
+        .suggestion-card-title {
+            font-size: 13px;
+            color: var(--gold-pale);
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 1;
+            font-weight: 500;
+        }
+        .suggestion-card-hint {
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-top: 2px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ========== Chat Messages Area ========== */
+        .chat-area {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px 0;
+            display: none;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .chat-area.active {
+            display: flex;
+        }
+
+        .message-row {
+            display: flex;
+            gap: 10px;
+            animation: msgIn 0.4s ease-out;
+        }
+        @keyframes msgIn {
+            from {
+                opacity: 0;
+                transform: translateY(12px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .message-row.user {
+            flex-direction: row-reverse;
+        }
+
+        .msg-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+        .message-row.bot .msg-avatar {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid var(--border-gold);
+        }
+        .message-row.user .msg-avatar {
+            background: rgba(199, 0, 10, 0.15);
+            border: 1px solid rgba(199, 0, 10, 0.3);
+        }
+
+        .msg-body {
+            max-width: 70%;
+        }
+
+        .msg-bubble {
+            padding: 14px 18px;
+            border-radius: 16px;
+            font-size: 14px;
+            line-height: 1.7;
+            word-break: break-word;
+        }
+        .message-row.user .msg-bubble {
+            background: linear-gradient(135deg, var(--vermillion), #a50008);
+            color: #fce4e4;
+            border-bottom-right-radius: 4px;
+            box-shadow: 0 4px 16px rgba(199, 0, 10, 0.2);
+        }
+        .message-row.bot .msg-bubble {
+            background: rgba(26, 8, 8, 0.9);
+            color: var(--text-body);
+            border-bottom-left-radius: 4px;
+            border: 1px solid var(--border-gold-light);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .msg-time {
+            font-size: 10px;
+            color: var(--text-muted);
+            margin-top: 4px;
+            padding: 0 4px;
+        }
+        .message-row.user .msg-time {
+            text-align: right;
+        }
+
+        /* Typing indicator */
+        .typing-dots {
+            display: flex;
+            gap: 4px;
+            padding: 4px 0;
+        }
+        .typing-dots span {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--gold);
+            animation: typingBounce 1.2s ease-in-out infinite;
+        }
+        .typing-dots span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .typing-dots span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        @keyframes typingBounce {
+            0%, 60%, 100% {
+                transform: translateY(0);
+                opacity: 0.4;
+            }
+            30% {
+                transform: translateY(-6px);
+                opacity: 1;
+            }
+        }
+
+        /* Action buttons in bot messages */
+        .msg-actions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .msg-action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 7px 14px;
+            border-radius: 18px;
+            font-size: 12px;
+            cursor: pointer;
+            letter-spacing: 1px;
+            transition: all var(--transition-fast);
+            border: 1px solid;
+            background: transparent;
+            font-family: var(--font-body);
+            white-space: nowrap;
+        }
+
+        .msg-action-btn.reserve {
+            color: #4caf50;
+            border-color: rgba(76, 175, 80, 0.45);
+            background: rgba(76, 175, 80, 0.06);
+        }
+        .msg-action-btn.reserve:hover {
+            background: rgba(76, 175, 80, 0.15);
+            box-shadow: 0 2px 12px rgba(76, 175, 80, 0.25);
+            border-color: rgba(76, 175, 80, 0.7);
+        }
+
+        .msg-action-btn.map-btn {
+            color: #42a5f5;
+            border-color: rgba(66, 165, 245, 0.45);
+            background: rgba(66, 165, 245, 0.06);
+        }
+        .msg-action-btn.map-btn:hover {
+            background: rgba(66, 165, 245, 0.15);
+            box-shadow: 0 2px 12px rgba(66, 165, 245, 0.25);
+            border-color: rgba(66, 165, 245, 0.7);
+        }
+
+        .msg-action-btn.detail {
+            color: var(--gold);
+            border-color: var(--border-gold-light);
+            background: rgba(212, 175, 55, 0.06);
+        }
+        .msg-action-btn.detail:hover {
+            background: rgba(212, 175, 55, 0.15);
+            box-shadow: 0 2px 12px var(--glow-gold);
+            border-color: var(--gold);
+        }
+
+        .msg-action-btn.deactivated {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        /* ========== Input Area ========== */
+        .input-area {
+            position: relative;
+            z-index: 10;
+            padding: 12px 0 8px;
+        }
+
+        .input-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(26, 8, 8, 0.85);
+            border: 1px solid var(--border-gold-light);
+            border-radius: 28px;
+            padding: 6px 6px 6px 20px;
+            transition: all var(--transition-med);
+            backdrop-filter: blur(12px);
+        }
+        .input-wrapper:focus-within {
+            border-color: var(--gold);
+            box-shadow: 0 0 20px var(--glow-gold);
+        }
+
+        .input-wrapper input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: var(--text-body);
+            font-size: 14px;
+            font-family: var(--font-body);
+            padding: 8px 0;
+        }
+        .input-wrapper input::placeholder {
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        .input-send-btn {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--gold), #a68a2e);
+            color: var(--bg-deep);
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            flex-shrink: 0;
+            transition: all var(--transition-fast);
+            box-shadow: 0 2px 12px var(--glow-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .input-send-btn:hover {
+            transform: scale(1.06);
+            box-shadow: 0 4px 20px var(--glow-gold);
+        }
+        .input-send-btn:active {
+            transform: scale(0.95);
+        }
+
+        .input-hint {
+            text-align: center;
+            font-size: 10px;
+            color: var(--text-muted);
+            margin-top: 6px;
+            letter-spacing: 1px;
+        }
+
+        /* ========== Museum Info Card (in message) ========== */
+        .museum-info-mini {
+            margin-top: 10px;
+            padding: 12px 14px;
+            border-radius: 10px;
+            background: rgba(212, 175, 55, 0.04);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            font-size: 12px;
+            line-height: 1.6;
+        }
+        .museum-info-mini .mi-name {
+            font-family: var(--font-display);
+            font-size: 15px;
+            color: var(--gold-light);
+            margin-bottom: 4px;
+        }
+        .museum-info-mini .mi-row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            color: var(--text-dim);
+        }
+        .museum-info-mini .mi-row span {
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+        }
+
+        /* ========== Scroll to bottom ========== */
+        .scroll-bottom-btn {
+            position: fixed;
+            bottom: 100px;
+            right: 24px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(212, 175, 55, 0.12);
+            border: 1px solid var(--border-gold-light);
+            color: var(--gold);
+            cursor: pointer;
+            font-size: 16px;
+            z-index: 20;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition-fast);
+        }
+        .scroll-bottom-btn.visible {
+            display: flex;
+        }
+        .scroll-bottom-btn:hover {
+            background: rgba(212, 175, 55, 0.2);
+        }
+
+        /* ========== Responsive ========== */
+        @media (max-width: 600px) {
+            .header {
+                padding: 12px 16px;
+            }
+            .header-title {
+                font-size: 15px;
+                letter-spacing: 2px;
+            }
+            .header-subtitle {
+                font-size: 10px;
+            }
+            .header-back span {
+                display: none;
+            }
+            .main-container {
+                padding: 0 12px 12px;
+                height: calc(100vh - 61px);
+            }
+            .msg-body {
+                max-width: 82%;
+            }
+            .msg-bubble {
+                padding: 10px 14px;
+                font-size: 13px;
+            }
+            .suggestion-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-bg"></div>
+    <div class="page-bg-lines"></div>
+    <div class="corner-decor tl"></div>
+    <div class="corner-decor br"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <a href="/" class="header-back">
+                ← <span>返回首页</span>
+            </a>
+            <div class="header-crest"></div>
+            <div class="header-brand">
+                <div>
+                    <div class="header-title">博物金陵</div>
+                    <div class="header-subtitle">AI 智能导览</div>
+                </div>
+            </div>
+        </div>
+        <div class="header-status">
+            <span class="status-dot"></span>
+            <span>在线</span>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Welcome Area -->
+        <div class="welcome-area" id="welcomeArea">
+            <div class="welcome-icon">🏛️</div>
+            <div class="welcome-title">博物导览 · AI 助手</div>
+            <div class="welcome-divider"></div>
+            <div class="welcome-subtitle">我是您的私人博物向导，为您探寻金陵文脉</div>
+            <div class="suggestion-grid">
+                <div class="suggestion-card" onclick="quickAsk('推荐几个必去的博物馆')">
+                    <div class="suggestion-card-icon">🏛️</div>
+                    <div class="suggestion-card-title">必去推荐</div>
+                    <div class="suggestion-card-hint">探索南京最值得参观的博物馆</div>
+                </div>
+                <div class="suggestion-card" onclick="quickAsk('有没有免费的博物馆推荐？')">
+                    <div class="suggestion-card-icon">🎫</div>
+                    <div class="suggestion-card-title">免费参观</div>
+                    <div class="suggestion-card-hint">发现可以免费游览的博物馆</div>
+                </div>
+                <div class="suggestion-card" onclick="quickAsk('南京博物院怎么预约？')">
+                    <div class="suggestion-card-icon">📅</div>
+                    <div class="suggestion-card-title">预约指南</div>
+                    <div class="suggestion-card-hint">了解各博物馆的预约方式</div>
+                </div>
+                <div class="suggestion-card" onclick="quickAsk('推荐适合带孩子去的博物馆')">
+                    <div class="suggestion-card-icon">👨‍👩‍👧</div>
+                    <div class="suggestion-card-title">亲子游玩</div>
+                    <div class="suggestion-card-hint">适合家庭出游的博物馆推荐</div>
+                </div>
+                <div class="suggestion-card" onclick="quickAsk('介绍几个有特色的专题博物馆')">
+                    <div class="suggestion-card-icon">✨</div>
+                    <div class="suggestion-card-title">特色专题</div>
+                    <div class="suggestion-card-hint">发现小众独特的专题博物馆</div>
+                </div>
+                <div class="suggestion-card" onclick="quickAsk('南京有哪些国家一级博物馆？')">
+                    <div class="suggestion-card-icon">⭐</div>
+                    <div class="suggestion-card-title">顶级馆藏</div>
+                    <div class="suggestion-card-hint">一览国家级博物馆的风采</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Messages Area -->
+        <div class="chat-area" id="chatArea"></div>
+
+        <!-- Input Area -->
+        <div class="input-area">
+            <div class="input-wrapper">
+                <input type="text" id="messageInput" placeholder="输入您的问题，探索金陵文脉..."
+                autocomplete="off">
+                <button class="input-send-btn" id="sendBtn" onclick="sendMessage()">➤</button>
+            </div>
+            <div class="input-hint">按 Enter 发送 · AI 导览基于真实博物馆数据</div>
+        </div>
+    </div>
+
+    <!-- Scroll to bottom -->
+    <button class="scroll-bottom-btn" id="scrollBottomBtn" onclick="scrollToBottom()">↓</button>
+
+    <script>
+        // ========== State ==========
+        let messagesContainer = document.getElementById('chatArea');
+        let welcomeArea = document.getElementById('welcomeArea');
+        let messageInput = document.getElementById('messageInput');
+        let sendBtn = document.getElementById('sendBtn');
+        let scrollBottomBtn = document.getElementById('scrollBottomBtn');
+        let isWaiting = false;
+        let museumsData = [];
+
+        // ========== Load Museums ==========
+        fetch('/api/museums')
+            .then(r => r.json())
+            .then(data => { museumsData = data; })
+            .catch(() => {});
+
+        // ========== Send Message ==========
+        function sendMessage() {
+            const text = messageInput.value.trim();
+            if (!text || isWaiting) return;
+
+            addMessage('user', text);
+            messageInput.value = '';
+            welcomeArea.classList.add('hidden');
+            document.getElementById('chatArea').classList.add('active');
+
+            // Typing indicator
+            const typingMsg = addTypingIndicator();
+
+            isWaiting = true;
+            sendBtn.classList.add('deactivated');
+
+            fetch('/api/ask', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ question: text })
+                })
+                .then(r => {
+                    if (!r.ok) {
+                        return r.json().then(d => {
+                            throw new Error(d.answer || '服务异常');
+                        }).catch(e => {
+                            if (e.message && e.message !== '服务异常') throw e;
+                            throw new Error(`服务异常 (${r.status})`);
+                        });
+                    }
+                    return r.json();
+                })
+                .then(d => {
+                    removeTypingIndicator(typingMsg);
+                    addBotMessage(d.answer, d.actions || []);
+                    isWaiting = false;
+                    sendBtn.classList.remove('deactivated');
+                    messageInput.focus();
+                })
+                .catch(err => {
+                    removeTypingIndicator(typingMsg);
+                    const errMsg = err.message || 'AI 服务暂时不可用';
+                    if (errMsg.includes('未配置')) {
+                        addBotMessage('AI 服务尚未配置，请在 .env 文件中设置有效的 API 密钥后重启服务。', []);
+                    } else if (errMsg.includes('超时')) {
+                        addBotMessage('AI 服务响应超时，请稍后再试。', []);
+                    } else {
+                        addBotMessage('抱歉，' + errMsg + '，请稍后再试。', []);
+                    }
+                    isWaiting = false;
+                    sendBtn.classList.remove('deactivated');
+                });
+        }
+
+        function quickAsk(question) {
+            messageInput.value = question;
+            sendMessage();
+        }
+
+        // ========== Message Rendering ==========
+        function addMessage(role, text) {
+            const row = document.createElement('div');
+            row.className = `message-row ${role}`;
+
+            const avatar = role === 'bot' ? '🏛️' : '👤';
+            const time = new Date().toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' });
+
+            row.innerHTML = `
+                <div class="msg-avatar">${avatar}</div>
+                <div class="msg-body">
+                    <div class="msg-bubble">${escapeHtml(text)}</div>
+                    <div class="msg-time">${time}</div>
+                </div>
+            `;
+
+            messagesContainer.appendChild(row);
+            scrollToBottom();
+            return row;
+        }
+
+        function addBotMessage(text, actions) {
+            const row = document.createElement('div');
+            row.className = 'message-row bot';
+            const time = new Date().toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' });
+
+            let html = `
+                <div class="msg-avatar">🏛️</div>
+                <div class="msg-body">
+                    <div class="msg-bubble">${escapeHtml(text)}</div>
+            `;
+
+            if (actions && actions.length > 0) {
+                html += '<div class="msg-actions">';
+                actions.forEach(a => {
+                    if (a.reserve_link) {
+                        html +=
+                            `<button class="msg-action-btn reserve" onclick="openReserve('${escapeAttr(a.museum_name)}', '${escapeAttr(a.reserve_link)}')">📅 预约「${escapeHtml(a.museum_name)}」</button>`;
+                    }
+                    if (a.lat && a.lng) {
+                        html +=
+                            `<button class="msg-action-btn map-btn" onclick="openMap(${a.lat}, ${a.lng}, '${escapeAttr(a.museum_name)}')">📍 地图定位</button>`;
+                    }
+                    html +=
+                        `<button class="msg-action-btn detail" onclick="openDetail(${a.museum_id})">📖 查看详情</button>`;
+                });
+                html += '</div>';
+            }
+
+            html += `<div class="msg-time">${time}</div></div>`;
+
+            row.innerHTML = html;
+            messagesContainer.appendChild(row);
+            scrollToBottom();
+            return row;
+        }
+
+        function addTypingIndicator() {
+            const row = document.createElement('div');
+            row.className = 'message-row bot';
+            row.id = 'typingIndicator';
+            row.innerHTML = `
+                <div class="msg-avatar">🏛️</div>
+                <div class="msg-body">
+                    <div class="msg-bubble">
+                        <div class="typing-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                </div>
+            `;
+            messagesContainer.appendChild(row);
+            scrollToBottom();
+            return row;
+        }
+
+        function removeTypingIndicator(row) {
+            if (row && row.parentNode) {
+                row.remove();
+            }
+        }
+
+        // ========== Actions ==========
+        function openReserve(name, link) {
+            if (!link) return;
+            if (link.startsWith('http')) {
+                window.open(link, '_blank');
+            } else {
+                addBotMessage(
+                    `📅 <b>「${name}」预约方式</b><br><br>${link}<br><br>💡 提示：部分博物馆需要通过微信公众号预约，请搜索对应公众号进行操作。`,
+                    []);
+            }
+        }
+
+        function openMap(lat, lng, name) {
+            const url = `/?museum=${encodeURIComponent(name)}&lat=${lat}&lng=${lng}`;
+            window.open(url, '_blank');
+        }
+
+        function openDetail(id) {
+            const url = `/?museum_id=${id}`;
+            window.open(url, '_blank');
+        }
+
+        // ========== Utilities ==========
+        function escapeHtml(str) {
+            if (!str) return '';
+            const div = document.createElement('div');
+            div.textContent = str;
+            return div.innerHTML;
+        }
+
+        function escapeAttr(str) {
+            if (!str) return '';
+            return str.replace(/'/g, "\\'").replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        }
+
+        function scrollToBottom() {
+            const area = document.getElementById('chatArea');
+            if (area) {
+                area.scrollTop = area.scrollHeight;
+            }
+            updateScrollBtn();
+        }
+
+        // ========== Scroll Bottom Button ==========
+        document.getElementById('chatArea').addEventListener('scroll', updateScrollBtn);
+
+        function updateScrollBtn() {
+            const area = document.getElementById('chatArea');
+            if (!area) return;
+            const isNearBottom = area.scrollHeight - area.scrollTop - area.clientHeight < 100;
+            if (isNearBottom) {
+                scrollBottomBtn.classList.remove('visible');
+            } else {
+                scrollBottomBtn.classList.add('visible');
+            }
+        }
+
+        // ========== Keyboard ==========
+        messageInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+
+        // ========== Focus input on load ==========
+        messageInput.focus();
+
+        // ========== Handle museum navigation from URL params (when returning from detail/map) ==========
+        const urlParams = new URLSearchParams(window.location.search);
+        const museumName = urlParams.get('museum');
+        if (museumName) {
+            messageInput.value = `请介绍一下【${museumName}】`;
+            setTimeout(() => sendMessage(), 500);
+        }
+    </script>
+</body>
+
+</html>

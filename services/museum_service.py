@@ -81,6 +81,7 @@ def get_all_museums():
                 'wechat': museum.get('wechat', ''),
                 'reserve_link': museum.get('reserve_link', ''),
                 'website': museum.get('website', ''),
+                'photo_url': museum.get('photo_url', ''),
                 'intro_short': museum.get('intro_short', '')
             }
             transformed_museums.append(transformed)
