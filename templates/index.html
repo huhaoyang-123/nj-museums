@@ -162,7 +162,8 @@
 
         /* ========== Hero Section ========== */
         .hero {
-            min-height: 100vh;
+            min-height: 85vh;
+            max-height: 90vh;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -170,7 +171,7 @@
             text-align: center;
             position: relative;
             overflow: hidden;
-            padding: 40px 20px;
+            padding: 60px 20px;
             background:
                 radial-gradient(ellipse at 50% 30%, rgba(212, 175, 55, 0.10) 0%, transparent 60%),
                 radial-gradient(ellipse at 80% 70%, rgba(199, 0, 10, 0.06) 0%, transparent 50%),
@@ -382,39 +383,164 @@
             opacity: 0.5;
         }
 
-        /* ========== Museum Type Tags ========== */
-        .type-grid {
+        /* ========== Search Bar ========== */
+        .search-container {
             display: flex;
             gap: 12px;
             flex-wrap: wrap;
             justify-content: center;
             max-width: 600px;
+            margin-bottom: 24px;
         }
 
-        .type-tag {
+        .search-input-wrapper {
+            flex: 1;
+            min-width: 280px;
+            max-width: 600px;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 10px 36px 10px 14px;
+            border: 1px solid var(--border-gold-light);
+            border-radius: 20px;
+            background: rgba(212, 175, 55, 0.04);
+            color: var(--text-body);
+            font-size: 13px;
+            outline: none;
+            transition: all var(--transition-med);
+        }
+
+        .search-input:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 12px var(--glow-gold);
+        }
+
+        .search-input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .search-clear-btn {
+            position: absolute;
+            right: 36px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--text-dim);
+            font-size: 14px;
+            cursor: pointer;
+            padding: 2px;
+            opacity: 0;
+            transition: opacity var(--transition-fast);
+        }
+
+        .search-input:not(:placeholder-shown)+.search-clear-btn {
+            opacity: 1;
+        }
+
+        .search-clear-btn:hover {
+            color: var(--gold);
+        }
+
+        /* ========== Filter Bars ========== */
+        .filter-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 800px;
+            width: 100%;
+            padding: 0 20px;
+            margin-bottom: 32px;
+        }
+
+        .filter-row {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.06);
+        }
+
+        .filter-row:last-child {
+            border-bottom: none;
+        }
+
+        .filter-label {
+            font-size: 12px;
+            color: var(--gold-pale);
+            letter-spacing: 2px;
+            min-width: 60px;
+            text-align: right;
+            flex-shrink: 0;
+        }
+
+        .filter-grid {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .filter-tag {
             background: rgba(212, 175, 55, 0.05);
             border: 1px solid var(--border-gold-light);
             color: var(--gold-pale);
-            padding: 6px 16px;
+            padding: 6px 14px;
             font-size: 12px;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             font-family: var(--font-display);
             transition: all var(--transition-med);
             cursor: pointer;
+            border-radius: 16px;
         }
 
-        .type-tag:hover {
+        .filter-tag:hover {
             background: rgba(212, 175, 55, 0.12);
             border-color: var(--gold);
             color: var(--gold);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 16px var(--glow-gold);
+            transform: translateY(-1px);
         }
 
-        .type-tag.active {
+        .filter-tag.active {
             background: rgba(212, 175, 55, 0.15);
             border-color: var(--gold);
             color: var(--gold);
+            box-shadow: 0 0 8px var(--glow-gold);
+        }
+
+        .filter-tag.free {
+            color: #4caf50;
+            border-color: rgba(76, 175, 80, 0.3);
+        }
+
+        .filter-tag.free.active {
+            background: rgba(76, 175, 80, 0.15);
+            border-color: #4caf50;
+            color: #4caf50;
+        }
+
+        .filter-tag.paid {
+            color: #ff9800;
+            border-color: rgba(255, 152, 0, 0.3);
+        }
+
+        .filter-tag.paid.active {
+            background: rgba(255, 152, 0, 0.15);
+            border-color: #ff9800;
+            color: #ff9800;
         }
 
         /* ========== Museum Cards ========== */
@@ -540,6 +666,54 @@
             display: none;
         }
 
+        /* ========== Pagination ========== */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .pagination-btn {
+            min-width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border-gold-light);
+            background: transparent;
+            color: var(--text-dim);
+            font-size: 14px;
+            cursor: pointer;
+            transition: all var(--transition-med);
+            border-radius: 4px;
+        }
+
+        .pagination-btn:hover:not(:disabled) {
+            border-color: var(--gold);
+            color: var(--gold);
+            background: rgba(212, 175, 55, 0.08);
+        }
+
+        .pagination-btn.active {
+            border-color: var(--gold);
+            color: var(--gold);
+            background: rgba(212, 175, 55, 0.15);
+        }
+
+        .pagination-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .pagination-info {
+            font-size: 13px;
+            color: var(--text-dim);
+            margin: 0 12px;
+        }
+
         /* ========== Museum Detail Modal ========== */
         .modal-overlay {
             position: fixed;
@@ -559,7 +733,7 @@
             border-radius: 12px;
             max-width: 600px;
             width: 100%;
-            max-height: 90vh;
+            max-height: 95vh;
             overflow-y: auto;
             position: relative;
             box-shadow: 0 20px 60px var(--glow-gold);
@@ -599,7 +773,7 @@
             object-fit: cover;
             border-radius: 12px 12px 0 0;
             display: block;
-            background: linear-gradient(135deg, rgba(212,175,55,0.08), rgba(199,0,10,0.06));
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.08), rgba(199, 0, 10, 0.06));
         }
 
         .modal-photo-placeholder {
@@ -609,13 +783,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, rgba(212,175,55,0.06), rgba(26,8,8,0.8));
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.06), rgba(26, 8, 8, 0.8));
             border-bottom: 1px solid var(--border-gold);
         }
+
         .modal-photo-placeholder .ph-icon {
             font-size: 56px;
             opacity: 0.5;
         }
+
         .modal-photo-placeholder .ph-text {
             position: absolute;
             bottom: 24px;
@@ -711,14 +887,139 @@
             margin: 0;
         }
 
+        /* ========== Collections Carousel ========== */
+        .modal-collections {
+            margin-bottom: 24px;
+            padding: 16px;
+            background: rgba(212, 175, 55, 0.04);
+            border-radius: 8px;
+            border: 1px solid var(--border-dark);
+        }
+
+        .modal-collections h3 {
+            font-size: 16px;
+            color: var(--gold);
+            margin: 0 0 12px 0;
+        }
+
+        .collections-carousel {
+            display: flex;
+            gap: 12px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 8px;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(212, 175, 55, 0.3) transparent;
+        }
+
+        .collections-carousel::-webkit-scrollbar {
+            height: 4px;
+        }
+
+        .collections-carousel::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .collections-carousel::-webkit-scrollbar-thumb {
+            background: rgba(212, 175, 55, 0.3);
+            border-radius: 2px;
+        }
+
+        .collection-card {
+            flex: 0 0 180px;
+            scroll-snap-align: start;
+            background: rgba(26, 8, 8, 0.6);
+            border: 1px solid var(--border-gold);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all var(--transition-med);
+            cursor: default;
+        }
+
+        .collection-card:hover {
+            border-color: var(--gold);
+            box-shadow: 0 0 16px var(--glow-gold);
+            transform: translateY(-2px);
+        }
+
+        .collection-card-image {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(26, 8, 8, 0.8));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: var(--gold);
+            opacity: 0.6;
+        }
+
+        .collection-card-body {
+            padding: 10px 12px;
+        }
+
+        .collection-card-name {
+            font-family: var(--font-display);
+            font-size: 13px;
+            color: var(--gold-light);
+            margin: 0 0 4px 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .collection-card-era {
+            font-size: 10px;
+            color: var(--text-dim);
+            margin: 0 0 4px 0;
+            background: rgba(212, 175, 55, 0.1);
+            display: inline-block;
+            padding: 1px 6px;
+            border-radius: 3px;
+        }
+
+        .collection-card-desc {
+            font-size: 11px;
+            color: var(--text-dim);
+            margin: 0;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .collections-note {
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        .collections-empty {
+            font-size: 13px;
+            color: var(--text-muted);
+            text-align: center;
+            padding: 16px 0;
+        }
+
         .modal-actions {
             display: flex;
             gap: 12px;
             justify-content: center;
+            flex-shrink: 0;
+            padding: 16px 0 8px;
+            background: linear-gradient(to bottom, transparent, var(--bg-wall) 20%);
+            margin-top: -40px;
+            position: relative;
+            z-index: 5;
         }
 
         .btn-map,
-        .btn-reserve {
+        .btn-reserve,
+        .btn-collections {
             padding: 12px 24px;
             border: 1px solid var(--border-gold);
             background: transparent;
@@ -730,7 +1031,8 @@
         }
 
         .btn-map:hover,
-        .btn-reserve:hover {
+        .btn-reserve:hover,
+        .btn-collections:hover {
             background: rgba(212, 175, 55, 0.1);
             box-shadow: 0 0 12px var(--glow-gold);
         }
@@ -741,8 +1043,144 @@
             border-top: 1px solid var(--border-gold);
             padding: 0;
             position: relative;
-            height: 70vh;
             min-height: 500px;
+            height: 65vh;
+            max-height: 700px;
+        }
+
+        /* ========== Map Filter Panel ========== */
+        .map-filter-panel {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 50;
+            background: rgba(10, 5, 5, 0.92);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-gold);
+            border-radius: 12px;
+            padding: 16px;
+            min-width: 200px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        }
+
+        .map-filter-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-gold);
+        }
+
+        .map-filter-title {
+            font-size: 13px;
+            color: var(--gold);
+            letter-spacing: 2px;
+            font-family: var(--font-display);
+        }
+
+        .map-filter-toggle {
+            width: 24px;
+            height: 24px;
+            border: 1px solid var(--border-gold);
+            border-radius: 50%;
+            background: transparent;
+            color: var(--gold);
+            font-size: 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition-fast);
+        }
+
+        .map-filter-toggle:hover {
+            background: rgba(212, 175, 55, 0.1);
+        }
+
+        .map-filter-content {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .map-filter-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .map-filter-option:hover {
+            background: rgba(212, 175, 55, 0.08);
+        }
+
+        .map-filter-option.active {
+            background: rgba(212, 175, 55, 0.15);
+        }
+
+        .map-filter-checkbox {
+            width: 16px;
+            height: 16px;
+            border: 1px solid var(--border-gold);
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition-fast);
+            flex-shrink: 0;
+        }
+
+        .map-filter-option.active .map-filter-checkbox {
+            background: var(--gold);
+            border-color: var(--gold);
+        }
+
+        .map-filter-checkbox::after {
+            content: '✓';
+            color: var(--bg-deep);
+            font-size: 10px;
+            opacity: 0;
+            transition: opacity var(--transition-fast);
+        }
+
+        .map-filter-option.active .map-filter-checkbox::after {
+            opacity: 1;
+        }
+
+        .map-filter-label {
+            font-size: 12px;
+            color: var(--text-body);
+            letter-spacing: 1px;
+        }
+
+        .map-filter-reset {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border-gold);
+        }
+
+        .map-filter-reset-btn {
+            width: 100%;
+            padding: 8px;
+            background: transparent;
+            border: 1px solid var(--border-gold);
+            border-radius: 8px;
+            color: var(--gold);
+            font-size: 12px;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .map-filter-reset-btn:hover {
+            background: rgba(212, 175, 55, 0.1);
+            box-shadow: 0 0 12px var(--glow-gold);
         }
 
         .map-section::before {
@@ -915,12 +1353,21 @@
             opacity: 0;
             transition: all 0.3s ease;
         }
+
         .mkr-pulse.active {
             animation: mkrPulse 1.2s ease-out infinite;
         }
+
         @keyframes mkrPulse {
-            0% { transform: translateX(-50%) scale(0.8); opacity: 0.8; }
-            100% { transform: translateX(-50%) scale(1.8); opacity: 0; }
+            0% {
+                transform: translateX(-50%) scale(0.8);
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translateX(-50%) scale(1.8);
+                opacity: 0;
+            }
         }
 
         /* Outer glow ring */
@@ -947,9 +1394,10 @@
             align-items: center;
             justify-content: center;
             transition: transform 0.25s ease;
-            border: 2px solid rgba(255,255,255,0.25);
+            border: 2px solid rgba(255, 255, 255, 0.25);
             z-index: 2;
         }
+
         .mkr-icon {
             font-size: 14px;
             line-height: 1;
@@ -986,12 +1434,14 @@
             pointer-events: none;
             transition: opacity 0.25s ease, top 0.25s ease;
             z-index: 10;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
         }
+
         .mkr-label.show {
             opacity: 1;
             top: -44px;
         }
+
         .mkr-label-name {
             display: block;
             font-size: 12px;
@@ -999,16 +1449,18 @@
             font-family: 'Georgia', 'Noto Serif SC', serif;
             letter-spacing: 1px;
         }
+
         .mkr-label-cat {
             display: block;
             font-size: 10px;
             color: #886655;
         }
+
         .mkr-level {
             display: inline-block;
             font-size: 9px;
             color: #d4af37;
-            background: rgba(212,175,55,0.12);
+            background: rgba(212, 175, 55, 0.12);
             padding: 1px 5px;
             border-radius: 3px;
             margin: 2px 0;
@@ -1023,21 +1475,25 @@
             background: linear-gradient(160deg, #1a0808 0%, #0f0505 100%);
             border-radius: 12px;
             border: 1px solid rgba(212, 175, 55, 0.25);
-            box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
         }
+
         .iw-header {
             display: flex;
             align-items: center;
             gap: 10px;
         }
+
         .iw-icon {
             font-size: 28px;
             flex-shrink: 0;
         }
+
         .iw-title-area {
             flex: 1;
             min-width: 0;
         }
+
         .iw-name {
             font-size: 16px;
             color: #e8d5a3;
@@ -1048,21 +1504,25 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
+
         .iw-category {
             font-size: 11px;
             color: #886655;
         }
+
         .iw-divider {
             height: 1px;
             background: rgba(212, 175, 55, 0.15);
             margin: 12px 0;
         }
+
         .iw-info-grid {
             display: flex;
             flex-direction: column;
             gap: 6px;
             margin-bottom: 10px;
         }
+
         .iw-info-item {
             display: flex;
             align-items: flex-start;
@@ -1071,21 +1531,25 @@
             color: #c9b896;
             line-height: 1.5;
         }
+
         .iw-info-icon {
             flex-shrink: 0;
             font-size: 13px;
         }
+
         .iw-desc {
             margin: 0 0 12px 0;
             font-size: 12px;
             color: #886655;
             line-height: 1.6;
         }
+
         .iw-actions {
             display: flex;
             gap: 8px;
             flex-wrap: wrap;
         }
+
         .iw-action-btn {
             padding: 6px 14px;
             border-radius: 16px;
@@ -1100,16 +1564,19 @@
             display: inline-block;
             font-family: inherit;
         }
+
         .iw-action-btn:hover {
             background: rgba(212, 175, 55, 0.15);
             border-color: #d4af37;
             box-shadow: 0 2px 10px rgba(212, 175, 55, 0.2);
         }
+
         .iw-action-btn.iw-reserve {
             color: #4caf50;
             border-color: rgba(76, 175, 80, 0.3);
             background: rgba(76, 175, 80, 0.06);
         }
+
         .iw-action-btn.iw-reserve:hover {
             background: rgba(76, 175, 80, 0.15);
             border-color: #4caf50;
@@ -1128,7 +1595,7 @@
             border-radius: 50%;
             background: linear-gradient(135deg, var(--gold), #a68a2e);
             color: var(--bg-deep);
-            border: 2px solid rgba(255,255,255,0.15);
+            border: 2px solid rgba(255, 255, 255, 0.15);
             cursor: pointer;
             font-size: 22px;
             display: flex;
@@ -1137,10 +1604,12 @@
             box-shadow: 0 4px 20px var(--glow-gold);
             transition: all var(--transition-med);
         }
+
         #chat-toggle-btn:hover {
             transform: scale(1.08);
             box-shadow: 0 6px 28px rgba(212, 175, 55, 0.4);
         }
+
         #chat-toggle-btn.hidden {
             opacity: 0;
             pointer-events: none;
@@ -1158,9 +1627,9 @@
             z-index: 1002;
             display: flex;
             flex-direction: column;
-            background: linear-gradient(180deg, rgba(10,5,5,0.99) 0%, rgba(18,6,6,0.99) 100%);
+            background: linear-gradient(180deg, rgba(10, 5, 5, 0.99) 0%, rgba(18, 6, 6, 0.99) 100%);
             border-left: 1px solid var(--border-gold);
-            box-shadow: -8px 0 40px rgba(0,0,0,0.5);
+            box-shadow: -8px 0 40px rgba(0, 0, 0, 0.5);
             transform: translateX(100%);
             transition: transform var(--transition-slow);
             padding: 0;
@@ -1178,12 +1647,14 @@
             border-bottom: 1px solid var(--border-gold);
             flex-shrink: 0;
         }
+
         .chat-panel-title {
             font-family: var(--font-display);
             font-size: 16px;
             color: var(--gold);
             letter-spacing: 3px;
         }
+
         .chat-panel-close {
             width: 32px;
             height: 32px;
@@ -1198,6 +1669,7 @@
             justify-content: center;
             transition: all var(--transition-fast);
         }
+
         .chat-panel-close:hover {
             background: rgba(212, 175, 55, 0.1);
             box-shadow: 0 0 12px var(--glow-gold);
@@ -1224,6 +1696,7 @@
             transition: all var(--transition-med);
             white-space: nowrap;
         }
+
         .quick-action-chip:hover {
             background: rgba(212, 175, 55, 0.12);
             border-color: var(--gold);
@@ -1240,9 +1713,11 @@
             margin-bottom: 10px;
             display: flex;
         }
+
         .message.user {
             justify-content: flex-end;
         }
+
         .message.bot {
             justify-content: flex-start;
         }
@@ -1255,12 +1730,14 @@
             line-height: 1.6;
             word-break: break-word;
         }
+
         .message.user .bubble {
             background: linear-gradient(135deg, var(--vermillion), #a50008);
             color: white;
             border-bottom-right-radius: 4px;
             box-shadow: 0 2px 10px rgba(199, 0, 10, 0.2);
         }
+
         .message.bot .bubble {
             background: rgba(26, 8, 8, 0.95);
             color: var(--text-body);
@@ -1278,6 +1755,7 @@
             flex-shrink: 0;
             background: rgba(10, 5, 5, 0.95);
         }
+
         #questionInput {
             flex: 1;
             padding: 10px 14px;
@@ -1289,9 +1767,11 @@
             font-family: inherit;
             color: var(--text-body);
         }
+
         #questionInput::placeholder {
             color: var(--text-muted);
         }
+
         #questionInput:focus {
             border-color: var(--gold);
             box-shadow: 0 0 10px var(--glow-gold);
@@ -1313,6 +1793,7 @@
             transition: all var(--transition-fast);
             box-shadow: 0 2px 10px var(--glow-gold);
         }
+
         #sendButton:hover {
             transform: scale(1.06);
         }
@@ -1321,15 +1802,100 @@
         #chat-backdrop {
             position: fixed;
             inset: 0;
-            background: rgba(0,0,0,0.4);
+            background: rgba(0, 0, 0, 0.4);
             z-index: 1001;
             opacity: 0;
             pointer-events: none;
             transition: opacity var(--transition-med);
         }
+
         #chat-backdrop.show {
             opacity: 1;
             pointer-events: auto;
+        }
+
+        /* ========== Page Navigation (Full Page) ========== */
+        .page-nav-container {
+            position: fixed;
+            bottom: 32px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 998;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: rgba(10, 5, 5, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-gold);
+            border-radius: 32px;
+            padding: 8px 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .page-nav-btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1px solid var(--border-gold);
+            background: transparent;
+            color: var(--gold);
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition-med);
+        }
+
+        .page-nav-btn:hover:not(:disabled) {
+            background: rgba(212, 175, 55, 0.15);
+            box-shadow: 0 0 16px var(--glow-gold);
+            transform: translateY(-2px);
+        }
+
+        .page-nav-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .page-nav-indicator {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .page-nav-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(212, 175, 55, 0.3);
+            transition: all var(--transition-med);
+            cursor: pointer;
+        }
+
+        .page-nav-dot.active {
+            background: var(--gold);
+            box-shadow: 0 0 8px var(--glow-gold);
+            transform: scale(1.3);
+        }
+
+        .page-nav-dot:hover {
+            background: rgba(212, 175, 55, 0.6);
+        }
+
+        .page-nav-text {
+            font-size: 12px;
+            color: var(--text-dim);
+            letter-spacing: 2px;
+            margin: 0 8px;
+        }
+
+        /* ========== Full Page Section Styles ========== */
+        .full-page-section {
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         /* ========== Responsive ========== */
@@ -1359,9 +1925,9 @@
     <nav class="nav" id="topNav">
         <span class="nav-title">博物金陵</span>
         <ul class="nav-links">
-            <li><a onclick="scrollToSection('hero')">首页</a></li>
-            <li><a onclick="scrollToSection('museums')">博物馆</a></li>
-            <li><a onclick="scrollToSection('map-section')">地图</a></li>
+            <li><a onclick="navigateToPage(1)">首页</a></li>
+            <li><a onclick="navigateToPage(2)">博物馆</a></li>
+            <li><a onclick="navigateToPage(3)">地图</a></li>
             <li><a href="/chat">AI 导览</a></li>
         </ul>
     </nav>
@@ -1379,7 +1945,7 @@
             <div class="hero-crest"></div>
             <h1>博物金陵</h1>
             <div class="hero-divider"></div>
-            <div class="hero-subtitle">水墨长卷 · 文化寻踪</div>
+            <div class="hero-subtitle">阅古通今 · 文化寻踪</div>
             <p class="hero-desc">金陵文脉，千年传承。探索南京的博物馆，触摸历史的温度。</p>
             <div style="display:flex;justify-content:center;align-items:center;gap:20px;flex-wrap:wrap;">
                 <button class="hero-cta" onclick="scrollToSection('museums')">开始探索</button>
@@ -1392,26 +1958,111 @@
     <!-- ==================== MUSEUMS SECTION ==================== -->
     <section class="section" id="museums">
         <div class="section-header fade-up">
-            <div class="section-label">— 博物馆类型 —</div>
-            <h2 class="section-title">中国·南京</h2>
+            <div class="section-label">— 博物馆探索 —</div>
+            <h2 class="section-title">博物展馆</h2>
             <div class="section-divider"></div>
+            <p style="color: var(--text-dim); font-size: 14px; margin-top: 8px;">共收录 82 座博物馆，探索金陵文脉</p>
         </div>
 
-        <div class="type-grid fade-up" id="typeGrid">
-            <span class="type-tag active" data-type="all">全部</span>
-            <span class="type-tag" data-type="history">历史人文</span>
-            <span class="type-tag" data-type="art">艺术文化</span>
-            <span class="type-tag" data-type="science">科学教育</span>
-            <span class="type-tag" data-type="specialty">专题特色</span>
+        <!-- 搜索栏 -->
+        <div class="search-container fade-up" id="searchContainer">
+            <div class="search-input-wrapper">
+                <input type="text" id="searchInput" class="search-input" placeholder="搜索博物馆名称、简介...">
+                <button class="search-clear-btn" onclick="clearSearch()">×</button>
+                <span class="search-icon">🔍</span>
+            </div>
+        </div>
+
+        <!-- 筛选栏 -->
+        <div class="filter-section fade-up" id="filterSection">
+            <!-- 区域筛选 - 最上 -->
+            <div class="filter-row">
+                <span class="filter-label">📍 区域</span>
+                <div class="filter-grid" id="districtFilter">
+                    <span class="filter-tag active" data-filter="district" data-value="all">全部区域</span>
+                    <span class="filter-tag" data-filter="district" data-value="玄武区">玄武区</span>
+                    <span class="filter-tag" data-filter="district" data-value="秦淮区">秦淮区</span>
+                    <span class="filter-tag" data-filter="district" data-value="鼓楼区">鼓楼区</span>
+                    <span class="filter-tag" data-filter="district" data-value="建邺区">建邺区</span>
+                    <span class="filter-tag" data-filter="district" data-value="栖霞区">栖霞区</span>
+                    <span class="filter-tag" data-filter="district" data-value="雨花台区">雨花台区</span>
+                    <span class="filter-tag" data-filter="district" data-value="江宁区">江宁区</span>
+                    <span class="filter-tag" data-filter="district" data-value="浦口区">浦口区</span>
+                    <span class="filter-tag" data-filter="district" data-value="六合区">六合区</span>
+                </div>
+            </div>
+
+            <!-- 类型筛选 - 居中 -->
+            <div class="filter-row">
+                <span class="filter-label">🏛️ 分类</span>
+                <div class="filter-grid" id="typeFilter">
+                    <span class="filter-tag active" data-filter="type" data-value="all">全部分类</span>
+                    <span class="filter-tag" data-filter="type" data-value="history">历史人文</span>
+                    <span class="filter-tag" data-filter="type" data-value="art">艺术文化</span>
+                    <span class="filter-tag" data-filter="type" data-value="science">科学教育</span>
+                    <span class="filter-tag" data-filter="type" data-value="specialty">专题特色</span>
+                </div>
+            </div>
+
+            <!-- 免费/付费筛选 - 最下 -->
+            <div class="filter-row">
+                <span class="filter-label">🎫 费用</span>
+                <div class="filter-grid" id="ticketFilter">
+                    <span class="filter-tag active" data-filter="ticket" data-value="all">全部</span>
+                    <span class="filter-tag free" data-filter="ticket" data-value="free">免费</span>
+                    <span class="filter-tag paid" data-filter="ticket" data-value="paid">付费</span>
+                </div>
+            </div>
         </div>
 
         <div class="museum-cards-grid" id="museumCardsGrid">
             <!-- 博物馆卡片将通过JS动态加载 -->
         </div>
+
+        <div class="result-count" id="resultCount"
+            style="text-align:center;color:var(--text-muted);font-size:13px;margin-top:12px;letter-spacing:2px;"></div>
+
+        <div class="pagination" id="pagination"></div>
     </section>
 
     <!-- ==================== MAP SECTION ==================== -->
     <section class="map-section" id="map-section">
+        <!-- 地图筛选面板 -->
+        <div class="map-filter-panel" id="mapFilterPanel">
+            <div class="map-filter-header">
+                <span class="map-filter-title">📍 筛选</span>
+                <button class="map-filter-toggle" onclick="toggleMapFilterPanel()">›</button>
+            </div>
+            <div class="map-filter-content" id="mapFilterContent">
+                <div class="map-filter-option active" data-map-filter="type" data-value="history">
+                    <div class="map-filter-checkbox"></div>
+                    <span class="map-filter-label">🏛️ 历史人文</span>
+                </div>
+                <div class="map-filter-option active" data-map-filter="type" data-value="art">
+                    <div class="map-filter-checkbox"></div>
+                    <span class="map-filter-label">🎨 艺术文化</span>
+                </div>
+                <div class="map-filter-option active" data-map-filter="type" data-value="science">
+                    <div class="map-filter-checkbox"></div>
+                    <span class="map-filter-label">🔬 科学教育</span>
+                </div>
+                <div class="map-filter-option active" data-map-filter="type" data-value="specialty">
+                    <div class="map-filter-checkbox"></div>
+                    <span class="map-filter-label">✨ 专题特色</span>
+                </div>
+                <div class="map-filter-option active" data-map-filter="ticket" data-value="free">
+                    <div class="map-filter-checkbox"></div>
+                    <span class="map-filter-label">🆓 免费</span>
+                </div>
+                <div class="map-filter-option active" data-map-filter="ticket" data-value="paid">
+                    <div class="map-filter-checkbox"></div>
+                    <span class="map-filter-label">💰 付费</span>
+                </div>
+            </div>
+            <div class="map-filter-reset">
+                <button class="map-filter-reset-btn" onclick="resetMapFilters()">重置筛选</button>
+            </div>
+        </div>
         <div id="map-container"></div>
     </section>
 
@@ -1437,46 +2088,66 @@
                     <span class="ph-text">博物金陵</span>
                 </div>
                 <div class="modal-body-inner">
-                <div class="modal-header">
-                    <div class="modal-icon" id="modalIcon">🏛️</div>
-                    <div class="modal-title-area">
-                        <h2 id="modalName">博物馆名称</h2>
-                        <div class="modal-category" id="modalCategory">分类</div>
+                    <div class="modal-header">
+                        <div class="modal-icon" id="modalIcon">🏛️</div>
+                        <div class="modal-title-area">
+                            <h2 id="modalName">博物馆名称</h2>
+                            <div class="modal-category" id="modalCategory">分类</div>
+                        </div>
+                        <div class="modal-level" id="modalLevel"></div>
                     </div>
-                    <div class="modal-level" id="modalLevel"></div>
-                </div>
 
-                <div class="modal-info-grid">
-                    <div class="info-item">
-                        <span class="info-label">📍 地址</span>
-                        <span class="info-value" id="modalAddress">地址信息</span>
+                    <div class="modal-info-grid">
+                        <div class="info-item">
+                            <span class="info-label">📍 地址</span>
+                            <span class="info-value" id="modalAddress">地址信息</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">⏰ 开放时间</span>
+                            <span class="info-value" id="modalOpenTime">开放时间</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">🎫 门票信息</span>
+                            <span class="info-value" id="modalTicket">门票信息</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">📞 联系电话</span>
+                            <span class="info-value" id="modalPhone">联系电话</span>
+                        </div>
                     </div>
-                    <div class="info-item">
-                        <span class="info-label">⏰ 开放时间</span>
-                        <span class="info-value" id="modalOpenTime">开放时间</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">🎫 门票信息</span>
-                        <span class="info-value" id="modalTicket">门票信息</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">📞 联系电话</span>
-                        <span class="info-value" id="modalPhone">联系电话</span>
-                    </div>
-                </div>
 
-                <div class="modal-description">
-                    <h3>📖 博物馆介绍</h3>
-                    <p id="modalDesc">详细介绍内容...</p>
-                </div>
+                    <div class="modal-description">
+                        <h3>📖 博物馆介绍</h3>
+                        <p id="modalDesc">详细介绍内容...</p>
+                    </div>
 
-                <div class="modal-actions">
-                    <button class="btn-map" onclick="navigateToMap()">📍 在地图上查看</button>
-                    <button class="btn-reserve" id="btnReserve" style="display: none;">🔗 预约参观</button>
-                </div>
+                    <div class="modal-collections" id="modalCollections" style="display:none;">
+                        <h3>🏺 代表文物</h3>
+                        <div class="collections-carousel" id="collectionsCarousel"></div>
+                        <p class="collections-note" id="collectionsNote"></p>
+                    </div>
+
+                    <div class="modal-actions">
+                        <button class="btn-map" onclick="navigateToMap()">📍 在地图上查看</button>
+                        <button class="btn-collections" id="btnCollections" style="display: none;"
+                            onclick="openCollectionsPage()">🏺 代表文物</button>
+                        <button class="btn-reserve" id="btnReserve" style="display: none;">🔗 预约参观</button>
+                    </div>
                 </div><!-- /modal-body-inner -->
             </div>
         </div>
+    </div>
+
+    <!-- ==================== Page Navigation Controls ==================== -->
+    <div class="page-nav-container" id="pageNavContainer">
+        <button class="page-nav-btn" id="prevPageBtn" onclick="goToPrevPage()" disabled>‹</button>
+        <div class="page-nav-indicator">
+            <span class="page-nav-dot active" data-page="1" onclick="goToPageDirect(1)"></span>
+            <span class="page-nav-dot" data-page="2" onclick="goToPageDirect(2)"></span>
+            <span class="page-nav-dot" data-page="3" onclick="goToPageDirect(3)"></span>
+        </div>
+        <span class="page-nav-text" id="pageNavText">01 / 03</span>
+        <button class="page-nav-btn" id="nextPageBtn" onclick="goToNextPage()">›</button>
     </div>
 
     <!-- ==================== Floating Chat Toggle Button ==================== -->
@@ -1544,6 +2215,11 @@
             }
         }
 
+        // ========== Navigate to page (for nav bar) ==========
+        function navigateToPage(pageNum) {
+            goToPageDirect(pageNum);
+        }
+
         // ========== Fade-up on scroll ==========
         const observerOptions = {
             root: null,
@@ -1562,6 +2238,14 @@
 
         document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
+        // ========== Page Navigation Constants ==========
+        const PAGES = [
+            { id: 'hero', name: '首页' },
+            { id: 'museums', name: '博物馆' },
+            { id: 'map-section', name: '地图' }
+        ];
+        let currentPageIndex = 0;
+
         // ========== Museum Data ==========
         let museumsData = [];
 
@@ -1573,8 +2257,24 @@
             'specialty': '✨'
         };
 
+        // ========== Filter State ==========
+        const filterState = {
+            keyword: '',
+            type: 'all',
+            ticket: 'all',
+            district: 'all'
+        };
+
+        // ========== Pagination State ==========
+        const ITEMS_PER_PAGE = 12;
+        let currentMuseumPage = 1;
+        let filteredMuseums = [];
+
+        // ========== Map Marker Storage ==========
+        let mapMarkers = [];
+
         // ========== Render Museum Cards ==========
-        function renderMuseumCards(museums) {
+        function renderMuseumCards(museums, page = 1) {
             const grid = document.getElementById('museumCardsGrid');
             if (!grid) {
                 console.error('museumCardsGrid element not found');
@@ -1582,7 +2282,11 @@
             }
             grid.innerHTML = '';
 
-            museums.forEach((museum, index) => {
+            const startIndex = (page - 1) * ITEMS_PER_PAGE;
+            const endIndex = startIndex + ITEMS_PER_PAGE;
+            const pageMuseums = museums.slice(startIndex, endIndex);
+
+            pageMuseums.forEach((museum, index) => {
                 const card = document.createElement('div');
                 card.className = 'museum-card fade-up visible';
                 card.dataset.type = museum.type || 'all';
@@ -1613,6 +2317,72 @@
 
                 grid.appendChild(card);
             });
+
+            filteredMuseums = museums;
+            currentMuseumPage = page;
+            renderMuseumPagination();
+        }
+
+        // ========== Render Museum Pagination ==========
+        function renderMuseumPagination() {
+            const pagination = document.getElementById('pagination');
+            const resultCount = document.getElementById('resultCount');
+            if (!pagination) return;
+
+            const totalItems = filteredMuseums.length;
+            const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
+
+            // 更新结果计数
+            if (resultCount) {
+                resultCount.textContent = `— 共 ${totalItems} 座博物馆 —`;
+            }
+
+            if (totalPages <= 1) {
+                pagination.innerHTML = '';
+                return;
+            }
+
+            let html = '';
+
+            html += `<button class="pagination-btn" onclick="goToMuseumPage(${currentMuseumPage - 1})" ${currentMuseumPage === 1 ? 'disabled' : ''}>‹</button>`;
+
+            const maxVisiblePages = 5;
+            let startPage = Math.max(1, currentMuseumPage - Math.floor(maxVisiblePages / 2));
+            let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+
+            if (endPage - startPage < maxVisiblePages - 1) {
+                startPage = Math.max(1, endPage - maxVisiblePages + 1);
+            }
+
+            if (startPage > 1) {
+                html += `<button class="pagination-btn" onclick="goToMuseumPage(1)">1</button>`;
+                if (startPage > 2) {
+                    html += `<span class="pagination-info">...</span>`;
+                }
+            }
+
+            for (let i = startPage; i <= endPage; i++) {
+                html += `<button class="pagination-btn ${i === currentMuseumPage ? 'active' : ''}" onclick="goToMuseumPage(${i})">${i}</button>`;
+            }
+
+            if (endPage < totalPages) {
+                if (endPage < totalPages - 1) {
+                    html += `<span class="pagination-info">...</span>`;
+                }
+                html += `<button class="pagination-btn" onclick="goToMuseumPage(${totalPages})">${totalPages}</button>`;
+            }
+
+            html += `<button class="pagination-btn" onclick="goToMuseumPage(${currentMuseumPage + 1})" ${currentMuseumPage === totalPages ? 'disabled' : ''}>›</button>`;
+
+            html += `<span class="pagination-info">第 ${currentMuseumPage} / ${totalPages} 页，共 ${totalItems} 个博物馆</span>`;
+
+            pagination.innerHTML = html;
+        }
+
+        function goToMuseumPage(page) {
+            const totalPages = Math.ceil(filteredMuseums.length / ITEMS_PER_PAGE);
+            if (page < 1 || page > totalPages) return;
+            renderMuseumCards(filteredMuseums, page);
         }
 
         // ========== Museum Detail Modal ==========
@@ -1667,14 +2437,24 @@
                 reserveBtn.style.display = 'none';
             }
 
+            // Collections button - always show, navigates to collections page
+            const collectionsBtn = document.getElementById('btnCollections');
+            collectionsBtn.style.display = 'inline-block';
+
             document.getElementById('museumModal').style.display = 'flex';
             document.body.style.overflow = 'hidden';
+            // 隐藏底部页面导航栏
+            const pageNav = document.getElementById('pageNavContainer');
+            if (pageNav) pageNav.style.display = 'none';
         }
 
         function closeMuseumDetail() {
             document.getElementById('museumModal').style.display = 'none';
             document.body.style.overflow = '';
             currentMuseum = null;
+            // 恢复底部页面导航栏
+            const pageNav = document.getElementById('pageNavContainer');
+            if (pageNav) pageNav.style.display = '';
         }
 
         function navigateToMap() {
@@ -1682,6 +2462,12 @@
                 map.setZoomAndCenter(14, [currentMuseum.lng, currentMuseum.lat]);
                 closeMuseumDetail();
                 scrollToSection('map-section');
+            }
+        }
+
+        function openCollectionsPage() {
+            if (currentMuseum && currentMuseum.id) {
+                window.open('/museum/' + currentMuseum.id + '/collections', '_blank');
             }
         }
 
@@ -1699,25 +2485,116 @@
             }
         });
 
-        // ========== Type Filter ==========
-        document.querySelectorAll('.type-tag').forEach(tag => {
-            tag.addEventListener('click', () => {
-                if (!museumsData || museumsData.length === 0) {
-                    console.log('博物馆数据尚未加载完成，请稍候...');
-                    return;
-                }
+        // ========== Search and Filter Functions ==========
+        function isFree(museum) {
+            const ticket = (museum.ticket_info || '').trim();
+            if (!ticket) return false;
 
-                document.querySelectorAll('.type-tag').forEach(t => t.classList.remove('active'));
-                tag.classList.add('active');
+            // 明确的"非完全免费"关键词 → 归为付费
+            const paidMarkers = ['收费', '以展览为准', '以公告为准', '定价为准', '购票', '以当期'];
+            for (const m of paidMarkers) {
+                if (ticket.includes(m)) return false;
+            }
 
-                const type = tag.dataset.type;
-                const filtered = type === 'all'
-                    ? museumsData
-                    : museumsData.filter(m => m.type === type);
+            // 含具体价格（数字+元）→ 付费
+            // 例如 "全价25元"、"20元（成人）"、"50元" 等
+            if (/\d+元/.test(ticket)) return false;
 
-                renderMuseumCards(filtered);
+            // 以"免费"开头 → 完全免费
+            if (ticket.startsWith('免费')) return true;
+
+            // 默认归为付费
+            return false;
+        }
+
+        function filterMuseums() {
+            let result = [...museumsData];
+
+            // Keyword search
+            if (filterState.keyword) {
+                const kw = filterState.keyword.toLowerCase();
+                result = result.filter(m =>
+                    m.name.toLowerCase().includes(kw) ||
+                    (m.desc && m.desc.toLowerCase().includes(kw)) ||
+                    (m.intro_short && m.intro_short.toLowerCase().includes(kw)) ||
+                    (m.address && m.address.toLowerCase().includes(kw))
+                );
+            }
+
+            // Type filter
+            if (filterState.type !== 'all') {
+                result = result.filter(m => m.type === filterState.type);
+            }
+
+            // Ticket filter
+            if (filterState.ticket === 'free') {
+                result = result.filter(m => isFree(m));
+            } else if (filterState.ticket === 'paid') {
+                result = result.filter(m => !isFree(m));
+            }
+
+            // District filter
+            if (filterState.district !== 'all') {
+                result = result.filter(m => m.district === filterState.district);
+            }
+
+            renderMuseumCards(result, 1);
+        }
+
+        function applyFilter(filterType, value) {
+            filterState[filterType] = value;
+            filterMuseums();
+        }
+
+        function handleSearchInput() {
+            const input = document.getElementById('searchInput');
+            filterState.keyword = input.value.trim();
+            filterMuseums();
+        }
+
+        function clearSearch() {
+            const input = document.getElementById('searchInput');
+            input.value = '';
+            filterState.keyword = '';
+            filterMuseums();
+        }
+
+        // ========== Initialize Filter Event Listeners ==========
+        function initFilters() {
+            // Search input
+            const searchInput = document.getElementById('searchInput');
+            if (searchInput) {
+                searchInput.addEventListener('input', debounce(handleSearchInput, 300));
+            }
+
+            // Filter tags
+            document.querySelectorAll('.filter-tag').forEach(tag => {
+                tag.addEventListener('click', () => {
+                    const filterType = tag.dataset.filter;
+                    const value = tag.dataset.value;
+
+                    // Update active state
+                    const siblings = document.querySelectorAll(`[data-filter="${filterType}"]`);
+                    siblings.forEach(s => s.classList.remove('active'));
+                    tag.classList.add('active');
+
+                    applyFilter(filterType, value);
+                });
             });
-        });
+        }
+
+        // Debounce helper
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
 
         // ========== Map Initialization ==========
         let map = null;
@@ -1876,7 +2753,7 @@
             const reserveAction = museum.reserve_link
                 ? (museum.reserve_link.startsWith('http')
                     ? `<a href="${museum.reserve_link}" target="_blank" class="iw-action-btn iw-reserve">🔗 前往预约</a>`
-                    : `<span class="iw-action-btn iw-reserve" style="cursor:default;opacity:0.6;">📱 ${museum.reserve_link.substring(0,15)}...</span>`)
+                    : `<span class="iw-action-btn iw-reserve" style="cursor:default;opacity:0.6;">📱 ${museum.reserve_link.substring(0, 15)}...</span>`)
                 : '';
 
             const infoWindow = new AMap.InfoWindow({
@@ -1923,10 +2800,83 @@
         }
 
         // Helper for info window detail button
-        window._openMuseumDetail = function(id) {
+        window._openMuseumDetail = function (id) {
             const museum = museumsData.find(m => m.id === id);
             if (museum) showMuseumDetail(museum);
         };
+
+        // ========== Map Filter State ==========
+        const mapFilterState = {
+            types: { history: true, art: true, science: true, specialty: true },
+            tickets: { free: true, paid: true }
+        };
+
+        // ========== Toggle Map Filter ==========
+        function toggleMapFilter(filterType, value) {
+            if (filterType === 'type') {
+                mapFilterState.types[value] = !mapFilterState.types[value];
+            } else if (filterType === 'ticket') {
+                const other = value === 'free' ? 'paid' : 'free';
+                if (mapFilterState.tickets[value] && !mapFilterState.tickets[other]) {
+                    // 当前已互斥选中 → 取消选中，恢复全部显示
+                    mapFilterState.tickets.free = true;
+                    mapFilterState.tickets.paid = true;
+                } else {
+                    // 互斥选中：只激活当前项，取消另一项
+                    mapFilterState.tickets[value] = true;
+                    mapFilterState.tickets[other] = false;
+                }
+                // 同步更新票务选项的 UI 状态
+                document.querySelectorAll('.map-filter-option[data-map-filter="ticket"]').forEach(opt => {
+                    if (mapFilterState.tickets[opt.dataset.value]) {
+                        opt.classList.add('active');
+                    } else {
+                        opt.classList.remove('active');
+                    }
+                });
+            }
+            updateMapMarkersVisibility();
+        }
+
+        // ========== Reset Map Filters ==========
+        function resetMapFilters() {
+            Object.keys(mapFilterState.types).forEach(k => mapFilterState.types[k] = true);
+            Object.keys(mapFilterState.tickets).forEach(k => mapFilterState.tickets[k] = true);
+
+            document.querySelectorAll('.map-filter-option').forEach(opt => {
+                opt.classList.add('active');
+            });
+            updateMapMarkersVisibility();
+        }
+
+        // ========== Update Map Markers Visibility ==========
+        function updateMapMarkersVisibility() {
+            if (!map || mapMarkers.length === 0) return;
+
+            mapMarkers.forEach(({ marker, museum }) => {
+                const typeMatch = mapFilterState.types[museum.type] || false;
+                const isFreeMuseum = isFree(museum);
+                const ticketMatch = isFreeMuseum
+                    ? mapFilterState.tickets.free
+                    : mapFilterState.tickets.paid;
+
+                if (typeMatch && ticketMatch) {
+                    marker.show();
+                } else {
+                    marker.hide();
+                }
+            });
+        }
+
+        // ========== Toggle Map Filter Panel ==========
+        function toggleMapFilterPanel() {
+            const content = document.getElementById('mapFilterContent');
+            const toggleBtn = document.querySelector('.map-filter-toggle');
+            const isVisible = content.style.display !== 'none';
+
+            content.style.display = isVisible ? 'none' : 'flex';
+            toggleBtn.textContent = isVisible ? '‹' : '›';
+        }
 
         // ========== Load Museum Data ==========
         function loadMuseumData() {
@@ -1938,9 +2888,10 @@
                 })
                 .then(museums => {
                     console.log('获取到博物馆数据:', museums.length, '个');
+
                     museumsData = museums.map((m, i) => ({
                         ...m,
-                        type: m.type || ['history', 'art', 'heritage'][i % 3],
+                        type: m.type !== undefined && m.type !== null && m.type !== '' ? m.type : ['history', 'art', 'science', 'specialty'][i % 4],
                         desc: m.desc || m.intro_short || '暂无详细介绍'
                     }));
 
@@ -1949,9 +2900,12 @@
 
                     if (map) {
                         console.log('添加地图标记...');
-                        const markers = museumsData.map(museum => createMuseumMarker(museum));
-                        map.add(markers);
-                        console.log('已添加', markers.length, '个标记');
+                        mapMarkers = museumsData.map(museum => ({
+                            marker: createMuseumMarker(museum),
+                            museum: museum
+                        }));
+                        map.add(mapMarkers.map(m => m.marker));
+                        console.log('已添加', mapMarkers.length, '个标记');
                     } else {
                         console.error('地图未初始化');
                     }
@@ -2095,6 +3049,71 @@
             if (e.key === 'Enter') askAI();
         });
 
+        // ========== Full Page Navigation Functions ==========
+        function goToPageDirect(pageIndex) {
+            if (pageIndex < 1 || pageIndex > PAGES.length) return;
+            currentPageIndex = pageIndex - 1;
+            updatePageNavigation();
+            navigateToSection(PAGES[currentPageIndex].id);
+        }
+
+        function goToNextPage() {
+            if (currentPageIndex < PAGES.length - 1) {
+                currentPageIndex++;
+                updatePageNavigation();
+                navigateToSection(PAGES[currentPageIndex].id);
+            }
+        }
+
+        function goToPrevPage() {
+            if (currentPageIndex > 0) {
+                currentPageIndex--;
+                updatePageNavigation();
+                navigateToSection(PAGES[currentPageIndex].id);
+            }
+        }
+
+        function updatePageNavigation() {
+            const prevBtn = document.getElementById('prevPageBtn');
+            const nextBtn = document.getElementById('nextPageBtn');
+            const pageText = document.getElementById('pageNavText');
+            const dots = document.querySelectorAll('.page-nav-dot');
+
+            prevBtn.disabled = currentPageIndex === 0;
+            nextBtn.disabled = currentPageIndex === PAGES.length - 1;
+            pageText.textContent = String(currentPageIndex + 1).padStart(2, '0') + ' / ' + String(PAGES.length).padStart(2, '0');
+
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentPageIndex);
+            });
+        }
+
+        function navigateToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        // ========== Initialize Map Filter Event Listeners ==========
+        function initMapFilters() {
+            document.querySelectorAll('.map-filter-option').forEach(opt => {
+                opt.addEventListener('click', () => {
+                    const filterType = opt.dataset.mapFilter;
+                    const value = opt.dataset.value;
+
+                    if (filterType === 'ticket') {
+                        // 票务筛选：互斥模式，由 toggleMapFilter 统一控制 UI
+                        toggleMapFilter(filterType, value);
+                    } else {
+                        // 类型筛选：多选模式
+                        opt.classList.toggle('active');
+                        toggleMapFilter(filterType, value);
+                    }
+                });
+            });
+        }
+
         // ========== Initialize ==========
         // ========== Chat Panel Toggle ==========
         function toggleChatPanel() {
@@ -2126,6 +3145,12 @@
 
         window.addEventListener('load', () => {
             // 不再自动弹出聊天框
+
+            // 初始化筛选器
+            initFilters();
+
+            // 初始化地图筛选器
+            initMapFilters();
 
             // 立即加载博物馆数据（不依赖地图）
             console.log('页面加载完成，立即加载博物馆数据...');

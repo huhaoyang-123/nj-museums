@@ -25,8 +25,8 @@ CATEGORY_TYPE_MAP = {
     "历史类": "history",
     "纪念类": "history",
     "遗址类": "history",
-    "专题类": "history",
-    "民俗类": "heritage",
+    "专题类": "specialty",
+    "民俗类": "specialty",
     "自然科学类": "science",
     "科学类": "science",
     "当代艺术": "art",
@@ -51,7 +51,7 @@ def get_all_museums():
         transformed_museums = []
         for idx, museum in enumerate(museums_raw, start=1):
             category = museum.get('category', '')
-            museum_type = map_category_to_type(category)
+            museum_type = museum.get('type', '') or map_category_to_type(category)
 
             name = museum.get('name', '')
             district = museum.get('district', '')
@@ -82,7 +82,9 @@ def get_all_museums():
                 'reserve_link': museum.get('reserve_link', ''),
                 'website': museum.get('website', ''),
                 'photo_url': museum.get('photo_url', ''),
-                'intro_short': museum.get('intro_short', '')
+                'intro_short': museum.get('intro_short', ''),
+                'collections': museum.get('collections', []),
+                'collections_note': museum.get('collections_note', '')
             }
             transformed_museums.append(transformed)
 

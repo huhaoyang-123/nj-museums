@@ -23,7 +23,59 @@
     "lat": 32.062000000000005,
     "lng": 118.842,
     "desc": "中国三大博物馆之一，前身是1933年蔡元培等倡建的国立中央博物院，国家一级博物馆，一院六馆格局（历史馆/特展馆/数字馆/艺术馆/非遗馆/民国馆）。",
-    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nanjing_Museum_front_door.jpg?width=800"
+    "photo_url": "http://store.is.autonavi.com/showpic/6d9679442d9f514b78d55213b43d9417",
+    "photo_source": "amap",
+    "collections": [
+      {
+        "name": "金兽",
+        "desc": "西汉金器，重9100克，含金量99%，迄今出土最重金器，国之瑰宝",
+        "era": "西汉",
+        "image": "https://www.njmuseum.com/files/nb/collection/modify/2023/05/04/16831904434753.png"
+      },
+      {
+        "name": "釉里红岁寒三友纹梅瓶",
+        "desc": "明洪武釉里红，现存唯一带盖完整的洪武釉里红梅瓶，国宝级文物",
+        "era": "明洪武",
+        "image": "https://www.njmuseum.com/files/newbackImage/2018-11-02/6603326d-228a-4f34-907e-096d01d33c83.jpg"
+      },
+      {
+        "name": "金蝉玉叶",
+        "desc": "明代发簪，金蝉立于和田羊脂白玉叶上，构思巧妙的稀世工艺珍品",
+        "era": "明",
+        "image": "https://www.njmuseum.com/files/nb/collection/modify/2020/12/01/1606807297495%E9%87%91%E8%9D%89%E7%8E%89%E5%8F%B6.jpg"
+      },
+      {
+        "name": "银缕玉衣",
+        "desc": "东汉银缕玉衣，全国仅发现一件，玉片2600余块",
+        "era": "东汉",
+        "image": "https://5b0988e595225.cdn.sohucs.com/images/20180825/0a7473e06d1a47c89a4a9ac5c84a2bce.jpg"
+      },
+      {
+        "name": "错银铜牛灯",
+        "desc": "东汉青铜器，环保设计领先西方一千多年，实用与艺术完美结合",
+        "era": "东汉",
+        "image": "https://www.njmuseum.com/files/nb/collection/modify/2021/09/30/163299245898926%E9%94%99%E9%93%B6%E7%89%9B%E7%81%AF3.png"
+      },
+      {
+        "name": "广陵王玺金印",
+        "desc": "东汉唯一汉朝刘姓王金印，高纯度黄金制成，汉印精品",
+        "era": "东汉",
+        "image": "https://www.njmuseum.com/files/nb/collection/modify/2020/06/15/1592205313069%E9%87%91%E5%8D%B020200615.png"
+      },
+      {
+        "name": "透雕人鸟兽玉饰件",
+        "desc": "新石器时代良渚文化，我国出土最早的人鸟兽透雕精品",
+        "era": "新石器时代",
+        "image": "https://pic4.zhimg.com/v2-ea251470953370255c60c0a6302a12fb_1440w.jpg"
+      },
+      {
+        "name": "青瓷神兽尊",
+        "desc": "西晋青瓷，出土于周处家族墓，最早有铭款瓷器之一",
+        "era": "西晋",
+        "image": "https://zdimg.lifeweek.com.cn/bg/20201215/1608020953023jksea.jpg"
+      }
+    ],
+    "collections_note": "数据来源：网络搜索，图片均为实况文物照片"
   },
   {
     "name": "南京市博物馆（朝天宫）",
@@ -49,7 +101,65 @@
     "lat": 32.021,
     "lng": 118.801,
     "desc": "江南地区现存规模最大、保存最完整的明清官式古建筑群，南京市市立综合性历史艺术类博物馆，馆藏文物十万余件。",
-    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Gate_of_Chaotian_Palace,_Nanjing.JPG?width=800"
+    "photo_url": "http://store.is.autonavi.com/showpic/39703c578c378582d4de6ea2f334445c",
+    "photo_source": "amap",
+    "collections": [
+      {
+        "name": "元青花「萧何月下追韩信」图梅瓶",
+        "desc": "元末明初青花瓷罕见珍品，中国瓷器三绝之一，禁止出境展览文物",
+        "era": "元",
+        "image": "https://www.njmuseumadmin.com/Public/Upload/FckFile/150921022300570"
+      },
+      {
+        "name": "青瓷羊尊",
+        "desc": "三国吴青瓷，釉色匀净无暇，造型优美，六朝青瓷珍品",
+        "era": "三国·吴",
+        "image": "http://www.rmhb.com.cn/yxsj/tpgs/202506/W020250624330616242517.jpg"
+      },
+      {
+        "name": "镶金托云龙纹玉带板",
+        "desc": "明洪武四年汪兴祖墓出土，工艺精湛的明代玉带饰",
+        "era": "明洪武",
+        "image": "http://www.rmhb.com.cn/yxsj/tpgs/202506/W020250624330609467827.jpg"
+      },
+      {
+        "name": "嵌宝石金盒",
+        "desc": "明成化十年沐斌夫人梅氏墓出土，明代金银器珍品",
+        "era": "明",
+        "image": "http://www.rmhb.com.cn/yxsj/tpgs/202506/W020250624330607530410.jpg"
+      },
+      {
+        "name": "人面形陶塑",
+        "desc": "新石器时代，南京地区发现最早的人塑像，金陵始祖",
+        "era": "新石器时代",
+        "image": "http://www.rmhb.com.cn/yxsj/tpgs/202506/W020250624330608840559.jpg"
+      },
+      {
+        "name": "官窑青釉瓷盘",
+        "desc": "南宋官窑青釉，汪兴祖墓出土，南宋官窑瓷器珍品",
+        "era": "南宋",
+        "image": "http://www.rmhb.com.cn/yxsj/tpgs/202506/W020250624330612155275.jpg"
+      },
+      {
+        "name": "月影梅纹银盘",
+        "desc": "南宋庆元元年张同之夫妇墓出土，宋代金银器上品佳作",
+        "era": "南宋",
+        "image": "http://www.rmhb.com.cn/yxsj/tpgs/202506/W020250624330610756142.jpg"
+      },
+      {
+        "name": "兽面纹铜铙",
+        "desc": "商周青铜打击乐器，体饰兽面纹，铸工精良",
+        "era": "商周",
+        "image": "http://www.rmhb.com.cn/yxsj/tpgs/202506/W020250624330610093561.jpg"
+      },
+      {
+        "name": "紫砂提梁壶",
+        "desc": "明代紫砂壶，提梁式造型古朴，明代宜兴紫砂代表",
+        "era": "明",
+        "image": "http://www.rmhb.com.cn/yxsj/tpgs/202506/W020250624330615589268.jpg"
+      }
+    ],
+    "collections_note": "数据来源：网络搜索，图片均为实况文物照片"
   },
   {
     "name": "六朝博物馆",
@@ -74,7 +184,29 @@
     "lng": 118.842,
     "desc": "全国唯一以六朝历史文化为主题的专题博物馆，贝氏建筑事务所设计，光影空间极具美感，毗邻总统府。",
     "website": "https://www.njmuseumadmin.com/Stadium/index/id/6",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/%E5%8D%97%E4%BA%AC%E5%85%AD%E6%9C%9D%E5%8D%9A%E7%89%A9%E9%A6%86.jpg"
+    "photo_url": "http://store.is.autonavi.com/showpic/de50004f8b367977e4d6a3543890a578",
+    "photo_source": "amap",
+    "collections": [
+      {
+        "name": "青瓷釉下彩羽人纹盘口壶",
+        "desc": "1983年出土，通体绘制纹饰，我国最早釉下彩瓷器之一，镇馆之宝",
+        "era": "三国·吴",
+        "image": "https://www.njmuseumadmin.com/Public/Upload/default/2015/09/01/ab70d96832c45aadf53958801f4b3115.jpg"
+      },
+      {
+        "name": "青瓷莲花尊",
+        "desc": "存世莲花尊中体型最大、制作最精美的器物，佛教艺术珍品",
+        "era": "南朝",
+        "image": "https://www.njmuseumadmin.com/Public/Upload/FckFile/150921020910955"
+      },
+      {
+        "name": "六朝陶俑群",
+        "desc": "六朝时期陶俑组合，反映六朝衣冠风貌与社会生活",
+        "era": "六朝",
+        "image": "https://www.njmuseumadmin.com/Public/Upload/default/2015/08/19/3084e773070976345b77f28c63b2003f.jpg"
+      }
+    ],
+    "collections_note": "数据来源：网络搜索，图片均为实况文物照片"
   },
   {
     "name": "江宁织造博物馆",
@@ -98,7 +230,23 @@
     "lng": 118.842,
     "desc": "依托清代江宁织造府遗址建设，融合曹雪芹与《红楼梦》文化、云锦织造技艺展示，地下层展厅+地上园林式布局。",
     "website": "https://www.njmuseumadmin.com/Stadium/index/id/3",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Jiangning_zhizaofu_in_Nanjing_2012-10.JPG"
+    "photo_url": "https://aos-comment.amap.com/B001911KPA/comment/EB3ADB87_1571_4909_87B2_BDE05859D701_L0_001_1179_145_1773449306698_96657885.jpg",
+    "photo_source": "amap",
+    "collections": [
+      {
+        "name": "明万历织金孔雀羽妆花纱袍料（复制件）",
+        "desc": "云锦复制国宝，纱地妆花工艺，17余米长，真金线与孔雀羽织就",
+        "era": "明万历",
+        "image": "http://www.rmhb.com.cn/yxsj/zttp/202506/W020250625521583728374.jpg"
+      },
+      {
+        "name": "元代织金大袖袍服",
+        "desc": "元代织金锦袍服，见证元代丝织工艺之精绝",
+        "era": "元",
+        "image": "https://icity-static.icitycdn.com/images/uploads/ap/imsm/event/pic_head/a8udxo3/c549a6d58633e56da8udxo3.jpg/1477297167/640x0"
+      }
+    ],
+    "collections_note": "数据来源：网络搜索，图片均为实况文物照片"
   },
   {
     "name": "太平天国历史博物馆（瞻园）",
@@ -121,7 +269,17 @@
     "lat": 32.021,
     "lng": 118.801,
     "desc": "馆园合一的明清园林式博物馆，\"金陵第一园\"瞻园西侧为园林、东侧为五进古建筑展区，太平天国文物专题。",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Taiping_Kingdom_History_Museum.jpg"
+    "photo_url": "https://store.is.autonavi.com/showpic/c49db9b360d2d89e0000002254570731?type=pic",
+    "photo_source": "amap",
+    "collections": [
+      {
+        "name": "太平天国黄缎绣龙马褂",
+        "desc": "镇馆之宝，黄缎彩线绣五爪团龙，太平天国高级官员官服",
+        "era": "太平天国",
+        "image": "http://www.rmhb.com.cn/yxsj/tpgs/202506/W020250624344851818010.jpg"
+      }
+    ],
+    "collections_note": "数据来源：网络搜索，图片均为实况文物照片"
   },
   {
     "name": "南京中国科举博物馆（江南贡院）",
@@ -147,7 +305,23 @@
     "lng": 118.801,
     "desc": "中国历史上规模最大的科举考场遗址上建成的地下式博物馆，沉浸式展示千年科举制度与中国古代选官文化。",
     "website": "https://www.njiemuseum.com",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Jiangnan03.jpg"
+    "photo_url": "http://store.is.autonavi.com/showpic/f5bea28c1ade934769756aaa80cdf653",
+    "photo_source": "amap",
+    "collections": [
+      {
+        "name": "康熙御题碑",
+        "desc": "镇馆之宝，清代康熙皇帝御笔题写的碑刻",
+        "era": "清康熙",
+        "image": "https://www.chinanews.com/cr/2013/1121/3389805647.jpg"
+      },
+      {
+        "name": "进士题名碑",
+        "desc": "记录历代进士名录的石碑，科举制度实物见证",
+        "era": "明清",
+        "image": "https://inews.gtimg.com/om_bt/O4FRnWPPGhhbpjKahDuHHBwCzlrlItlwajS86Dx04S2dwAA/641"
+      }
+    ],
+    "collections_note": "数据来源：网络搜索，图片均为实况文物照片"
   },
   {
     "name": "南京城墙博物馆",
@@ -163,12 +337,22 @@
     "data_source": "manual+official",
     "last_updated": "2026-06-01",
     "id": 7,
-    "type": "art",
+    "type": "specialty",
     "lat": 32.021,
     "lng": 118.801,
     "desc": "中国规模最大的地方城墙专题类博物馆，毗邻中华门瓮城，展示南京650余年明城墙的建造技术、军事防御与城市记忆。",
     "website": "https://www.njcitywall.com",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/5/58/Nanjing_City_Wall_Museum_-Overview_from_the_wall.jpg"
+    "photo_url": "https://aos-comment.amap.com/B0H3XR19VD/comment/463DD3B1_E504_452D_8D84_B779056B0192_L0_001_2016_151_1768797524316_55428208.jpg",
+    "photo_source": "amap",
+    "collections": [
+      {
+        "name": "四重城垣沙盘",
+        "desc": "复原明初南京城宏大规模，生动展示城门宫殿楼宇",
+        "era": "明",
+        "image": "http://www.news.cn/local/2021-12/29/1128214384_16407811788941n.jpg"
+      }
+    ],
+    "collections_note": "数据来源：网络搜索，图片均为实况文物照片"
   },
   {
     "name": "侵华日军南京大屠杀遇难同胞纪念馆",
@@ -193,7 +377,23 @@
     "lng": 118.71000000000001,
     "desc": "全国性抗战纪念遗址与史实教育场馆，以史料陈列、遗骸坑原址保护、和平广场构成，国家一级博物馆。",
     "website": "https://www.19371213.com.cn",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/The_monument_in_the_front_of_Nanjing_Massacre_Memorial_Hall_%2820090614_9921%29.jpg"
+    "photo_url": "http://store.is.autonavi.com/showpic/5bece6e3e3e4e0203fe0f2962394a46d",
+    "photo_source": "amap",
+    "collections": [
+      {
+        "name": "遇难同胞遗骸遗址",
+        "desc": "江东门「万人坑」遗址，三次发掘出的遇难同胞遗骸",
+        "era": "1937",
+        "image": "http://www.81.cn/js_208592/_attachment/2024/03/23/16296309_ccfad48d4236684923c2371d65691f85.jpg"
+      },
+      {
+        "name": "幸存者照片墙",
+        "desc": "南京大屠杀幸存者影像墙，铭记历史的见证",
+        "era": "现代",
+        "image": "http://www.81.cn/js_208592/_attachment/2024/03/23/16296309_af74e6332bae94337a605f19f8bab0c4.jpg"
+      }
+    ],
+    "collections_note": "数据来源：网络搜索，图片均为实况文物照片"
   },
   {
     "name": "南京云锦博物馆",
@@ -214,7 +414,23 @@
     "lng": 118.71000000000001,
     "desc": "展示人类非遗「南京云锦木机妆花手工织造技艺」，馆藏历代云锦精品，汉服爱好者常访地。",
     "website": "http://www.yjmuseum.com",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Nanjing_Brocade_Research_Institute.jpg"
+    "photo_url": "http://store.is.autonavi.com/showpic/486379dde96afff5922e0e7d90aa244d",
+    "photo_source": "amap",
+    "collections": [
+      {
+        "name": "云锦龙袍匹料",
+        "desc": "明清皇家云锦龙袍面料，妆花工艺代表作",
+        "era": "明清",
+        "image": "http://www.njyjmuseum.com/attached/upload/image/20240308/6384549190517001194575642.png"
+      },
+      {
+        "name": "大花楼木织机",
+        "desc": "传统云锦提花织机，长5.6米高4米，1924个零部件，云锦工艺核心",
+        "era": "明清",
+        "image": "https://pic.huitu.com/res/20260327/1165041_20260327184502552207_1.jpg"
+      }
+    ],
+    "collections_note": "数据来源：网络搜索，图片均为实况文物照片"
   },
   {
     "name": "南京古生物博物馆",
@@ -238,7 +454,29 @@
     "lng": 118.842,
     "desc": "世界上规模最大的古生物专业博物馆之一，「澄江动物群」「中华龙鸟」等国宝级化石标本所在地。",
     "website": "http://nmp.ac.cn",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/%E5%8D%97%E4%BA%AC%E5%8F%A4%E7%94%9F%E7%89%A9%E5%8D%9A%E7%89%A9%E9%A6%86.jpg"
+    "photo_url": "http://store.is.autonavi.com/showpic/d1b6d4dd2e8b6782beccd0b996d27b47",
+    "photo_source": "amap",
+    "collections": [
+      {
+        "name": "原始中华龙鸟化石",
+        "desc": "镇馆之宝，距今约1.25亿年，热河生物群代表化石",
+        "era": "白垩纪早期",
+        "image": "https://www.nmp.ac.cn/hsjp/jzdwhs/202411/W020241125637364011526.png"
+      },
+      {
+        "name": "孔子鸟化石",
+        "desc": "热河生物群重要鸟类化石",
+        "era": "白垩纪早期",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Sinosauropteryxfossil.jpg"
+      },
+      {
+        "name": "澄江动物群化石",
+        "desc": "5.3亿年前寒武纪生命大爆发见证，世界级化石宝库",
+        "era": "寒武纪",
+        "image": "https://media.bjnews.com.cn/cover/2025/02/25/5558455284944414102.jpg?x-oss-process=image/resize,m_fill,h_300,w_300"
+      }
+    ],
+    "collections_note": "数据来源：网络搜索，图片均为实况文物照片"
   },
   {
     "name": "南京地质博物馆",
@@ -261,7 +499,23 @@
     "lng": 118.842,
     "desc": "中国第一个以地质矿产为主要内容的专业博物馆（始建于1935），涵盖地球起源、岩石矿物、恐龙世界复原等。",
     "website": "http://www.njgeo.cn",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Nanjing_Geological_Museum%2C_Old_Buiding-_150524601.JPG"
+    "photo_url": "https://aos-comment.amap.com/B00190BD4M/comment/content_media_external_file_1000021094_ss__1762588499032_06660535.jpg",
+    "photo_source": "amap",
+    "collections": [
+      {
+        "name": "北京猿人头盖骨首批复制品",
+        "desc": "世界上仅存5个首批复制品之一，镇馆之宝",
+        "era": "旧石器时代",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Peking_Man_Skull_%28replica%29_presented_at_Paleozoological_Museum_of_China.jpg"
+      },
+      {
+        "name": "炳灵大夏巨龙",
+        "desc": "亚洲最大恐龙化石之一，体长26米，白垩纪巨型恐龙",
+        "era": "白垩纪",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Daxiatitan.jpg"
+      }
+    ],
+    "collections_note": "数据来源：网络搜索，图片均为实况文物照片"
   },
   {
     "name": "中国共产党代表团梅园新村纪念馆",
@@ -284,7 +538,10 @@
     "lat": 32.062000000000005,
     "lng": 118.842,
     "desc": "解放战争时期中共代表团驻地旧址群（梅园新村17/30/35号），全国重点文保单位、爱国主义教育示范基地。",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/6/69/No30_MeiyuanXincun_Nanjing_1.jpg"
+    "photo_url": "http://store.is.autonavi.com/showpic/2e7dc365c54a96972a7e6ac091a48f41",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "数据来源：博物南京，全国重点文保单位"
   },
   {
     "name": "南京市民俗博物馆（甘熙宅第）",
@@ -308,7 +565,10 @@
     "lat": 32.021,
     "lng": 118.801,
     "desc": "全国重点文保单位甘熙宅第内，展示南京非遗、民俗风情、传统民居建筑艺术，南京市民俗保护传承基地。",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/GanJiaDaYuan02.JPG"
+    "photo_url": "http://store.is.autonavi.com/showpic/17d9bb69a1d54d3d3ae1ea94941a39dd",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "数据来源：南京市文化和旅游局、秦淮区人民政府，展示十余个市级以上非遗项目"
   },
   {
     "name": "渡江胜利纪念馆",
@@ -329,7 +589,17 @@
     "lat": 32.061,
     "lng": 118.781,
     "desc": "以渡江战役为主线的大型革命史纪念馆，主馆区含胜利广场与大型雕塑群，免费开放。",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/2/22/People%27s_Liberation_Army_occupied_the_presidential_palace_1949.jpg"
+    "photo_url": "http://store.is.autonavi.com/showpic/ba2f0b3864e26b9c95b30c1e787f7b90",
+    "photo_source": "amap",
+    "collections": [
+      {
+        "name": "京电号小火轮",
+        "desc": "渡江战役中运送解放军过江的英雄船",
+        "era": "1949",
+        "image": "http://jsnews.jschina.com.cn/zt2022/ztgk/202204/W020220423553682082939"
+      }
+    ],
+    "collections_note": "数据来源：网络搜索，图片均为实况文物照片"
   },
   {
     "name": "南京大报恩寺遗址博物馆",
@@ -349,7 +619,29 @@
     "lat": 32.021,
     "lng": 118.801,
     "desc": "明代大报恩寺与琉璃塔遗址上的大型遗址博物馆，玻璃塔重建+沉浸式光影叙事，国家一级博物馆。",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/2024Apr_-_Glass_Pagoda_of_Nanjing_-_img_03.jpg"
+    "photo_url": "https://aos-comment.amap.com/B0FFG9GMZ7/comment/a07fd012c3d440a1a91f1a44397a40e7_2048_2048_80.jpg",
+    "photo_source": "amap",
+    "collections": [
+      {
+        "name": "鎏金七宝阿育王塔",
+        "desc": "北宋佛教文物，通高1.2米，中国境内出土体量最大阿育王塔",
+        "era": "北宋",
+        "image": "https://www.njmuseumadmin.com/Public/Upload/FckFile/150921022453902"
+      },
+      {
+        "name": "琉璃构件",
+        "desc": "明代大报恩寺琉璃塔多彩琉璃建筑构件",
+        "era": "明",
+        "image": "https://www.njmuseumadmin.com/Public/Upload/FckFile/150921021532327"
+      },
+      {
+        "name": "感应舍利",
+        "desc": "大报恩寺地宫出土，佛教圣物，与佛顶骨舍利同出",
+        "era": "北宋",
+        "image": "https://www.seu.edu.cn/_upload/article/47/32/769bee1b4c19ac0bf05488cefe25/5add9292-fca3-43ce-bc3e-94763e2342c1.jpg"
+      }
+    ],
+    "collections_note": "数据来源：网络搜索，图片均为实况文物照片"
   },
   {
     "name": "明孝陵博物馆",
@@ -368,7 +660,17 @@
     "lat": 32.062000000000005,
     "lng": 118.842,
     "desc": "世界遗产明孝陵配套博物馆，讲述明初都城规划与朱元璋时代历史，紧邻下马坊遗址公园。",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Nanjing_Ming_Xiaoling_2017.11.11_08-10-27.jpg"
+    "photo_url": "https://aos-comment.amap.com/B00190BS7S/comment/content_media_external_file_1000009502_ss__1769919132357_89448222.jpg",
+    "photo_source": "amap",
+    "collections": [
+      {
+        "name": "明孝陵神道石刻",
+        "desc": "石象路神道守护神兽系列石刻复制品及相关文物",
+        "era": "明",
+        "image": "https://imgcdn.yzwb.net/1765289877409fcapp_c93097a4-ae3c-42f2-871c-c04473cd64d6_1765283105961coverWaterMark.jpg?imageMogr2/thumbnail/1080x%3E/strip/ignore-error/1|imageslim"
+      }
+    ],
+    "collections_note": "数据来源：网络搜索，图片均为实况文物照片"
   },
   {
     "name": "德基艺术博物馆",
@@ -388,7 +690,10 @@
     "lat": 32.062000000000005,
     "lng": 118.842,
     "desc": "商业综合体高层内的综合性私人艺术机构，跨文化与时代边界的收藏、研究与展览平台，当代艺术重磅展频出。",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/%E5%BE%B7%E5%9F%BA%E5%A4%96%E8%A7%82%E4%BF%AE%E6%AD%A3.jpg"
+    "photo_url": "http://store.is.autonavi.com/showpic/e556efecc6bd199cc92bc0aa8f7a5aee",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "数据来源：德基艺术博物馆官网、维基百科，研究驱动型私立博物馆"
   },
   {
     "name": "励志社博物馆",
@@ -407,7 +712,11 @@
     "desc": "励志社旧址，民国时期的军官俱乐部，现为博物馆展示民国历史",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市玄武区中山东路307号",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Exterior_of_lizhishe_in_nanjing_201201.jpg"
+    "photo_url": "https://store.is.autonavi.com/showpic/364b4d9f0b1a33da3740bd7f0a03bbb8",
+    "reserve_link": "公众号「南京文旅」预约",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "该馆为小型民国历史博物馆，网上未搜索到公开的镇馆之宝/代表文物名单，建议实地参观获取"
   },
   {
     "name": "南京中国近代史遗址博物馆",
@@ -432,7 +741,10 @@
     "formatted_address": "江苏省南京市玄武区长江路292号",
     "reserve_link": "https://www.njztf.cn/",
     "website": "https://www.njztf.cn",
-    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Presidental_Palace_at_Nanjing_main_gate.JPG?width=800"
+    "photo_url": "https://aos-comment.amap.com/B00190BAAX/comment/D8F24BB9_D02D_44B4_91F1_6ACAD112DC1C_L0_001_1500_200_1747300471577_77406835.jpg",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "数据来源：CCTV国家地理，以历史建筑群和史料陈列为主"
   },
   {
     "name": "玄武区退役军人主题馆",
@@ -445,13 +757,18 @@
     "data_source": "prefilled",
     "last_updated": "2026-06-01",
     "id": 20,
-    "type": "history",
+    "type": "specialty",
     "lat": 32.04572,
     "lng": 118.817068,
     "desc": "展示退役军人风采，弘扬退役军人精神",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市玄武区珠江路683号",
-    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nanjing_Museum_front_door.jpg?width=800"
+    "visit_tips": "建议参观时长：20分钟",
+    "highlight": "特色：退役军人风采展示",
+    "transport": "交通：地铁2号线珠江路站",
+    "nearby": "周边：南京大学、鼓楼",
+    "collections": [],
+    "collections_note": "该馆为小型纪念场馆，网上未搜索到公开的镇馆之宝/代表展品名单，建议实地参观获取"
   },
   {
     "name": "南京近代建筑博物馆",
@@ -471,7 +788,10 @@
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市玄武区杨将军巷9号d9街区",
     "reserve_link": "https://www.njgjz.com/",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/LingXingMen_of_Nanjing_Confucian_Temple.jpg"
+    "photo_url": "https://aos-comment.amap.com/B0HRLC2FV9/comment/e6067ddc633f9ab926d6b864409a4c65_2048_2048_80.jpg",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "数据来源：博物馆官网，以建筑历史展览为主"
   },
   {
     "name": "德基美术馆",
@@ -491,7 +811,10 @@
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市玄武区中山路18号",
     "reserve_link": "https://www.dejiplaza.com/",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/%E5%BE%B7%E5%9F%BA%E5%A4%96%E8%A7%82%E4%BF%AE%E6%AD%A3.jpg"
+    "photo_url": "https://store.is.autonavi.com/showpic/5ea920a479434e530000001893216876?type=pic",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "与德基艺术博物馆同属德基集团，以当期展览为主要展示内容"
   },
   {
     "name": "东南大学校史馆",
@@ -510,8 +833,11 @@
     "desc": "展示东南大学建校以来的历史与成就",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市玄武区四牌楼2号",
-    "reserve_link": "https://www.seu.edu.cn/",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/en/a/ab/Southeast_University_logo.png"
+    "reserve_link": "校内参观，联系校史馆",
+    "photo_url": "https://store.is.autonavi.com/showpic/6a1d4f65ba26d3e30000002353546751",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "高校校史馆，以校史档案和实物为主"
   },
   {
     "name": "吴健雄纪念馆",
@@ -524,13 +850,16 @@
     "data_source": "prefilled",
     "last_updated": "2026-06-01",
     "id": 24,
-    "type": "history",
+    "type": "specialty",
     "lat": 32.054213,
     "lng": 118.795193,
     "desc": "纪念著名物理学家吴健雄女士",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市玄武区四牌楼2号东南大学(四牌楼校区)",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Chien-shiung_Wu_%281912-1997%29_%28cropped%29.jpg"
+    "photo_url": "https://store.is.autonavi.com/showpic/1581d6871dca280e0000002353504866",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "纪念物理学家吴健雄的个人纪念馆"
   },
   {
     "name": "江南丝绸文化博物馆",
@@ -549,7 +878,12 @@
     "desc": "展示江南丝绸文化历史与工艺",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市秦淮区夫子庙内",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/LingXingMen_of_Nanjing_Confucian_Temple.jpg"
+    "visit_tips": "建议参观时长：30-45分钟",
+    "highlight": "特色：丝绸文化展示、传统织造技艺",
+    "transport": "交通：地铁3号线夫子庙站",
+    "nearby": "周边：夫子庙、秦淮河",
+    "collections": [],
+    "collections_note": "小型专题博物馆，位于夫子庙内"
   },
   {
     "name": "南京老字号博物馆",
@@ -568,7 +902,12 @@
     "desc": "展示南京老字号品牌历史与文化",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市秦淮区老门东",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/LingXingMen_of_Nanjing_Confucian_Temple.jpg"
+    "visit_tips": "建议参观时长：30分钟",
+    "highlight": "特色：南京传统品牌历史、老字号文化",
+    "transport": "交通：地铁1号线三山街站",
+    "nearby": "周边：夫子庙、老门东",
+    "collections": [],
+    "collections_note": "小型民俗博物馆，位于老门东"
   },
   {
     "name": "南京永银钱币博物馆",
@@ -588,7 +927,10 @@
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市秦淮区瞻园路8号",
     "reserve_link": "http://www.yybwg.com/",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/LingXingMen_of_Nanjing_Confucian_Temple.jpg"
+    "photo_url": "https://aos-comment.amap.com/B0FFFA07UU/comment/63113c9242f31be31bd03306fa16a346_2048_2048_80.jpg",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "钱币文化专题馆"
   },
   {
     "name": "南京钰缘泉博物馆",
@@ -607,7 +949,10 @@
     "desc": "玉器文化专题博物馆",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市秦淮区集庆路来凤街1号",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Nanjing_in_Ming_Dynasty.jpg"
+    "photo_url": "http://store.is.autonavi.com/showpic/41826b626ff1d55dd8aa3070c55dde4f",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "小型私立玉器专题馆，网上未搜索到详细的代表藏品名单"
   },
   {
     "name": "南京镜见律师博物馆",
@@ -626,7 +971,10 @@
     "desc": "展示中国律师制度发展历史",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市建邺区奥体大街68号",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Banner_of_Nanjing_Museum%2C_2015-06-20.jpg"
+    "photo_url": "https://store.is.autonavi.com/showpic/9822c4d34741733a0000001900724046?type=pic",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "法律专题小型博物馆，网上未搜索到详细的代表藏品名单"
   },
   {
     "name": "太平天国壁画艺术馆",
@@ -645,7 +993,10 @@
     "desc": "展示太平天国时期的壁画艺术",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市秦淮区堂子街108号",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/LingXingMen_of_Nanjing_Confucian_Temple.jpg"
+    "photo_url": "https://aos-comment.amap.com/B0019077A8/headerImg/f4a2b1e710db525160565807ac63a020_2048_2048_80.jpg",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "壁画专题艺术馆"
   },
   {
     "name": "李香君故居陈列馆",
@@ -664,7 +1015,10 @@
     "desc": "明末清初名妓李香君的故居，展示秦淮文化",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市秦淮区钞库街38号",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/LingXingMen_of_Nanjing_Confucian_Temple.jpg"
+    "photo_url": "http://store.is.autonavi.com/showpic/734cf3868ba7489aa36db10cb66aae42",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "名人故居类小型陈列馆"
   },
   {
     "name": "王导谢安纪念馆",
@@ -683,7 +1037,10 @@
     "desc": "纪念东晋名相王导、谢安，展示六朝历史文化",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市秦淮区乌衣巷27号",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/LingXingMen_of_Nanjing_Confucian_Temple.jpg"
+    "photo_url": "http://store.is.autonavi.com/showpic/e985fe9f524a4a2c91f834e168fe679c",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "纪念东晋名相的小型纪念馆"
   },
   {
     "name": "秦大士故居展览馆",
@@ -702,7 +1059,10 @@
     "desc": "清代状元秦大士的故居，展示科举文化",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市秦淮区瞻园路126号",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/LingXingMen_of_Nanjing_Confucian_Temple.jpg"
+    "photo_url": "https://aos-comment.amap.com/B00190BUK5/comment/3171a689ee891830459c61d7de492d89_2048_2048_80.jpg",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "清代状元故居改建的小型展览馆"
   },
   {
     "name": "孙中山纪念馆",
@@ -721,8 +1081,11 @@
     "desc": "位于中山陵东侧，展示孙中山先生的生平事迹与革命历程",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市玄武区",
-    "reserve_link": "http://www.szsjng.com/",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Sun_Yat-sen_Mausoleum_-_54400198691.jpg"
+    "reserve_link": "https://zschina.nanjing.gov.cn/",
+    "photo_url": "http://store.is.autonavi.com/showpic/ec6d1f47d15b9c818f0b73dc43147d2f",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "位于中山陵景区内，展示孙中山生平事迹"
   },
   {
     "name": "南京抗日航空烈士纪念馆",
@@ -735,14 +1098,18 @@
     "data_source": "prefilled",
     "last_updated": "2026-06-01",
     "id": 35,
-    "type": "history",
+    "type": "specialty",
     "lat": 32.070477,
     "lng": 118.853294,
     "desc": "纪念在抗日战争中牺牲的中外航空烈士，展示航空历史",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市玄武区紫金山",
-    "reserve_link": "https://www.nj1937.org/",
-    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nanjing_Museum_front_door.jpg?width=800"
+    "reserve_link": "http://www.nj1937.org/",
+    "website": "http://www.nj1937.org/",
+    "photo_url": "http://store.is.autonavi.com/showpic/54f59373a310b1a38acfddbf",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "纪念抗日航空烈士的专题纪念馆"
   },
   {
     "name": "国民政府主席官邸旧址",
@@ -764,7 +1131,11 @@
     "desc": "蒋介石与宋美龄的住所，中西合璧的建筑风格",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市玄武区",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Mei-ling_Villa%2C_Nov_2017_%282%29.jpg"
+    "photo_url": "https://store.is.autonavi.com/showpic/f2c6ad22bae25dfd0000000740602942?type=pic",
+    "reserve_link": "公众号「钟山风景区」预约",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "以建筑本身和民国生活场景复原为主要展示内容"
   },
   {
     "name": "东吴大帝孙权纪念馆",
@@ -783,7 +1154,10 @@
     "desc": "纪念三国时期东吴大帝孙权",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市玄武区",
-    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nanjing_Museum_front_door.jpg?width=800"
+    "photo_url": "https://aos-comment.amap.com/B001911OPO/comment/content_media_external_file_1000014558_ss__1750989295520_32015994.jpg",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "小型三国主题纪念馆，网上未搜索到详细代表文物名单"
   },
   {
     "name": "紫金山森林科普馆",
@@ -802,7 +1176,10 @@
     "desc": "展示紫金山森林生态系统",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市玄武区紫金山",
-    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nanjing_Museum_front_door.jpg?width=800"
+    "photo_url": "https://aos-comment.amap.com/B0FFK8QODX/comment/20260313-17634d457a2f941aa66692d5-ynXnZAWyrO86zPzpnLo5I.jpg",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "自然科学科普类场馆，以图文展板为主，无传统意义文物藏品"
   },
   {
     "name": "南京梅花艺术中心",
@@ -821,7 +1198,10 @@
     "desc": "梅花主题艺术展示中心",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市玄武区紫金山",
-    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nanjing_Museum_front_door.jpg?width=800"
+    "photo_url": "https://store.is.autonavi.com/showpic/6a07b6b3b478e0b889464541888917b8",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "梅花节期间开放的艺术展示中心，以临时展览为主"
   },
   {
     "name": "南京中山植物园",
@@ -841,7 +1221,10 @@
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市玄武区前湖后村1号",
     "reserve_link": "https://www.cnbg.net/",
-    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nanjing_Museum_front_door.jpg?width=800"
+    "photo_url": "http://store.is.autonavi.com/showpic/2069bca7503d20091d2e90f3f6d44b70",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "以活体植物收藏为主，非文物类博物馆"
   },
   {
     "name": "南京地震科学馆",
@@ -860,7 +1243,10 @@
     "desc": "普及地震科学知识，展示地震监测设备",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市建邺区水西门大街213号",
-    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nanjing_Museum_front_door.jpg?width=800"
+    "photo_url": "https://aos-comment.amap.com/B00190ABSP/comment/content_media_external_file_265153_1770079527842_26368333.jpg",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "以科普仪器设备展示为主"
   },
   {
     "name": "南京近代邮政博物馆",
@@ -879,7 +1265,10 @@
     "desc": "展示近代邮政发展历史",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市鼓楼区中山北路23号",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Nanjing_Drum_Tower.jpg"
+    "photo_url": "http://store.is.autonavi.com/showpic/d1b6d4dd2e8b6782beccd0b996d27b47",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "邮政专题小型博物馆"
   },
   {
     "name": "南京十朝历史文化陈列馆",
@@ -898,8 +1287,11 @@
     "desc": "展示南京作为十朝古都的历史文化",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市秦淮区瞻园路128号",
-    "reserve_link": "https://www.nj10d.com/",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/LingXingMen_of_Nanjing_Confucian_Temple.jpg"
+    "reserve_link": "http://www.nj10d.com/",
+    "photo_url": "https://store.is.autonavi.com/showpic/9a58aafda000da3e0000002331226537?type=pic",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "展示南京十朝都城历史"
   },
   {
     "name": "紫金山昆虫博物馆",
@@ -918,7 +1310,10 @@
     "desc": "展示昆虫多样性与生态",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市玄武区紫金山",
-    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nanjing_Museum_front_door.jpg?width=800"
+    "photo_url": "https://aos-comment.amap.com/B0FFLMQVCL/comment/content_media_external_file_3154_1770377980761_96011043.jpg",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "以昆虫标本展示为主"
   },
   {
     "name": "紫金山天文历史博物馆",
@@ -938,7 +1333,10 @@
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市玄武区紫金山",
     "reserve_link": "https://www.pmo.ac.cn/",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Purple_Mountain_Observatory_2016.7.16-1.jpg"
+    "photo_url": "https://store.is.autonavi.com/showpic/cc9a1da07edeb22b9dd33d344e30eee7",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "依托紫金山天文台的科普博物馆"
   },
   {
     "name": "南京车管所汽车博物馆",
@@ -957,7 +1355,10 @@
     "desc": "展示汽车发展历史",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市玄武区东方城68号",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Banner_of_Nanjing_Museum%2C_2015-06-20.jpg"
+    "photo_url": "http://store.is.autonavi.com/showpic/39703c578c378582d4de6ea2f334445c",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "小型汽车专题馆，网上未搜索到详细代表藏品名单"
   },
   {
     "name": "南京理工大学兵器博物馆",
@@ -976,8 +1377,11 @@
     "desc": "展示各种兵器装备，兵器科学与技术教育基地",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市玄武区孝陵卫街200号",
-    "reserve_link": "https://www.njust.edu.cn/",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Banner_of_Nanjing_Museum%2C_2015-06-20.jpg"
+    "reserve_link": "校内参观，联系校史馆",
+    "photo_url": "https://aos-comment.amap.com/B0FFF4O5KL/comment/content_media_external_file_100001662_1757771112534_76265176.jpg",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "兵器科学与技术教育基地"
   },
   {
     "name": "郑和纪念馆",
@@ -997,7 +1401,10 @@
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市鼓楼区龙江路8号",
     "reserve_link": "http://www.zhjng.com/",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/2016_Malakka%2C_Stadhuys_%2809%29.jpg"
+    "photo_url": "http://store.is.autonavi.com/showpic/35b732e4a1badc679deb35ae48c0b717",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "纪念明代航海家郑和的专题馆"
   },
   {
     "name": "五老村爱国卫生运动纪念馆",
@@ -1016,7 +1423,10 @@
     "desc": "纪念爱国卫生运动历史",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市秦淮区三条巷25号",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/LingXingMen_of_Nanjing_Confucian_Temple.jpg"
+    "photo_url": "http://store.is.autonavi.com/showpic/641d8215692fed2c1e18e2723508f4e2",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "小型纪念场馆，网上未搜索到详细代表展品名单"
   },
   {
     "name": "秦淮非遗馆",
@@ -1035,7 +1445,10 @@
     "desc": "展示南京非物质文化遗产，体验传统手工艺",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市秦淮区钞库街21号",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/LingXingMen_of_Nanjing_Confucian_Temple.jpg"
+    "photo_url": "https://aos-comment.amap.com/B0H3S6GEVW/comment/076f3d79f5ec15efd25dc9d7a72f93f5_2048_2048_80.jpg",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "以非遗技艺展示和体验为主"
   },
   {
     "name": "南京越剧博物馆",
@@ -1054,7 +1467,10 @@
     "desc": "展示越剧艺术与文化",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市秦淮区剪子巷54号老门东",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/LingXingMen_of_Nanjing_Confucian_Temple.jpg"
+    "photo_url": "https://aos-comment.amap.com/B0FFHJW6MX/comment/176428912480_1764289131438_04960596.jpg",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "戏曲艺术专题馆"
   },
   {
     "name": "南京航空航天博物馆",
@@ -1073,8 +1489,11 @@
     "desc": "展示航空航天历史与飞行器实物",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市秦淮区御道街29号",
-    "reserve_link": "https://www.nuaa.edu.cn/",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/LingXingMen_of_Nanjing_Confucian_Temple.jpg"
+    "reserve_link": "校内参观，联系校史馆",
+    "photo_url": "http://store.is.autonavi.com/showpic/b78fcb6ef35a6ae7a920dc1f9963805c",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "展示航空航天历史的专题博物馆"
   },
   {
     "name": "江苏省五环彩票博物馆",
@@ -1093,7 +1512,10 @@
     "desc": "展示彩票发展历史",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市鼓楼区虎踞路69号",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Taiwan_Lottery_Big-lotto_NTD100_20150206_face.jpg"
+    "photo_url": "https://aos-comment.amap.com/B00190D0VC/comment/c7b5296f0fc2df95c0533cebbc5d521e_2048_2048_80.jpg",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "彩票专题博物馆"
   },
   {
     "name": "南京国防园",
@@ -1113,7 +1535,10 @@
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市鼓楼区虎踞路87号",
     "reserve_link": "https://www.njgf.gov.cn/",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Defence_Park_%28Nanjing%29.jpg"
+    "photo_url": "http://store.is.autonavi.com/showpic/fc50b9fa8893af18cffb2eb4d76b14a2",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "以退役军事装备户外展示为主"
   },
   {
     "name": "颐和路社区将军馆",
@@ -1132,7 +1557,10 @@
     "desc": "展示将军们的生平事迹，弘扬爱国主义精神",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市鼓楼区颐和路32号",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/No.15_in_Yihe_Road_2012-11.JPG"
+    "photo_url": "https://store.is.autonavi.com/showpic/7a00bf517b77e6625ceffbac88180908",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "社区级纪念场馆"
   },
   {
     "name": "吴贻芳纪念馆",
@@ -1151,7 +1579,10 @@
     "desc": "纪念金陵女子大学校长吴贻芳",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市鼓楼区宁海路122号",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/%E5%90%B3%E8%B2%BD%E8%8A%B3.jpg"
+    "photo_url": "http://store.is.autonavi.com/showpic/654fa5c1906f4c9a81cd8f8a4f887c77",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "教育家个人纪念馆"
   },
   {
     "name": "江苏省中医药博物馆",
@@ -1171,7 +1602,10 @@
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市栖霞区仙林大道138号",
     "reserve_link": "https://www.njucm.edu.cn/",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/zh/f/fa/Nanjing_University_of_Chinese_Medicine_Emblem.svg"
+    "photo_url": "https://aos-comment.amap.com/B0FFFCLLU9/comment/content_media_external_file_100001654_1753846776330_39844486.jpg",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "中医药文化专题博物馆"
   },
   {
     "name": "南京大学校史博物馆",
@@ -1190,8 +1624,11 @@
     "desc": "展示南京大学百年校史与学术成就",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市鼓楼区汉口路22号",
-    "reserve_link": "https://www.nju.edu.cn/",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/en/6/6a/Nanjing_University_Logo.svg"
+    "reserve_link": "校内参观，联系校史馆",
+    "photo_url": "https://store.is.autonavi.com/showpic/4ed25360f1db5b9a0000002477464046?type=pic",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "高校校史馆"
   },
   {
     "name": "南京森林警察学院珍稀动物标本馆",
@@ -1211,7 +1648,10 @@
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市玄武区花园路11号",
     "reserve_link": "https://www.forestpolice.net/",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/zh/f/f9/Nanjing_Police_University_Logo.svg"
+    "photo_url": "https://aos-comment.amap.com/B0FFJP7769/comment/298425B0_8804_416A_93E7_5FF62B3520D5_L0_001_1500_200_1765338538836_84801842.jpg",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "高校教学标本馆"
   },
   {
     "name": "横山县抗日民主政府旧址史料陈列馆",
@@ -1230,7 +1670,13 @@
     "desc": "展示横山抗日历史",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市江宁区许呈村社区街道呈村路北",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/%E6%98%A8%E5%A4%A9.%E4%BB%8A%E5%A4%A9.%E6%98%8E%E5%A4%A9_-_panoramio.jpg"
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/%E6%98%A8%E5%A4%A9.%E4%BB%8A%E5%A4%A9.%E6%98%8E%E5%A4%A9_-_panoramio.jpg",
+    "visit_tips": "建议参观时长：20-30分钟",
+    "highlight": "特色：革命历史教育、红色文化",
+    "transport": "交通：建议自驾前往",
+    "nearby": "周边：横山风景区",
+    "collections": [],
+    "collections_note": "位于江宁区的乡村革命史陈列馆，网上未搜索到详细代表展品名单"
   },
   {
     "name": "新四军第一支队指挥部旧址史料陈列馆",
@@ -1249,7 +1695,10 @@
     "desc": "展示新四军抗战历史",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市江宁区横山村",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/N4A_-_NRA_New_Fourth_Army_%28Communist%29_badge_2.svg"
+    "photo_url": "https://store.is.autonavi.com/showpic/489a5ef3785a67a7d25acb49b733cd63",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "暂未收录代表文物数据，欢迎补充"
   },
   {
     "name": "南唐文化史料陈列馆",
@@ -1268,7 +1717,10 @@
     "desc": "展示南唐历史文化",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市江宁区秣陵街道祖堂村南唐二陵",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Nantang06.jpg"
+    "photo_url": "http://store.is.autonavi.com/showpic/706b6d3342d60993826d764479c201e4",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "暂未收录代表文物数据，欢迎补充"
   },
   {
     "name": "郑和墓史料陈列馆",
@@ -1287,7 +1739,10 @@
     "desc": "展示郑和墓与相关历史",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市江宁区牛首山",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Zhenghemu03.jpg"
+    "photo_url": "https://aos-comment.amap.com/B0FFKZV4LX/comment/253977BC_E942_4161_84CB_FED141845886_L0_001_2000_150_1750239467676_39436168.jpg",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "暂未收录代表文物数据，欢迎补充"
   },
   {
     "name": "洪保墓史料陈列馆",
@@ -1306,7 +1761,10 @@
     "desc": "展示洪保墓考古发现",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市江宁区祖堂山",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Zhenghemu03.jpg"
+    "photo_url": "https://aos-comment.amap.com/B0FFKZV4LX/comment/253977BC_E942_4161_84CB_FED141845886_L0_001_2000_150_1750239467676_39436168.jpg",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "暂未收录代表文物数据，欢迎补充"
   },
   {
     "name": "蜜蜂文化博物馆",
@@ -1325,7 +1783,10 @@
     "desc": "展示蜜蜂文化与养蜂业",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市江宁区湖熟街道西洋湖",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/European_honey_bee_extracts_nectar.jpg"
+    "photo_url": "http://store.is.autonavi.com/showpic/39703c578c378582d4de6ea2f334445c",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "暂未收录代表文物数据，欢迎补充"
   },
   {
     "name": "梅钢厂史陈列馆",
@@ -1344,7 +1805,10 @@
     "desc": "展示梅山钢铁厂历史",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市雨花台区梅山街道梅钢路",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/%E4%B8%8A%E6%B5%B7%E5%AE%9D%E9%92%A2%E5%8D%97%E4%BA%AC%E6%A2%85%E5%B1%B1%E5%85%AC%E5%8F%B8_-_panoramio.jpg"
+    "photo_url": "https://store.is.autonavi.com/showpic/80ea70df1a186e87f16559030c213447",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "暂未收录代表文物数据，欢迎补充"
   },
   {
     "name": "南京知青故里纪念馆",
@@ -1363,7 +1827,10 @@
     "desc": "展示知青文化历史，纪念上山下乡运动",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市浦口区永宁街道侯冲社区",
-    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nanjing_Museum_front_door.jpg?width=800"
+    "photo_url": "https://aos-comment.amap.com/B0FFGCS9BS/comment/file_media_Photo_7510_IMG_1759720511_6994_IMG_20251006_111331_jpg_ss_2.jpg",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "暂未收录代表文物数据，欢迎补充"
   },
   {
     "name": "南京五色中华虎凤蝶自然博物馆",
@@ -1382,7 +1849,10 @@
     "desc": "展示中华虎凤蝶与自然保护",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市浦口区水墨大埝旅游区",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/%E5%8D%97%E4%BA%AC%E6%80%BB%E7%BB%9F%E5%BA%9C%E8%A5%BF%E8%8A%B1%E5%8E%852024.3.jpg"
+    "photo_url": "https://aos-comment.amap.com/B0FFHBJ6OB/comment/366C95BC_D567_4D5C_A4A5_D3BA39AA700E_L0_001_1500_200_1763341159654_15163119.jpg",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "暂未收录代表文物数据，欢迎补充"
   },
   {
     "name": "江苏警官学院校史馆",
@@ -1402,7 +1872,10 @@
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市浦口区石佛寺",
     "reserve_link": "https://www.jspi.cn/",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/%E5%8D%97%E4%BA%AC%E6%80%BB%E7%BB%9F%E5%BA%9C%E8%A5%BF%E8%8A%B1%E5%8E%852024.3.jpg"
+    "photo_url": "http://store.is.autonavi.com/showpic/3af8546b67d3cc58e5f48d9154f1f6dd",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "暂未收录代表文物数据，欢迎补充"
   },
   {
     "name": "江苏警官学院近代警察史博物馆",
@@ -1421,8 +1894,11 @@
     "desc": "展示近代警察历史",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市浦口区石佛寺",
-    "reserve_link": "https://www.jspi.cn/",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/%E5%8D%97%E4%BA%AC%E6%80%BB%E7%BB%9F%E5%BA%9C%E8%A5%BF%E8%8A%B1%E5%8E%852024.3.jpg"
+    "reserve_link": "公众号「江苏警官学院」预约",
+    "photo_url": "http://store.is.autonavi.com/showpic/9562919e79aebae281b683f26a9db93b",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "暂未收录代表文物数据，欢迎补充"
   },
   {
     "name": "南京审计大学货币博物馆",
@@ -1441,8 +1917,11 @@
     "desc": "展示货币发展历史与金融文化",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市浦口区江浦街道雨山西路86号",
-    "reserve_link": "https://www.nau.edu.cn/",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Banner_of_Nanjing_Museum%2C_2015-06-20.jpg"
+    "reserve_link": "校内参观，联系校史馆",
+    "photo_url": "http://store.is.autonavi.com/showpic/39703c578c378582d4de6ea2f334445c",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "暂未收录代表文物数据，欢迎补充"
   },
   {
     "name": "竹镇市抗日民主政府旧址纪念馆",
@@ -1461,7 +1940,10 @@
     "desc": "展示竹镇抗日历史",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市六合区竹镇镇市府南路",
-    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nanjing_Museum_front_door.jpg?width=800"
+    "photo_url": "https://aos-comment.amap.com/B001907KQN/comment/content_media_external_file_1000023787_ss__1757492317113_55543015.jpg",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "暂未收录代表文物数据，欢迎补充"
   },
   {
     "name": "冶山铁矿博物馆",
@@ -1480,7 +1962,10 @@
     "desc": "展示冶山铁矿历史",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市六合区冶山街道望月村1号",
-    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nanjing_Museum_front_door.jpg?width=800"
+    "photo_url": "https://aos-comment.amap.com/B0FFF5VA6G/comment/16225f99b5845c0147764aba0317ab25_2048_2048_80.jpg",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "暂未收录代表文物数据，欢迎补充"
   },
   {
     "name": "达浦生纪念馆",
@@ -1493,13 +1978,16 @@
     "data_source": "prefilled",
     "last_updated": "2026-06-01",
     "id": 74,
-    "type": "history",
+    "type": "specialty",
     "lat": 32.338949,
     "lng": 118.834383,
     "desc": "纪念达浦生先生",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市六合区清真街",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/%E5%8D%97%E4%BA%AC%E6%80%BB%E7%BB%9F%E5%BA%9C%E8%A5%BF%E8%8A%B1%E5%8E%852024.3.jpg"
+    "photo_url": "http://store.is.autonavi.com/showpic/ba2f0b3864e26b9c95b30c1e787f7b90",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "暂未收录代表文物数据，欢迎补充"
   },
   {
     "name": "南化公司厂史陈列馆",
@@ -1518,7 +2006,12 @@
     "desc": "展示南化公司历史",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市六合区葛关路200号",
-    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nanjing_Museum_front_door.jpg?width=800"
+    "visit_tips": "建议参观时长：30分钟",
+    "highlight": "特色：工业遗产、化工发展史",
+    "transport": "交通：地铁S8号线六合站",
+    "nearby": "周边：金牛湖风景区",
+    "collections": [],
+    "collections_note": "暂未收录代表文物数据，欢迎补充"
   },
   {
     "name": "供销社博物馆",
@@ -1537,7 +2030,10 @@
     "desc": "展示供销社历史",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市溧水区晶桥镇石山下",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/%E5%8D%97%E4%BA%AC%E6%80%BB%E7%BB%9F%E5%BA%9C%E8%A5%BF%E8%8A%B1%E5%8E%852024.3.jpg"
+    "photo_url": "https://store.is.autonavi.com/showpic/d9e7a6bf6c86b8b50000002607828306?type=pic",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "暂未收录代表文物数据，欢迎补充"
   },
   {
     "name": "西舍红色文化陈列馆",
@@ -1556,7 +2052,10 @@
     "desc": "展示西舍红色文化",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市高淳区桂金路301县",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/%E5%8D%97%E4%BA%AC%E6%80%BB%E7%BB%9F%E5%BA%9C%E8%A5%BF%E8%8A%B1%E5%8E%852024.3.jpg"
+    "photo_url": "https://store.is.autonavi.com/showpic/a1d5fd852ad88e119c38059d07f008c1",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "暂未收录代表文物数据，欢迎补充"
   },
   {
     "name": "南京消防博物馆",
@@ -1575,7 +2074,10 @@
     "desc": "展示消防历史与消防装备",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市鼓楼区北京西路1号",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Nanjing_Drum_Tower.jpg"
+    "photo_url": "https://store.is.autonavi.com/showpic/4ea37bc1430671bf0000000672290313?type=pic",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "暂未收录代表文物数据，欢迎补充"
   },
   {
     "name": "南京钢铁博物馆",
@@ -1594,7 +2096,10 @@
     "desc": "展示南钢发展历史与钢铁工业文化",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市六合区卸甲甸",
-    "photo_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nanjing_Museum_front_door.jpg?width=800"
+    "photo_url": "https://store.is.autonavi.com/showpic/bcf0a29d6bed1df30000002553796361?type=pic",
+    "photo_source": "amap",
+    "collections": [],
+    "collections_note": "暂未收录代表文物数据，欢迎补充"
   },
   {
     "name": "南京林业大学博物馆",
@@ -1613,8 +2118,10 @@
     "desc": "展示林业科学与森林资源",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市玄武区龙蟠路159号",
-    "reserve_link": "https://www.njfu.edu.cn/",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/zh/1/19/Nanjing_Forestry_University_badge.svg"
+    "reserve_link": "校内参观，联系校史馆",
+    "photo_url": "https://upload.wikimedia.org/wikipedia/zh/1/19/Nanjing_Forestry_University_badge.svg",
+    "collections": [],
+    "collections_note": "暂未收录代表文物数据，欢迎补充"
   },
   {
     "name": "南京江南丝绸文化博物馆",
@@ -1634,7 +2141,13 @@
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市秦淮区菱角市(公交站)66号",
     "reserve_link": "http://www.silkmuseum.cn/",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Banner_of_Nanjing_Museum%2C_2015-06-20.jpg"
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Banner_of_Nanjing_Museum%2C_2015-06-20.jpg",
+    "visit_tips": "建议参观时长：30-45分钟",
+    "highlight": "特色：江南丝绸文化、织造技艺展示",
+    "transport": "交通：地铁3号线夫子庙站",
+    "nearby": "周边：夫子庙景区",
+    "collections": [],
+    "collections_note": "暂未收录代表文物数据，欢迎补充"
   },
   {
     "name": "南京市江宁区文化遗产保护中心",
@@ -1653,6 +2166,11 @@
     "desc": "江宁区文化遗产保护与展示",
     "coordinates_source": "amap_geocoding",
     "formatted_address": "江苏省南京市江宁区东山街道竹山路80号",
-    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Zhenghemu03.jpg"
+    "visit_tips": "建议参观时长：30分钟",
+    "highlight": "特色：江宁区文化遗产展示",
+    "transport": "交通：地铁1号线龙眠大道站",
+    "nearby": "周边：江宁博物馆",
+    "collections": [],
+    "collections_note": "暂未收录代表文物数据，欢迎补充"
   }
 ]

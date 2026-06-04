@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ museum.name }} · 代表文物 · 博物金陵</title>
+    <style>
+        :root {
+            --bg-deep: #0a0505;
+            --bg-wall: #1a0808;
+            --bg-card: rgba(212, 175, 55, 0.04);
+            --gold: #d4af37;
+            --gold-light: #e8d5a3;
+            --gold-pale: #c9a96e;
+            --vermillion: #c7000a;
+            --text-body: #c9b896;
+            --text-dim: #886655;
+            --text-muted: #554433;
+            --border-gold: rgba(212, 175, 55, 0.18);
+            --border-gold-light: rgba(212, 175, 55, 0.3);
+            --glow-gold: rgba(212, 175, 55, 0.25);
+            --font-display: 'Georgia', 'Noto Serif SC', 'STSong', 'SimSun', serif;
+            --font-body: 'Georgia', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            --transition-med: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            background: var(--bg-deep);
+            color: var(--text-body);
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--bg-deep);
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            pointer-events: none;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E");
+        }
+
+        /* ========== Top Bar ========== */
+        .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(10, 5, 5, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-gold);
+            padding: 0 24px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .topbar-brand {
+            font-family: var(--font-display);
+            font-size: 18px;
+            color: var(--gold);
+            letter-spacing: 4px;
+            text-decoration: none;
+        }
+
+        .topbar-back {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 13px;
+            letter-spacing: 2px;
+            transition: color var(--transition-med);
+            padding: 8px 16px;
+            border: 1px solid var(--border-gold);
+            border-radius: 6px;
+        }
+
+        .topbar-back:hover {
+            color: var(--gold);
+            border-color: var(--gold);
+        }
+
+        /* ========== Hero ========== */
+        .page-hero {
+            padding: 48px 24px 32px;
+            text-align: center;
+            background:
+                radial-gradient(ellipse at 50% 0%, rgba(212, 175, 55, 0.12) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 100%, rgba(199, 0, 10, 0.05) 0%, transparent 50%);
+        }
+
+        .page-hero-icon {
+            font-size: 64px;
+            margin-bottom: 12px;
+        }
+
+        .page-hero h1 {
+            font-family: var(--font-display);
+            font-size: 36px;
+            color: var(--gold-light);
+            letter-spacing: 6px;
+            margin-bottom: 8px;
+        }
+
+        .page-hero .museum-tags {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 12px;
+        }
+
+        .museum-tag {
+            font-size: 12px;
+            padding: 4px 14px;
+            border-radius: 20px;
+            border: 1px solid var(--border-gold);
+            color: var(--gold);
+            background: rgba(212, 175, 55, 0.06);
+        }
+
+        .museum-tag.level {
+            border-color: rgba(199, 0, 10, 0.3);
+            color: var(--vermillion-bright);
+            background: rgba(199, 0, 10, 0.08);
+        }
+
+        /* ========== Info Grid ========== */
+        .info-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px 32px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+
+        .info-cell {
+            background: rgba(212, 175, 55, 0.03);
+            border: 1px solid var(--border-gold);
+            border-radius: 10px;
+            padding: 16px;
+        }
+
+        .info-cell-label {
+            font-size: 11px;
+            color: var(--text-dim);
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .info-cell-value {
+            font-size: 14px;
+            color: var(--text-body);
+            line-height: 1.5;
+        }
+
+        .museum-desc-block {
+            background: rgba(212, 175, 55, 0.04);
+            border: 1px solid var(--border-gold);
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin-bottom: 40px;
+        }
+
+        .museum-desc-block h2 {
+            font-family: var(--font-display);
+            font-size: 18px;
+            color: var(--gold);
+            margin-bottom: 12px;
+            letter-spacing: 2px;
+        }
+
+        .museum-desc-block p {
+            font-size: 14px;
+            color: var(--text-body);
+            line-height: 1.8;
+        }
+
+        /* ========== Collections Grid ========== */
+        .collections-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .collections-header h2 {
+            font-family: var(--font-display);
+            font-size: 24px;
+            color: var(--gold-light);
+            letter-spacing: 4px;
+            margin-bottom: 8px;
+        }
+
+        .collections-header .note {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        .collections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 20px;
+            margin-bottom: 48px;
+        }
+
+        .collection-item {
+            background: linear-gradient(135deg, rgba(26, 8, 8, 0.8), rgba(10, 5, 5, 0.9));
+            border: 1px solid var(--border-gold);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all var(--transition-slow);
+        }
+
+        .collection-item:hover {
+            border-color: var(--gold);
+            box-shadow: 0 4px 24px var(--glow-gold);
+            transform: translateY(-4px);
+        }
+
+        .collection-item-image-wrapper {
+            width: 100%;
+            height: 180px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.06), rgba(10, 5, 5, 0.6));
+        }
+
+        /* 骨架屏闪烁动画 */
+        .collection-item-image-wrapper::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg,
+                    transparent 0%,
+                    rgba(212, 175, 55, 0.06) 50%,
+                    transparent 100%);
+            animation: shimmer 1.8s ease-in-out infinite;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .collection-item-image-wrapper.loaded::before {
+            display: none;
+        }
+
+        .collection-item-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.08), rgba(26, 8, 8, 0.6));
+        }
+
+        .collection-item-image.loaded {
+            opacity: 1;
+        }
+
+        /* 图片加载失败的占位图标 */
+        .collection-item-image-fallback {
+            position: absolute;
+            inset: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            opacity: 0.35;
+            z-index: 0;
+        }
+
+        .collection-item-image-wrapper.error .collection-item-image-fallback {
+            display: flex;
+        }
+
+        .collection-item-image-wrapper.error .collection-item-image {
+            opacity: 0;
+        }
+
+        .collection-item-body {
+            padding: 18px 20px;
+        }
+
+        .collection-item-name {
+            font-family: var(--font-display);
+            font-size: 16px;
+            color: var(--gold-light);
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .collection-item-era {
+            font-size: 11px;
+            color: var(--gold-pale);
+            background: rgba(212, 175, 55, 0.1);
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .collection-item-desc {
+            font-size: 13px;
+            color: var(--text-dim);
+            line-height: 1.6;
+        }
+
+        /* ========== Empty State ========== */
+        .empty-state {
+            text-align: center;
+            padding: 64px 24px;
+        }
+
+        .empty-state-icon {
+            font-size: 64px;
+            margin-bottom: 16px;
+            opacity: 0.5;
+        }
+
+        .empty-state h3 {
+            font-family: var(--font-display);
+            font-size: 20px;
+            color: var(--text-dim);
+            margin-bottom: 8px;
+        }
+
+        .empty-state p {
+            font-size: 14px;
+            color: var(--text-muted);
+            max-width: 400px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* ========== Footer Actions ========== */
+        .footer-actions {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            padding: 32px 24px 48px;
+            flex-wrap: wrap;
+        }
+
+        .footer-btn {
+            padding: 12px 28px;
+            border: 1px solid var(--border-gold);
+            background: transparent;
+            color: var(--gold);
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all var(--transition-med);
+            text-decoration: none;
+            font-family: var(--font-body);
+            letter-spacing: 1px;
+        }
+
+        .footer-btn:hover {
+            background: rgba(212, 175, 55, 0.1);
+            box-shadow: 0 0 12px var(--glow-gold);
+        }
+
+        .footer-btn.primary {
+            background: rgba(199, 0, 10, 0.15);
+            border-color: rgba(199, 0, 10, 0.4);
+            color: var(--vermillion-bright);
+        }
+
+        .footer-btn.primary:hover {
+            background: rgba(199, 0, 10, 0.25);
+            box-shadow: 0 0 12px var(--glow-red);
+        }
+
+        /* ========== Scrollbar ========== */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-deep);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(212, 175, 55, 0.3);
+            border-radius: 3px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(212, 175, 55, 0.5);
+        }
+
+        /* ========== Responsive ========== */
+        @media (max-width: 600px) {
+            .page-hero h1 {
+                font-size: 26px;
+                letter-spacing: 3px;
+            }
+
+            .collections-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <nav class="topbar">
+        <a href="/" class="topbar-brand">博物金陵</a>
+        <a href="/" onclick="window.close();" class="topbar-back">← 返回</a>
+    </nav>
+
+    <!-- Hero -->
+    <section class="page-hero">
+        <div class="page-hero-icon">🏛️</div>
+        <h1>{{ museum.name }}</h1>
+        <div class="museum-tags">
+            {% if museum.category %}<span class="museum-tag">{{ museum.category }}</span>{% endif %}
+            {% if museum.level %}<span class="museum-tag level">{{ museum.level }}</span>{% endif %}
+            {% if museum.type %}<span class="museum-tag">{{ museum.type }}</span>{% endif %}
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <div class="info-section">
+        <!-- Museum Info Grid -->
+        <div class="info-grid">
+            {% if museum.address %}
+            <div class="info-cell">
+                <div class="info-cell-label">📍 地址</div>
+                <div class="info-cell-value">{{ museum.address }}</div>
+            </div>
+            {% endif %}
+            {% if museum.open_time %}
+            <div class="info-cell">
+                <div class="info-cell-label">⏰ 开放时间</div>
+                <div class="info-cell-value">{{ museum.open_time }}</div>
+            </div>
+            {% endif %}
+            {% if museum.ticket_info %}
+            <div class="info-cell">
+                <div class="info-cell-label">🎫 门票信息</div>
+                <div class="info-cell-value">{{ museum.ticket_info }}</div>
+            </div>
+            {% endif %}
+            {% if museum.phone %}
+            <div class="info-cell">
+                <div class="info-cell-label">📞 联系电话</div>
+                <div class="info-cell-value">{{ museum.phone }}</div>
+            </div>
+            {% endif %}
+        </div>
+
+        <!-- Museum Description -->
+        <div class="museum-desc-block">
+            <h2>📖 博物馆介绍</h2>
+            <p>{{ museum.desc or museum.intro_short or '暂无详细介绍' }}</p>
+        </div>
+
+        <!-- Collections -->
+        <div class="collections-header">
+            <h2>🏺 代表文物</h2>
+            {% if museum.collections_note %}
+            <p class="note">{{ museum.collections_note }}</p>
+            {% endif %}
+        </div>
+
+        {% if museum.collections and museum.collections|length > 0 %}
+        <div class="collections-grid">
+            {% for item in museum.collections %}
+            <div class="collection-item">
+                {% if item.image %}
+                <div class="collection-item-image-wrapper">
+                    <img class="collection-item-image"
+                         src="{{ item.image }}"
+                         alt="{{ item.name }}"
+                         decoding="async"
+                         {% if loop.index <= 4 %}fetchpriority="high"{% else %}loading="lazy"{% endif %}
+                         onload="this.classList.add('loaded');this.parentElement.classList.add('loaded')"
+                         onerror="this.parentElement.classList.add('error')">
+                    <div class="collection-item-image-fallback">🏺</div>
+                </div>
+                {% endif %}
+                <div class="collection-item-body">
+                    <div class="collection-item-name">{{ item.name }}</div>
+                    {% if item.era %}<span class="collection-item-era">{{ item.era }}</span>{% endif %}
+                    <p class="collection-item-desc">{{ item.desc }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="empty-state">
+            <div class="empty-state-icon">📭</div>
+            <h3>暂无代表文物数据</h3>
+            <p>该博物馆暂未收录详细的代表文物信息，欢迎实地参观探索更多精彩藏品。</p>
+        </div>
+        {% endif %}
+
+        <!-- Footer Actions -->
+        <div class="footer-actions">
+            {% if museum.reserve_link or museum.website %}
+            <a href="{{ museum.reserve_link or museum.website }}" target="_blank" class="footer-btn primary">🔗 预约参观</a>
+            {% endif %}
+            <a href="/" class="footer-btn">🏛️ 返回首页</a>
+            <a href="javascript:window.close()" class="footer-btn">✕ 关闭页面</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

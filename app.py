@@ -10,6 +10,7 @@ from services.museum_service import get_all_museums
 load_dotenv()
 
 app = Flask(__name__)
+app.config['TEMPLATES_AUTO_RELOAD'] = True
 CORS(app)
 
 AMAP_KEY = os.environ.get('AMAP_KEY', '')
@@ -17,14 +18,9 @@ APP_PORT = int(os.environ.get('PORT', 5000))
 GROQ_API_KEY = os.environ.get('GROQ_API_KEY', '')
 GROQ_API_URL = 'https://api.deepseek.com/v1/chat/completions'
 
-_all_museums = None
-
 
 def load_museums():
-    global _all_museums
-    if _all_museums is None:
-        _all_museums = get_all_museums()
-    return _all_museums
+    return get_all_museums()
 
 
 def build_museum_context(museums):
@@ -50,6 +46,7 @@ SYSTEM_PROMPT_BASE = """你是「博物金陵」的AI导览员，热情专业地
 3. 推荐博物馆时，要包含特色亮点、门票信息和预约方式
 4. 如果用户想预约或查看某个博物馆，主动提醒可以使用下方的预约按钮
 5. 回答结尾可以追问引导用户了解更多（例如：需要我帮您查看南京博物院的预约信息吗？）
+6. 当用户询问位于南京市之外的博物馆信息时，主动提醒用户该博物馆不在南京市范围内，不提供详细信息
 请严格基于下面提供的博物馆数据库来回答，不要编造不存在的信息。"""
 
 
@@ -67,6 +64,16 @@ def index():
 @app.route('/chat')
 def chat():
     return render_template('chat.html')
+
+
+@app.route('/museum/<int:museum_id>/collections')
+def museum_collections(museum_id):
+    """博物馆代表文物独立页面"""
+    museums = load_museums()
+    museum = next((m for m in museums if m.get('id') == museum_id), None)
+    if not museum:
+        return "博物馆不存在", 404
+    return render_template('collections.html', museum=museum)
 
 
 @app.route('/api/reserve-info', methods=['GET'])
