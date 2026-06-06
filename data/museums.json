@@ -73,6 +73,12 @@
         "desc": "西晋青瓷，出土于周处家族墓，最早有铭款瓷器之一",
         "era": "西晋",
         "image": "https://zdimg.lifeweek.com.cn/bg/20201215/1608020953023jksea.jpg"
+      },
+      {
+        "name": "竹林七贤与荣启期砖画",
+        "desc": "南朝墓葬模印拼嵌画像砖，现存最早魏晋人物画实物，禁止出境展览",
+        "era": "南朝",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/73/Seven_Sages_of_the_Bamboo_Grove_and_Rong_Qiqi.jpg"
       }
     ],
     "collections_note": "数据来源：网络搜索，图片均为实况文物照片"
@@ -277,6 +283,36 @@
         "desc": "镇馆之宝，黄缎彩线绣五爪团龙，太平天国高级官员官服",
         "era": "太平天国",
         "image": "http://www.rmhb.com.cn/yxsj/tpgs/202506/W020250624344851818010.jpg"
+      },
+      {
+        "name": "天王洪秀全玉玺",
+        "desc": "太平天国天王洪秀全玉玺拓片，太平天国最高权力象征",
+        "era": "太平天国",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/3a/TaiPingRevolutionSeal.png"
+      },
+      {
+        "name": "太平天国镇库钱",
+        "desc": "太平天国铸造的镇库大钱，存世孤品，镇馆之宝",
+        "era": "太平天国",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/b2/The_Coin_of_Heavenly_Kingdom_of_Great_Peace.JPG"
+      },
+      {
+        "name": "曾水源墓碑",
+        "desc": "太平天国官员曾水源墓碑，研究太平天国官制的重要实物",
+        "era": "太平天国",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Tombstone_of_Zeng_Shuiyuan_2011-03.JPG"
+      },
+      {
+        "name": "陈玉成英王府雕花梁架",
+        "desc": "太平天国英王陈玉成王府雕花梁架构件，精美木雕遗存",
+        "era": "太平天国",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Beam_from_the_Official_Residence_of_Chen_Yucheng_2011-12.JPG"
+      },
+      {
+        "name": "太平天国天王宝座",
+        "desc": "太平天国天王宝座，太平天国天王洪秀全的御座",
+        "era": "太平天国",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Heavenly_throne_%285811933470%29.jpg"
       }
     ],
     "collections_note": "数据来源：网络搜索，图片均为实况文物照片"
@@ -319,6 +355,30 @@
         "desc": "记录历代进士名录的石碑，科举制度实物见证",
         "era": "明清",
         "image": "https://inews.gtimg.com/om_bt/O4FRnWPPGhhbpjKahDuHHBwCzlrlItlwajS86Dx04S2dwAA/641"
+      },
+      {
+        "name": "江南贡院明远楼",
+        "desc": "江南贡院中心建筑，中国保留最古老的贡院考场建筑",
+        "era": "明",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/09/Mingyuan_Tower_in_Jiangnan_Examination_Hall.jpg"
+      },
+      {
+        "name": "中国科举博物馆建筑",
+        "desc": "中国科举博物馆建筑外景，沉浸式展示千年科举制度",
+        "era": "现代",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/71/China_Imperial_Examination_Museum_20180929.jpg"
+      },
+      {
+        "name": "明代科举人物肖像",
+        "desc": "明代科举人物江顺福肖像，博物馆藏科举文物",
+        "era": "明",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Portrait_of_Jiang_Shunfu.jpg"
+      },
+      {
+        "name": "南京夫子庙孔子雕像",
+        "desc": "南京夫子庙孔子雕像，儒家文化象征",
+        "era": "现代",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/79/Confucius_Sculpture%2C_Nanjing.jpg"
       }
     ],
     "collections_note": "数据来源：网络搜索，图片均为实况文物照片"
@@ -350,6 +410,18 @@
         "desc": "复原明初南京城宏大规模，生动展示城门宫殿楼宇",
         "era": "明",
         "image": "http://www.news.cn/local/2021-12/29/1128214384_16407811788941n.jpg"
+      },
+      {
+        "name": "中华门城堡",
+        "desc": "南京中华门城堡，中国现存规模最大的城门城堡",
+        "era": "明",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/%E5%8D%97%E4%BA%AC%E4%B8%AD%E5%8D%8E%E9%97%A8%2C_2009-01-27_01.jpg"
+      },
+      {
+        "name": "中华门瓮城",
+        "desc": "中华门瓮城三道防线环环相扣，军事防御杰作",
+        "era": "明",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Glazed_arch_of_Dabaoen_Temple.jpg"
       }
     ],
     "collections_note": "数据来源：网络搜索，图片均为实况文物照片"
@@ -391,6 +463,12 @@
         "desc": "南京大屠杀幸存者影像墙，铭记历史的见证",
         "era": "现代",
         "image": "http://www.81.cn/js_208592/_attachment/2024/03/23/16296309_af74e6332bae94337a605f19f8bab0c4.jpg"
+      },
+      {
+        "name": "和平大钟",
+        "desc": "和平大钟，悼念遇难同胞，祈愿世界和平",
+        "era": "现代",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a2/The_Peace_Bell%2C_Nanjing_Massacre_Memorial_%28f17724196152%29.jpg"
       }
     ],
     "collections_note": "数据来源：网络搜索，图片均为实况文物照片"
@@ -428,6 +506,12 @@
         "desc": "传统云锦提花织机，长5.6米高4米，1924个零部件，云锦工艺核心",
         "era": "明清",
         "image": "https://pic.huitu.com/res/20260327/1165041_20260327184502552207_1.jpg"
+      },
+      {
+        "name": "乾隆云锦龙袍",
+        "desc": "清代乾隆年间云锦龙袍，18世纪皇室织物珍品",
+        "era": "清",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/5/52/Drachenrobe-Qianlong.JPG"
       }
     ],
     "collections_note": "数据来源：网络搜索，图片均为实况文物照片"
@@ -540,8 +624,15 @@
     "desc": "解放战争时期中共代表团驻地旧址群（梅园新村17/30/35号），全国重点文保单位、爱国主义教育示范基地。",
     "photo_url": "http://store.is.autonavi.com/showpic/2e7dc365c54a96972a7e6ac091a48f41",
     "photo_source": "amap",
-    "collections": [],
-    "collections_note": "数据来源：博物南京，全国重点文保单位"
+    "collections": [
+      {
+        "name": "中共代表团办事处旧址",
+        "desc": "梅园新村30号，周恩来、邓颖超1946年办公与居住地",
+        "era": "1946",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Meiyuan_Xincun_No.30.jpg"
+      }
+    ],
+    "collections_note": "数据来源：网络搜索，图片均为实况文物照片"
   },
   {
     "name": "南京市民俗博物馆（甘熙宅第）",
@@ -567,8 +658,15 @@
     "desc": "全国重点文保单位甘熙宅第内，展示南京非遗、民俗风情、传统民居建筑艺术，南京市民俗保护传承基地。",
     "photo_url": "http://store.is.autonavi.com/showpic/17d9bb69a1d54d3d3ae1ea94941a39dd",
     "photo_source": "amap",
-    "collections": [],
-    "collections_note": "数据来源：南京市文化和旅游局、秦淮区人民政府，展示十余个市级以上非遗项目"
+    "collections": [
+      {
+        "name": "甘熙宅第全景",
+        "desc": "清代甘熙宅第，九十九间半，南京现有面积最大的明清民居建筑群",
+        "era": "清",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/07/Ganxi%27s_Residence_in_Nanjing_01.jpg"
+      }
+    ],
+    "collections_note": "数据来源：网络搜索，图片均为实况文物照片"
   },
   {
     "name": "渡江胜利纪念馆",
@@ -597,6 +695,12 @@
         "desc": "渡江战役中运送解放军过江的英雄船",
         "era": "1949",
         "image": "http://jsnews.jschina.com.cn/zt2022/ztgk/202204/W020220423553682082939"
+      },
+      {
+        "name": "渡江胜利纪念碑",
+        "desc": "渡江胜利纪念碑雕塑，纪念1949年渡江战役胜利",
+        "era": "1949",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/23/Yangtze_Crossing_Monument_-_detail_-_P1070673.JPG"
       }
     ],
     "collections_note": "数据来源：网络搜索，图片均为实况文物照片"
@@ -639,6 +743,12 @@
         "desc": "大报恩寺地宫出土，佛教圣物，与佛顶骨舍利同出",
         "era": "北宋",
         "image": "https://www.seu.edu.cn/_upload/article/47/32/769bee1b4c19ac0bf05488cefe25/5add9292-fca3-43ce-bc3e-94763e2342c1.jpg"
+      },
+      {
+        "name": "大报恩寺琉璃塔拱门",
+        "desc": "明代大报恩寺琉璃塔拱门构件，曾位列中古世界七大奇迹",
+        "era": "明",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Glazed_arch_of_Dabaoen_Temple.jpg"
       }
     ],
     "collections_note": "数据来源：网络搜索，图片均为实况文物照片"
@@ -668,6 +778,24 @@
         "desc": "石象路神道守护神兽系列石刻复制品及相关文物",
         "era": "明",
         "image": "https://imgcdn.yzwb.net/1765289877409fcapp_c93097a4-ae3c-42f2-871c-c04473cd64d6_1765283105961coverWaterMark.jpg?imageMogr2/thumbnail/1080x%3E/strip/ignore-error/1|imageslim"
+      },
+      {
+        "name": "明孝陵神道石象路",
+        "desc": "明孝陵神道石象路秋景，12对石兽守护600余年",
+        "era": "明",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Spirit_Way_Ming_Xiaoling_2017_November.jpg"
+      },
+      {
+        "name": "明孝陵石像路晨曦",
+        "desc": "明孝陵神道石像路晨曦景观，石象路清晨",
+        "era": "明",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Ming_Xiaoling_Mausoleum_Spirit_Way.jpg"
+      },
+      {
+        "name": "明孝陵石象",
+        "desc": "明孝陵神道石象路石雕，600年历史的石象雕刻",
+        "era": "明",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/89/MingXiaoling_Animal_Elephant_01.jpg"
       }
     ],
     "collections_note": "数据来源：网络搜索，图片均为实况文物照片"
@@ -743,8 +871,33 @@
     "website": "https://www.njztf.cn",
     "photo_url": "https://aos-comment.amap.com/B00190BAAX/comment/D8F24BB9_D02D_44B4_91F1_6ACAD112DC1C_L0_001_1500_200_1747300471577_77406835.jpg",
     "photo_source": "amap",
-    "collections": [],
-    "collections_note": "数据来源：CCTV国家地理，以历史建筑群和史料陈列为主"
+    "collections": [
+      {
+        "name": "总统府门楼",
+        "desc": "南京总统府标志性门楼建筑，中国近代史重要遗址",
+        "era": "民国",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/83/Presidential_Palace_Nanjing_2015_January.jpg"
+      },
+      {
+        "name": "孙中山临时大总统办公室",
+        "desc": "孙中山1912年在南京就任临时大总统时的办公场所",
+        "era": "1912",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Office_of_Provisional_President_Sun_Yat-sen_2011-12.jpg"
+      },
+      {
+        "name": "孙中山总统府坐像",
+        "desc": "南京总统府内孙中山坐像， commissioned Hall前",
+        "era": "民国",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Sun_Yat-sen_Statue_in_Nanjing_Presidential_Palace.jpg"
+      },
+      {
+        "name": "总统府会议室",
+        "desc": "南京总统府会议室旧址，见证重要历史决策",
+        "era": "民国",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/27/Meeting_Room_in_Nanjing_Presidential_Palace.JPG"
+      }
+    ],
+    "collections_note": "数据来源：网络搜索，图片均为实况文物照片"
   },
   {
     "name": "玄武区退役军人主题馆",
@@ -1084,8 +1237,15 @@
     "reserve_link": "https://zschina.nanjing.gov.cn/",
     "photo_url": "http://store.is.autonavi.com/showpic/ec6d1f47d15b9c818f0b73dc43147d2f",
     "photo_source": "amap",
-    "collections": [],
-    "collections_note": "位于中山陵景区内，展示孙中山生平事迹"
+    "collections": [
+      {
+        "name": "中山陵祭堂",
+        "desc": "中山陵主体建筑祭堂，孙中山先生陵寝所在地",
+        "era": "民国",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Hall_of_Sun_Yat-sen_Mausoleum.jpg"
+      }
+    ],
+    "collections_note": "数据来源：网络搜索，图片均为实况文物照片"
   },
   {
     "name": "南京抗日航空烈士纪念馆",
@@ -1403,8 +1563,15 @@
     "reserve_link": "http://www.zhjng.com/",
     "photo_url": "http://store.is.autonavi.com/showpic/35b732e4a1badc679deb35ae48c0b717",
     "photo_source": "amap",
-    "collections": [],
-    "collections_note": "纪念明代航海家郑和的专题馆"
+    "collections": [
+      {
+        "name": "郑和铜像",
+        "desc": "郑和铜像，位于南京静海寺，纪念伟大航海家郑和",
+        "era": "现代",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/de/Bronze_of_Zheng_He%2C_Jinghai_Si.jpg"
+      }
+    ],
+    "collections_note": "数据来源：网络搜索，图片均为实况文物照片"
   },
   {
     "name": "五老村爱国卫生运动纪念馆",
