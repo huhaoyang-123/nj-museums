@@ -5,7 +5,7 @@
 ## 项目结构
 
 ```
-EL.demo2.0/
+EL.demo 3.0/
 ├── app.py                              # Flask 主入口（路由、AI 对话、语音识别、Token 用量追踪）
 ├── requirements.txt                    # Python 依赖（Flask、Flask-CORS、python-dotenv、requests）
 ├── .env.example                        # 环境变量模板
@@ -24,27 +24,30 @@ EL.demo2.0/
 │   ├── collections.html                # 代表文物详情页（骨架屏 + 懒加载 + 淡入动画）
 │   └── chat.html                       # AI 导览独立全屏页面
 │
-├── scripts/                            # 数据维护脚本
-│   ├── check_status.py                 # 检查博物馆文物覆盖情况
+├── scripts/                            # 数据维护脚本（共 10 个）
+│   ├── README.md                       # 脚本使用说明
 │   ├── discover_new_museums.py         # 通过高德 POI API 发现新博物馆候选
 │   ├── dedup_museums.py                # 去重新博物馆候选名单
 │   ├── fill_museum_metadata.py         # 通过百度百科/搜索引擎填充博物馆元数据
 │   ├── fill_candidates_address.py      # 为候选博物馆补充地址信息
 │   ├── fix_museum_coordinates_poi.py   # 通过高德 POI 搜索修正博物馆坐标
+│   ├── scrape_collections.py           # 爬取博物馆代表文物信息
+│   ├── repair_collections.py           # 修复/清理文物数据
 │   ├── crawl_museum_news.py            # 从博物馆官网爬取最新展览/活动/新闻
 │   ├── crawl_news_quick.py             # 精简版新闻爬虫（聚焦重点博物馆）
 │   ├── update_news_data.py             # 写入精选新闻/展览数据到 museums.json
-│   └── README.md                       # 脚本使用说明
+│   └── check_status.py                 # 检查博物馆文物覆盖情况
 │
 ├── .vscode/                            # VS Code 调试配置
 │   └── launch.json                     # Flask debugpy 启动配置
 │
-├── .trae/                              # Trae IDE 配置
-│   ├── rules/
-│   │   └── git-commit-message.md       # Git 提交信息规范
-│   └── skills/
-│       └── museum-artifact-scraper/
-│           └── SKILL.md                # 博物馆文物爬取技能定义
+└── .trae/                              # Trae IDE 配置
+    ├── rules/
+    │   ├── coding-standards.md          编码与爬取规则
+    │   └── git-commit-message.md        Git 提交信息规范
+    └── skills/
+        └── museum-artifact-scraper/
+            └── SKILL.md                 博物馆文物爬取技能定义
 ```
 
 ## 核心功能与实现逻辑
@@ -232,6 +235,7 @@ cp .env.example .env
 | `AMAP_WEB_KEY`         | 高德地图 Web端Key（用于前端地图渲染） | 是       |
 | `AMAP_WEB_SECRET_KEY`  | Web端安全密钥（可选）                 | 否       |
 | `GROQ_API_KEY`         | DeepSeek AI API密钥                   | 是       |
+| `TOKEN_LIMIT`          | AI总Token用量上限（默认20000000）      | 否       |
 | `BAIDU_ASR_API_KEY`    | 百度语音识别 API Key                  | 否       |
 | `BAIDU_ASR_SECRET_KEY` | 百度语音识别 Secret Key               | 否       |
 | `PORT`                 | 服务器端口（默认5000）                | 否       |
@@ -324,10 +328,12 @@ python app.py
 | 填充博物馆元数据 | `fill_museum_metadata.py`       | 网络       |
 | 补充候选地址信息 | `fill_candidates_address.py`    | `AMAP_KEY` |
 | 修正博物馆坐标   | `fix_museum_coordinates_poi.py` | `AMAP_KEY` |
-| 检查文物覆盖     | `check_status.py`               | —          |
+| 爬取代表文物     | `scrape_collections.py`         | 网络       |
+| 修复文物数据     | `repair_collections.py`         | —          |
 | 爬取官网新闻     | `crawl_museum_news.py`          | 网络       |
 | 快速爬取新闻     | `crawl_news_quick.py`           | 网络       |
 | 写入精选新闻     | `update_news_data.py`           | —          |
+| 检查文物覆盖     | `check_status.py`               | —          |
 
 > 运行脚本前请备份 `data/museums.json`，部分脚本需要高德 API 密钥。
 

@@ -28,8 +28,25 @@ BAIDU_ASR_TOKEN = None
 BAIDU_ASR_TOKEN_EXPIRY = 0
 
 # Token 用量追踪
-TOKEN_LIMIT = 20_000_000
+TOKEN_LIMIT = int(os.environ.get('TOKEN_LIMIT', '20000000'))
 TOKEN_USAGE_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'token_usage.json')
+
+
+def _ensure_data_dir():
+    """确保 data 目录和 token_usage.json 存在且有正确权限"""
+    data_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data')
+    os.makedirs(data_dir, exist_ok=True)
+    # 如果 token_usage.json 不存在则初始化
+    if not os.path.exists(TOKEN_USAGE_FILE):
+        with open(TOKEN_USAGE_FILE, 'w', encoding='utf-8') as f:
+            json.dump({'total_tokens': 0}, f)
+        print(f"[启动] 已初始化 {TOKEN_USAGE_FILE}")
+    # 确保文件可写
+    if not os.access(TOKEN_USAGE_FILE, os.W_OK):
+        print(f"[警告] {TOKEN_USAGE_FILE} 不可写，AI Token 用量记录将失败")
+
+
+_ensure_data_dir()
 
 
 def _read_token_usage():

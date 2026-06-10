@@ -1,6 +1,6 @@
 # Scripts 目录说明
 
-本目录包含博物馆数据维护脚本，用于发现新场馆、去重、补充元数据、修正坐标及数据质量检查。
+本目录包含博物馆数据维护脚本，用于发现新场馆、去重、补充元数据、修正坐标、爬取文物、获取新闻及数据质量检查（共 10 个脚本）。
 
 ## 脚本列表
 
@@ -96,22 +96,42 @@ python scripts/fill_candidates_address.py
 
 ---
 
-### 6. check_status.py
-**用途**：快速查看博物馆文物覆盖情况
+### 6. scrape_collections.py
+**用途**：为缺失文物数据的博物馆自动搜索并填充展品照片信息
 
 **功能**：
-- 统计有文物的博物馆数量和占比
-- 列出文物较少的博物馆（<5件）
-- 列出完全无文物的博物馆
+- 多源搜索（百度百科 → 博物馆官网 → 通用搜索）
+- 支持限流、并发控制、自动备份
+- 支持命令行参数：`--limit`、`--id`、`--dry-run`（预览模式）
 
 **运行命令**：
 ```bash
-python scripts/check_status.py
+python scripts/scrape_collections.py              # 处理所有缺失文物的博物馆
+python scripts/scrape_collections.py --limit 10   # 只处理前 10 个
+python scripts/scrape_collections.py --id 18,20   # 只处理指定 ID
+python scripts/scrape_collections.py --dry-run    # 预览模式，不写文件
+```
+
+**依赖**：`requests`、`beautifulsoup4`
+
+---
+
+### 7. repair_collections.py
+**用途**：修复与清理博物馆文物数据
+
+**功能**：
+- 修复损坏的文物图片链接
+- 清理批量爬取产生的低质量数据（重复图片、无效文本等）
+- 为优先博物馆补充验证过的高质量文物数据
+
+**运行命令**：
+```bash
+python scripts/repair_collections.py
 ```
 
 ---
 
-### 7. crawl_museum_news.py
+### 8. crawl_museum_news.py
 **用途**：从博物馆官网首页自动抓取最新展览、活动、新闻等动态信息
 
 **功能**：
@@ -134,7 +154,7 @@ python scripts/crawl_museum_news.py
 
 ---
 
-### 8. crawl_news_quick.py
+### 9. crawl_news_quick.py
 **用途**：精简版新闻爬虫，聚焦有独立官网的重点博物馆
 
 **功能**：
@@ -155,7 +175,7 @@ python scripts/crawl_news_quick.py
 
 ---
 
-### 9. update_news_data.py
+### 10. update_news_data.py
 **用途**：将通过 firecrawl 等工具采集到的精选新闻/展览数据写入 `museums.json`
 
 **功能**：
@@ -181,6 +201,21 @@ NEWS_DATA = {
         },
     ],
 }
+```
+
+---
+
+### 11. check_status.py
+**用途**：快速查看博物馆文物覆盖情况
+
+**功能**：
+- 统计有文物的博物馆数量和占比
+- 列出文物较少的博物馆（<5 件）
+- 列出完全无文物的博物馆
+
+**运行命令**：
+```bash
+python scripts/check_status.py
 ```
 
 ---
