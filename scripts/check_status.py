@@ -1,5 +1,5 @@
 import json
-with open(r'c:\Users\haoyang hu\Desktop\EL.demo1.1\data\museums.json', 'r', encoding='utf-8') as f:
+with open(r'c:\Users\haoyang hu\Desktop\EL.demo 3.0\data\museums.json', 'r', encoding='utf-8') as f:
     museums = json.load(f)
 print(f'总博物馆数: {len(museums)}')
 with_collections = [(m['id'], m['name'], len(m.get("collections", []))) for m in museums]

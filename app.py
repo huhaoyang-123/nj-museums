@@ -340,4 +340,4 @@ def speech_to_text():
 
 
 if __name__ == '__main__':
-    app.run(use_reloader=False, port=APP_PORT)
+   app.run(host='0.0.0.0', use_reloader=False, port=APP_PORT)

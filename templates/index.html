@@ -770,6 +770,89 @@
             padding: 20px;
         }
 
+        /* ========== Navigation Modal ========== */
+        .nav-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 1010;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .nav-modal-backdrop {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.8);
+            -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+        }
+
+        .nav-modal-content {
+            position: relative;
+            background: linear-gradient(135deg, var(--bg-card), var(--bg-wall));
+            border: 1px solid var(--border-gold);
+            border-radius: 12px;
+            padding: 32px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2);
+        }
+
+        .nav-modal-content h3 {
+            color: var(--gold);
+            margin-bottom: 8px;
+            font-size: 1.25rem;
+        }
+
+        .nav-modal-content p {
+            color: var(--text-body);
+            margin-bottom: 24px;
+            font-size: 0.9rem;
+        }
+
+        .nav-options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .nav-options button {
+            padding: 14px 24px;
+            border: 1px solid var(--border-gold);
+            background: transparent;
+            color: var(--gold);
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all var(--transition-fast);
+        }
+
+        .nav-options button:hover {
+            background: rgba(212, 175, 55, 0.1);
+            box-shadow: 0 0 12px var(--glow-gold);
+            transform: translateY(-2px);
+        }
+
+        .nav-modal-close {
+            padding: 10px 32px;
+            border: 1px solid var(--border-gold);
+            background: transparent;
+            color: var(--text-dim);
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all var(--transition-fast);
+        }
+
+        .nav-modal-close:hover {
+            color: var(--gold);
+            background: rgba(212, 175, 55, 0.05);
+        }
+
         .modal-content {
             background: linear-gradient(135deg, var(--bg-card), var(--bg-wall));
             border: 1px solid var(--border-gold);
@@ -930,6 +1013,111 @@
             margin: 0;
         }
 
+        /* ========== Modal News Section ========== */
+        .modal-news {
+            margin-bottom: 24px;
+            padding: 16px;
+            background: rgba(212, 175, 55, 0.04);
+            border-radius: 8px;
+            border: 1px solid var(--border-dark);
+        }
+
+        .modal-news h3 {
+            font-size: 16px;
+            color: var(--gold);
+            margin: 0 0 12px 0;
+        }
+
+        .modal-news-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-height: 280px;
+            overflow-y: auto;
+            padding-right: 4px;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(212, 175, 55, 0.3) transparent;
+        }
+
+        .modal-news-list::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .modal-news-list::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .modal-news-list::-webkit-scrollbar-thumb {
+            background: rgba(212, 175, 55, 0.3);
+            border-radius: 2px;
+        }
+
+        .modal-news-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 10px 12px;
+            background: rgba(212, 175, 55, 0.03);
+            border: 1px solid rgba(212, 175, 55, 0.12);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            text-decoration: none;
+        }
+
+        .modal-news-item:hover {
+            background: rgba(212, 175, 55, 0.08);
+            border-color: rgba(212, 175, 55, 0.25);
+        }
+
+        .modal-news-icon {
+            font-size: 16px;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .modal-news-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .modal-news-title {
+            font-size: 13px;
+            color: var(--text-primary);
+            line-height: 1.5;
+            font-weight: 500;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .modal-news-desc {
+            font-size: 11px;
+            color: var(--text-dim);
+            margin-top: 2px;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .modal-news-empty {
+            text-align: center;
+            padding: 12px;
+            color: var(--text-muted);
+            font-size: 12px;
+        }
+
+        .modal-news-source {
+            font-size: 10px;
+            color: var(--text-muted);
+            margin-top: 8px;
+            text-align: right;
+            font-style: italic;
+        }
+
         /* ========== Collections Carousel ========== */
         .modal-collections {
             margin-bottom: 24px;
@@ -1061,6 +1249,7 @@
         }
 
         .btn-map,
+        .btn-nav,
         .btn-reserve,
         .btn-collections {
             padding: 12px 24px;
@@ -1074,6 +1263,7 @@
         }
 
         .btn-map:hover,
+        .btn-nav:hover,
         .btn-reserve:hover,
         .btn-collections:hover {
             background: rgba(212, 175, 55, 0.1);
@@ -1375,29 +1565,105 @@
             color: var(--vermillion-bright);
         }
 
-        .fav-panel-stats {
+        .fav-panel-tabs {
             flex-shrink: 0;
-            padding: 16px 20px;
+            padding: 10px 12px;
             border-top: 1px solid var(--border-gold);
             display: flex;
-            justify-content: space-around;
+            gap: 6px;
         }
 
-        .fav-stat {
-            text-align: center;
+        .fav-tab {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2px;
+            padding: 10px 4px;
+            background: transparent;
+            border: 1px solid transparent;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            font-family: var(--font-body);
+            position: relative;
         }
 
-        .fav-stat-num {
-            font-family: var(--font-display);
-            font-size: 20px;
-            color: var(--gold);
+        .fav-tab:hover {
+            background: rgba(212, 175, 55, 0.05);
+            border-color: var(--border-gold);
         }
 
-        .fav-stat-label {
+        .fav-tab.active {
+            background: rgba(212, 175, 55, 0.08);
+            border-color: var(--border-gold-light);
+            box-shadow: 0 0 12px var(--glow-gold);
+        }
+
+        .fav-tab-icon {
+            font-size: 18px;
+            line-height: 1;
+        }
+
+        .fav-tab-label {
             font-size: 11px;
             color: var(--text-dim);
             letter-spacing: 1px;
+        }
+
+        .fav-tab.active .fav-tab-label {
+            color: var(--gold-light);
+        }
+
+        .fav-tab-badge {
+            font-size: 11px;
+            font-weight: bold;
+            color: var(--gold-pale);
+            background: rgba(212, 175, 55, 0.1);
+            min-width: 20px;
+            height: 18px;
+            line-height: 18px;
+            text-align: center;
+            border-radius: 9px;
+            padding: 0 6px;
+        }
+
+        .fav-tab.active .fav-tab-badge {
+            color: var(--gold);
+            background: rgba(212, 175, 55, 0.18);
+        }
+
+        /* Visited item note */
+        .fav-item-date {
+            font-size: 11px;
+            color: var(--text-dim);
             margin-top: 2px;
+        }
+
+        .fav-item-note-preview {
+            font-size: 12px;
+            color: var(--text-body);
+            margin-top: 4px;
+            padding: 6px 8px;
+            background: rgba(212, 175, 55, 0.04);
+            border-left: 2px solid var(--border-gold-light);
+            border-radius: 0 4px 4px 0;
+            white-space: pre-wrap;
+            word-break: break-all;
+            max-height: 60px;
+            overflow: hidden;
+            line-height: 1.5;
+        }
+
+        .fav-item-visited-badge {
+            display: inline-block;
+            font-size: 10px;
+            color: var(--gold);
+            background: rgba(212, 175, 55, 0.08);
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-left: 6px;
         }
 
         /* ========== Nav Favorite Button ========== */
@@ -1864,6 +2130,60 @@
             margin: 2px 0;
         }
 
+        /* Highlighted / Glowing marker state */
+        .museum-marker-wrapper.highlight .mkr-pin {
+            transform: translateX(-50%) scale(1.5);
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.9), 0 0 60px rgba(255, 180, 0, 0.6), 0 4px 10px rgba(0, 0, 0, 0.4) !important;
+            border-color: rgba(255, 255, 200, 0.8) !important;
+            z-index: 999;
+        }
+
+        .museum-marker-wrapper.highlight .mkr-pulse {
+            animation: highlightPulse 0.8s ease-out infinite;
+            border-color: rgba(255, 215, 0, 0.8);
+            opacity: 1;
+        }
+
+        .museum-marker-wrapper.highlight .mkr-outer-ring {
+            animation: highlightGlow 1.5s ease-in-out infinite alternate;
+        }
+
+        .museum-marker-wrapper.highlight .mkr-tip {
+            border-top-color: #ffcc00 !important;
+        }
+
+        .museum-marker-wrapper.highlight .mkr-label {
+            opacity: 1;
+            top: -44px;
+            border-color: rgba(255, 215, 0, 0.7);
+            box-shadow: 0 4px 24px rgba(255, 180, 0, 0.3);
+            z-index: 999;
+        }
+
+        @keyframes highlightPulse {
+            0% {
+                transform: translateX(-50%) scale(0.9);
+                opacity: 0.9;
+            }
+
+            100% {
+                transform: translateX(-50%) scale(2.5);
+                opacity: 0;
+            }
+        }
+
+        @keyframes highlightGlow {
+            0% {
+                opacity: 0.3;
+                transform: translateX(-50%) scale(1);
+            }
+
+            100% {
+                opacity: 0.8;
+                transform: translateX(-50%) scale(1.6);
+            }
+        }
+
         /* ========== Info Window Styles ========== */
         .iw-card {
             padding: 16px;
@@ -2254,19 +2574,462 @@
             justify-content: center;
         }
 
-        /* ========== Responsive ========== */
+        /* ========== Responsive: Tablet (≤768px) ========== */
         @media (max-width: 768px) {
-            .museum-cards-grid {
-                grid-template-columns: 1fr;
+
+            /* --- Navigation --- */
+            .nav {
+                padding: 0 12px;
+                height: 48px;
+            }
+
+            .nav-title {
+                font-size: 15px;
+                letter-spacing: 2px;
             }
 
             .nav-links {
+                gap: 6px;
+            }
+
+            .nav-links a,
+            .nav-fav-link {
+                font-size: 10px;
+                letter-spacing: 0.5px;
+                padding: 4px 6px;
+            }
+
+            /* --- Hero --- */
+            .hero {
+                min-height: 70vh;
+                max-height: 75vh;
+                padding: 40px 12px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+                letter-spacing: 8px;
+            }
+
+            .hero-subtitle {
+                font-size: 14px;
+                letter-spacing: 6px;
+            }
+
+            .hero-desc {
+                font-size: 13px;
+            }
+
+            .hero-loc {
+                font-size: 11px;
+                letter-spacing: 4px;
+            }
+
+            .hero-corner {
+                width: 60px;
+                height: 60px;
+            }
+
+            .hero-corner.tl {
+                top: 16px;
+                left: 16px;
+            }
+
+            .hero-corner.tr {
+                top: 16px;
+                right: 16px;
+            }
+
+            .hero-corner.bl {
+                bottom: 16px;
+                left: 16px;
+            }
+
+            .hero-corner.br {
+                bottom: 16px;
+                right: 16px;
+            }
+
+            .hero-cta {
+                padding: 10px 28px;
+                font-size: 13px;
+            }
+
+            /* --- Section --- */
+            .section {
+                padding: 40px 12px;
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
+
+            /* --- Search --- */
+            .search-container {
+                max-width: 100%;
+                padding: 0 8px;
+            }
+
+            .search-input-wrapper {
+                min-width: 0;
+                max-width: 100%;
+            }
+
+            /* --- Filter --- */
+            .filter-section {
+                padding: 0 8px;
                 gap: 12px;
             }
 
-            .nav-links a {
-                font-size: 11px;
+            .filter-row {
+                gap: 8px;
+                padding: 6px 0;
+            }
+
+            .filter-label {
+                font-size: 10px;
+                min-width: 44px;
                 letter-spacing: 1px;
+            }
+
+            .filter-tag {
+                padding: 4px 10px;
+                font-size: 10px;
+            }
+
+            .filter-grid {
+                gap: 4px;
+            }
+
+            /* --- Museum Cards: 3 per row, compact --- */
+            .museum-cards-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+                max-width: 100%;
+                margin-top: 24px;
+            }
+
+            .museum-card {
+                padding: 12px 8px;
+            }
+
+            .museum-card-icon {
+                font-size: 24px;
+                margin-bottom: 6px;
+            }
+
+            .museum-card-name {
+                font-size: 13px;
+            }
+
+            .museum-card-category {
+                font-size: 10px;
+                margin-bottom: 4px;
+            }
+
+            .museum-card-desc {
+                font-size: 10px;
+                line-height: 1.4;
+                margin-bottom: 8px;
+            }
+
+            .museum-card-level {
+                font-size: 8px;
+                padding: 1px 6px;
+            }
+
+            .museum-card-footer {
+                padding-top: 8px;
+            }
+
+            .museum-card-address {
+                font-size: 9px;
+            }
+
+            .museum-card-arrow {
+                font-size: 16px;
+            }
+
+            .museum-card-fav {
+                font-size: 14px;
+                top: 6px;
+                right: 6px;
+            }
+
+            .museum-card-visited {
+                font-size: 9px;
+                padding: 1px 5px;
+            }
+
+            /* --- Museum Detail Modal --- */
+            .modal-content {
+                max-width: 95vw;
+                max-height: 90vh;
+            }
+
+            .modal-body-inner {
+                padding: 16px 20px 20px;
+            }
+
+            .modal-photo {
+                height: 160px;
+            }
+
+            .modal-photo-placeholder {
+                height: 140px;
+            }
+
+            .modal-header {
+                flex-direction: column;
+                gap: 10px;
+                margin-bottom: 16px;
+            }
+
+            .modal-actions {
+                flex-wrap: wrap;
+                gap: 8px;
+                padding: 12px 0 4px;
+            }
+
+            .btn-map,
+            .btn-nav,
+            .btn-reserve,
+            .btn-collections {
+                padding: 8px 14px;
+                font-size: 11px;
+                border-radius: 6px;
+            }
+
+            /* --- Map --- */
+            .map-section {
+                min-height: 350px;
+                height: 50vh;
+            }
+
+            .map-filter-panel {
+                top: 10px;
+                right: 10px;
+                padding: 10px;
+                min-width: 160px;
+                font-size: 11px;
+            }
+
+            .map-filter-header {
+                font-size: 11px;
+            }
+
+            /* --- Pagination --- */
+            .pagination {
+                gap: 4px;
+            }
+
+            .pagination button {
+                padding: 5px 10px;
+                font-size: 10px;
+            }
+        }
+
+        /* ========== Responsive: Phone (≤480px) ========== */
+        @media (max-width: 480px) {
+
+            /* --- Navigation --- */
+            .nav-links a,
+            .nav-fav-link {
+                font-size: 9px;
+                padding: 3px 4px;
+            }
+
+            .nav-links {
+                gap: 2px;
+            }
+
+            .nav-title {
+                font-size: 13px;
+            }
+
+            /* --- Hero --- */
+            .hero {
+                min-height: 55vh;
+                max-height: 60vh;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+                letter-spacing: 6px;
+            }
+
+            .hero-subtitle {
+                font-size: 12px;
+                letter-spacing: 4px;
+            }
+
+            .hero-desc {
+                font-size: 11px;
+            }
+
+            .hero-corner {
+                width: 40px;
+                height: 40px;
+            }
+
+            .hero-corner.tl {
+                top: 10px;
+                left: 10px;
+            }
+
+            .hero-corner.tr {
+                top: 10px;
+                right: 10px;
+            }
+
+            .hero-corner.bl {
+                bottom: 10px;
+                left: 10px;
+            }
+
+            .hero-corner.br {
+                bottom: 10px;
+                right: 10px;
+            }
+
+            .hero-cta {
+                padding: 8px 20px;
+                font-size: 11px;
+            }
+
+            /* --- Museum Cards: 3 per row, very compact --- */
+            .museum-cards-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 6px;
+            }
+
+            .museum-card {
+                padding: 8px 4px;
+            }
+
+            .museum-card-icon {
+                font-size: 20px;
+                margin-bottom: 4px;
+            }
+
+            .museum-card-name {
+                font-size: 11px;
+            }
+
+            .museum-card-category {
+                font-size: 9px;
+                margin-bottom: 2px;
+            }
+
+            .museum-card-desc {
+                font-size: 9px;
+                margin-bottom: 6px;
+            }
+
+            .museum-card-address {
+                font-size: 8px;
+            }
+
+            .museum-card-arrow {
+                font-size: 14px;
+            }
+
+            .museum-card-fav {
+                font-size: 12px;
+                top: 4px;
+                right: 4px;
+                padding: 2px;
+            }
+
+            .museum-card-visited {
+                font-size: 8px;
+                padding: 1px 4px;
+            }
+
+            /* --- Filter --- */
+            .filter-tag {
+                padding: 3px 8px;
+                font-size: 9px;
+            }
+
+            .filter-label {
+                font-size: 9px;
+                min-width: 36px;
+            }
+
+            /* --- Modal --- */
+            .modal-content {
+                max-width: 100vw;
+                border-radius: 8px;
+            }
+
+            .modal-body-inner {
+                padding: 12px 14px 14px;
+            }
+
+            .modal-photo {
+                height: 130px;
+            }
+
+            .modal-photo-placeholder {
+                height: 110px;
+            }
+
+            .modal-close {
+                top: 10px;
+                right: 10px;
+                width: 28px;
+                height: 28px;
+                font-size: 18px;
+            }
+
+            .modal-actions {
+                gap: 4px;
+            }
+
+            .btn-map,
+            .btn-nav,
+            .btn-reserve,
+            .btn-collections {
+                padding: 6px 10px;
+                font-size: 10px;
+            }
+
+            /* --- Navigation Modal --- */
+            .nav-modal-content {
+                padding: 20px 16px;
+            }
+
+            .nav-modal-content h3 {
+                font-size: 1rem;
+            }
+
+            .nav-options button {
+                padding: 10px 16px;
+                font-size: 12px;
+            }
+
+            /* --- Map --- */
+            .map-section {
+                min-height: 280px;
+                height: 40vh;
+            }
+
+            .map-filter-panel {
+                top: 6px;
+                right: 6px;
+                padding: 8px;
+                min-width: 140px;
+                font-size: 10px;
+            }
+
+            /* --- Section --- */
+            .section {
+                padding: 32px 8px;
+            }
+
+            .section-title {
+                font-size: 20px;
             }
         }
     </style>
@@ -2318,7 +3081,8 @@
             <div class="section-label">— 博物馆探索 —</div>
             <h2 class="section-title">博物展馆</h2>
             <div class="section-divider"></div>
-            <p style="color: var(--text-dim); font-size: 14px; margin-top: 8px;">共收录 82 座博物馆，探索金陵文脉</p>
+            <p id="museumCountLabel" style="color: var(--text-dim); font-size: 14px; margin-top: 8px;">共收录 0 座博物馆，探索金陵文脉
+            </p>
         </div>
 
         <!-- 搜索栏 -->
@@ -2347,6 +3111,8 @@
                     <span class="filter-tag" data-filter="district" data-value="江宁区">江宁区</span>
                     <span class="filter-tag" data-filter="district" data-value="浦口区">浦口区</span>
                     <span class="filter-tag" data-filter="district" data-value="六合区">六合区</span>
+                    <span class="filter-tag" data-filter="district" data-value="溧水区">溧水区</span>
+                    <span class="filter-tag" data-filter="district" data-value="高淳区">高淳区</span>
                 </div>
             </div>
 
@@ -2429,7 +3195,7 @@
         <div class="footer-seal">金陵</div>
         <div class="footer-text">
             博物金陵 · 阅古通今<br>
-            数据来源：南京文化旅游<br>
+            部分图片来源于网络，侵权请联系删除<br>
             © 2026 博物金陵
         </div>
     </footer>
@@ -2455,6 +3221,10 @@
                         <div class="modal-level" id="modalLevel"></div>
                     </div>
 
+                    <p class="modal-disclaimer"
+                        style="color: var(--text-muted); font-size: 12px; text-align: left; margin-top: 6px; font-style: italic;">
+                        部分信息由爬虫从网络上爬取，可能存在缺漏或错误，请注意鉴别</p>
+
                     <div class="modal-info-grid">
                         <div class="info-item">
                             <span class="info-label">📍 地址</span>
@@ -2479,10 +3249,11 @@
                         <p id="modalDesc">详细介绍内容...</p>
                     </div>
 
-                    <div class="modal-collections" id="modalCollections" style="display:none;">
-                        <h3>🏺 代表文物</h3>
-                        <div class="collections-carousel" id="collectionsCarousel"></div>
-                        <p class="collections-note" id="collectionsNote"></p>
+                    <div class="modal-news" id="modalNewsSection" style="display:none;">
+                        <h3>📰 最新动态</h3>
+                        <div class="modal-news-list" id="modalNewsList">
+                        </div>
+                        <div class="modal-news-source">内容来源于博物馆官网</div>
                     </div>
 
                     <div class="modal-actions">
@@ -2490,8 +3261,10 @@
                         <button type="button" class="btn-visit" id="btnVisit" onclick="toggleModalVisited()">✅
                             标记已参观</button>
                         <button type="button" class="btn-map" onclick="navigateToMap()">📍 在地图上查看</button>
-                        <button type="button" class="btn-collections" id="btnCollections" style="display: none;"
-                            onclick="openCollectionsPage()">🏺 代表文物</button>
+                        <button type="button" class="btn-nav" id="btnNav" style="display: none;"
+                            onclick="openNavigation()">🚗 打开导航</button>
+                        <button type="button" class="btn-collections" id="btnCollections" style="display: inline-block;"
+                            onclick="openCollectionsPage()">📖 详细介绍</button>
                         <button type="button" class="btn-reserve" id="btnReserve" style="display: none;">🔗
                             预约参观</button>
                     </div>
@@ -2513,25 +3286,28 @@
     <div class="favorites-backdrop" id="favoritesBackdrop" onclick="closeFavoritesPanel()"></div>
     <div class="favorites-panel" id="favoritesPanel">
         <div class="fav-panel-header">
-            <span class="fav-panel-title">⭐ 我的收藏</span>
+            <span class="fav-panel-title" id="favPanelTitle">⭐ 我的收藏</span>
             <button type="button" class="fav-panel-close" onclick="closeFavoritesPanel()">×</button>
         </div>
         <div class="fav-panel-list" id="favPanelList">
             <div class="fav-panel-empty">还没有收藏任何博物馆<br>点击卡片或详情中的 ⭐ 进行收藏</div>
         </div>
-        <div class="fav-panel-stats">
-            <div class="fav-stat">
-                <div class="fav-stat-num" id="favStatCount">0</div>
-                <div class="fav-stat-label">总收藏</div>
-            </div>
-            <div class="fav-stat">
-                <div class="fav-stat-num" id="favStatVisited">0</div>
-                <div class="fav-stat-label">已打卡</div>
-            </div>
-            <div class="fav-stat">
-                <div class="fav-stat-num" id="favStatNotes">0</div>
-                <div class="fav-stat-label">有笔记</div>
-            </div>
+        <div class="fav-panel-tabs">
+            <button type="button" class="fav-tab active" data-tab="fav" onclick="switchFavTab('fav')">
+                <span class="fav-tab-icon">⭐</span>
+                <span class="fav-tab-label">收藏</span>
+                <span class="fav-tab-badge" id="favTabBadgeFav">0</span>
+            </button>
+            <button type="button" class="fav-tab" data-tab="visited" onclick="switchFavTab('visited')">
+                <span class="fav-tab-icon">📍</span>
+                <span class="fav-tab-label">打卡</span>
+                <span class="fav-tab-badge" id="favTabBadgeVisited">0</span>
+            </button>
+            <button type="button" class="fav-tab" data-tab="notes" onclick="switchFavTab('notes')">
+                <span class="fav-tab-icon">📝</span>
+                <span class="fav-tab-label">笔记</span>
+                <span class="fav-tab-badge" id="favTabBadgeNotes">0</span>
+            </button>
         </div>
     </div>
 
@@ -3085,6 +3861,32 @@
             document.getElementById('modalPhone').textContent = museum.phone || '暂无电话';
             document.getElementById('modalDesc').textContent = museum.desc || museum.intro_short || '暂无介绍';
 
+            // 渲染最新动态
+            const newsSection = document.getElementById('modalNewsSection');
+            const newsList = document.getElementById('modalNewsList');
+            const news = museum.news || [];
+            if (news.length > 0) {
+                newsSection.style.display = 'block';
+                newsList.innerHTML = '';
+                const icons = ['📌', '🎨', '📅', '🎯', '🏛️', '🎪', '📢', '🎭'];
+                news.forEach((item, i) => {
+                    const div = document.createElement('div');
+                    div.className = 'modal-news-item';
+                    div.onclick = () => { window.open(item.link, '_blank'); };
+                    div.title = item.link;
+                    div.innerHTML = `
+                        <span class="modal-news-icon">${icons[i % icons.length]}</span>
+                        <div class="modal-news-content">
+                            <div class="modal-news-title">${item.title}</div>
+                            ${item.desc && item.desc !== item.title ? `<div class="modal-news-desc">${item.desc}</div>` : ''}
+                        </div>
+                    `;
+                    newsList.appendChild(div);
+                });
+            } else {
+                newsSection.style.display = 'none';
+            }
+
             const reserveBtn = document.getElementById('btnReserve');
             const reserveLink = museum.reserve_link || museum.website || '';
             if (reserveLink && reserveLink.startsWith('http')) {
@@ -3107,9 +3909,12 @@
                 reserveBtn.style.display = 'none';
             }
 
-            // Collections button - always show, navigates to collections page
-            const collectionsBtn = document.getElementById('btnCollections');
-            collectionsBtn.style.display = 'inline-block';
+            const navBtn = document.getElementById('btnNav');
+            if (museum.lat && museum.lng) {
+                navBtn.style.display = 'inline-block';
+            } else {
+                navBtn.style.display = 'none';
+            }
 
             updateModalFavVisitState(museum);
 
@@ -3123,11 +3928,119 @@
             currentMuseum = null;
         }
 
+        // Track currently highlighted marker for cleanup
+        let highlightedMarkerWrapper = null;
+
         function navigateToMap() {
-            if (currentMuseum && map) {
-                map.setZoomAndCenter(14, [currentMuseum.lng, currentMuseum.lat]);
-                closeMuseumDetail();
-                scrollToSection('map-section');
+            if (!currentMuseum || !map) return;
+
+            // Save reference before closing modal (closeMuseumDetail sets currentMuseum = null)
+            const museum = currentMuseum;
+
+            // Close modal and scroll to map
+            closeMuseumDetail();
+            scrollToSection('map-section');
+
+            // Wait for smooth scroll to complete before zooming
+            setTimeout(() => {
+                if (!map || !museum) return;
+
+                // Precise jump: zoom to 17 for close-up view, center on museum coordinates
+                map.setZoomAndCenter(17, [museum.lng, museum.lat]);
+
+                // Remove previous highlight
+                if (highlightedMarkerWrapper) {
+                    highlightedMarkerWrapper.classList.remove('highlight');
+                    highlightedMarkerWrapper = null;
+                }
+
+                // Find and highlight the corresponding marker
+                const markerEntry = mapMarkers.find(m => m.museum.id === museum.id);
+                if (markerEntry) {
+                    const wrapper = markerEntry.marker.getContent();
+                    if (wrapper) {
+                        wrapper.classList.add('highlight');
+                        highlightedMarkerWrapper = wrapper;
+
+                        // Auto-remove highlight after 5 seconds
+                        setTimeout(() => {
+                            if (highlightedMarkerWrapper === wrapper) {
+                                wrapper.classList.remove('highlight');
+                                highlightedMarkerWrapper = null;
+                            }
+                        }, 5000);
+                    }
+                }
+            }, 400);
+        }
+
+        function isMobileDevice() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+
+        function openNavigation() {
+            if (!currentMuseum || !currentMuseum.lat || !currentMuseum.lng) {
+                alert('该博物馆暂无坐标信息，无法导航');
+                return;
+            }
+
+            const { lat, lng, name, address } = currentMuseum;
+            const encodedName = encodeURIComponent(name);
+
+            if (isMobileDevice()) {
+                const amapUrl = `amapuri://route/plan?dlat=${lat}&dlng=${lng}&dname=${encodedName}&dev=0&t=0`;
+                const baiduUrl = `baidumap://map/direction?destination=latlng:${lat},${lng}|name:${encodedName}&mode=driving`;
+                const appleUrl = `https://maps.apple.com/?q=${lat},${lng}&address=${encodeURIComponent(address || name)}`;
+                const amapWebFallback = `https://amap.com/search?query=${encodedName}&location=${lng},${lat}`;
+                const baiduWebFallback = `https://map.baidu.com/search/${encodedName}/?latlng=${lat},${lng}`;
+
+                const navModal = document.createElement('div');
+                navModal.className = 'nav-modal';
+                navModal.innerHTML = `
+                    <div class="nav-modal-backdrop" onclick="closeNavModal()"></div>
+                    <div class="nav-modal-content">
+                        <h3>🚗 选择导航方式</h3>
+                        <p>将为您导航至「${name}」</p>
+                        <div class="nav-options">
+                            <button onclick="tryOpenApp('${amapUrl}','${amapWebFallback}'); setTimeout(closeNavModal,300)">🗺️ 高德地图</button>
+                            <button onclick="tryOpenApp('${baiduUrl}','${baiduWebFallback}'); setTimeout(closeNavModal,300)">🗺️ 百度地图</button>
+                            <button onclick="window.open('${appleUrl}', '_blank'); setTimeout(closeNavModal,300)">🍎 Apple Maps</button>
+                        </div>
+                        <button class="nav-modal-close" onclick="closeNavModal()">取消</button>
+                    </div>
+                `;
+                document.body.appendChild(navModal);
+            } else {
+                const googleUrl = `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`;
+                const amapWebUrl = `https://amap.com/search?query=${encodedName}&location=${lng},${lat}`;
+
+                const copyText = `${name}\n${address || ''}\n坐标: ${lat}, ${lng}`;
+                navigator.clipboard.writeText(copyText).then(() => {
+                    alert(`📍 地址已复制到剪贴板：\n\n${name}\n${address || ''}\n\n💡 电脑端建议：\n• 复制地址到手机地图APP\n• 或打开网页版地图\n\n已为您复制地址，可粘贴到手机导航APP中使用`);
+                }).catch(() => {
+                    alert(`📍 「${name}」\n\n${address || ''}\n\n💡 电脑端无法直接唤起地图APP\n\n建议：\n• 手动复制地址到手机地图APP\n• 打开网页版地图：\n${amapWebUrl}`);
+                });
+            }
+        }
+
+        function tryOpenApp(url, fallbackUrl) {
+            // 使用 window.location.href 比创建 a 标签更可靠
+            // 部分浏览器会阻止 createElement('a').click() 唤起自定义协议
+            const startTime = Date.now();
+            window.location.href = url;
+
+            // 如果2秒后还在本页面，说明没有安装该APP，跳转备用方案
+            setTimeout(() => {
+                if (Date.now() - startTime < 2200 && fallbackUrl) {
+                    window.open(fallbackUrl, '_blank');
+                }
+            }, 2000);
+        }
+
+        function closeNavModal() {
+            const modal = document.querySelector('.nav-modal');
+            if (modal) {
+                document.body.removeChild(modal);
             }
         }
 
@@ -3202,10 +4115,15 @@
         }
 
         // ========== Favorites Panel Functions ==========
+        let currentFavTab = 'fav';
+
         function openFavoritesPanel() {
             document.getElementById('favoritesPanel').classList.add('open');
             document.getElementById('favoritesBackdrop').classList.add('show');
             document.body.style.overflow = 'hidden';
+            currentFavTab = 'fav';
+            const titleEl = document.getElementById('favPanelTitle');
+            if (titleEl) titleEl.textContent = '⭐ 我的收藏';
             renderFavoritesPanel();
         }
 
@@ -3215,40 +4133,105 @@
             document.body.style.overflow = '';
         }
 
+        function switchFavTab(tab) {
+            currentFavTab = tab;
+            // Update panel title
+            const titles = { fav: '⭐ 我的收藏', visited: '📍 我的打卡', notes: '📝 我的笔记' };
+            const titleEl = document.getElementById('favPanelTitle');
+            if (titleEl) titleEl.textContent = titles[tab] || '⭐ 我的收藏';
+            // Update tab active states
+            document.querySelectorAll('.fav-tab').forEach(t => t.classList.remove('active'));
+            const activeTab = document.querySelector(`.fav-tab[data-tab="${tab}"]`);
+            if (activeTab) activeTab.classList.add('active');
+            renderFavoritesPanel();
+        }
+
         function renderFavoritesPanel() {
             const list = document.getElementById('favPanelList');
             if (!list) return;
 
             const favs = getFavorites();
-            if (favs.length === 0) {
-                list.innerHTML = '<div class="fav-panel-empty">还没有收藏任何博物馆<br>点击卡片或详情中的 ⭐ 进行收藏</div>';
-            } else {
-                let html = '';
-                favs.forEach(id => {
-                    const museum = museumsData.find(m => m.id === id);
-                    if (museum) {
-                        html += `
-                            <div class="fav-panel-item" onclick="showMuseumDetailById(${museum.id})">
-                                <div class="fav-item-info">
-                                    <div class="fav-item-name">${museum.name}</div>
-                                    <div class="fav-item-category">${museum.category || ''}</div>
+            const visited = getVisited();
+            const notes = getNotes();
+            let html = '';
+
+            if (currentFavTab === 'fav') {
+                // 收藏列表
+                if (favs.length === 0) {
+                    list.innerHTML = '<div class="fav-panel-empty">还没有收藏任何博物馆<br>点击卡片或详情中的 ⭐ 进行收藏</div>';
+                } else {
+                    favs.forEach(id => {
+                        const museum = museumsData.find(m => m.id === id);
+                        if (museum) {
+                            html += `
+                                <div class="fav-panel-item" onclick="showMuseumDetailById(${museum.id})">
+                                    <div class="fav-item-info">
+                                        <div class="fav-item-name">${museum.name}</div>
+                                        <div class="fav-item-category">${museum.category || ''}</div>
+                                    </div>
+                                    <button type="button" class="fav-item-remove" onclick="event.stopPropagation(); removeFavItem(${museum.id})" title="取消收藏">×</button>
                                 </div>
-                                <button type="button" class="fav-item-remove" onclick="event.stopPropagation(); removeFavItem(${museum.id})" title="取消收藏">×</button>
-                            </div>
-                        `;
-                    }
-                });
-                list.innerHTML = html;
+                            `;
+                        }
+                    });
+                    list.innerHTML = html;
+                }
+            } else if (currentFavTab === 'visited') {
+                // 打卡列表
+                const visitedIds = Object.keys(visited);
+                if (visitedIds.length === 0) {
+                    list.innerHTML = '<div class="fav-panel-empty">还没有打卡记录<br>在博物馆详情中点击 📍 进行打卡</div>';
+                } else {
+                    visitedIds.forEach(id => {
+                        const museum = museumsData.find(m => m.id === parseInt(id));
+                        if (museum) {
+                            const dateStr = visited[id];
+                            html += `
+                                <div class="fav-panel-item" onclick="showMuseumDetailById(${museum.id})">
+                                    <div class="fav-item-info">
+                                        <div class="fav-item-name">${museum.name}${isFavorited(museum.id) ? '<span class="fav-item-visited-badge">★ 已收藏</span>' : ''}</div>
+                                        <div class="fav-item-date">📅 打卡日期：${dateStr}</div>
+                                    </div>
+                                </div>
+                            `;
+                        }
+                    });
+                    list.innerHTML = html;
+                }
+            } else if (currentFavTab === 'notes') {
+                // 笔记列表
+                const noteIds = Object.keys(notes).filter(k => notes[k].trim());
+                if (noteIds.length === 0) {
+                    list.innerHTML = '<div class="fav-panel-empty">还没有笔记记录<br>在博物馆详情中撰写笔记吧</div>';
+                } else {
+                    noteIds.forEach(id => {
+                        const museum = museumsData.find(m => m.id === parseInt(id));
+                        if (museum) {
+                            const noteText = notes[id].trim();
+                            html += `
+                                <div class="fav-panel-item" onclick="showMuseumDetailById(${museum.id})" style="flex-direction: column; align-items: flex-start;">
+                                    <div class="fav-item-info" style="width: 100%;">
+                                        <div class="fav-item-name">${museum.name}${isFavorited(museum.id) ? '<span class="fav-item-visited-badge">★ 已收藏</span>' : ''}</div>
+                                    </div>
+                                    <div class="fav-item-note-preview">${noteText}</div>
+                                </div>
+                            `;
+                        }
+                    });
+                    list.innerHTML = html;
+                }
             }
 
-            // Update stats
-            const favCount = favs.length;
-            const visitedCount = Object.keys(getVisited()).length;
-            const noteCount = Object.keys(getNotes()).filter(k => getNotes()[k].trim()).length;
+            // Update tab badges
+            const noteCount = Object.keys(notes).filter(k => notes[k].trim()).length;
+            document.getElementById('favTabBadgeFav').textContent = favs.length;
+            document.getElementById('favTabBadgeVisited').textContent = Object.keys(visited).length;
+            document.getElementById('favTabBadgeNotes').textContent = noteCount;
 
-            document.getElementById('favStatCount').textContent = favCount;
-            document.getElementById('favStatVisited').textContent = visitedCount;
-            document.getElementById('favStatNotes').textContent = noteCount;
+            // Ensure active tab is correctly styled
+            document.querySelectorAll('.fav-tab').forEach(t => t.classList.remove('active'));
+            const activeTab = document.querySelector(`.fav-tab[data-tab="${currentFavTab}"]`);
+            if (activeTab) activeTab.classList.add('active');
         }
 
         function removeFavItem(id) {
@@ -3745,6 +4728,12 @@
 
                     console.log('渲染博物馆卡片...');
                     renderMuseumCards(museumsData);
+
+                    // 动态更新博物馆总数
+                    const countLabel = document.getElementById('museumCountLabel');
+                    if (countLabel) {
+                        countLabel.textContent = `共收录 ${museumsData.length} 座博物馆，探索金陵文脉`;
+                    }
 
                     // 尝试添加地图标记（如果地图已就绪）
                     tryAddMuseumMarkers();

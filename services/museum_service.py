@@ -43,7 +43,7 @@ def get_all_museums():
     logger.info("读取文件: %s", file_path)
 
     try:
-        with open(file_path, 'r', encoding='utf-8') as f:
+        with open(file_path, 'r', encoding='utf-8-sig') as f:
             data = json.load(f)
 
         museums_raw = data.get('museums', []) if isinstance(data, dict) else data
@@ -84,7 +84,8 @@ def get_all_museums():
                 'photo_url': museum.get('photo_url', ''),
                 'intro_short': museum.get('intro_short', ''),
                 'collections': museum.get('collections', []),
-                'collections_note': museum.get('collections_note', '')
+                'collections_note': museum.get('collections_note', ''),
+                'news': museum.get('news', [])
             }
             transformed_museums.append(transformed)
 

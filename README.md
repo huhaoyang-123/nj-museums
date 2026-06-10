@@ -1,6 +1,6 @@
 # 博物金陵 - 南京博物馆导览系统
 
-基于 Flask 的南京博物馆信息导览 Web 应用，集成 AI 智能对话与语音识别，提供 82 座博物馆的查询、筛选、地图导航、代表文物浏览与个性化收藏服务。
+基于 Flask 的南京博物馆信息导览 Web 应用，集成 AI 智能对话与语音识别，提供 151 座博物馆的查询、筛选、地图导航、代表文物浏览与个性化收藏服务。
 
 ## 项目结构
 
@@ -13,7 +13,7 @@ EL.demo2.0/
 ├── .gitattributes                      # Git 行尾规范化
 │
 ├── data/                               # 数据层
-│   ├── museums.json                    # 82 座博物馆的完整数据（含代表文物）
+│   ├── museums.json                    # 151 座博物馆的完整数据（含代表文物、最新动态）
 │   └── token_usage.json                # AI Token 累计用量记录（上限 20M）
 │
 ├── services/                           # 服务层
@@ -25,12 +25,15 @@ EL.demo2.0/
 │   └── chat.html                       # AI 导览独立全屏页面
 │
 ├── scripts/                            # 数据维护脚本
-│   ├── update_collections_images.py    # 更新文物图片为真实 URL
-│   ├── update_museum_coordinates.py    # 通过高德地理编码 API 更新经纬度坐标
-│   ├── update_museums_address.py       # 更新博物馆地址信息
-│   ├── update_reserve_links.py         # 更新预约链接与官网
 │   ├── check_status.py                 # 检查博物馆文物覆盖情况
-│   ├── validate_images.py              # 验证所有文物图片链接有效性
+│   ├── discover_new_museums.py         # 通过高德 POI API 发现新博物馆候选
+│   ├── dedup_museums.py                # 去重新博物馆候选名单
+│   ├── fill_museum_metadata.py         # 通过百度百科/搜索引擎填充博物馆元数据
+│   ├── fill_candidates_address.py      # 为候选博物馆补充地址信息
+│   ├── fix_museum_coordinates_poi.py   # 通过高德 POI 搜索修正博物馆坐标
+│   ├── crawl_museum_news.py            # 从博物馆官网爬取最新展览/活动/新闻
+│   ├── crawl_news_quick.py             # 精简版新闻爬虫（聚焦重点博物馆）
+│   ├── update_news_data.py             # 写入精选新闻/展览数据到 museums.json
 │   └── README.md                       # 脚本使用说明
 │
 ├── .vscode/                            # VS Code 调试配置
@@ -42,9 +45,6 @@ EL.demo2.0/
 │   └── skills/
 │       └── museum-artifact-scraper/
 │           └── SKILL.md                # 博物馆文物爬取技能定义
-│
-└── docs/                               # 文档
-    └── map-marker-bug-analysis.md      # 地图标记 Bug 分析
 ```
 
 ## 核心功能与实现逻辑
@@ -76,7 +76,18 @@ EL.demo2.0/
 - **文物卡片**：每张卡片展示文物名称、年代标签、描述，鼠标悬停有金色光晕效果
 - **图片占位**：缺失图片时显示类型图标（🏛️/🎨/🔬/✨）替代占位
 
-### 3. 地图导航
+### 3. 最新动态
+
+**实现位置**：`templates/index.html`（前端）
+
+- **数据来源**：`museums.json` 中 `news` 字段，包含 `title`、`desc`、`link`、`date`
+- **展示位置**：博物馆详情弹窗中，介绍文字下方显示"📰 最新动态"区块
+- **交互**：每条动态显示图标 + 标题 + 简短描述，点击可在新标签页打开官网链接
+- **滚动**：列表最大高度 280px，超出可滚动浏览
+- **自动隐藏**：无 `news` 数据的博物馆不显示该区块
+- **数据采集**：通过 `crawl_museum_news.py`（静态网站）和 `update_news_data.py`（JS 渲染网站）两种方式维护
+
+### 4. 地图导航
 
 **实现位置**：`templates/index.html`（前端 JS） + `app.py` `/api/amap-config`（动态 Key）
 
@@ -89,10 +100,21 @@ EL.demo2.0/
   - 分类彩色主 pin（金色/古铜/蓝色/红色，对应 4 种分类）
   - 悬停标签（名称 + 等级 + 分类）
   - 点击信息窗口（地址、开放时间、门票、预约按钮、查看详情按钮）
-- **地图筛选面板**：右侧浮动面板，支持按类型（多选）和费用（互斥）筛���标记显示/隐藏
+- **地图筛选面板**：右侧浮动面板，支持按类型（多选）和费用（互斥）筛选标记显示/隐藏
 - **初始化时序**：加载顺序为"SDK 加载 → 边界绘制 → 数据 fetch → 添加标记"，各环节有兜底，避免数据未就绪导致标记缺失
 
-### 4. AI 智能导览
+#### 导航功能（唤起本地地图APP）
+
+- **导航按钮**：详情弹窗中新增「🚗 打开导航」按钮，仅当博物馆有坐标数据时显示
+- **平台检测**：`isMobileDevice()` 通过 `navigator.userAgent` 判断运行环境
+- **移动端**：显示导航选择弹窗，支持三种地图应用：
+  - 高德地图：`amapuri://route/plan?dlat=...&dlng=...&dname=...`
+  - 百度地图：`baidumap://map/direction?destination=latlng:...|name:...`
+  - Apple Maps：`https://maps.apple.com/?q=...`
+- **PC端兼容**：无法唤起本地地图APP时，自动复制博物馆名称和地址到剪贴板，提示用户粘贴到手机导航APP使用
+- **导航弹窗样式**：金色边框弹窗，三个地图选项按钮垂直排列，悬停有光晕效果
+
+### 5. AI 智能导览
 
 **实现位置**：`app.py` `/api/ask` + `templates/index.html`（侧边聊天面板）
 
@@ -109,7 +131,7 @@ EL.demo2.0/
   - 对话历史：用户消息红色气泡、AI 回复金色边框气泡，自动滚底
 - **独立页面**：`/chat` 提供全屏沉浸式 AI 导览，设计语言与首页一致
 
-### 5. 语音识别
+### 6. 语音识别
 
 **实现位置**：`app.py` `/api/speech-to-text` + `templates/index.html`（录音逻辑）
 
@@ -121,7 +143,7 @@ EL.demo2.0/
   - 聊天面板 🎤 按钮：录音后自动填写输入框（需手动发送）
 - **状态提示**：录音中红色脉冲动画（`@keyframes mic-pulse`），处理中转圈动画
 
-### 6. 个性化功能（localStorage）
+### 7. 个性化功能（localStorage）
 
 **实现位置**：`templates/index.html`（localStorage 模块 + UI）
 
@@ -137,7 +159,7 @@ EL.demo2.0/
   - 详情弹窗底部笔记文本框
   - 保存后按钮变绿提示"已保存"
 
-### 7. 页面设计
+### 8. 页面设计
 
 **实现位置**：`templates/index.html`（HTML 结构 + CSS 样式 + JS 交互）
 
@@ -264,7 +286,15 @@ python app.py
       "image": "图片URL"
     }
   ],
-  "collections_note": "数据来源说明"
+  "collections_note": "数据来源说明",
+  "news": [
+    {
+      "title": "展览/活动/新闻标题",
+      "desc": "简短描述",
+      "link": "https://官网链接",
+      "date": "2026-06-09"
+    }
+  ]
 }
 ```
 
@@ -274,7 +304,7 @@ python app.py
 2. 遍历每条记录，执行字段转换：
    - `category` → `type` 映射（`CATEGORY_TYPE_MAP`）
    - `district` → 坐标回填（优先精确坐标，回退到区域坐标 + hash 散列）
-   - 补充 `intro_short` 等字段
+   - 补充 `intro_short`、`news`、`collections` 等字段
 3. 返回标准化的博物馆列表供 API 和模板使用
 
 ### 数据来源
@@ -287,14 +317,17 @@ python app.py
 
 详见 [scripts/README.md](scripts/README.md)。常用场景：
 
-| 场景              | 脚本                           | 依赖       |
-| ----------------- | ------------------------------ | ---------- |
-| 新增/更新文物数据 | `update_collections_images.py` | —          |
-| 修正博物馆坐标    | `update_museum_coordinates.py` | `AMAP_KEY` |
-| 补充地址信息      | `update_museums_address.py`    | `AMAP_KEY` |
-| 更新预约链接      | `update_reserve_links.py`      | —          |
-| 检查文物覆盖      | `check_status.py`              | —          |
-| 验证图片链接      | `validate_images.py`           | 网络       |
+| 场景             | 脚本                            | 依赖       |
+| ---------------- | ------------------------------- | ---------- |
+| 发现新博物馆候选 | `discover_new_museums.py`       | `AMAP_KEY` |
+| 去重候选名单     | `dedup_museums.py`              | —          |
+| 填充博物馆元数据 | `fill_museum_metadata.py`       | 网络       |
+| 补充候选地址信息 | `fill_candidates_address.py`    | `AMAP_KEY` |
+| 修正博物馆坐标   | `fix_museum_coordinates_poi.py` | `AMAP_KEY` |
+| 检查文物覆盖     | `check_status.py`               | —          |
+| 爬取官网新闻     | `crawl_museum_news.py`          | 网络       |
+| 快速爬取新闻     | `crawl_news_quick.py`           | 网络       |
+| 写入精选新闻     | `update_news_data.py`           | —          |
 
 > 运行脚本前请备份 `data/museums.json`，部分脚本需要高德 API 密钥。
 

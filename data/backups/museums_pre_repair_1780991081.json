@@ -324,41 +324,28 @@
     "photo_source": "amap",
     "collections": [
       {
-        "name": "太平天国镇库钱",
+        "name": "太平天国黄缎绣龙马褂",
+        "desc": "镇馆之宝，黄缎彩线绣五爪团龙，太平天国高级官员官服",
         "era": "太平天国",
-        "desc": "太平天国时期铸造的镇库大钱，存世仅数枚，是太平天国货币制度的珍贵实物见证，国家一级文物",
-        "image": "https://img1.baidu.com/it/u=2842138883,3430015150&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667"
+        "image": "http://www.rmhb.com.cn/yxsj/tpgs/202506/W020250624344851818010.jpg"
       },
       {
-        "name": "团龙马褂",
+        "name": "天王洪秀全玉玺",
+        "desc": "太平天国天王洪秀全玉玺拓片，太平天国最高权力象征",
         "era": "太平天国",
-        "desc": "太平天国高级将领所穿的团龙马褂，绣有五爪金龙纹饰，体现太平天国独特的服饰制度与等级观念",
-        "image": "https://img2.baidu.com/it/u=1988993416,1780106144&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500"
+        "image": "https://bkimg.cdn.bcebos.com/smart/6f061d950a7b02087bf4dc00518fe5d3572c10df6281-bkimg-process,v_1,rw_1,rh_1,pad_1,color_ffffff?x-bce-process=image/format,f_auto"
       },
       {
-        "name": "太平天国门牌",
+        "name": "太平天国天王宝座",
+        "desc": "太平天国天王宝座，太平天国天王洪秀全的御座",
         "era": "太平天国",
-        "desc": "太平天国户籍管理的实物凭证，相当于户口本，记录户主姓名、家庭成员及田产信息",
-        "image": "https://img0.baidu.com/it/u=2285715178,3412306801&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=671"
-      },
-      {
-        "name": "太平天国印书",
-        "era": "太平天国",
-        "desc": "太平天国刊刻的《天朝田亩制度》《资政新篇》等官书，反映太平天国的政治纲领和社会理想",
-        "image": "https://img2.baidu.com/it/u=523635559,1956841113&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=1108"
-      },
-      {
-        "name": "陈玉成官衙横梁",
-        "era": "太平天国",
-        "desc": "英王陈玉成官衙建筑构件，雕刻精美，是太平天国高级将领府邸建筑的珍贵遗存",
-        "image": "https://img2.baidu.com/it/u=1437543412,4089557955&fm=253&fmt=auto&app=120&f=JPEG?w=666&h=500"
+        "image": "https://imagecloud.thepaper.cn/thepaper/image/136/545/46.jpg"
       }
     ],
     "coordinates_source": "amap_poi_search",
     "formatted_address": "江苏省南京市秦淮区瞻园路128号",
     "amap_poi_name": "太平天国历史博物馆",
-    "amap_poi_address": "夫子庙街道夫子庙街道瞻园路128号瞻园内(南侧)",
-    "collections_note": "来自Wikipedia/Wikimedia验证数据"
+    "amap_poi_address": "夫子庙街道夫子庙街道瞻园路128号瞻园内(南侧)"
   },
   {
     "name": "南京中国科举博物馆",
@@ -408,31 +395,31 @@
         "name": "江南贡院号舍复原",
         "desc": "清代科举考棚原样复原，每间仅1.3平方米，考生在此答题三天两夜",
         "era": "清",
-        "image": "https://img1.baidu.com/it/u=3151910214,3929385554&fm=253&fmt=auto&app=138&f=PNG?w=683&h=500"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/6/60/%E6%B1%9F%E5%8D%97%E8%B4%A1%E9%99%A2%E6%98%8E%E8%BF%9C%E6%A5%BC%E5%8F%8A%E9%83%A8%E5%88%86%E5%8F%B7%E8%88%8D_2018-3.jpg"
       },
       {
         "name": "状元及第匾",
         "desc": "清代状元匾额原件，科举制度最高荣誉的实物见证",
         "era": "清",
-        "image": "https://img1.baidu.com/it/u=3034595593,4212182701&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1066"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Palastexamen-SongDynastie-Kaiser.jpg"
       },
       {
         "name": "科举朱卷",
         "desc": "清代考生墨卷与朱卷对照，展示八股文格式与誊录制度",
         "era": "清",
-        "image": "https://img2.baidu.com/it/u=3332154319,3527151290&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=736"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Milit%C3%A4rexamen.jpg"
       },
       {
         "name": "魁星点斗图",
         "desc": "清代科举信仰文物，魁星是传说中掌管文运的神祇",
         "era": "清",
-        "image": "https://img0.baidu.com/it/u=2074380610,3910181651&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1449"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/0a/%E6%96%87%E6%98%8C%E9%98%81_-_Tower_of_the_God_of_Literature_-_2011.11_-_panoramio.jpg"
       },
       {
         "name": "殿试策问答卷",
         "desc": "清代殿试原卷，皇帝亲自出题，考生当场作答的最高级别考试",
         "era": "清",
-        "image": "https://img2.baidu.com/it/u=1739600847,1323375276&fm=253&fmt=auto&app=120&f=JPEG?w=607&h=386"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/2a/%E8%BF%9E%E5%8D%87%E4%B8%89%E7%BA%A7%E4%BA%94_20250606.jpg"
       }
     ],
     "coordinates_source": "amap_poi_search",
@@ -571,19 +558,19 @@
         "name": "万人坑遗址",
         "desc": "江东门集体屠杀遗址出土的遇难者遗骸，是日军暴行的铁证",
         "era": "1937",
-        "image": "https://img0.baidu.com/it/u=3218913671,800918679&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1200"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a3/%E5%8D%97%E4%BA%AC%E5%A4%A7%E5%B1%A0%E6%9D%80%E7%BA%AA%E5%BF%B5%E9%A6%86%E6%B1%9F%E4%B8%9C%E9%97%A8%E4%B8%9B%E8%91%AC%E5%9C%B0%E4%B8%87%E4%BA%BA%E5%9D%91%E7%9A%84%E4%B8%80%E9%83%A8%E5%88%86.jpg"
       },
       {
         "name": "拉贝日记",
         "desc": "约翰·拉贝记录南京大屠杀的亲历日记，国际安全区的珍贵史料",
         "era": "1937",
-        "image": "https://img0.baidu.com/it/u=3439203821,3104708176&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=878"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/73/Attacking_the_Gate_of_China01.jpg"
       },
       {
         "name": "魏特琳雕像",
         "desc": "明妮·魏特琳，金陵女子文理学院代理院长，保护万余妇孺免遭日军侵害",
         "era": "1937",
-        "image": "https://img0.baidu.com/it/u=3622411105,4049118467&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1422"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Aerial_shot_of_Nanking_city_wall_1930.jpg"
       }
     ],
     "coordinates_source": "amap_poi_search",
@@ -660,25 +647,25 @@
         "name": "明万历织金妆花纱龙袍",
         "desc": "明代皇帝朝服云锦匹料，真金线织就，寸锦寸金",
         "era": "明万历",
-        "image": "https://img2.baidu.com/it/u=1952681100,2540292023&fm=253&fmt=auto&app=138&f=JPEG?w=512&h=500"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Nanjing_Brocade_Loom.jpg"
       },
       {
         "name": "清代云锦龙袍",
         "desc": "清代帝王礼服，以片金线和孔雀羽线织成，绚丽夺目",
         "era": "清",
-        "image": "https://img1.baidu.com/it/u=1316829604,1897233602&fm=253&fmt=auto&app=138&f=JPEG?w=1200&h=800"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/94/Nanjing_Brocade_Research_Institute.jpg"
       },
       {
         "name": "云锦妆花纱匹料",
         "desc": "云锦最高工艺'妆花'代表作，通经断纬、逐花异色",
         "era": "清",
-        "image": "https://img2.baidu.com/it/u=2737560991,1712437910&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=653"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/73/%E6%B1%9F%E5%AF%A7%E7%B9%94%E9%80%A0.JPG"
       },
       {
         "name": "大花楼木织机展示",
         "desc": "传统云锦织造所用的大花楼木机，需提花工与织造工二人配合操作",
         "era": "传统工艺",
-        "image": "https://img0.baidu.com/it/u=1599069682,1202271821&fm=253&fmt=auto&app=138&f=JPEG?w=643&h=500"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Jute_nahtlos.png"
       }
     ],
     "coordinates_source": "formal_update",
@@ -726,37 +713,37 @@
         "name": "澄江动物群化石群",
         "desc": "寒武纪生命大爆发的最佳见证，包含奇虾、微网虫等珍稀化石",
         "era": "寒武纪（5.3亿年前）",
-        "image": "https://img2.baidu.com/it/u=2417985481,2199597925&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=1178"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/6/65/Xianglong_BW.jpg"
       },
       {
         "name": "热河生物群化石",
         "desc": "发现大量带羽毛恐龙和早期鸟类化石，改写鸟类起源学说",
         "era": "白垩纪早期",
-        "image": "https://img1.baidu.com/it/u=3553900351,3307262357&fm=253&fmt=auto&app=138&f=JPEG?w=626&h=500"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Confuciusornis_sanctus_mmartyniuk.png"
       },
       {
         "name": "始祖鸟化石模型",
         "desc": "世界上最早的鸟类化石精密复制品，连接恐龙与鸟类的关键证据",
         "era": "侏罗纪晚期",
-        "image": "https://img2.baidu.com/it/u=1960658729,1883486120&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=966"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/cc/New_Archaeopteryx_specimen_%283D_digital_reconstruction%29.jpg"
       },
       {
         "name": "菊石化石群",
         "desc": "中生代海洋霸主菊石的完整化石系列，展示演化历程",
         "era": "中生代",
-        "image": "https://img0.baidu.com/it/u=2392659137,2057480886&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=800"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/da/Haeckel_Ammonitida.jpg"
       },
       {
         "name": "震旦角石化石",
         "desc": "中国特有古生物标准化石，产于三峡地区奥陶纪地层",
         "era": "奥陶纪",
-        "image": "https://img2.baidu.com/it/u=3483152798,3359077643&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1277"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/91/Smithsonian_miscellaneous_collections_%281916%29_%2814595404090%29.jpg"
       },
       {
         "name": "三叶虫化石集群",
         "desc": "寒武纪至二叠纪多样三叶虫化石，展示3亿年演化史",
         "era": "古生代",
-        "image": "https://img0.baidu.com/it/u=1991314731,2104616312&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/74/Walliserops_trifurcatus_fossil_trilobite_%28Devonian%2C_Morocco%29.jpg"
       }
     ],
     "coordinates_source": "amap_poi_search",
@@ -841,19 +828,19 @@
         "name": "海蓝宝石晶体",
         "desc": "中国最大海蓝宝石单晶之一，产自新疆阿尔泰伟晶岩",
         "era": "天然矿物",
-        "image": "https://img1.baidu.com/it/u=2375274529,1470392787&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1066"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/91/Indroda_eggs.JPG"
       },
       {
         "name": "恐龙蛋化石群",
         "desc": "河南西峡出土的巨型恐龙蛋窝化石，为世界罕见",
         "era": "白垩纪",
-        "image": "https://img0.baidu.com/it/u=4118046917,2124821037&fm=253&fmt=auto&app=138&f=JPEG?w=686&h=500"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Yingliangbeibei.png"
       },
       {
         "name": "辰砂巨晶",
         "desc": "中国最大辰砂单晶之一，产自贵州万山汞矿，色泽鲜红",
         "era": "天然矿物",
-        "image": "https://img0.baidu.com/it/u=536224169,1628674081&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=652"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Oolithes_spheroides_%28Senckenberg%29.jpg"
       }
     ],
     "coordinates_source": "amap_poi_search",
@@ -889,18 +876,6 @@
         "name": "周恩来铜像",
         "desc": "位于梅园新村纪念馆庭院中央，高3.2米，青铜铸造，展现1946年周恩来谈判时的风采",
         "image": "http://www.rmhb.com.cn/yxsj/sy/202506/W020250624562602410103.jpg"
-      },
-      {
-        "name": "周恩来在梅园",
-        "desc": "展出周恩来在梅园新村工作期间使用过的办公家具、衣物及生活用品",
-        "era": "1946-1947",
-        "image": "https://img0.baidu.com/it/u=2363956017,2994799905&fm=253&fmt=auto&app=138&f=JPEG?w=753&h=500"
-      },
-      {
-        "name": "中共代表团驻地复原",
-        "desc": "1:1复原1946年中共代表团在梅园新村的办公场所与生活场景",
-        "era": "1946-1947",
-        "image": "https://img0.baidu.com/it/u=670317094,3747077779&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500"
       }
     ],
     "coordinates_source": "amap_poi_search",
@@ -936,25 +911,25 @@
         "name": "南京绒花",
         "desc": "江苏省非物质文化遗产，以蚕丝为材料制成的传统头饰工艺",
         "era": "非遗",
-        "image": "https://img1.baidu.com/it/u=3854934837,2038086488&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=646"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Velvet_flower_Nanjing_01.jpg/800px-Velvet_flower_Nanjing_01.jpg"
       },
       {
         "name": "金陵剪纸",
         "desc": "国家级非遗，南京剪纸以'花中有花、题中有题'著称",
         "era": "非遗",
-        "image": "https://img2.baidu.com/it/u=2566487171,1246510693&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=656"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Chinese_paper_cuttings.jpg"
       },
       {
         "name": "南京云锦织机演示",
         "desc": "传统木织机现场演示，展示云锦织造的精湛技艺",
         "era": "非遗",
-        "image": "https://img1.baidu.com/it/u=3710919734,1871190470&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=750"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/c3/%E5%86%9C%E4%B9%A6%E7%BB%87%E5%B8%83%E6%9C%BA.jpg"
       },
       {
         "name": "南京面塑",
         "desc": "以糯米面为主料捏制人物的传统手工艺，造型生动",
         "era": "非遗",
-        "image": "https://img0.baidu.com/it/u=1043576567,1138779414&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Noodles_With_Sesame_Sauce_%28%E9%BA%BB%E9%86%AC%E9%BA%B5%29.jpg"
       }
     ],
     "coordinates_source": "amap_poi_search",
@@ -1131,19 +1106,19 @@
         "name": "金陵图数字艺术展",
         "desc": "以清代冯宁《金陵图》为蓝本的沉浸式数字艺术展，再现宋代南京繁华",
         "era": "当代",
-        "image": "https://img2.baidu.com/it/u=2334842134,3924333297&fm=253&fmt=auto&app=138&f=JPEG?w=1067&h=800"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/b1/%E5%BE%B7%E5%9F%BA%E8%89%BA%E6%9C%AF%E5%8D%9A%E7%89%A9%E9%A6%86%E8%8A%B1%E8%8A%B1%E4%B8%96%E7%95%8C%E5%B1%955.jpg"
       },
       {
         "name": "当代艺术装置",
         "desc": "德基艺术博物馆收藏的国内外当代艺术家大型装置作品",
         "era": "当代",
-        "image": "https://img0.baidu.com/it/u=2778009470,1776804791&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Beeple-%E5%BE%B7%E5%9F%BA%E8%89%BA%E6%9C%AF%E5%8D%9A%E7%89%A9%E9%A6%864.jpg"
       },
       {
         "name": "国际艺术大师作品展",
         "desc": "德基定期展出的国际知名艺术家真迹，涵盖绘画、雕塑等领域",
         "era": "现当代",
-        "image": "https://img1.baidu.com/it/u=1921138058,2721103445&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/8f/%E5%BE%B7%E5%9F%BA%E5%A4%96%E8%A7%82%E4%BF%AE%E6%AD%A3.jpg"
       }
     ],
     "coordinates_source": "amap_poi_search",
@@ -1210,20 +1185,7 @@
     "photo_url": "https://store.is.autonavi.com/showpic/364b4d9f0b1a33da3740bd7f0a03bbb8",
     "reserve_link": "公众号「南京文旅」预约",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "馆藏精品展",
-        "desc": "展出励志社代表性藏品",
-        "era": "古代-现代",
-        "image": "https://img0.baidu.com/it/u=1659443772,4098133585&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500"
-      },
-      {
-        "name": "励志社历史展",
-        "desc": "展出励志社创立至抗战期间的组织活动史料及文物",
-        "era": "1929-1949",
-        "image": "https://img0.baidu.com/it/u=3070319473,3167462635&fm=253&fmt=auto&app=138&f=JPEG?w=710&h=500"
-      }
-    ],
+    "collections": [],
     "amap_poi_name": "励志社博物馆",
     "amap_poi_address": "中山东路307号"
   },
@@ -1339,20 +1301,7 @@
     "highlight": "特色：退役军人风采展示",
     "transport": "交通：地铁2号线珠江路站",
     "nearby": "周边：南京大学、鼓楼",
-    "collections": [
-      {
-        "name": "主题展览",
-        "desc": "展出玄武区退役军人主题馆相关的艺术作品及历史资料",
-        "era": "现代",
-        "image": "https://img2.baidu.com/it/u=2807916308,3790177017&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500"
-      },
-      {
-        "name": "军旅记忆展",
-        "desc": "展出老兵军装、勋章、立功证书等珍贵实物",
-        "era": "1950s-现代",
-        "image": "https://img1.baidu.com/it/u=3819726391,4232486518&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500"
-      }
-    ],
+    "collections": [],
     "website": "",
     "phone": "",
     "photo_url": "",
@@ -1379,20 +1328,7 @@
     "reserve_link": "https://www.njgjz.com/",
     "photo_url": "https://aos-comment.amap.com/B0HRLC2FV9/comment/e6067ddc633f9ab926d6b864409a4c65_2048_2048_80.jpg",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "南京近代建筑展",
-        "desc": "通过模型、图纸和照片展示南京近代建筑发展史",
-        "era": "近代",
-        "image": "https://img2.baidu.com/it/u=3436628228,242795130&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1067"
-      },
-      {
-        "name": "民国建筑大师展",
-        "desc": "展出吕彦直、杨廷宝等建筑大师的设计手稿及作品模型",
-        "era": "民国",
-        "image": "https://img1.baidu.com/it/u=2716802264,851993837&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1067"
-      }
-    ],
+    "collections": [],
     "amap_poi_name": "南京近代建筑博物馆",
     "amap_poi_address": "杨将军巷9号南京D9街区F1层"
   },
@@ -1415,20 +1351,7 @@
     "reserve_link": "https://www.dejiplaza.com/",
     "photo_url": "https://store.is.autonavi.com/showpic/5ea920a479434e530000001893216876?type=pic",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "当代艺术展",
-        "desc": "展出当代艺术家代表性作品",
-        "era": "现代",
-        "image": "https://img0.baidu.com/it/u=2778009470,1776804791&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500"
-      },
-      {
-        "name": "馆藏精品展",
-        "desc": "展示本馆收藏的绘画、雕塑等艺术精品",
-        "era": "现代",
-        "image": "https://img2.baidu.com/it/u=2438406553,1200709790&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=651"
-      }
-    ],
+    "collections": [],
     "amap_poi_name": "德基美术馆(德基广场店文创小铺)",
     "amap_poi_address": "中山路18号德基广场二期8F层"
   },
@@ -1453,16 +1376,10 @@
     "photo_source": "amap",
     "collections": [
       {
-        "name": "校史沿革展",
-        "desc": "展示该校从创建至今的发展历程、历史照片及重要文献",
-        "era": "近代-现代",
-        "image": "https://img2.baidu.com/it/u=450241847,3945687100&fm=253&fmt=auto&app=138&f=JPEG?w=682&h=500"
-      },
-      {
-        "name": "杰出校友展",
-        "desc": "展出该校培养的杰出人才事迹及学术成果",
-        "era": "近代-现代",
-        "image": "https://img2.baidu.com/it/u=1995981758,266945128&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500"
+        "name": "东南大学校史馆 展品",
+        "era": "",
+        "desc": "",
+        "image": "https://img.dahepiao.com/uploads/allimg/260423/26391-Kx3nMEsXqG5AR.png"
       }
     ],
     "amap_poi_name": "东南大学(四牌楼校区)校史馆",
@@ -1489,16 +1406,34 @@
     "photo_source": "amap",
     "collections": [
       {
-        "name": "主题纪念展",
-        "desc": "展出与吴健雄相关的历史文物、照片及文献",
-        "era": "近代-现代",
-        "image": "https://img1.baidu.com/it/u=2372399465,2327857814&fm=253&fmt=auto&app=120&f=JPEG?w=1200&h=800"
+        "name": "档案在此，容不得日方抵赖",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260608327011252970.jpg"
       },
       {
-        "name": "实验物理展",
-        "desc": "展出吴健雄实验室复原场景及科研手稿",
-        "era": "现代",
-        "image": "https://img2.baidu.com/it/u=2495426887,311425958&fm=253&fmt=auto&app=138&f=JPEG?w=723&h=500"
+        "name": "“正义的回响，未竟的使命”——央媒集中报道东京审判开庭80周",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260603346798618176.jpg"
+      },
+      {
+        "name": "留言月历 | “尽己所能，让越来越多的人知晓历史真相”",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260602567119399723.jpg"
+      },
+      {
+        "name": "八十年铁证归来 | “不可动摇的正义审判——馆藏东京审判档案",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260602567089473410.jpg"
+      },
+      {
+        "name": "多国学者齐聚沪宁发出最强音：东京审判正义不可撼动！",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260602567030910335.jpg"
       }
     ],
     "level": "未定级",
@@ -1525,26 +1460,7 @@
     "highlight": "特色：丝绸文化展示、传统织造技艺",
     "transport": "交通：地铁3号线夫子庙站",
     "nearby": "周边：夫子庙、秦淮河",
-    "collections": [
-      {
-        "name": "传统织机展示",
-        "desc": "展示从手工缫丝到织造的完整工艺流程，包括复原的古代织机实物",
-        "era": "古代-近代",
-        "image": "https://img2.baidu.com/it/u=1177420321,491969270&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=740"
-      },
-      {
-        "name": "丝绸文物精品",
-        "desc": "展出历代丝绸服饰、匹料及织锦精品，呈现江南丝绸千年文化",
-        "era": "唐-清",
-        "image": "https://img2.baidu.com/it/u=785865391,685755270&fm=253&fmt=auto&app=120&f=JPEG?w=1096&h=800"
-      },
-      {
-        "name": "蚕桑文化展区",
-        "desc": "展示蚕桑养殖历史、丝绸之路贸易路线图及丝绸文化传播",
-        "era": "古代-现代",
-        "image": "https://img2.baidu.com/it/u=1201364335,1215464316&fm=253&fmt=auto&app=120&f=JPEG?w=1201&h=800"
-      }
-    ],
+    "collections": [],
     "amap_poi_name": "江苏省南京市秦淮区江南丝绸文化博物馆(北门)",
     "amap_poi_address": "江南丝绸文化博物馆(北门)",
     "website": "",
@@ -1574,20 +1490,7 @@
     "highlight": "特色：南京传统品牌历史、老字号文化",
     "transport": "交通：地铁1号线三山街站",
     "nearby": "周边：夫子庙、老门东",
-    "collections": [
-      {
-        "name": "馆藏精品展",
-        "desc": "展出南京名城老字号代表性藏品",
-        "era": "古代-现代",
-        "image": "https://img1.baidu.com/it/u=54543219,666463556&fm=253&fmt=auto&app=138&f=JPEG?w=781&h=500"
-      },
-      {
-        "name": "老字号技艺展",
-        "desc": "展示南京老字号的传统制作工艺及工具实物",
-        "era": "清-现代",
-        "image": "https://img1.baidu.com/it/u=2579872741,2713395316&fm=253&fmt=auto&app=138&f=JPEG?w=888&h=500"
-      }
-    ],
+    "collections": [],
     "grade": null,
     "level": "",
     "website": "",
@@ -1615,20 +1518,7 @@
     "reserve_link": "http://www.yybwg.com/",
     "photo_url": "https://aos-comment.amap.com/B0FFFA07UU/comment/63113c9242f31be31bd03306fa16a346_2048_2048_80.jpg",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "历代钱币陈列",
-        "desc": "展出从先秦贝币到民国银元的中国历代货币演变",
-        "era": "先秦-民国",
-        "image": "https://img1.baidu.com/it/u=1103916011,1810942155&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1754"
-      },
-      {
-        "name": "外国货币展区",
-        "desc": "展示世界各国各时期代表性货币，反映国际货币文化交流",
-        "era": "古代-现代",
-        "image": "https://img0.baidu.com/it/u=4282688079,1788675767&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=800"
-      }
-    ],
+    "collections": [],
     "amap_poi_name": "永银钱币博物馆",
     "amap_poi_address": "应天大街388南京晨光1865创意产业园C2栋"
   },
@@ -1650,20 +1540,7 @@
     "formatted_address": "江苏省南京市秦淮区集庆路来凤街1号",
     "photo_url": "http://store.is.autonavi.com/showpic/41826b626ff1d55dd8aa3070c55dde4f",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "馆藏精品展",
-        "desc": "展出南京钰缘泉代表性藏品",
-        "era": "古代-现代",
-        "image": "https://img2.baidu.com/it/u=2858025436,3163369873&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=1068"
-      },
-      {
-        "name": "玉文化展",
-        "desc": "展示中国玉文化发展脉络及各类玉器标本",
-        "era": "新石器-清",
-        "image": "https://img1.baidu.com/it/u=3071520450,2986494317&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=660"
-      }
-    ],
+    "collections": [],
     "amap_poi_name": "钰缘泉博物馆",
     "amap_poi_address": "集庆路来凤街1号明城墙上",
     "level": "未定级",
@@ -1689,16 +1566,10 @@
     "photo_source": "amap",
     "collections": [
       {
-        "name": "中国律师史展",
-        "desc": "展示中国律师制度从清末到当代的发展历程",
-        "era": "清末-现代",
-        "image": "https://img1.baidu.com/it/u=1698486335,1627562653&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667"
-      },
-      {
-        "name": "法律文书展",
-        "desc": "展出历代法律典籍、判决文书及律师执业证照",
-        "era": "古代-现代",
-        "image": "https://img1.baidu.com/it/u=1812736245,2402896502&fm=253&fmt=auto&app=138&f=JPEG?w=689&h=500"
+        "name": "镜见律师博物馆展厅陈设",
+        "era": "",
+        "desc": "镜见律师博物馆展厅陈设",
+        "image": "https://bkimg.cdn.bcebos.com/pic/b8014a90f603738da9773cf65b41a751f81987184696?x-bce-process=image/format,f_auto/resize,m_lfit,limit_1,w_448"
       }
     ],
     "phone": "025-84618822",
@@ -1730,25 +1601,25 @@
         "name": "堂子街太平天国壁画",
         "desc": "堂子街某王府遗址发现的太平天国时期壁画原作，全国重点文物保护单位",
         "era": "太平天国",
-        "image": "https://img1.baidu.com/it/u=2193968398,3621653019&fm=253&fmt=auto&app=120&f=JPEG?w=1200&h=800"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/09/Nanjing_Tangzijie_Taiping_Tianguo_Bihua_2017.11.12_14-25-09.jpg"
       },
       {
         "name": "防江望楼壁画",
         "desc": "太平天国代表性壁画，描绘了江防军事设施望楼",
         "era": "太平天国",
-        "image": "https://img0.baidu.com/it/u=617307042,4045481901&fm=253&fmt=auto&app=138&f=JPEG?w=880&h=500"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Hong_Xiuquan.jpg"
       },
       {
         "name": "孔雀牡丹壁画",
         "desc": "太平天国壁画中的花鸟题材代表作，笔法细腻、色彩鲜艳",
         "era": "太平天国",
-        "image": "https://img2.baidu.com/it/u=2521877519,1385553948&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=659"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/02/Jintian_Uprising_Museum_%285%29.jpg"
       },
       {
         "name": "江防图壁画",
         "desc": "太平天国天京保卫战时期的江防军事壁画",
         "era": "太平天国",
-        "image": "https://img0.baidu.com/it/u=1940030830,1770332505&fm=253&fmt=auto&app=120&f=JPEG?w=1248&h=800"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Throne_of_the_Heavenly_King.jpg"
       }
     ],
     "level": "未定级",
@@ -1772,20 +1643,7 @@
     "formatted_address": "江苏省南京市秦淮区钞库街38号",
     "photo_url": "http://store.is.autonavi.com/showpic/734cf3868ba7489aa36db10cb66aae42",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "故居复原展",
-        "desc": "复原展示故居原貌及主人生平事迹",
-        "era": "清",
-        "image": "https://img1.baidu.com/it/u=386913468,3739656964&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1067"
-      },
-      {
-        "name": "桃花扇文化展",
-        "desc": "展出《桃花扇》剧本版本及侯方域、李香君相关文物",
-        "era": "明末清初",
-        "image": "https://img1.baidu.com/it/u=2586252617,2648109094&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667"
-      }
-    ],
+    "collections": [],
     "phone": "025-52249600",
     "amap_poi_name": "李香君故居陈列馆",
     "amap_poi_address": "大石坝街150号李香君故居内",
@@ -1811,16 +1669,34 @@
     "photo_source": "amap",
     "collections": [
       {
-        "name": "主题纪念展",
-        "desc": "展出与王导谢安相关的历史文物、照片及文献",
-        "era": "近代-现代",
-        "image": "https://img0.baidu.com/it/u=89489848,3515319924&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1067"
+        "name": "档案在此，容不得日方抵赖",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260608327011252970.jpg"
       },
       {
-        "name": "六朝名士展",
-        "desc": "展出王导、谢安等六朝名士的书法拓片及生平文物",
-        "era": "东晋",
-        "image": "https://img2.baidu.com/it/u=3882738831,4116222488&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667"
+        "name": "“正义的回响，未竟的使命”——央媒集中报道东京审判开庭80周",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260603346798618176.jpg"
+      },
+      {
+        "name": "留言月历 | “尽己所能，让越来越多的人知晓历史真相”",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260602567119399723.jpg"
+      },
+      {
+        "name": "八十年铁证归来 | “不可动摇的正义审判——馆藏东京审判档案",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260602567089473410.jpg"
+      },
+      {
+        "name": "多国学者齐聚沪宁发出最强音：东京审判正义不可撼动！",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260602567030910335.jpg"
       }
     ],
     "phone": "025-52231693",
@@ -1847,20 +1723,7 @@
     "formatted_address": "江苏省南京市秦淮区瞻园路126号",
     "photo_url": "https://aos-comment.amap.com/B00190BUK5/comment/3171a689ee891830459c61d7de492d89_2048_2048_80.jpg",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "故居复原展",
-        "desc": "复原展示故居原貌及主人生平事迹",
-        "era": "清",
-        "image": "https://img2.baidu.com/it/u=505694930,506432695&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667"
-      },
-      {
-        "name": "秦大士生平展",
-        "desc": "展出清代状元秦大士的书法作品、科举文物及生平事迹",
-        "era": "清",
-        "image": "https://img1.baidu.com/it/u=4195641343,3011294760&fm=253&fmt=auto&app=138&f=JPEG?w=686&h=500"
-      }
-    ],
+    "collections": [],
     "amap_poi_name": "秦大士故居展览馆",
     "amap_poi_address": "秦状元府",
     "level": "未定级",
@@ -1897,25 +1760,25 @@
         "name": "孙中山坐像",
         "desc": "中山陵祭堂内孙中山汉白玉坐像，由法国雕塑家保罗·朗特斯基创作",
         "era": "1930",
-        "image": "https://img0.baidu.com/it/u=4118228077,1592137864&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=746"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Sun_Yat-sen_Funeral_Taian.jpg"
       },
       {
         "name": "中山陵碑亭",
         "desc": "中山陵碑亭内'中国国民党葬总理孙先生于此'碑，谭延闿手书",
         "era": "1929",
-        "image": "https://img2.baidu.com/it/u=321515495,2160778266&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=610"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/13/Soong_investigate_location_of_Sun%27s_cemetery_in_Nanjing.jpg"
       },
       {
         "name": "中山陵陵门",
         "desc": "中山陵陵门，三拱门中门镌刻孙中山手书'天下为公'",
         "era": "1929",
-        "image": "https://img1.baidu.com/it/u=2119310643,2856440983&fm=253&fmt=auto&app=120&f=JPEG?w=667&h=500"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/41/Sun_Yat-sen_Sacrificial_Hall_Inscription.jpg"
       },
       {
         "name": "孙中山手书原迹",
         "desc": "孙中山亲笔题写的'博爱''天下为公'等墨宝",
         "era": "民国",
-        "image": "https://img0.baidu.com/it/u=1709165275,659899057&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=654"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/6/64/Funeral_of_Sun_Yat-sen_01.jpg"
       }
     ],
     "phone": "025-85769227",
@@ -1945,33 +1808,33 @@
     "collections": [
       {
         "name": "抗日航空烈士纪念碑",
-        "era": "抗日战争时期",
-        "desc": "纪念碑镌刻4296名中外航空烈士英名，是世界规模最大的航空烈士纪念建筑群",
-        "image": "https://img0.baidu.com/it/u=136219769,3688354287&fm=253&fmt=auto&app=138&f=JPEG?w=1067&h=800"
+        "era": "",
+        "desc": "抗日航空烈士纪念碑",
+        "image": ""
       },
       {
-        "name": "I-16战斗机模型",
-        "era": "1937-1945",
-        "desc": "苏联援华航空志愿队使用的伊-16战斗机，抗战初期中国空军的主力机型",
-        "image": "https://img2.baidu.com/it/u=3552755212,4011720604&fm=253&fmt=auto&app=138&f=JPEG?w=796&h=500"
+        "name": "刻有烈士姓名的石碑",
+        "era": "",
+        "desc": "刻有烈士姓名的石碑",
+        "image": ""
       },
       {
-        "name": "苏联援华航空队史迹展",
-        "era": "1937-1941",
-        "desc": "展览苏联航空志愿队在华作战史迹，包括2000余名苏联飞行员援华抗战的珍贵史料",
-        "image": "https://img2.baidu.com/it/u=1606014960,705959239&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500"
+        "name": "苏联援助中华民国空军的抗战用I-16之原始外观",
+        "era": "",
+        "desc": "苏联援助中华民国空军的抗战用I-16之原始外观",
+        "image": ""
       },
       {
-        "name": "美国飞虎队展区",
-        "era": "1941-1945",
-        "desc": "展示陈纳德将军率领的美国志愿航空队（飞虎队）在中国抗战中的英雄事迹",
-        "image": "https://img1.baidu.com/it/u=1510888077,3732661756&fm=253&fmt=auto&app=138&f=JPEG?w=686&h=500"
+        "name": "抗战期间来华助战的苏联航空志愿队也都以国军涂装面貌出击",
+        "era": "",
+        "desc": "抗战期间来华助战的苏联航空志愿队也都以国军涂装面貌出击",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Soviet_volunteer.jpg"
       }
     ],
     "phone": "025-85477129",
     "amap_poi_name": "南京抗日航空烈士纪念馆",
     "amap_poi_address": "北麓抗日航空烈士公墓",
-    "collections_note": "来自Wikipedia/Wikimedia验证数据"
+    "collections_note": "自动采集自百度百科/Wikipedia/博物馆官网"
   },
   {
     "name": "国民政府主席官邸旧址",
@@ -1995,20 +1858,7 @@
     "photo_url": "https://store.is.autonavi.com/showpic/f2c6ad22bae25dfd0000000740602942?type=pic",
     "reserve_link": "公众号「钟山风景区」预约",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "主题展览",
-        "desc": "展出国民政府主席官邸旧址相关的艺术作品及历史资料",
-        "era": "现代",
-        "image": "https://img0.baidu.com/it/u=1605766939,69425036&fm=253&fmt=auto&app=120&f=JPEG?w=700&h=525"
-      },
-      {
-        "name": "美龄宫陈设展",
-        "desc": "复原展示国民政府主席官邸内部陈设及历史场景",
-        "era": "民国",
-        "image": "https://img0.baidu.com/it/u=1507981173,1407637678&fm=253&fmt=auto&app=138&f=JPEG?w=375&h=500"
-      }
-    ],
+    "collections": [],
     "amap_poi_name": "美龄宫",
     "amap_poi_address": "中山陵9号钟山风景名胜区内(南侧)"
   },
@@ -2035,25 +1885,25 @@
         "name": "孙权雕像",
         "desc": "东吴大帝孙权戎装雕像，展现其建立东吴、开发江南的雄才大略",
         "era": "三国·吴",
-        "image": "https://img1.baidu.com/it/u=333982192,1432793820&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1067"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/08/Yellow_Crane_Tower_in_20060430.jpg"
       },
       {
         "name": "东吴都城建业复原模型",
         "desc": "三国时期东吴都城建业（今南京）的城市格局复原模型",
         "era": "三国·吴",
-        "image": "https://img1.baidu.com/it/u=369968874,3590001871&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=733"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/38/Chibizhizhan.png"
       },
       {
         "name": "东吴青瓷文物",
         "desc": "东吴时期的青瓷器物，展示三国时期江南制瓷工艺",
         "era": "三国·吴",
-        "image": "https://img2.baidu.com/it/u=564140686,3060966403&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1067"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/02/Portraits_of_Famous_Men_-_Sun_Quan.jpg"
       },
       {
         "name": "孙权故事浮雕墙",
         "desc": "浮雕展示孙权'草船借箭''赤壁之战'等历史故事",
         "era": "三国·吴",
-        "image": "https://img2.baidu.com/it/u=3736635233,78811646&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=700"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/4f/%E9%87%8D%E5%88%97%E7%A5%9E%E5%85%BD%E9%95%9C.png"
       }
     ],
     "phone": "025-84442880;025-85769228",
@@ -2079,20 +1929,7 @@
     "formatted_address": "江苏省南京市玄武区紫金山",
     "photo_url": "https://aos-comment.amap.com/B0FFK8QODX/comment/20260313-17634d457a2f941aa66692d5-ynXnZAWyrO86zPzpnLo5I.jpg",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "森林生态展",
-        "desc": "展示森林生态系统及珍稀动植物标本",
-        "era": "自然",
-        "image": "https://img2.baidu.com/it/u=1312078344,2032890945&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667"
-      },
-      {
-        "name": "紫金山动植物展",
-        "desc": "展出紫金山地区代表性动植物标本及生态模型",
-        "era": "自然",
-        "image": "https://img0.baidu.com/it/u=3397946506,1757050426&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500"
-      }
-    ],
+    "collections": [],
     "amap_poi_name": "紫金山森林科普馆",
     "amap_poi_address": "四方城1号梅花谷公园",
     "level": "未定级",
@@ -2116,20 +1953,7 @@
     "formatted_address": "江苏省南京市玄武区紫金山",
     "photo_url": "https://store.is.autonavi.com/showpic/6a07b6b3b478e0b889464541888917b8",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "梅花文化展",
-        "desc": "展示梅花品种、栽培历史及梅文化诗词书画",
-        "era": "古代-现代",
-        "image": "https://img1.baidu.com/it/u=2364351230,569489190&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=889"
-      },
-      {
-        "name": "梅花书画展",
-        "desc": "展出历代名家梅花题材书画作品",
-        "era": "古代-现代",
-        "image": "https://img2.baidu.com/it/u=1418319346,1822118438&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=656"
-      }
-    ],
+    "collections": [],
     "level": "未定级",
     "reserve_link": "免费参观"
   },
@@ -2154,16 +1978,16 @@
     "photo_source": "amap",
     "collections": [
       {
-        "name": "珍稀植物标本",
-        "desc": "展出中山植物园珍藏的珍稀植物标本及种子",
-        "era": "自然",
-        "image": "https://img0.baidu.com/it/u=1009085803,1256989970&fm=253&fmt=auto&app=138&f=JPEG?w=1067&h=800"
+        "name": "南京中山植物园 藏品 1",
+        "era": "",
+        "desc": "",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Tango-nosources.svg"
       },
       {
-        "name": "药用植物展",
-        "desc": "展出珍稀药用植物标本及药用植物园科研成果",
-        "era": "自然",
-        "image": "https://img1.baidu.com/it/u=3162882485,3794023469&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667"
+        "name": "此条目没有列出任何参考或来源。(2025年10月9日)维基百",
+        "era": "",
+        "desc": "此条目没有列出任何参考或来源。(2025年10月9日)维基百科所有的内容都应该可供查证。请协助补充可靠来源以改善这篇条目。无法查证的内容可能会因为异议提出而被移除。中山植物园南京市文物保护单位地址南京",
+        "image": ""
       }
     ],
     "amap_poi_name": "南京中山植物园",
@@ -2188,20 +2012,7 @@
     "formatted_address": "江苏省南京市建邺区水西门大街213号",
     "photo_url": "https://aos-comment.amap.com/B00190ABSP/comment/content_media_external_file_265153_1770079527842_26368333.jpg",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "地震科普展",
-        "desc": "展示地震成因、监测技术及南京地震历史",
-        "era": "自然",
-        "image": "https://img2.baidu.com/it/u=3486907494,3410109866&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500"
-      },
-      {
-        "name": "地震监测展",
-        "desc": "展示现代地震监测仪器设备及预警技术",
-        "era": "现代",
-        "image": "https://img0.baidu.com/it/u=1269485176,850100224&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500"
-      }
-    ],
+    "collections": [],
     "phone": "025-58609075",
     "amap_poi_name": "南京地震科学馆",
     "amap_poi_address": "中山陵东新村7号",
@@ -2225,20 +2036,7 @@
     "formatted_address": "江苏省南京市鼓楼区中山北路23号",
     "photo_url": "http://store.is.autonavi.com/showpic/d1b6d4dd2e8b6782beccd0b996d27b47",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "邮政史展",
-        "desc": "展出从古代驿站到近代邮政的发展历程及邮递工具",
-        "era": "古代-近代",
-        "image": "https://img1.baidu.com/it/u=3252110946,2973878561&fm=253&fmt=auto&app=138&f=JPEG?w=713&h=475"
-      },
-      {
-        "name": "邮路变迁展",
-        "desc": "展示从驿道邮路到近代邮路的演变",
-        "era": "古代-近代",
-        "image": "https://img2.baidu.com/it/u=1562022635,4273671151&fm=253&fmt=auto&app=138&f=JPEG?w=1067&h=800"
-      }
-    ],
+    "collections": [],
     "level": "未定级",
     "phone": "025-83582170",
     "reserve_link": "免费参观"
@@ -2262,20 +2060,7 @@
     "reserve_link": "http://www.nj10d.com/",
     "photo_url": "https://store.is.autonavi.com/showpic/9a58aafda000da3e0000002331226537?type=pic",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "史料陈列",
-        "desc": "展出南京十朝历史文化相关历史资料及实物",
-        "era": "近代",
-        "image": "https://img1.baidu.com/it/u=3878537527,2514587233&fm=253&fmt=auto&app=138&f=JPEG?w=1067&h=800"
-      },
-      {
-        "name": "十朝文物展",
-        "desc": "展出南京作为十朝都会的代表性出土文物及文献",
-        "era": "六朝-民国",
-        "image": "https://img2.baidu.com/it/u=1609777273,3080423884&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=633"
-      }
-    ],
+    "collections": [],
     "phone": "025-83651501",
     "amap_poi_name": "南京十朝历史文化陈列馆",
     "amap_poi_address": "四方城1号"
@@ -2300,16 +2085,16 @@
     "photo_source": "amap",
     "collections": [
       {
-        "name": "世界昆虫标本展",
-        "desc": "展出全球各区域代表性昆虫标本数千种",
-        "era": "自然",
-        "image": "https://img2.baidu.com/it/u=2222569900,837020910&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=889"
+        "name": "南京紫金山昆虫博物馆藏品",
+        "era": "",
+        "desc": "",
+        "image": "https://bkimg.cdn.bcebos.com/smart/78310a55b319ebc4b745c80dda7fd8fc1e178a82b854-bkimg-process,v_1,rw_924,rh_720,maxl_364?x-bce-process=image/format,f_auto"
       },
       {
-        "name": "蝴蝶多样性展",
-        "desc": "展示中国及世界珍稀蝴蝶品种，呈现蝶类生物多样性",
-        "era": "自然",
-        "image": "https://img0.baidu.com/it/u=1699007151,1713769471&fm=253&fmt=auto&app=138&f=JPEG?w=666&h=500"
+        "name": "展厅",
+        "era": "",
+        "desc": "展厅",
+        "image": "https://bkimg.cdn.bcebos.com/smart/78310a55b319ebc4b745c80dda7fd8fc1e178a82b854-bkimg-process,v_1,rw_924,rh_720,maxl_364?x-bce-process=image/format,f_auto"
       }
     ],
     "amap_poi_name": "南京紫金山昆虫博物馆",
@@ -2377,20 +2162,7 @@
     "reserve_link": "https://www.pmo.ac.cn/",
     "photo_url": "https://store.is.autonavi.com/showpic/cc9a1da07edeb22b9dd33d344e30eee7",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "天文仪器展",
-        "desc": "展出浑仪、简仪等古代天文观测仪器复刻品",
-        "era": "古代",
-        "image": "https://img2.baidu.com/it/u=3208259974,2171037574&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500"
-      },
-      {
-        "name": "陨石标本展",
-        "desc": "展示各类陨石标本及天体模型",
-        "era": "自然",
-        "image": "https://img1.baidu.com/it/u=2613288489,3643148890&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=1031"
-      }
-    ],
+    "collections": [],
     "amap_poi_name": "天文历史博物馆",
     "amap_poi_address": "第三峰北侧紫金山天文台",
     "grade": null,
@@ -2414,20 +2186,7 @@
     "formatted_address": "江苏省南京市玄武区东方城68号",
     "photo_url": "http://store.is.autonavi.com/showpic/39703c578c378582d4de6ea2f334445c",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "老爷车展",
-        "desc": "展出红旗、上海等国产经典车型及车管历史",
-        "era": "1950s-1990s",
-        "image": "https://img0.baidu.com/it/u=2068610796,1820144342&fm=253&fmt=auto&app=138&f=JPEG?w=1067&h=800"
-      },
-      {
-        "name": "牌照演变展",
-        "desc": "展出中国机动车号牌的历史演变及车管文物",
-        "era": "1950s-现代",
-        "image": "https://img2.baidu.com/it/u=680136248,4233210666&fm=253&fmt=auto&app=120&f=JPEG?w=632&h=500"
-      }
-    ],
+    "collections": [],
     "website": "",
     "phone": "025-84466460",
     "level": "未定级",
@@ -2452,20 +2211,7 @@
     "reserve_link": "微信公众号\"南京理工大学兵器博物馆\"小程序预约",
     "photo_url": "https://aos-comment.amap.com/B0FFF4O5KL/comment/content_media_external_file_100001662_1757771112534_76265176.jpg",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "近现代兵器展",
-        "desc": "展出中外各类枪械、火炮及弹药实物模型",
-        "era": "近代-现代",
-        "image": "https://img2.baidu.com/it/u=2971072662,3540300381&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1068"
-      },
-      {
-        "name": "装甲车辆展示",
-        "desc": "展出退役坦克、装甲车等重型装备实物",
-        "era": "现代",
-        "image": "https://img1.baidu.com/it/u=523947875,92645572&fm=253&fmt=auto&app=138&f=JPEG?w=753&h=500"
-      }
-    ],
+    "collections": [],
     "website": "https://bqbwg.njust.edu.cn/",
     "phone": "025-84315777",
     "news": [
@@ -2525,31 +2271,31 @@
         "name": "郑和宝船模型",
         "desc": "按史料记载复原的郑和宝船模型，长达44丈，是当时世界最大木船",
         "era": "明永乐",
-        "image": "https://img1.baidu.com/it/u=2782387875,2589904721&fm=253&fmt=auto&app=120&f=JPEG?w=1097&h=800"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/5/53/IMMH_Chinese_treasure_ship_model.jpg"
       },
       {
         "name": "郑和下西洋航海图",
         "desc": "郑和船队七下西洋的航海路线图，航程遍及亚非30余国",
         "era": "明永乐",
-        "image": "https://img1.baidu.com/it/u=2818325026,3266828447&fm=253&fmt=auto&app=138&f=JPEG?w=783&h=500"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/ac/%E9%83%91%E5%92%8C%E8%88%AA%E6%B5%B7%E5%9B%BE%E4%BA%94.jpg"
       },
       {
         "name": "郑和塑像",
         "desc": "伟大航海家郑和的青铜塑像，手持航海图，目光远眺大海",
         "era": "明",
-        "image": "https://img2.baidu.com/it/u=670600905,3411204484&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=658"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/30/%E5%9B%BD%E5%AE%B6%E6%96%B9%E5%BF%97%E9%A6%86%E5%8D%97%E6%96%B9%E4%B8%9D%E7%BB%B8%E4%B9%8B%E8%B7%AF%E5%88%86%E9%A6%86-%E9%83%91%E5%92%8C%E9%9B%95%E5%83%8F_2024-08-07.jpg"
       },
       {
         "name": "明代航海仪器",
         "desc": "牵星板、水罗盘等明代航海导航工具的复制展示",
         "era": "明",
-        "image": "https://img0.baidu.com/it/u=3200348831,1500318955&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=750"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/75/KangnidoMap.jpg"
       },
       {
         "name": "永乐通宝钱币",
         "desc": "郑和下西洋时期流通的永乐通宝，在东南亚、非洲东海岸均有出土",
         "era": "明永乐",
-        "image": "https://img0.baidu.com/it/u=583959641,405389869&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=800"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/7e/WuBeiZhi.jpg"
       }
     ]
   },
@@ -2573,16 +2319,34 @@
     "photo_source": "amap",
     "collections": [
       {
-        "name": "爱国卫生运动史",
-        "desc": "展出五老村爱国卫生运动的历史照片、文献及实物",
-        "era": "1950s-1960s",
-        "image": "https://img0.baidu.com/it/u=1262042869,4229965697&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500"
+        "name": "档案在此，容不得日方抵赖",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260608327011252970.jpg"
       },
       {
-        "name": "五老村变迁展",
-        "desc": "展示五老村从棚户区到卫生模范的改造历程",
-        "era": "1950s-1960s",
-        "image": "https://img0.baidu.com/it/u=2476316041,1864355337&fm=253&fmt=auto&app=138&f=JPEG?w=475&h=356"
+        "name": "“正义的回响，未竟的使命”——央媒集中报道东京审判开庭80周",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260603346798618176.jpg"
+      },
+      {
+        "name": "留言月历 | “尽己所能，让越来越多的人知晓历史真相”",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260602567119399723.jpg"
+      },
+      {
+        "name": "八十年铁证归来 | “不可动摇的正义审判——馆藏东京审判档案",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260602567089473410.jpg"
+      },
+      {
+        "name": "多国学者齐聚沪宁发出最强音：东京审判正义不可撼动！",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260602567030910335.jpg"
       }
     ],
     "amap_poi_name": "五老村爱国卫生运动纪念馆",
@@ -2609,20 +2373,7 @@
     "formatted_address": "江苏省南京市秦淮区钞库街21号",
     "photo_url": "https://aos-comment.amap.com/B0H3S6GEVW/comment/076f3d79f5ec15efd25dc9d7a72f93f5_2048_2048_80.jpg",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "金陵非遗技艺展",
-        "desc": "展出南京云锦、金箔、剪纸、灯彩等非遗项目实物",
-        "era": "传统",
-        "image": "https://img2.baidu.com/it/u=2188592823,1678860194&fm=253&fmt=auto&app=138&f=JPEG?w=1422&h=800"
-      },
-      {
-        "name": "非遗传承人作品",
-        "desc": "展示国家级非遗传承人的代表作品及工具",
-        "era": "传统-现代",
-        "image": "https://img0.baidu.com/it/u=2081609178,67473545&fm=253&fmt=auto&app=138&f=JPEG?w=1422&h=800"
-      }
-    ],
+    "collections": [],
     "amap_poi_name": "秦淮·非遗馆",
     "amap_poi_address": "夫子庙街道钞库街21号",
     "level": "未定级",
@@ -2648,16 +2399,34 @@
     "photo_source": "amap",
     "collections": [
       {
-        "name": "越剧经典剧目展",
-        "era": "近现代",
-        "desc": "展出《梁山伯与祝英台》《红楼梦》《西厢记》等经典越剧剧目的戏服、道具、剧本，展现越剧百年艺术传承",
-        "image": "https://img1.baidu.com/it/u=1721760983,1343683443&fm=253&fmt=auto&app=138&f=JPEG?w=686&h=500"
+        "name": "提示：此条目的主题不是南京市博物馆.",
+        "era": "",
+        "desc": "提示：此条目的主题不是南京市博物馆。",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Confusion_grey.svg"
       },
       {
-        "name": "越剧名伶展",
-        "desc": "展出竺水招、商芳臣等南京越剧名伶的剧照、戏服及遗物",
-        "era": "现代",
-        "image": "https://img1.baidu.com/it/u=3080172039,2216922957&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=657"
+        "name": "1950年3月9月",
+        "era": "",
+        "desc": "1950年3月9月，举行国立南京博物院成立典礼。",
+        "image": ""
+      },
+      {
+        "name": "南京越剧博物馆 藏品 3",
+        "era": "",
+        "desc": "",
+        "image": ""
+      },
+      {
+        "name": "南京越剧博物馆 藏品 4",
+        "era": "",
+        "desc": "",
+        "image": ""
+      },
+      {
+        "name": "南京越剧博物馆 藏品 5",
+        "era": "",
+        "desc": "",
+        "image": ""
       }
     ],
     "amap_poi_name": "南京越剧博物馆",
@@ -2685,20 +2454,7 @@
     "reserve_link": "校内参观",
     "photo_url": "http://store.is.autonavi.com/showpic/b78fcb6ef35a6ae7a920dc1f9963805c",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "飞机实物展",
-        "desc": "展出退役战斗机、教练机及直升机实物",
-        "era": "现代",
-        "image": "https://img0.baidu.com/it/u=1483739147,513984519&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500"
-      },
-      {
-        "name": "航空发动机展",
-        "desc": "展示各类航空发动机实物及解剖模型",
-        "era": "现代",
-        "image": "https://img1.baidu.com/it/u=855774425,1728679467&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=333"
-      }
-    ]
+    "collections": []
   },
   {
     "name": "江苏省五环彩票博物馆",
@@ -2718,20 +2474,7 @@
     "formatted_address": "江苏省南京市鼓楼区虎踞路69号",
     "photo_url": "https://aos-comment.amap.com/B00190D0VC/comment/c7b5296f0fc2df95c0533cebbc5d521e_2048_2048_80.jpg",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "馆藏精品展",
-        "desc": "展出江苏省五环彩票代表性藏品",
-        "era": "古代-现代",
-        "image": "https://img0.baidu.com/it/u=2732601150,4271645588&fm=253&fmt=auto&app=138&f=JPEG?w=777&h=500"
-      },
-      {
-        "name": "彩票文化展",
-        "desc": "展出中国福利彩票和体育彩票的发展史及经典票样",
-        "era": "1987-现代",
-        "image": "https://img0.baidu.com/it/u=4190685566,992427219&fm=253&fmt=auto&app=138&f=JPEG?w=508&h=500"
-      }
-    ],
+    "collections": [],
     "amap_poi_name": "江苏省五环彩票博物馆",
     "amap_poi_address": "虎踞路69号",
     "website": "",
@@ -2758,20 +2501,7 @@
     "reserve_link": "https://www.njgf.gov.cn/",
     "photo_url": "http://store.is.autonavi.com/showpic/fc50b9fa8893af18cffb2eb4d76b14a2",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "国防装备展",
-        "desc": "展出退役坦克、火炮、飞机等大型国防装备",
-        "era": "现代",
-        "image": "https://img0.baidu.com/it/u=3179243599,2293560218&fm=253&fmt=auto&app=138&f=JPEG?w=1101&h=800"
-      },
-      {
-        "name": "军史展",
-        "desc": "展示南京地区军事历史及重大战役史料",
-        "era": "古代-现代",
-        "image": "https://img0.baidu.com/it/u=521452628,4264876772&fm=253&fmt=auto&app=138&f=JPEG?w=1068&h=800"
-      }
-    ],
+    "collections": [],
     "amap_poi_name": "南京国防园",
     "amap_poi_address": "虎踞路87号"
   },
@@ -2793,20 +2523,7 @@
     "formatted_address": "江苏省南京市鼓楼区颐和路32号",
     "photo_url": "https://store.is.autonavi.com/showpic/7a00bf517b77e6625ceffbac88180908",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "将军风采展",
-        "desc": "展出颐和路社区走出的共和国将军生平事迹及实物",
-        "era": "现代",
-        "image": "https://img1.baidu.com/it/u=1001924984,3726376241&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=653"
-      },
-      {
-        "name": "军旅生涯展",
-        "desc": "展出将军们的军装、勋章及戎马生涯实物",
-        "era": "现代",
-        "image": "https://img1.baidu.com/it/u=2337705883,3485216127&fm=253&fmt=auto&app=138&f=JPEG?w=600&h=450"
-      }
-    ],
+    "collections": [],
     "phone": "025-83320988",
     "amap_poi_name": "颐和路社区将军馆",
     "amap_poi_address": "宁海中学西南门旁(云南路地铁站1号口步行440米)",
@@ -2832,16 +2549,34 @@
     "photo_source": "amap",
     "collections": [
       {
-        "name": "吴贻芳生平展",
-        "desc": "展出吴贻芳校长的生平事迹、手稿及遗物",
-        "era": "近代",
-        "image": "https://img1.baidu.com/it/u=196314524,2630170184&fm=253&fmt=auto&app=120&f=JPEG?w=662&h=500"
+        "name": "档案在此，容不得日方抵赖",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260608327011252970.jpg"
       },
       {
-        "name": "金陵女大展",
-        "desc": "展出金陵女子大学创办历史及吴贻芳教育理念史料",
-        "era": "1915-1951",
-        "image": "https://img2.baidu.com/it/u=91744282,1047198119&fm=253&fmt=auto&app=120&f=JPEG?w=1009&h=518"
+        "name": "“正义的回响，未竟的使命”——央媒集中报道东京审判开庭80周",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260603346798618176.jpg"
+      },
+      {
+        "name": "留言月历 | “尽己所能，让越来越多的人知晓历史真相”",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260602567119399723.jpg"
+      },
+      {
+        "name": "八十年铁证归来 | “不可动摇的正义审判——馆藏东京审判档案",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260602567089473410.jpg"
+      },
+      {
+        "name": "多国学者齐聚沪宁发出最强音：东京审判正义不可撼动！",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260602567030910335.jpg"
       }
     ],
     "amap_poi_name": "南京师范大学随园校区吴贻芳纪念馆",
@@ -2869,20 +2604,7 @@
     "reserve_link": "https://www.njucm.edu.cn/",
     "photo_url": "https://aos-comment.amap.com/B0FFFCLLU9/comment/content_media_external_file_100001654_1753846776330_39844486.jpg",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "中药材标本展",
-        "desc": "展出上千种中药材标本，涵盖植物药、动物药及矿物药",
-        "era": "古代-现代",
-        "image": "https://img0.baidu.com/it/u=273112893,1970454429&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=742"
-      },
-      {
-        "name": "传统制药工具",
-        "desc": "展示历代中药炮制工具及传统制剂工艺",
-        "era": "明-清",
-        "image": "https://img1.baidu.com/it/u=2718982044,610254479&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=732"
-      }
-    ],
+    "collections": [],
     "amap_poi_name": "南京中医药大学仙林校区江苏省中医药博物馆",
     "amap_poi_address": "仙林大道138号南京中医药大学"
   },
@@ -2905,20 +2627,7 @@
     "reserve_link": "校内参观，联系校史馆",
     "photo_url": "https://store.is.autonavi.com/showpic/4ed25360f1db5b9a0000002477464046?type=pic",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "校史沿革展",
-        "desc": "展示该校从创建至今的发展历程、历史照片及重要文献",
-        "era": "近代-现代",
-        "image": "https://img0.baidu.com/it/u=2515612074,2044108161&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=999"
-      },
-      {
-        "name": "杰出校友展",
-        "desc": "展出该校培养的杰出人才事迹及学术成果",
-        "era": "近代-现代",
-        "image": "https://img1.baidu.com/it/u=4101764576,2223360408&fm=253&fmt=auto&app=138&f=JPEG?w=692&h=500"
-      }
-    ],
+    "collections": [],
     "amap_poi_name": "南京大学(鼓楼校区)校史博物馆",
     "amap_poi_address": "汉口路22号南京大学鼓楼校区"
   },
@@ -2941,20 +2650,7 @@
     "reserve_link": "https://www.forestpolice.net/",
     "photo_url": "https://aos-comment.amap.com/B0FFJP7769/comment/298425B0_8804_416A_93E7_5FF62B3520D5_L0_001_1500_200_1765338538836_84801842.jpg",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "珍稀动物标本展",
-        "desc": "展出国家保护动物标本，呈现生物多样性",
-        "era": "自然",
-        "image": "https://img2.baidu.com/it/u=374951978,2804221465&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1067"
-      },
-      {
-        "name": "鸟类标本展",
-        "desc": "展示中国各生态区域代表性鸟类标本",
-        "era": "自然",
-        "image": "https://img1.baidu.com/it/u=2823612206,3034849126&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500"
-      }
-    ],
+    "collections": [],
     "level": "未定级"
   },
   {
@@ -2978,20 +2674,7 @@
     "highlight": "特色：革命历史教育、红色文化",
     "transport": "交通：建议自驾前往",
     "nearby": "周边：横山风景区",
-    "collections": [
-      {
-        "name": "抗日斗争史展",
-        "desc": "展出当地抗日斗争的珍贵史料、照片及文物",
-        "era": "1937-1945",
-        "image": "https://img0.baidu.com/it/u=2241611142,2668340487&fm=253&fmt=auto&app=138&f=JPEG?w=749&h=500"
-      },
-      {
-        "name": "横山烽火展",
-        "desc": "展出横山地区军民抗战的武器、书信等珍贵实物",
-        "era": "1937-1945",
-        "image": "https://img1.baidu.com/it/u=1488704177,66710305&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=647"
-      }
-    ],
+    "collections": [],
     "amap_poi_name": "横山县抗日民主政府旧址",
     "amap_poi_address": "横溪街道许呈社区呈村路北",
     "website": "",
@@ -3017,20 +2700,7 @@
     "formatted_address": "江苏省南京市江宁区横山村",
     "photo_url": "https://store.is.autonavi.com/showpic/489a5ef3785a67a7d25acb49b733cd63",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "史料陈列",
-        "desc": "展出新四军第一支队指挥部旧址相关历史资料及实物",
-        "era": "近代",
-        "image": "https://img2.baidu.com/it/u=266013946,1261293943&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1064"
-      },
-      {
-        "name": "新四军第一支队展",
-        "desc": "展出陈毅率新四军第一支队东进抗日的历史文物",
-        "era": "1938",
-        "image": "https://img0.baidu.com/it/u=3476147647,2196180414&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500"
-      }
-    ],
+    "collections": [],
     "website": "",
     "phone": "",
     "level": "未定级",
@@ -3054,20 +2724,7 @@
     "formatted_address": "江苏省南京市江宁区秣陵街道祖堂村南唐二陵",
     "photo_url": "http://store.is.autonavi.com/showpic/6d1c6fe6fd60d9537bc45c7f62351607",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "南唐历史文化展",
-        "desc": "展出南唐二陵出土文物及南唐历史文献资料",
-        "era": "南唐",
-        "image": "https://img0.baidu.com/it/u=253485377,1328601910&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1067"
-      },
-      {
-        "name": "南唐帝陵展",
-        "desc": "展出南唐二陵出土的陶俑、壁画及墓志铭拓片",
-        "era": "南唐",
-        "image": "https://img0.baidu.com/it/u=736762291,3470934626&fm=253&fmt=auto&app=138&f=JPEG?w=1062&h=800"
-      }
-    ],
+    "collections": [],
     "grade": null,
     "level": "未定级",
     "amap_poi_name": "南唐二陵",
@@ -3094,20 +2751,7 @@
     "formatted_address": "江苏省南京市江宁区牛首山",
     "photo_url": "https://aos-comment.amap.com/B0FFKZV4LX/comment/253977BC_E942_4161_84CB_FED141845886_L0_001_2000_150_1750239467676_39436168.jpg",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "郑和航海展",
-        "desc": "展示郑和下西洋的海图、宝船模型及历史文献",
-        "era": "明",
-        "image": "https://img2.baidu.com/it/u=1662165271,3332963534&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500"
-      },
-      {
-        "name": "郑和生平展",
-        "desc": "展示郑和七下西洋的海图、文物及历史影响",
-        "era": "明",
-        "image": "https://img2.baidu.com/it/u=3287076561,2472862332&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667"
-      }
-    ],
+    "collections": [],
     "amap_poi_name": "郑和墓史料陈列馆",
     "amap_poi_address": "牛首山郑和文化园内",
     "level": "未定级",
@@ -3131,20 +2775,7 @@
     "formatted_address": "江苏省南京市江宁区祖堂山",
     "photo_url": "https://aos-comment.amap.com/B0FFKZV4LX/comment/253977BC_E942_4161_84CB_FED141845886_L0_001_2000_150_1750239467676_39436168.jpg",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "史料陈列",
-        "desc": "展出洪保墓相关历史资料及实物",
-        "era": "近代",
-        "image": "https://img2.baidu.com/it/u=3257133324,2298704603&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500"
-      },
-      {
-        "name": "洪保生平展",
-        "desc": "展出明代太监洪保随郑和下西洋的文物及墓志铭",
-        "era": "明",
-        "image": "https://img1.baidu.com/it/u=652975305,1712485162&fm=253&fmt=auto&app=138&f=JPEG?w=778&h=500"
-      }
-    ],
+    "collections": [],
     "level": "未定级",
     "reserve_link": "免费参观"
   },
@@ -3166,20 +2797,7 @@
     "formatted_address": "江苏省南京市江宁区湖熟街道西洋湖",
     "photo_url": "http://store.is.autonavi.com/showpic/39703c578c378582d4de6ea2f334445c",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "蜜蜂文化展",
-        "desc": "展示蜜蜂生物学、养蜂历史及蜂产品文化",
-        "era": "古代-现代",
-        "image": "https://img1.baidu.com/it/u=1644288455,3798081916&fm=253&fmt=auto&app=138&f=JPEG?w=939&h=370"
-      },
-      {
-        "name": "蜂箱与工具展",
-        "desc": "展出古今中外各类养蜂工具及蜂箱实物",
-        "era": "传统-现代",
-        "image": "https://img1.baidu.com/it/u=3650532288,3863670872&fm=253&fmt=auto&app=120&f=JPEG?w=712&h=949"
-      }
-    ],
+    "collections": [],
     "website": "",
     "phone": "025-84466460",
     "level": "未定级",
@@ -3203,20 +2821,7 @@
     "formatted_address": "江苏省南京市雨花台区梅山街道梅钢路",
     "photo_url": "https://store.is.autonavi.com/showpic/80ea70df1a186e87f16559030c213447",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "梅钢发展史展",
-        "desc": "展示梅山钢铁从建厂至今的发展历程及重大成就",
-        "era": "1969-现代",
-        "image": "https://img1.baidu.com/it/u=3248715310,3724470929&fm=253&fmt=auto&app=138&f=JPEG?w=943&h=500"
-      },
-      {
-        "name": "钢铁工人展",
-        "desc": "展出梅钢工人各个时期的劳动工具、工作服及荣誉证书",
-        "era": "1969-现代",
-        "image": "https://img2.baidu.com/it/u=3648925847,2443357028&fm=253&fmt=auto&app=138&f=JPEG?w=943&h=500"
-      }
-    ],
+    "collections": [],
     "amap_poi_name": "梅钢厂史陈列馆",
     "amap_poi_address": "梅山街道梅钢路1号",
     "level": "未定级",
@@ -3240,20 +2845,7 @@
     "formatted_address": "江苏省南京市浦口区永宁街道侯冲社区",
     "photo_url": "https://aos-comment.amap.com/B0FFGCS9BS/comment/file_media_Photo_7510_IMG_1759720511_6994_IMG_20251006_111331_jpg_ss_2.jpg",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "知青岁月展",
-        "desc": "展出知青上山下乡时期的实物、照片和文献",
-        "era": "1960s-1970s",
-        "image": "https://img1.baidu.com/it/u=1108351398,2579031468&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=656"
-      },
-      {
-        "name": "知青生活复原",
-        "desc": "1:1复原知青宿舍、食堂等生活场景",
-        "era": "1960s-1970s",
-        "image": "https://img2.baidu.com/it/u=491311066,2588802257&fm=253&fmt=auto&app=120&f=JPEG?w=1463&h=800"
-      }
-    ],
+    "collections": [],
     "level": "未定级",
     "reserve_link": "免费参观"
   },
@@ -3275,20 +2867,7 @@
     "formatted_address": "江苏省南京市浦口区水墨大埝旅游区",
     "photo_url": "https://aos-comment.amap.com/B0FFHBJ6OB/comment/366C95BC_D567_4D5C_A4A5_D3BA39AA700E_L0_001_1500_200_1763341159654_15163119.jpg",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "中华虎凤蝶展",
-        "desc": "展示南京特有中华虎凤蝶完整生活史及保护",
-        "era": "自然",
-        "image": "https://img0.baidu.com/it/u=3736698287,1487525195&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=653"
-      },
-      {
-        "name": "蝴蝶多样性展",
-        "desc": "展示中国及世界珍稀蝴蝶品种标本",
-        "era": "自然",
-        "image": "https://img1.baidu.com/it/u=2449456774,1060317447&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=606"
-      }
-    ],
+    "collections": [],
     "website": "",
     "phone": "025-58225320",
     "level": "未定级",
@@ -3313,20 +2892,7 @@
     "reserve_link": "微信公众号\"江苏警官学院博物馆\"预约",
     "photo_url": "http://store.is.autonavi.com/showpic/3af8546b67d3cc58e5f48d9154f1f6dd",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "校史沿革展",
-        "desc": "展示江苏警官学院发展历程及历史照片",
-        "era": "1949-现代",
-        "image": "https://img1.baidu.com/it/u=2993286385,1911723834&fm=253&fmt=auto&app=138&f=JPEG?w=1067&h=800"
-      },
-      {
-        "name": "教学成果展",
-        "desc": "展出学院历年教学成果、优秀毕业生事迹及教学设备",
-        "era": "1949-现代",
-        "image": "https://img0.baidu.com/it/u=556890975,3293147320&fm=253&fmt=auto&app=138&f=JPEG?w=1595&h=500"
-      }
-    ],
+    "collections": [],
     "phone": "025-52431305",
     "website": "https://zq.jspi.cn/bwg",
     "wechat": "江苏警官学院博物馆",
@@ -3390,16 +2956,10 @@
     "photo_source": "amap",
     "collections": [
       {
-        "name": "近代警察史展",
-        "desc": "展出从清末至民国警察制度演变的历史文物",
-        "era": "清末-民国",
-        "image": "https://img1.baidu.com/it/u=2993286385,1911723834&fm=253&fmt=auto&app=138&f=JPEG?w=1067&h=800"
-      },
-      {
-        "name": "警用装备演变",
-        "desc": "展示各时期警服、警械及证件实物",
-        "era": "近代-现代",
-        "image": "https://img1.baidu.com/it/u=2530044725,2881326590&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500"
+        "name": "近代警察史博物馆藏品",
+        "era": "",
+        "desc": "",
+        "image": "https://bkimg.cdn.bcebos.com/smart/8ad4b31c8701a18b87d6e1b5ab76100828381e30508d-bkimg-process,v_1,rw_800,rh_533,maxl_426?x-bce-process=image/format,f_auto"
       }
     ],
     "amap_poi_name": "江苏警官学院",
@@ -3467,20 +3027,7 @@
     "reserve_link": "校内参观",
     "photo_url": "http://store.is.autonavi.com/showpic/39703c578c378582d4de6ea2f334445c",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "历代货币展",
-        "desc": "展出从贝币到人民币的中国货币演变史",
-        "era": "古代-现代",
-        "image": "https://img2.baidu.com/it/u=1793253264,4241937239&fm=253&fmt=auto&app=138&f=JPEG?w=677&h=500"
-      },
-      {
-        "name": "外国货币展",
-        "desc": "展示世界各国代表性货币及金融文物",
-        "era": "古代-现代",
-        "image": "https://img1.baidu.com/it/u=804161177,3414948534&fm=253&fmt=auto&app=138&f=JPEG?w=607&h=458"
-      }
-    ]
+    "collections": []
   },
   {
     "name": "竹镇市抗日民主政府旧址纪念馆",
@@ -3502,16 +3049,34 @@
     "photo_source": "amap",
     "collections": [
       {
-        "name": "抗日斗争史展",
-        "desc": "展出竹镇抗日民主政府的珍贵史料及文物",
-        "era": "1937-1945",
-        "image": "https://img2.baidu.com/it/u=878272628,3891645197&fm=253&fmt=auto&app=120&f=JPEG?w=749&h=500"
+        "name": "档案在此，容不得日方抵赖",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260608327011252970.jpg"
       },
       {
-        "name": "抗日英烈展",
-        "desc": "展出竹镇地区抗日英烈事迹及遗物",
-        "era": "1937-1945",
-        "image": "https://img1.baidu.com/it/u=3349062431,3752759339&fm=253&fmt=auto&app=120&f=JPEG?w=749&h=500"
+        "name": "“正义的回响，未竟的使命”——央媒集中报道东京审判开庭80周",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260603346798618176.jpg"
+      },
+      {
+        "name": "留言月历 | “尽己所能，让越来越多的人知晓历史真相”",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260602567119399723.jpg"
+      },
+      {
+        "name": "八十年铁证归来 | “不可动摇的正义审判——馆藏东京审判档案",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260602567089473410.jpg"
+      },
+      {
+        "name": "多国学者齐聚沪宁发出最强音：东京审判正义不可撼动！",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260602567030910335.jpg"
       }
     ],
     "level": "未定级",
@@ -3536,20 +3101,7 @@
     "formatted_address": "江苏省南京市六合区冶山街道望月村1号",
     "photo_url": "https://aos-comment.amap.com/B0FFF5VA6G/comment/16225f99b5845c0147764aba0317ab25_2048_2048_80.jpg",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "矿山遗迹展",
-        "desc": "展出冶山铁矿的矿石标本、采矿工具及历史照片",
-        "era": "1950s-现代",
-        "image": "https://img0.baidu.com/it/u=891739314,799444197&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=628"
-      },
-      {
-        "name": "矿工生活展",
-        "desc": "展示矿工工作场景复原及生活用品",
-        "era": "1950s-1990s",
-        "image": "https://img2.baidu.com/it/u=1448512342,3465643176&fm=253&fmt=auto&app=120&f=JPEG?w=1067&h=800"
-      }
-    ],
+    "collections": [],
     "amap_poi_name": "冶山铁矿博物馆",
     "amap_poi_address": "冶山街道",
     "level": "未定级",
@@ -3576,16 +3128,34 @@
     "photo_source": "amap",
     "collections": [
       {
-        "name": "达浦生生平展",
-        "desc": "展出回族教育家达浦生的事迹、手稿及历史照片",
-        "era": "近代",
-        "image": "https://img0.baidu.com/it/u=4074219540,1830504551&fm=253&fmt=auto&app=120&f=JPEG?w=1200&h=800"
+        "name": "档案在此，容不得日方抵赖",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260608327011252970.jpg"
       },
       {
-        "name": "回族教育展",
-        "desc": "展示达浦生创办回族学校、推动回族文化教育的历程",
-        "era": "近代",
-        "image": "https://img1.baidu.com/it/u=1689821470,1510371405&fm=253&fmt=auto&app=120&f=JPEG?w=600&h=986"
+        "name": "“正义的回响，未竟的使命”——央媒集中报道东京审判开庭80周",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260603346798618176.jpg"
+      },
+      {
+        "name": "留言月历 | “尽己所能，让越来越多的人知晓历史真相”",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260602567119399723.jpg"
+      },
+      {
+        "name": "八十年铁证归来 | “不可动摇的正义审判——馆藏东京审判档案",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260602567089473410.jpg"
+      },
+      {
+        "name": "多国学者齐聚沪宁发出最强音：东京审判正义不可撼动！",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260602567030910335.jpg"
       }
     ],
     "website": "",
@@ -3614,20 +3184,7 @@
     "highlight": "特色：工业遗产、化工发展史",
     "transport": "交通：地铁S8号线六合站",
     "nearby": "周边：金牛湖风景区",
-    "collections": [
-      {
-        "name": "南化发展史展",
-        "desc": "展示南化公司从建厂至今的发展历程及产品实物",
-        "era": "1934-现代",
-        "image": "https://img1.baidu.com/it/u=1277575700,2649215772&fm=253&fmt=auto&app=138&f=JPEG?w=683&h=500"
-      },
-      {
-        "name": "化工产品展",
-        "desc": "展出南化公司各时期代表性化工产品及技术成果",
-        "era": "1934-现代",
-        "image": "https://img2.baidu.com/it/u=2167666348,928879221&fm=253&fmt=auto&app=120&f=JPEG?w=667&h=500"
-      }
-    ],
+    "collections": [],
     "amap_poi_name": "江苏省南京市六合区南化公司厂史陈列馆(西南门)",
     "amap_poi_address": "南化公司厂史陈列馆(西南门)",
     "website": "",
@@ -3654,20 +3211,7 @@
     "formatted_address": "江苏省南京市溧水区晶桥镇石山下",
     "photo_url": "https://store.is.autonavi.com/showpic/d9e7a6bf6c86b8b50000002607828306?type=pic",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "供销社历史展",
-        "desc": "展示建国以来供销合作社的发展变迁",
-        "era": "1950s-1990s",
-        "image": "https://img0.baidu.com/it/u=58780175,2974113478&fm=253&fmt=auto&app=138&f=JPEG?w=690&h=500"
-      },
-      {
-        "name": "票证时代展",
-        "desc": "展出粮票、布票等各类计划经济票证实物",
-        "era": "1950s-1990s",
-        "image": "https://img0.baidu.com/it/u=3080340333,3289603245&fm=253&fmt=auto&app=138&f=JPEG?w=588&h=424"
-      }
-    ],
+    "collections": [],
     "amap_poi_name": "中国供销社博物馆",
     "amap_poi_address": "晶桥镇石山下33号",
     "website": "",
@@ -3693,20 +3237,7 @@
     "formatted_address": "江苏省南京市高淳区桂金路301县",
     "photo_url": "https://store.is.autonavi.com/showpic/a1d5fd852ad88e119c38059d07f008c1",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "红色文化展",
-        "desc": "展出西舍地区革命斗争史及红色文物",
-        "era": "近代",
-        "image": "https://img1.baidu.com/it/u=2666582504,1363713270&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=520"
-      },
-      {
-        "name": "革命文物展",
-        "desc": "展出西舍地区革命斗争的武器、文件等珍贵实物",
-        "era": "近代",
-        "image": "https://img0.baidu.com/it/u=2410074269,3476671115&fm=253&fmt=auto&app=138&f=JPEG?w=1067&h=800"
-      }
-    ],
+    "collections": [],
     "phone": "025-57815553",
     "amap_poi_name": "西舍红色文化陈列馆",
     "amap_poi_address": "桂金路301县",
@@ -3731,20 +3262,7 @@
     "formatted_address": "江苏省南京市鼓楼区北京西路1号",
     "photo_url": "https://store.is.autonavi.com/showpic/4ea37bc1430671bf0000000672290313?type=pic",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "消防史展",
-        "desc": "展示从古代到现代消防器械及制度的演变",
-        "era": "古代-现代",
-        "image": "https://img0.baidu.com/it/u=1863505740,1875341550&fm=253&fmt=auto&app=138&f=JPEG?w=751&h=500"
-      },
-      {
-        "name": "消防车展",
-        "desc": "展出各时期退役消防车辆实物",
-        "era": "1950s-现代",
-        "image": "https://img0.baidu.com/it/u=2137555751,2614270549&fm=253&fmt=auto&app=138&f=JPEG?w=682&h=500"
-      }
-    ],
+    "collections": [],
     "phone": "025-83622173",
     "amap_poi_name": "南京消防博物馆",
     "amap_poi_address": "北京西路1号南京市消防救援支队机关大院内",
@@ -3770,16 +3288,34 @@
     "photo_source": "amap",
     "collections": [
       {
-        "name": "钢铁冶炼工艺展",
-        "era": "古代-现代",
-        "desc": "展示从古代冶铁到现代钢铁冶炼的完整工艺流程，包括高炉模型、炼钢设备实物及历史照片",
-        "image": "https://img0.baidu.com/it/u=716612013,597328725&fm=253&fmt=auto&app=138&f=JPEG?w=686&h=500"
+        "name": "提示：此条目的主题不是南京市博物馆.",
+        "era": "",
+        "desc": "提示：此条目的主题不是南京市博物馆。",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Confusion_grey.svg"
       },
       {
-        "name": "钢铁产品展",
-        "desc": "展出南钢各时期代表性钢铁产品及技术成就",
-        "era": "1958-现代",
-        "image": "https://img1.baidu.com/it/u=3944023303,443845122&fm=253&fmt=auto&app=138&f=JPEG?w=681&h=500"
+        "name": "1950年3月9月",
+        "era": "",
+        "desc": "1950年3月9月，举行国立南京博物院成立典礼。",
+        "image": ""
+      },
+      {
+        "name": "南京钢铁博物馆 藏品 3",
+        "era": "",
+        "desc": "",
+        "image": ""
+      },
+      {
+        "name": "南京钢铁博物馆 藏品 4",
+        "era": "",
+        "desc": "",
+        "image": ""
+      },
+      {
+        "name": "南京钢铁博物馆 藏品 5",
+        "era": "",
+        "desc": "",
+        "image": ""
       }
     ],
     "phone": "025-57072634",
@@ -3808,16 +3344,10 @@
     "photo_url": "https://upload.wikimedia.org/wikipedia/zh/1/19/Nanjing_Forestry_University_badge.svg",
     "collections": [
       {
-        "name": "林业标本展",
-        "desc": "展出树木、植物标本及林业科技史料",
-        "era": "自然",
-        "image": "https://img1.baidu.com/it/u=1280317915,4220491403&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=2075"
-      },
-      {
-        "name": "木材标本展",
-        "desc": "展出中国主要树种的木材标本及林业科研成果",
-        "era": "自然",
-        "image": "https://img2.baidu.com/it/u=4244833162,2575368786&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=3690"
+        "name": "南京林业大学博物馆藏品",
+        "era": "",
+        "desc": "",
+        "image": "https://bkimg.cdn.bcebos.com/smart/908fa0ec08fa513d26975c922e3942fbb2fb43167379-bkimg-process,v_1,rw_1080,rh_811,maxl_378?x-bce-process=image/format,f_auto"
       }
     ],
     "collections_note": "自动采集自百度百科/Wikipedia/博物馆官网"
@@ -3844,20 +3374,7 @@
     "highlight": "特色：江南丝绸文化、织造技艺展示",
     "transport": "交通：地铁3号线夫子庙站",
     "nearby": "周边：夫子庙景区",
-    "collections": [
-      {
-        "name": "丝绸文物展",
-        "desc": "展出历代丝绸服饰及织造工具精品",
-        "era": "古代-清",
-        "image": "https://img2.baidu.com/it/u=1177420321,491969270&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=740"
-      },
-      {
-        "name": "织造工艺展",
-        "desc": "展示从蚕茧到丝绸的完整传统工艺",
-        "era": "传统",
-        "image": "https://img1.baidu.com/it/u=1277894225,1468302367&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500"
-      }
-    ],
+    "collections": [],
     "level": "未定级",
     "wechat": "江南丝绸文化博物馆"
   },
@@ -3881,20 +3398,7 @@
     "highlight": "特色：江宁区文化遗产展示",
     "transport": "交通：地铁1号线龙眠大道站",
     "nearby": "周边：江宁博物馆",
-    "collections": [
-      {
-        "name": "江宁文物展",
-        "desc": "展出江宁区出土文物及文化遗产保护成果",
-        "era": "新石器-清",
-        "image": "https://img2.baidu.com/it/u=3533317630,3955751277&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500"
-      },
-      {
-        "name": "非遗保护展",
-        "desc": "展示江宁区非物质文化遗产保护成果及传承人作品",
-        "era": "传统",
-        "image": "https://img2.baidu.com/it/u=3231629346,3273592592&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500"
-      }
-    ],
+    "collections": [],
     "website": "",
     "phone": "",
     "photo_url": "",
@@ -3919,20 +3423,7 @@
     "alias": [],
     "photo_url": "http://store.is.autonavi.com/showpic/519fa525aa080b2264b020d91f52b233",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "玉器精品展",
-        "desc": "展出历代玉器精品及现代玉雕艺术",
-        "era": "古代-现代",
-        "image": "https://img1.baidu.com/it/u=3071520450,2986494317&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=660"
-      },
-      {
-        "name": "玉雕工艺展",
-        "desc": "展示从原石到成品的玉雕制作工艺流程",
-        "era": "传统-现代",
-        "image": "https://img2.baidu.com/it/u=3227408124,1889143065&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=1124"
-      }
-    ],
+    "collections": [],
     "lat": 32.061604,
     "lng": 118.801642,
     "coordinates_source": "amap_poi_search",
@@ -3961,16 +3452,34 @@
     "photo_source": "amap",
     "collections": [
       {
-        "name": "古代税票与货币展",
-        "era": "秦-民国",
-        "desc": "展示从秦汉至民国各时期的税票、赋税凭证及历代货币，呈现中国税收制度的历史变迁",
-        "image": "https://img2.baidu.com/it/u=4206272360,3445381149&fm=253&fmt=auto&app=138&f=JPEG?w=681&h=500"
+        "name": "提示：此条目的主题不是南京市博物馆.",
+        "era": "",
+        "desc": "提示：此条目的主题不是南京市博物馆。",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Confusion_grey.svg"
       },
       {
-        "name": "税收文物展",
-        "desc": "展出历代税收票据、文书及征税工具实物",
-        "era": "古代-民国",
-        "image": "https://img2.baidu.com/it/u=787957536,2583897267&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667"
+        "name": "1950年3月9月",
+        "era": "",
+        "desc": "1950年3月9月，举行国立南京博物院成立典礼。",
+        "image": ""
+      },
+      {
+        "name": "南京税收博物馆 藏品 3",
+        "era": "",
+        "desc": "",
+        "image": ""
+      },
+      {
+        "name": "南京税收博物馆 藏品 4",
+        "era": "",
+        "desc": "",
+        "image": ""
+      },
+      {
+        "name": "南京税收博物馆 藏品 5",
+        "era": "",
+        "desc": "",
+        "image": ""
       }
     ],
     "lat": 32.033601,
@@ -4000,20 +3509,7 @@
     "alias": [],
     "photo_url": "",
     "photo_source": "",
-    "collections": [
-      {
-        "name": "手语文化展",
-        "desc": "展示中国手语的发展历史及聋人文化",
-        "era": "近代-现代",
-        "image": "https://img0.baidu.com/it/u=2208702664,327741814&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500"
-      },
-      {
-        "name": "聋人文化展",
-        "desc": "展示聋人文化艺术作品及无障碍交流发展历程",
-        "era": "现代",
-        "image": "https://img1.baidu.com/it/u=2127590352,3217567043&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500"
-      }
-    ],
+    "collections": [],
     "lat": 32.030352,
     "lng": 118.815557,
     "coordinates_source": "amap_poi_search",
@@ -4043,16 +3539,28 @@
     "photo_source": "amap",
     "collections": [
       {
-        "name": "奥运历史展",
-        "desc": "展出历届奥运会火炬、奖牌及纪念品",
-        "era": "1896-现代",
-        "image": "https://img0.baidu.com/it/u=2216973775,674348350&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500"
+        "name": "南京奥林匹克博物馆藏品",
+        "era": "",
+        "desc": "",
+        "image": "https://bkimg.cdn.bcebos.com/smart/c8177f3e6709c93d70cf8adc6b65efdcd100baa1fedd-bkimg-process,v_1,rw_750,rh_500,maxl_426?x-bce-process=image/format,f_auto"
       },
       {
-        "name": "南京青奥展",
-        "desc": "展示2014南京青奥会珍贵实物及影像资料",
-        "era": "2014",
-        "image": "https://img2.baidu.com/it/u=1697152275,1023477455&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500"
+        "name": "博物馆外的南京青奥会吉祥物砳砳",
+        "era": "",
+        "desc": "博物馆外的南京青奥会吉祥物砳砳",
+        "image": "https://bkimg.cdn.bcebos.com/smart/c8177f3e6709c93d70cf8adc6b65efdcd100baa1fedd-bkimg-process,v_1,rw_750,rh_500,maxl_426?x-bce-process=image/format,f_auto"
+      },
+      {
+        "name": "南京奥林匹克博物馆Nanjing Olympic Museu",
+        "era": "",
+        "desc": "南京奥林匹克博物馆Nanjing Olympic Museum成立日期2014年8月17日地址中华人民共和国江苏省南京市建邺区金沙江西街9号类型非国有博物馆馆藏规模1275件建立者吴经国网站http:",
+        "image": "https://maps.wikimedia.org/img/osm-intl,13,a,a,270x200.png?lang=zh&domain=zh.wikipedia.org&title=%E5%8D%97%E4%BA%AC%E5%A5%A5%E6%9E%97%E5%8C%B9%E5%85%8B%E5%8D%9A%E7%89%A9%E9%A6%86&revid=83307989&groups=_af0bcf09b0467ee764a38aeff89ceb6baebb109d&parser=legacy"
+      },
+      {
+        "name": "南京奥林匹克博物馆 藏品 2",
+        "era": "",
+        "desc": "",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/f5/The_Olympic_Museum_Logo.svg"
       }
     ],
     "lat": 31.992266,
@@ -4121,20 +3629,7 @@
     "alias": [],
     "photo_url": "https://aos-comment.amap.com/B0I1FZM0J4/headerImg/bd0f1f5846cecf2fdacfeac11021c0df_2048_2048_80.jpg",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "玉石精品展",
-        "desc": "展出各类玉石原石及雕刻艺术精品",
-        "era": "自然",
-        "image": "https://img1.baidu.com/it/u=3071520450,2986494317&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=660"
-      },
-      {
-        "name": "矿物晶体展",
-        "desc": "展出各类矿物晶体及宝石原石标本",
-        "era": "自然",
-        "image": "https://img0.baidu.com/it/u=2959450601,632202326&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=652"
-      }
-    ],
+    "collections": [],
     "lat": 32.014012,
     "lng": 118.744069,
     "coordinates_source": "amap_poi_search",
@@ -4161,20 +3656,7 @@
     "alias": [],
     "photo_url": "http://store.is.autonavi.com/showpic/31750426763b98154bb3b9828d20488c",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "颜真卿生平展",
-        "desc": "展出颜真卿书法碑刻拓片及生平史料",
-        "era": "唐",
-        "image": "https://img2.baidu.com/it/u=3746839437,1486156298&fm=253&fmt=auto&app=138&f=JPEG?w=1067&h=800"
-      },
-      {
-        "name": "颜体书法展",
-        "desc": "展出颜真卿《多宝塔碑》《颜勤礼碑》等名帖拓片",
-        "era": "唐",
-        "image": "https://img0.baidu.com/it/u=1201361429,692587&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1067"
-      }
-    ],
+    "collections": [],
     "lat": 32.047179,
     "lng": 118.766688,
     "coordinates_source": "amap_poi_search",
@@ -4215,19 +3697,19 @@
         "name": "静海寺大殿",
         "desc": "明成祖为褒奖郑和航海功绩敕建的静海寺，郑和晚年曾在此居住",
         "era": "明永乐",
-        "image": "https://img0.baidu.com/it/u=1823831875,3445109757&fm=253&fmt=auto&app=138&f=JPEG?w=1067&h=800"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Paifang_of_Jinghaisi_Museum.JPG"
       },
       {
         "name": "警世钟",
         "desc": "静海寺警世钟，铭记'前事不忘，后事之师'的爱国主义教育基地",
         "era": "现代",
-        "image": "https://img2.baidu.com/it/u=713679106,2066319771&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=645"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Jinghai_Si_-_Bell_Tower_-_P1070431.JPG"
       },
       {
         "name": "郑和下西洋碑刻",
         "desc": "静海寺内郑和航海相关的碑刻文物",
         "era": "明",
-        "image": "https://img0.baidu.com/it/u=2331239270,1112332734&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=666"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/f8/The_Signing_of_the_Treaty_of_Nanking.jpg"
       }
     ],
     "lat": 32.092359,
@@ -4288,19 +3770,19 @@
         "name": "拉贝故居",
         "desc": "约翰·拉贝在南京的故居，也是南京安全区国际委员会总部所在地",
         "era": "1937",
-        "image": "https://img1.baidu.com/it/u=2004278959,242423623&fm=253&fmt=auto&app=120&f=JPEG?w=667&h=500"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Residence_of_John_Rabe%2C_Nanjing.jpg"
       },
       {
         "name": "拉贝日记手稿复制件",
         "desc": "拉贝日记记录了南京大屠杀期间的珍贵历史细节",
         "era": "1937",
-        "image": "https://img1.baidu.com/it/u=2112089677,84578239&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=750"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/cb/%E5%8D%97%E4%BA%AC%E9%9A%BE%E6%B0%91%E5%8C%BA%E5%9B%BD%E9%99%85%E6%95%91%E6%B5%8E%E5%A7%94%E5%91%98%E4%BC%9A%E5%A7%94%E5%91%98%E6%9A%A8%E9%87%91%E4%B8%AD%E6%94%B6%E5%AE%B9%E6%89%80%E6%89%80%E9%95%BF%E7%8E%87%E5%85%A8%E4%BD%93%E8%81%8C%E5%91%98%E6%91%84%E5%BD%B1%E7%BA%AA%E5%BF%B5.jpg"
       },
       {
         "name": "南京安全区地图",
         "desc": "1937年南京国际安全区范围图，保护了25万中国难民",
         "era": "1937",
-        "image": "https://img0.baidu.com/it/u=1319659384,4217830015&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/24/Ninghai_Road_5.jpg"
       }
     ],
     "lat": 32.054972,
@@ -4357,16 +3839,34 @@
     "photo_source": "amap",
     "collections": [
       {
-        "name": "鼓楼医院史展",
-        "desc": "展示鼓楼医院从建院至今的发展历程",
-        "era": "1892-现代",
-        "image": "https://img2.baidu.com/it/u=3129929767,2280970119&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=653"
+        "name": "档案在此，容不得日方抵赖",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260608327011252970.jpg"
       },
       {
-        "name": "医学文物展",
-        "desc": "展出鼓楼医院各时期医疗器械、病历档案及历史照片",
-        "era": "1892-现代",
-        "image": "https://img0.baidu.com/it/u=2736622115,2723852030&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=661"
+        "name": "“正义的回响，未竟的使命”——央媒集中报道东京审判开庭80周",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260603346798618176.jpg"
+      },
+      {
+        "name": "留言月历 | “尽己所能，让越来越多的人知晓历史真相”",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260602567119399723.jpg"
+      },
+      {
+        "name": "八十年铁证归来 | “不可动摇的正义审判——馆藏东京审判档案",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260602567089473410.jpg"
+      },
+      {
+        "name": "多国学者齐聚沪宁发出最强音：东京审判正义不可撼动！",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260602567030910335.jpg"
       }
     ],
     "lat": 32.057032,
@@ -4396,20 +3896,7 @@
     "alias": [],
     "photo_url": "https://store.is.autonavi.com/showpic/d4cc3ed7e88aa78fc8163a305415d867",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "红色电影展",
-        "desc": "展出经典红色电影海报、放映机及拍摄史料",
-        "era": "1950s-1980s",
-        "image": "https://img1.baidu.com/it/u=2666582504,1363713270&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=520"
-      },
-      {
-        "name": "老放映机展",
-        "desc": "展出各时期电影放映机、胶片及影院老物件",
-        "era": "1950s-1990s",
-        "image": "https://img1.baidu.com/it/u=686615842,2022507467&fm=253&fmt=auto&app=138&f=JPEG?w=424&h=571"
-      }
-    ],
+    "collections": [],
     "lat": 32.07493,
     "lng": 118.74832,
     "coordinates_source": "amap_geocoding_fallback",
@@ -4435,20 +3922,7 @@
     "alias": [],
     "photo_url": "",
     "photo_source": "",
-    "collections": [
-      {
-        "name": "鲁迅在南京",
-        "desc": "展出鲁迅在南京求学时期的文献、照片及实物",
-        "era": "清末民初",
-        "image": "https://img1.baidu.com/it/u=1872808039,3850123095&fm=253&fmt=auto&app=138&f=JPEG?w=474&h=313"
-      },
-      {
-        "name": "新学史料展",
-        "desc": "展出清末江南陆师学堂及矿路学堂的文献实物",
-        "era": "1898-1902",
-        "image": "https://img1.baidu.com/it/u=1864093881,821705590&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=375"
-      }
-    ],
+    "collections": [],
     "lat": 32.077712,
     "lng": 118.756902,
     "coordinates_source": "amap_geocoding_fallback",
@@ -4479,25 +3953,25 @@
         "name": "傅抱石画作《待细把江山图画》",
         "desc": "傅抱石代表作之一，以独创'抱石皴'技法描绘祖国山河",
         "era": "20世纪",
-        "image": "https://img2.baidu.com/it/u=1750840849,4025341353&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=717"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/16/Former_Residence_of_Fu_Baoshi_in_Hankouxi_Road_2012-09.JPG"
       },
       {
         "name": "傅抱石画室复原",
         "desc": "傅抱石生前画室原貌复原，展示其创作环境",
         "era": "20世纪",
-        "image": "https://img2.baidu.com/it/u=4222010952,1405490680&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1561"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/27/%E5%82%85%E6%8A%B1%E7%9F%B3_%E5%BA%90%E5%B1%B1%E8%B0%A3%E8%AF%97%E6%84%8F%E5%9B%BE%E8%BD%B4.jpg"
       },
       {
         "name": "傅抱石印章收藏",
         "desc": "傅抱石一生使用的印章，包括'往往醉后'等著名闲章",
         "era": "20世纪",
-        "image": "https://img1.baidu.com/it/u=3079588275,1275747016&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=650"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/27/%E5%82%85%E6%8A%B1%E7%9F%B3_%E5%BA%90%E5%B1%B1%E8%B0%A3%E8%AF%97%E6%84%8F%E5%9B%BE%E8%BD%B4.jpg"
       },
       {
         "name": "傅抱石与关山月合作《江山如此多娇》草图",
         "desc": "人民大会堂巨幅国画的创作草图，展现大师合作历程",
         "era": "1959",
-        "image": "https://img1.baidu.com/it/u=2758096925,1560497277&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/35/FuBaoshi1947.jpg"
       }
     ],
     "lat": 32.055049,
@@ -4526,20 +4000,7 @@
     "alias": [],
     "photo_url": "http://store.is.autonavi.com/showpic/39703c578c378582d4de6ea2f334445c",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "金陵文化展",
-        "desc": "展出南京历史文化代表性文物及史料",
-        "era": "古代-现代",
-        "image": "https://img2.baidu.com/it/u=1078422141,1410075574&fm=253&fmt=auto&app=138&f=JPEG?w=1067&h=800"
-      },
-      {
-        "name": "六朝都城展",
-        "desc": "通过模型复原展示六朝建康城城市布局及遗迹",
-        "era": "六朝",
-        "image": "https://img1.baidu.com/it/u=2519587,3907532064&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=1103"
-      }
-    ],
+    "collections": [],
     "lat": 32.046464,
     "lng": 118.765052,
     "coordinates_source": "amap_geocoding_fallback",
@@ -4565,20 +4026,7 @@
     "alias": [],
     "photo_url": "http://store.is.autonavi.com/showpic/63e4220245a3512e59e44831969d3783",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "麻凡艺术展",
-        "desc": "展出麻凡先生书画作品及艺术收藏",
-        "era": "现代",
-        "image": "https://img0.baidu.com/it/u=1974147024,1825386431&fm=253&fmt=auto&app=138&f=JPEG?w=751&h=500"
-      },
-      {
-        "name": "水墨艺术展",
-        "desc": "展出麻凡先生水墨画及书法精品",
-        "era": "现代",
-        "image": "https://img0.baidu.com/it/u=1457812498,2487277365&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500"
-      }
-    ],
+    "collections": [],
     "lat": 32.051042,
     "lng": 118.774846,
     "coordinates_source": "amap_geocoding_fallback",
@@ -4604,20 +4052,7 @@
     "alias": [],
     "photo_url": "http://store.is.autonavi.com/showpic/6206922c7d8b467d36a4e6acc0056c2c",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "师大馆藏展",
-        "desc": "展出南师大收藏的文物、标本及校史资料",
-        "era": "古代-现代",
-        "image": "https://img0.baidu.com/it/u=4008904882,3865557005&fm=253&fmt=auto&app=138&f=JPEG?w=836&h=500"
-      },
-      {
-        "name": "教育文物展",
-        "desc": "展出中国近现代教育史文物及教材教具",
-        "era": "清末-现代",
-        "image": "https://img0.baidu.com/it/u=3640122193,1019778953&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=666"
-      }
-    ],
+    "collections": [],
     "lat": 32.053173,
     "lng": 118.768681,
     "coordinates_source": "amap_geocoding_fallback",
@@ -4643,20 +4078,7 @@
     "alias": [],
     "photo_url": "http://store.is.autonavi.com/showpic/fd500da283544f3fd4944809550989da",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "艺术教育展",
-        "desc": "展示中国艺术教育发展史及教学成果",
-        "era": "近代-现代",
-        "image": "https://img0.baidu.com/it/u=2240424005,213729424&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500"
-      },
-      {
-        "name": "音乐教育展",
-        "desc": "展出中国音乐教育发展史文献及乐器实物",
-        "era": "近代-现代",
-        "image": "https://img0.baidu.com/it/u=2307863183,2676282992&fm=253&fmt=auto&app=120&f=JPEG?w=889&h=500"
-      }
-    ],
+    "collections": [],
     "lat": 32.053187,
     "lng": 118.76768,
     "coordinates_source": "amap_poi_search",
@@ -4683,20 +4105,7 @@
     "alias": [],
     "photo_url": "http://store.is.autonavi.com/showpic/6206922c7d8b467d36a4e6acc0056c2c",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "珍稀动物标本展",
-        "desc": "展出国家级保护动物标本数百种",
-        "era": "自然",
-        "image": "https://img2.baidu.com/it/u=3128822022,2552840171&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=742"
-      },
-      {
-        "name": "植物标本展",
-        "desc": "展出珍稀植物标本及种子资源",
-        "era": "自然",
-        "image": "https://img0.baidu.com/it/u=3817012671,3542798827&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=653"
-      }
-    ],
+    "collections": [],
     "lat": 32.103662,
     "lng": 118.911077,
     "coordinates_source": "amap_geocoding_fallback",
@@ -4722,20 +4131,7 @@
     "alias": [],
     "photo_url": "http://store.is.autonavi.com/showpic/39703c578c378582d4de6ea2f334445c",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "金箔锻制展",
-        "desc": "展示国家级非遗南京金箔锻制技艺全流程",
-        "era": "传统",
-        "image": "https://img1.baidu.com/it/u=619594979,4151473230&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=1049"
-      },
-      {
-        "name": "金箔艺术展",
-        "desc": "展出金箔贴金工艺品及现代金箔创作",
-        "era": "传统-现代",
-        "image": "https://img2.baidu.com/it/u=3333795800,4056688476&fm=253&fmt=auto&app=138&f=JPEG?w=781&h=500"
-      }
-    ],
+    "collections": [],
     "lat": 32.039798,
     "lng": 118.825226,
     "coordinates_source": "amap_poi_search",
@@ -4763,16 +4159,34 @@
     "photo_source": "amap",
     "collections": [
       {
-        "name": "陶行知生平展",
-        "desc": "展出教育家陶行知的手稿、著作及生活实物",
-        "era": "近代",
-        "image": "https://img0.baidu.com/it/u=4213089047,3858211695&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=633"
+        "name": "档案在此，容不得日方抵赖",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260608327011252970.jpg"
       },
       {
-        "name": "晓庄师范史料",
-        "desc": "展示晓庄师范创办历史及教育理念",
-        "era": "1920s-1930s",
-        "image": "https://img2.baidu.com/it/u=731238951,2740508741&fm=253&fmt=auto&app=138&f=JPEG?w=1067&h=800"
+        "name": "“正义的回响，未竟的使命”——央媒集中报道东京审判开庭80周",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260603346798618176.jpg"
+      },
+      {
+        "name": "留言月历 | “尽己所能，让越来越多的人知晓历史真相”",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260602567119399723.jpg"
+      },
+      {
+        "name": "八十年铁证归来 | “不可动摇的正义审判——馆藏东京审判档案",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260602567089473410.jpg"
+      },
+      {
+        "name": "多国学者齐聚沪宁发出最强音：东京审判正义不可撼动！",
+        "era": "",
+        "desc": "",
+        "image": "https://www.19371213.com.cn/sylm/xwzx/202606/W020260602567030910335.jpg"
       }
     ],
     "lat": 32.121878,
@@ -4803,20 +4217,7 @@
     "alias": [],
     "photo_url": "http://store.is.autonavi.com/showpic/39703c578c378582d4de6ea2f334445c",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "馆藏精品展",
-        "desc": "展出本馆收藏的陶瓷、书画及杂项精品",
-        "era": "古代-现代",
-        "image": "https://img2.baidu.com/it/u=3724549374,682759730&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1066"
-      },
-      {
-        "name": "文房清玩展",
-        "desc": "展出古代文房用品、印章及文人雅玩",
-        "era": "明-清",
-        "image": "https://img2.baidu.com/it/u=3341719542,1378114862&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1469"
-      }
-    ],
+    "collections": [],
     "lat": 32.112244,
     "lng": 118.90609,
     "coordinates_source": "amap_geocoding_fallback",
@@ -4847,31 +4248,31 @@
         "name": "雨花台烈士就义群雕",
         "desc": "雨花台烈士陵园大型花岗岩群雕，九位烈士英勇就义的光辉形象",
         "era": "现代",
-        "image": "https://img2.baidu.com/it/u=4017623850,3349948970&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Yuhuatai.JPG"
       },
       {
         "name": "雨花台烈士纪念碑",
         "desc": "高42.3米的烈士纪念碑，象征南京1949年4月23日解放",
         "era": "现代",
-        "image": "https://img2.baidu.com/it/u=2131537827,1643695406&fm=253&fmt=auto&app=138&f=JPEG?w=681&h=500"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/da/Yuhuatai.jpg"
       },
       {
         "name": "恽代英烈士遗物",
         "desc": "中国共产党早期青年运动领导人恽代英烈士的遗物和手迹",
         "era": "1931",
-        "image": "https://img2.baidu.com/it/u=3530524687,3130976842&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Yuhuage.jpg"
       },
       {
         "name": "邓中夏烈士遗物",
         "desc": "中国工人运动杰出领袖邓中夏烈士的手稿和遗物",
         "era": "1933",
-        "image": "https://img2.baidu.com/it/u=3223169722,2996134299&fm=253&fmt=auto&app=138&f=JPEG?w=743&h=500"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Fang_Xiaoru_tomb.jpg"
       },
       {
         "name": "烈士书信集",
         "desc": "雨花台烈士在狱中写给家人的书信原件，见证革命信仰",
         "era": "1927-1949",
-        "image": "https://img0.baidu.com/it/u=1929186647,3974126788&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e1/%E9%9B%A8%E8%8A%B1%E5%8F%B0%E9%AB%98%E5%BA%A7%E5%AF%BA.jpg"
       }
     ],
     "lat": 31.997211,
@@ -4932,25 +4333,25 @@
         "name": "雨花石精品《金陵十二钗》",
         "desc": "以南京特产雨花石天然纹理呈现的十二金钗图案系列",
         "era": "天然",
-        "image": "https://img2.baidu.com/it/u=156400599,1014816445&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=815"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Rain-flower_stone%28f5811979854%29.jpg"
       },
       {
         "name": "雨花石《山水画卷》",
         "desc": "天然纹理形成山水画意境的珍稀雨花石",
         "era": "天然",
-        "image": "https://img2.baidu.com/it/u=813924809,2669150251&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=520"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Rain-flower_stone%28f5811979854%29.jpg"
       },
       {
         "name": "雨花石《梅兰竹菊》",
         "desc": "四枚雨花石天然纹理分别呈现梅兰竹菊图案",
         "era": "天然",
-        "image": "https://img0.baidu.com/it/u=613821674,1739896588&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=653"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/be/Agat_wst%C4%99gowy%2C_grudka.jpg"
       },
       {
         "name": "雨花石地质标本",
         "desc": "展示雨花石形成的玛瑙质地和地质演变过程",
         "era": "地质年代",
-        "image": "https://img1.baidu.com/it/u=311066256,633854342&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=653"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/94/Agata%2C_da_idar-oberstein%2C_renania-palatinato%2C_germania.JPG"
       }
     ],
     "lat": 31.992825,
@@ -4980,20 +4381,7 @@
     "alias": [],
     "photo_url": "http://store.is.autonavi.com/showpic/15b2ed90a4418517ccf10ffbb0cd6fb7",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "民间抗战史展",
-        "desc": "展出民间收藏的抗战文物、照片及史料",
-        "era": "1931-1945",
-        "image": "https://img2.baidu.com/it/u=629147211,2245437843&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=966"
-      },
-      {
-        "name": "南京保卫战展",
-        "desc": "展示南京保卫战的历史背景及珍贵遗物",
-        "era": "1937",
-        "image": "https://img1.baidu.com/it/u=1634525388,2860015368&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667"
-      }
-    ],
+    "collections": [],
     "lat": 31.973404,
     "lng": 118.761988,
     "coordinates_source": "amap_poi_search",
@@ -5053,20 +4441,7 @@
     "alias": [],
     "photo_url": "http://store.is.autonavi.com/showpic/39703c578c378582d4de6ea2f334445c",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "西善桥史展",
-        "desc": "展出西善桥地区出土文物及历史资料",
-        "era": "古代-现代",
-        "image": "https://img1.baidu.com/it/u=2325822250,2397013728&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=1044"
-      },
-      {
-        "name": "竹林七贤展",
-        "desc": "展出西善桥出土的南朝竹林七贤砖印壁画复制品及研究",
-        "era": "南朝",
-        "image": "https://img0.baidu.com/it/u=2925488622,811849615&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1067"
-      }
-    ],
+    "collections": [],
     "lat": 31.949074,
     "lng": 118.717979,
     "coordinates_source": "amap_geocoding_fallback",
@@ -5092,20 +4467,7 @@
     "alias": [],
     "photo_url": "http://store.is.autonavi.com/showpic/0579321bbc5d0d8aab6a5045c5f2e5be",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "钢铁冶炼史展",
-        "desc": "展示梅山钢铁发展历程及冶炼工艺",
-        "era": "1969-现代",
-        "image": "https://img2.baidu.com/it/u=1971828672,3630324889&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=800"
-      },
-      {
-        "name": "钢铁产品展",
-        "desc": "展出各类钢铁制品及工业模型",
-        "era": "现代",
-        "image": "https://img1.baidu.com/it/u=2551865032,4276580473&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667"
-      }
-    ],
+    "collections": [],
     "lat": 31.899557,
     "lng": 118.626969,
     "coordinates_source": "amap_geocoding_fallback",
@@ -5131,20 +4493,7 @@
     "alias": [],
     "photo_url": "https://store.is.autonavi.com/showpic/bcf0a29d6bed1df30000002553796361?type=pic",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "钢铁邮票展",
-        "desc": "展出以钢铁工业为主题的专题邮票及邮品",
-        "era": "现代",
-        "image": "https://img1.baidu.com/it/u=3944023303,443845122&fm=253&fmt=auto&app=138&f=JPEG?w=681&h=500"
-      },
-      {
-        "name": "冶金题材邮票展",
-        "desc": "展出各国发行的钢铁冶金题材纪念邮票",
-        "era": "现代",
-        "image": "https://img2.baidu.com/it/u=3420716739,1060573762&fm=253&fmt=auto&app=120&f=JPEG?w=1226&h=800"
-      }
-    ],
+    "collections": [],
     "lat": 31.899557,
     "lng": 118.626969,
     "coordinates_source": "amap_geocoding_fallback",
@@ -5170,20 +4519,7 @@
     "alias": [],
     "photo_url": "https://store.is.autonavi.com/showpic/bcf0a29d6bed1df30000002553796361?type=pic",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "钢铁数字展",
-        "desc": "运用数字技术展示钢铁工业全流程及企业文化",
-        "era": "现代",
-        "image": "https://img1.baidu.com/it/u=3944023303,443845122&fm=253&fmt=auto&app=138&f=JPEG?w=681&h=500"
-      },
-      {
-        "name": "智慧钢铁展",
-        "desc": "展示钢铁智能制造、数字孪生及绿色冶金技术",
-        "era": "现代",
-        "image": "https://img1.baidu.com/it/u=3006031661,3356566111&fm=253&fmt=auto&app=138&f=JPEG?w=1067&h=800"
-      }
-    ],
+    "collections": [],
     "lat": 31.899557,
     "lng": 118.626969,
     "coordinates_source": "amap_geocoding_fallback",
@@ -5214,25 +4550,25 @@
         "name": "南唐二陵出土文物",
         "desc": "江宁祖堂山南唐二陵出土的陶俑、玉器等珍贵文物",
         "era": "南唐",
-        "image": "https://img0.baidu.com/it/u=253485377,1328601910&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1067"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Nantang06.jpg"
       },
       {
         "name": "江宁汉代木椁墓文物",
         "desc": "江宁湖熟汉代木椁墓出土的漆器、铜器等",
         "era": "汉",
-        "image": "https://img0.baidu.com/it/u=1470234849,2084380208&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=646"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/1e/%E6%B1%89%E9%AB%98%E5%B8%9D%E5%8D%81%E4%BA%8C%E5%B9%B4%E9%83%A1%E5%9B%BD.png"
       },
       {
         "name": "湖熟文化陶器",
         "desc": "南京地区商周时期湖熟文化的代表性陶器",
         "era": "商周",
-        "image": "https://img1.baidu.com/it/u=2619972933,1553899600&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=839"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/70/Plate_Buwayhid.JPG"
       },
       {
         "name": "江宁上坊孙吴墓文物",
         "desc": "江宁上坊发现的东吴大墓出土青瓷器等珍贵文物",
         "era": "三国·吴",
-        "image": "https://img0.baidu.com/it/u=2203696040,674148639&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=638"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/07/%E4%B8%89%E5%9B%BD%E8%A1%8C%E6%94%BF%E5%8C%BA%E5%88%92%28%E7%AE%80%29.png"
       }
     ],
     "lat": 31.948056,
@@ -5267,25 +4603,25 @@
         "name": "南京直立人头骨化石",
         "desc": "1993年汤山葫芦洞发现的两具直立人头骨化石，距今约60万年",
         "era": "更新世（约60万年前）",
-        "image": "https://img2.baidu.com/it/u=700414808,1335536930&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=631"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/13/Skull_of_Nanjingren.JPG"
       },
       {
         "name": "汤山猿人洞遗址",
         "desc": "汤山葫芦洞古人类遗址，南京直立人的发现地",
         "era": "更新世",
-        "image": "https://img2.baidu.com/it/u=557022959,275748812&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1067"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Tangshan_Yuanrendong.JPG"
       },
       {
         "name": "南京直立人复原像",
         "desc": "根据头骨化石科学复原的南京直立人面貌",
         "era": "更新世",
-        "image": "https://img2.baidu.com/it/u=2039374069,799092891&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=688"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/13/Skull_of_Nanjingren.JPG"
       },
       {
         "name": "伴生动物群化石",
         "desc": "与南京直立人共存的剑齿象、肿骨鹿等古动物化石",
         "era": "更新世",
-        "image": "https://img2.baidu.com/it/u=1028086875,1730429610&fm=253&fmt=auto&app=138&f=JPEG?w=686&h=500"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Darwin%27s_finches_by_Gould.jpg"
       }
     ],
     "lat": 32.056621,
@@ -5315,16 +4651,16 @@
     "photo_source": "amap",
     "collections": [
       {
-        "name": "金陵竹刻精品",
-        "desc": "展出明清金陵派竹刻代表作品",
-        "era": "明-清",
-        "image": "https://img0.baidu.com/it/u=1188441943,1051113260&fm=253&fmt=auto&app=120&f=JPEG?w=667&h=500"
+        "name": "金陵竹刻艺术博物馆藏品",
+        "era": "",
+        "desc": "",
+        "image": "https://bkimg.cdn.bcebos.com/smart/0ff41bd5ad6eddc451daa412a081a1fd5266d116959a-bkimg-process,v_1,rw_2952,rh_2196,maxl_381?x-bce-process=image/format,f_auto"
       },
       {
-        "name": "竹刻工艺展",
-        "desc": "展示从选竹到成品的竹刻制作全流程",
-        "era": "传统",
-        "image": "https://img0.baidu.com/it/u=3265449111,1338567597&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=653"
+        "name": "金陵竹刻艺术博物馆馆内景观",
+        "era": "",
+        "desc": "金陵竹刻艺术博物馆馆内景观",
+        "image": "https://bkimg.cdn.bcebos.com/smart/0ff41bd5ad6eddc451daa412a081a1fd5266d116959a-bkimg-process,v_1,rw_2952,rh_2196,maxl_381?x-bce-process=image/format,f_auto"
       }
     ],
     "lat": 31.997971,
@@ -5357,16 +4693,22 @@
     "photo_source": "amap",
     "collections": [
       {
-        "name": "江苏药学博物馆馆藏",
-        "desc": "展出江苏药学博物馆代表性藏品及历史资料",
-        "era": "现代",
-        "image": "https://img2.baidu.com/it/u=537078687,2805630634&fm=253&fmt=auto&app=138&f=JPEG?w=686&h=500"
+        "name": "江苏药学博物馆 藏品 1",
+        "era": "",
+        "desc": "",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Ambox_outdated_serious.svg"
       },
       {
-        "name": "本草纲目展",
-        "desc": "展出历代药学典籍及《本草纲目》相关文物",
-        "era": "古代-清",
-        "image": "https://img1.baidu.com/it/u=3203402377,3642898675&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=681"
+        "name": "此条目需要更新。(2018年5月30日)请更新本文以反映近况",
+        "era": "",
+        "desc": "此条目需要更新。(2018年5月30日)请更新本文以反映近况和新增内容。完成修改后请移除本模板。本列表列出中华人民共和国江苏省境内的博物馆。博物馆名称类型地址级别开馆日期图片备注南京博物院国有南京市中",
+        "image": ""
+      },
+      {
+        "name": "江苏药学博物馆 藏品 3",
+        "era": "",
+        "desc": "",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Commons-logo.svg"
       }
     ],
     "lat": 31.9019,
@@ -5396,20 +4738,7 @@
     "alias": [],
     "photo_url": "https://store.is.autonavi.com/showpic/2d3d962e29684d3f0000000729614978?type=pic",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "江宁民俗展",
-        "desc": "展出江宁地区传统服饰、农具及生活器物",
-        "era": "清-民国",
-        "image": "https://img0.baidu.com/it/u=3653859650,643836024&fm=253&fmt=auto&app=138&f=JPEG?w=753&h=500"
-      },
-      {
-        "name": "非遗手工艺展",
-        "desc": "展出江宁金箔、方山裱画等地方非遗技艺实物",
-        "era": "传统",
-        "image": "https://img1.baidu.com/it/u=3114774333,2162347287&fm=253&fmt=auto&app=120&f=JPEG?w=750&h=500"
-      }
-    ],
+    "collections": [],
     "lat": 31.857972,
     "lng": 118.926366,
     "coordinates_source": "amap_geocoding_fallback",
@@ -5435,20 +4764,7 @@
     "alias": [],
     "photo_url": "http://store.is.autonavi.com/showpic/39703c578c378582d4de6ea2f334445c",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "佛教艺术展",
-        "desc": "展出佛教造像、法器及经卷等珍贵文物",
-        "era": "古代-现代",
-        "image": "https://img1.baidu.com/it/u=805715182,1894194880&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=741"
-      },
-      {
-        "name": "牛首山佛文化展",
-        "desc": "展出牛首山佛顶宫出土佛教文物及舍利文化",
-        "era": "古代-现代",
-        "image": "https://img2.baidu.com/it/u=1334132979,3951776564&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=1406"
-      }
-    ],
+    "collections": [],
     "lat": 31.900358,
     "lng": 118.771302,
     "coordinates_source": "amap_geocoding_fallback",
@@ -5474,20 +4790,7 @@
     "alias": [],
     "photo_url": "https://aos-comment.amap.com/B0FFHU31Q4/comment/00470e835550f749e23edfba40f6c40f_2048_2048_80.jpg",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "当代艺术展",
-        "desc": "展出中国当代艺术家代表性作品",
-        "era": "现代",
-        "image": "https://img0.baidu.com/it/u=1418114207,543283354&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=653"
-      },
-      {
-        "name": "雕塑艺术展",
-        "desc": "展出中外当代雕塑艺术作品",
-        "era": "现代",
-        "image": "https://img0.baidu.com/it/u=3234343281,90882692&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667"
-      }
-    ],
+    "collections": [],
     "lat": 31.940105,
     "lng": 118.807664,
     "coordinates_source": "amap_poi_search",
@@ -5514,20 +4817,7 @@
     "alias": [],
     "photo_url": "http://store.is.autonavi.com/showpic/39703c578c378582d4de6ea2f334445c",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "红木家具展",
-        "desc": "展出明清风格红木家具精品及木雕工艺",
-        "era": "明-清",
-        "image": "https://img1.baidu.com/it/u=4262436633,3472238424&fm=253&fmt=auto&app=138&f=JPEG?w=607&h=403"
-      },
-      {
-        "name": "木雕工艺展",
-        "desc": "展示传统木雕及榫卯结构制作工艺",
-        "era": "传统",
-        "image": "https://img1.baidu.com/it/u=2833460927,4252271022&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500"
-      }
-    ],
+    "collections": [],
     "lat": 31.839138,
     "lng": 118.934263,
     "coordinates_source": "amap_geocoding_fallback",
@@ -5555,16 +4845,10 @@
     "photo_source": "amap",
     "collections": [
       {
-        "name": "航海教育展",
-        "desc": "展出中国航海教育发展史及教学设备实物",
-        "era": "近代-现代",
-        "image": "https://img1.baidu.com/it/u=2964375270,3091094539&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=656"
-      },
-      {
-        "name": "航海仪器展",
-        "desc": "展出天文钟、六分仪等航海教学仪器实物",
-        "era": "近代-现代",
-        "image": "https://img0.baidu.com/it/u=3970597283,4255113576&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500"
+        "name": "江苏海事职业技术学院海事教育博物馆藏品",
+        "era": "",
+        "desc": "",
+        "image": "https://bkimg.cdn.bcebos.com/smart/10dfa9ec8a13632762d05b8af7d6b7ec08fa513d694a-bkimg-process,v_1,rw_1000,rh_750,maxl_672?x-bce-process=image/format,f_auto"
       }
     ],
     "lat": 31.918368,
@@ -5599,25 +4883,25 @@
         "name": "林散之书法作品",
         "desc": "当代草圣林散之的书法真迹，被誉为'散草'",
         "era": "20世纪",
-        "image": "https://img0.baidu.com/it/u=31528896,1427792759&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1067"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/06/%E7%8E%8B%E5%AE%89%E7%9F%B3_%E8%A1%8C%E4%B9%A6%E6%A5%9E%E4%B8%A5%E7%BB%8F%E6%97%A8%E8%A6%81%E5%8D%B7.jpg"
       },
       {
         "name": "萧娴书法作品",
         "desc": "著名女书法家萧娴的书法艺术代表作",
         "era": "20世纪",
-        "image": "https://img1.baidu.com/it/u=3719059726,327723506&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=967"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/42/%E5%A4%A9%E7%AB%BA%E8%B7%AF21%E5%8F%B7%E6%B0%91%E5%9B%BD%E5%BB%BA%E7%AD%91.jpg"
       },
       {
         "name": "高二适书法作品",
         "desc": "著名学者、书法家高二适的书法墨迹",
         "era": "20世纪",
-        "image": "https://img1.baidu.com/it/u=2090692770,156902684&fm=253&fmt=auto&app=138&f=JPEG?w=1067&h=800"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/3/35/%E9%AB%98%E4%BA%8C%E9%80%82%E7%BA%AA%E5%BF%B5%E9%A6%86_02.jpg"
       },
       {
         "name": "胡小石书法作品",
         "desc": "国学大师胡小石的书法与学术手稿",
         "era": "20世纪",
-        "image": "https://img0.baidu.com/it/u=3524339770,3543167617&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1067"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/42/%E5%A4%A9%E7%AB%BA%E8%B7%AF21%E5%8F%B7%E6%B0%91%E5%9B%BD%E5%BB%BA%E7%AD%91.jpg"
       }
     ],
     "lat": 32.055805,
@@ -5646,20 +4930,7 @@
     "alias": [],
     "photo_url": "",
     "photo_source": "",
-    "collections": [
-      {
-        "name": "指纹技术展",
-        "desc": "展示指纹识别技术的发展历程及刑侦应用",
-        "era": "古代-现代",
-        "image": "https://img2.baidu.com/it/u=1805433231,1731979487&fm=253&fmt=auto&app=138&f=JPEG?w=607&h=405"
-      },
-      {
-        "name": "中华指纹史展",
-        "desc": "展示中国从古代画押捺印到现代指纹学的发展历程",
-        "era": "古代-现代",
-        "image": "https://img2.baidu.com/it/u=3531684207,2636765811&fm=253&fmt=auto&app=138&f=JPEG?w=1737&h=800"
-      }
-    ],
+    "collections": [],
     "lat": 32.091939,
     "lng": 118.657738,
     "coordinates_source": "amap_poi_search",
@@ -5724,20 +4995,7 @@
     "alias": [],
     "photo_url": "http://store.is.autonavi.com/showpic/9562919e79aebae281b683f26a9db93b",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "江苏警官学院博物馆馆藏精品",
-        "desc": "展出江苏警官学院博物馆代表性藏品",
-        "era": "现代",
-        "image": "https://img1.baidu.com/it/u=2993286385,1911723834&fm=253&fmt=auto&app=138&f=JPEG?w=1067&h=800"
-      },
-      {
-        "name": "公安史展",
-        "desc": "展出中国近现代公安制度演变及警用文物",
-        "era": "近代-现代",
-        "image": "https://img1.baidu.com/it/u=2589811232,3160538447&fm=253&fmt=auto&app=138&f=JPEG?w=1595&h=500"
-      }
-    ],
+    "collections": [],
     "lat": 32.095692,
     "lng": 118.650786,
     "coordinates_source": "amap_geocoding_fallback",
@@ -5802,20 +5060,7 @@
     "alias": [],
     "photo_url": "",
     "photo_source": "",
-    "collections": [
-      {
-        "name": "枪械演变展",
-        "desc": "展示从火铳到现代步枪的轻武器发展历程",
-        "era": "古代-现代",
-        "image": "https://img1.baidu.com/it/u=2210687752,3862980493&fm=253&fmt=auto&app=120&f=JPEG?w=667&h=500"
-      },
-      {
-        "name": "名枪博览",
-        "desc": "展出AK-47、M16等世界名枪实物模型及解剖展示",
-        "era": "现代",
-        "image": "https://img2.baidu.com/it/u=1560063754,58778201&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=312"
-      }
-    ],
+    "collections": [],
     "lat": 32.095692,
     "lng": 118.650786,
     "coordinates_source": "amap_geocoding_fallback",
@@ -5880,20 +5125,7 @@
     "alias": [],
     "photo_url": "https://store.is.autonavi.com/showpic/bcf0a29d6bed1df30000002553796361?type=pic",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "六合文物展",
-        "desc": "展出六合地区出土文物及历史文化资料",
-        "era": "古代-清",
-        "image": "https://img2.baidu.com/it/u=607571162,3180230187&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=667"
-      },
-      {
-        "name": "六合出土文物展",
-        "desc": "展出六合地区的商周青铜器及汉代墓葬出土文物",
-        "era": "商-汉",
-        "image": "https://img2.baidu.com/it/u=3732316156,3285379798&fm=253&fmt=auto&app=120&f=JPEG?w=667&h=500"
-      }
-    ],
+    "collections": [],
     "lat": 32.329515,
     "lng": 118.836198,
     "coordinates_source": "amap_poi_search",
@@ -5920,20 +5152,7 @@
     "alias": [],
     "photo_url": "http://store.is.autonavi.com/showpic/589c7638fcb532f057cbcce62cb4cbef",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "溧水文物展",
-        "desc": "展出溧水地区出土文物及地方历史资料",
-        "era": "新石器-清",
-        "image": "https://img1.baidu.com/it/u=289674234,1497764015&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=635"
-      },
-      {
-        "name": "溧水出土文物展",
-        "desc": "展出溧水地区新石器至汉代的出土文物精品",
-        "era": "新石器-汉",
-        "image": "https://img1.baidu.com/it/u=3733903512,953644622&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500"
-      }
-    ],
+    "collections": [],
     "lat": 31.642846,
     "lng": 118.986678,
     "coordinates_source": "amap_poi_search",
@@ -5960,20 +5179,7 @@
     "alias": [],
     "photo_url": "http://store.is.autonavi.com/showpic/d4a3f1fcfa08f8cda81be25c77004704",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "高淳文物展",
-        "desc": "展出高淳地区出土文物及地方历史资料",
-        "era": "新石器-清",
-        "image": "https://img2.baidu.com/it/u=3739979550,3784257846&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1059"
-      },
-      {
-        "name": "高淳老街文物展",
-        "desc": "展出高淳老街商号牌匾、契约文书等地方文物",
-        "era": "明-民国",
-        "image": "https://img1.baidu.com/it/u=2405039810,2865977345&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500"
-      }
-    ],
+    "collections": [],
     "lat": 31.320057,
     "lng": 118.888351,
     "coordinates_source": "amap_poi_search",
@@ -6000,20 +5206,7 @@
     "alias": [],
     "photo_url": "https://aos-comment.amap.com/B0FFL28PDA/comment/content_media_external_file_1000037753_ss__1771230073108_39343625.jpg",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "南京市现代陶瓷博物馆馆藏精品",
-        "desc": "展出南京市现代陶瓷博物馆代表性藏品",
-        "era": "现代",
-        "image": "https://img0.baidu.com/it/u=1428480075,2753311022&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=822"
-      },
-      {
-        "name": "陶瓷工艺展",
-        "desc": "展示从制泥到烧成的现代陶瓷完整生产工艺",
-        "era": "现代",
-        "image": "https://img0.baidu.com/it/u=2159590077,2241005264&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=741"
-      }
-    ],
+    "collections": [],
     "lat": 31.334425,
     "lng": 118.940725,
     "coordinates_source": "amap_poi_search",
@@ -6040,20 +5233,7 @@
     "alias": [],
     "photo_url": "https://store.is.autonavi.com/showpic/bb974a381b1b68a10000002635482729?type=pic",
     "photo_source": "amap",
-    "collections": [
-      {
-        "name": "大闸蟹文化展",
-        "desc": "展示中华绒螯蟹养殖历史、生态及蟹文化",
-        "era": "古代-现代",
-        "image": "https://img2.baidu.com/it/u=3158179,335442664&fm=253&fmt=auto&app=138&f=JPEG?w=751&h=500"
-      },
-      {
-        "name": "养殖生态展",
-        "desc": "展示中华绒螯蟹生态养殖技术及蟹塘模型",
-        "era": "现代",
-        "image": "https://img0.baidu.com/it/u=2233120838,486225791&fm=253&fmt=auto&app=138&f=JPEG?w=751&h=500"
-      }
-    ],
+    "collections": [],
     "lat": 31.261812,
     "lng": 118.89518,
     "coordinates_source": "amap_poi_search",
@@ -6083,20 +5263,7 @@
     "website": "",
     "wechat": "",
     "level": "",
-    "collections": [
-      {
-        "name": "失恋信物展",
-        "desc": "展出捐赠者的失恋纪念物品及背后的情感故事",
-        "era": "现代",
-        "image": "https://img1.baidu.com/it/u=2177186623,3398457359&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500"
-      },
-      {
-        "name": "情感信件展",
-        "desc": "展出捐赠者的分手信件、情书及情感故事",
-        "era": "现代",
-        "image": "https://img2.baidu.com/it/u=1429173957,487059404&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=653"
-      }
-    ],
+    "collections": [],
     "formatted_address": "江苏省南京市玄武区中山南路122号",
     "id": 128,
     "desc": "收藏300多件爱情遗物的失恋主题博物馆，展品来自陌生人捐赠的车票、香水、信笺等\"爱情遗物\"，每件展品扫码可听背后的故事。在别人的故事里完成与过去的告别，被誉为\"成年人的情绪避难所\"。",
@@ -6125,16 +5292,22 @@
     "level": "",
     "collections": [
       {
-        "name": "江苏警察博物馆馆藏精品",
-        "desc": "展出江苏警察博物馆代表性藏品",
-        "era": "现代",
-        "image": "https://img1.baidu.com/it/u=2993286385,1911723834&fm=253&fmt=auto&app=138&f=JPEG?w=1067&h=800"
+        "name": "江苏警察博物馆 藏品 1",
+        "era": "",
+        "desc": "",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Ambox_outdated_serious.svg"
       },
       {
-        "name": "近代警服展",
-        "desc": "展出从清末到现代各时期警服及徽章的演变",
-        "era": "清末-现代",
-        "image": "https://img0.baidu.com/it/u=2000153195,740183478&fm=253&fmt=auto&app=120&f=JPEG?w=667&h=500"
+        "name": "此条目需要更新。(2018年5月30日)请更新本文以反映近况",
+        "era": "",
+        "desc": "此条目需要更新。(2018年5月30日)请更新本文以反映近况和新增内容。完成修改后请移除本模板。本列表列出中华人民共和国江苏省境内的博物馆。博物馆名称类型地址级别开馆日期图片备注南京博物院国有南京市中",
+        "image": ""
+      },
+      {
+        "name": "江苏警察博物馆 藏品 3",
+        "era": "",
+        "desc": "",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Commons-logo.svg"
       }
     ],
     "formatted_address": "江苏省南京市玄武区新街口街道",
@@ -6164,20 +5337,7 @@
     "website": "",
     "wechat": "",
     "level": "",
-    "collections": [
-      {
-        "name": "民国影剧院展",
-        "desc": "复原民国时期首都大戏院场景及电影放映历史",
-        "era": "民国",
-        "image": "https://img0.baidu.com/it/u=281502904,542131847&fm=253&fmt=auto&app=138&f=JPEG?w=1067&h=800"
-      },
-      {
-        "name": "老电影海报展",
-        "desc": "展出民国至新中国初期的经典电影海报及剧照",
-        "era": "民国-1960s",
-        "image": "https://img1.baidu.com/it/u=3444480106,554668302&fm=253&fmt=auto&app=138&f=JPEG?w=1067&h=800"
-      }
-    ],
+    "collections": [],
     "formatted_address": "江苏省南京市秦淮区夫子庙贡院街84号夫子庙(地铁站)2号",
     "id": 130,
     "desc": "建于1931年，由著名设计师吕彦直团队设计，民国时期四大影院之一，曾首映阮玲玉主演的《新女性》。建筑面积850平方米共三层，现为电影放映机收藏博物馆，展示爱迪生幻灯机、卢米埃尔兄弟放映机等珍贵藏品。",
@@ -6204,20 +5364,7 @@
     "website": "",
     "wechat": "",
     "level": "",
-    "collections": [
-      {
-        "name": "植物染色展",
-        "desc": "展示中国传统植物染色工艺及色织艺术作品",
-        "era": "传统-现代",
-        "image": "https://img2.baidu.com/it/u=770716990,1021669413&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1422"
-      },
-      {
-        "name": "天然染料展",
-        "desc": "展示靛蓝、茜草、槐花等传统天然植物染料及色彩标本",
-        "era": "传统",
-        "image": "https://img0.baidu.com/it/u=4033390111,578145764&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=666"
-      }
-    ],
+    "collections": [],
     "formatted_address": "江苏省南京市秦淮区堆草巷27号",
     "id": 131,
     "desc": "位于小西湖历史风貌区堆草巷27号，以植物染色技艺为主题，定期举办工笔艺术与植物染技艺跨界展览、彝族蓝染文化展、植物热转印体验等活动，探索传统植物染与现代艺术的融合。由秦淮区文化和旅游局指导。",
@@ -6243,20 +5390,7 @@
     "website": "",
     "wechat": "",
     "level": "",
-    "collections": [
-      {
-        "name": "军舰模型展",
-        "desc": "展出中国海军各时期主力舰艇模型及实物",
-        "era": "现代",
-        "image": "https://img2.baidu.com/it/u=1016418690,3520149992&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500"
-      },
-      {
-        "name": "海军装备展",
-        "desc": "展出海军舰载武器、雷达及通讯设备实物",
-        "era": "现代",
-        "image": "https://img2.baidu.com/it/u=3400837712,2198310425&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=888"
-      }
-    ],
+    "collections": [],
     "formatted_address": "江苏省南京市鼓楼区建宁路196号18幢",
     "id": 132,
     "desc": "2025年3月19日正式开放，位于鼓楼区101明潮里园区（原海军101工厂旧址），约30平米。集海军历史研究、军事教育、文化传播与科普体验于一体，展示051型导弹驱逐舰、054A导弹护卫舰、\"辽宁号\"航空母舰等原厂手工制作舰艇模型。",
@@ -6283,20 +5417,7 @@
     "website": "",
     "wechat": "",
     "level": "",
-    "collections": [
-      {
-        "name": "雨花石精品展",
-        "desc": "展出玛瑙质雨花石精品，呈现天成之美",
-        "era": "自然",
-        "image": "https://img1.baidu.com/it/u=311066256,633854342&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=653"
-      },
-      {
-        "name": "雨花石文化展",
-        "desc": "展示雨花石鉴赏文化及历代文人咏石诗画",
-        "era": "古代-现代",
-        "image": "https://img0.baidu.com/it/u=4063210141,1293508837&fm=253&fmt=auto&app=138&f=JPEG?w=896&h=800"
-      }
-    ],
+    "collections": [],
     "formatted_address": "江苏省南京市秦淮区夫子庙贡院街122号秦淮礼物(贡院街)",
     "id": 133,
     "desc": "2023年4月26日开馆，面积1400平方米，是南京地区雨花石鉴赏习俗和文化传承的专业馆。展陈涵盖雨花石科学成因、文化渊源、鉴赏艺术，被誉为\"最南京文化符号\"的代表，2023年正式揭牌开馆。",
@@ -6324,20 +5445,7 @@
     "website": "",
     "wechat": "",
     "level": "",
-    "collections": [
-      {
-        "name": "片仔癀传承展",
-        "desc": "展示国家级非遗片仔癀的历史传承与制作工艺",
-        "era": "明-现代",
-        "image": "https://img0.baidu.com/it/u=1528109882,1171483658&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667"
-      },
-      {
-        "name": "中医药文化展",
-        "desc": "展示片仔癀配方中的名贵中药材及传统制药工艺",
-        "era": "明-现代",
-        "image": "https://img0.baidu.com/it/u=1363177067,2745314235&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667"
-      }
-    ],
+    "collections": [],
     "formatted_address": "江苏省南京市秦淮区陶家巷9号",
     "id": 134,
     "desc": "位于老门东历史街区陶家巷9号，以弘扬传统中医药文化和片仔癀文化为主旨。核心产品片仔癀自明朝嘉靖年间传承近500年，处方和工艺双绝密，为国家一级中药保护品种。集展览、体验、销售为一体的特色博物馆。",
@@ -6368,25 +5476,25 @@
         "name": "江南省造光绪元宝",
         "desc": "清代江南铸造银元制钱总局铸造的光绪元宝银元",
         "era": "清光绪",
-        "image": "https://img2.baidu.com/it/u=4004999728,2809242632&fm=253&fmt=auto&app=138&f=JPEG?w=1067&h=800"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/46/7.2_Candareens_-_Guangxu_Yuanbao_%28%E5%85%89%E7%B7%92%E5%85%83%E5%AF%B6%29_-_Jiangnan_Province_%281899%29_MA-Shops.jpg"
       },
       {
         "name": "民国开国纪念币",
         "desc": "1912年南京造币厂铸造的孙中山像开国纪念币",
         "era": "1912",
-        "image": "https://img1.baidu.com/it/u=1244736147,3243145891&fm=253&fmt=auto&app=138&f=JPEG?w=668&h=500"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/1/18/1927%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E9%96%8B%E5%9C%8B%E7%B4%80%E5%BF%B5%E5%B9%A3%28%E5%AD%AB%E5%83%8F%E5%85%AD%E8%A7%92%E6%98%9F%29%E5%A3%B9%E5%9C%93.png"
       },
       {
         "name": "造币模具",
         "desc": "清代至民国时期使用的造币压印模具原件",
         "era": "清-民国",
-        "image": "https://img0.baidu.com/it/u=580052067,2003210470&fm=253&fmt=auto&app=120&f=JPEG?w=684&h=1216"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/c9/10_Cash_-_Guangxu_Yuanbao_%28Jiangnan_Mint%29_-_Scott_Semans_07.jpg"
       },
       {
         "name": "江南造币厂历史照片",
         "desc": "南京造币厂不同历史时期的厂区建筑和设备照片",
         "era": "1897-1949",
-        "image": "https://img1.baidu.com/it/u=1674433839,2471509774&fm=253&fmt=auto&app=138&f=JPEG?w=532&h=500"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Liu_Kunyi_LOC_ggbain_03677.jpg"
       }
     ],
     "formatted_address": "江苏省南京市秦淮区来凤街/双塘路",
@@ -6416,20 +5524,7 @@
     "website": "",
     "wechat": "",
     "level": "",
-    "collections": [
-      {
-        "name": "可口可乐百年展",
-        "desc": "展出可口可乐各时期经典瓶型、广告画及纪念品",
-        "era": "1886-现代",
-        "image": "https://img0.baidu.com/it/u=525915559,2565708572&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=654"
-      },
-      {
-        "name": "可口可乐中国展",
-        "desc": "展示可口可乐在中国的发展历程及本土化纪念品",
-        "era": "1927-现代",
-        "image": "https://img2.baidu.com/it/u=1506851579,3880863278&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=653"
-      }
-    ],
+    "collections": [],
     "formatted_address": "江苏省南京市浦口区新科二路26号江苏太古可口可乐",
     "id": 136,
     "desc": "江苏太古可口可乐饮料有限公司建立的工业旅游基地（可口可乐观光工厂）。展示可口可乐百年发展历程、创意产品及生产线参观，设有酷儿车站、奥林匹克徽章墙等打卡场景。参观需提前预约。",
@@ -6461,25 +5556,25 @@
         "name": "汤山温泉地质剖面",
         "desc": "展示汤山温泉形成的地质构造和热储模型",
         "era": "地质年代",
-        "image": "https://img1.baidu.com/it/u=1876674243,1369011889&fm=253&fmt=auto&app=138&f=JPEG?w=888&h=500"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/f2/%E6%B1%A4%E5%B1%B1%E4%B8%83%E5%9D%8A%E6%99%AF%E5%8C%BA.jpeg"
       },
       {
         "name": "方山火山岩标本",
         "desc": "方山死火山口的玄武岩、火山弹等火山岩标本",
         "era": "新生代",
-        "image": "https://img2.baidu.com/it/u=324013603,467172991&fm=253&fmt=auto&app=138&f=JPEG?w=707&h=500"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/0/03/North_Gate_of_Fang_Hill_in_Nanjing_2012-10.JPG"
       },
       {
         "name": "汤山溶洞景观",
         "desc": "汤山地区喀斯特地貌和溶洞景观的模型展示",
         "era": "地质年代",
-        "image": "https://img0.baidu.com/it/u=1997098868,4128122894&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=652"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/6/64/Sun_Yat-sen_Mausoleum_-_54400198691.jpg"
       },
       {
         "name": "阳山碑材模型",
         "desc": "明代巨型碑材——阳山问碑的地质背景和开采历史",
         "era": "明",
-        "image": "https://img1.baidu.com/it/u=2014640514,3978745191&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1050"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/bc/%E9%95%BF%E5%B9%B2%E9%87%8C%E5%AE%A2%E9%87%91%E9%99%B5%E5%9B%9B%E5%8D%81%E5%85%AB%E6%99%AF%E5%9B%BE_%E5%A4%A9%E5%8D%B0%E6%A8%B5%E6%AD%8C.jpg"
       }
     ],
     "formatted_address": "江苏省南京市江宁区汤山街道汤泉西路169号",
@@ -6546,20 +5641,7 @@
     "website": "http://www.njjbbwg.com/",
     "wechat": "金箔博物馆",
     "level": "",
-    "collections": [
-      {
-        "name": "中国南京金箔博物馆馆藏精品",
-        "desc": "展出中国南京金箔博物馆代表性藏品",
-        "era": "现代",
-        "image": "https://img1.baidu.com/it/u=619594979,4151473230&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=1049"
-      },
-      {
-        "name": "金箔应用展",
-        "desc": "展示金箔在建筑、佛像、医药等领域的应用",
-        "era": "传统-现代",
-        "image": "https://img0.baidu.com/it/u=625236608,1075487177&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=808"
-      }
-    ],
+    "collections": [],
     "formatted_address": "江苏省南京市栖霞区疏港大道1号",
     "id": 138,
     "desc": "世界第一家综合性金箔博物馆，2017年3月免费开放。位于栖霞区龙潭（南京金箔发源地），重点展示国家级非遗\"南京金箔锻制技艺\"、江苏省级非遗\"南京传统真金线制作技艺\"。设金箔技艺厅、打箔机展示厅、乌金纸技艺厅、传统真金线技艺厅及金箔艺术品展示厅。",
@@ -6586,20 +5668,7 @@
     "website": "https://yxbwg.cpu.edu.cn/",
     "wechat": "江苏药学博物馆",
     "level": "",
-    "collections": [
-      {
-        "name": "中国药科大学(江宁校区)-药学博物馆馆藏精品",
-        "desc": "展出中国药科大学(江宁校区)-药学博物馆代表性藏品",
-        "era": "现代",
-        "image": "https://img2.baidu.com/it/u=537078687,2805630634&fm=253&fmt=auto&app=138&f=JPEG?w=686&h=500"
-      },
-      {
-        "name": "药学标本展",
-        "desc": "展出千余种中药材标本及现代药物制剂",
-        "era": "古代-现代",
-        "image": "https://img0.baidu.com/it/u=2563800381,1041913345&fm=253&fmt=auto&app=120&f=JPEG?w=1477&h=800"
-      }
-    ],
+    "collections": [],
     "formatted_address": "江苏省南京市江宁区中国药科大学(东门)江宁校区",
     "id": 139,
     "desc": "位于中国药科大学江宁校区，始建于1938年，前身为生药标本室，2012年7月正式开馆，后冠名\"江苏药学博物馆\"。占地面积约1800平方米，是国内医药院校中藏量最为丰富的药学专题博物馆之一。镇馆之宝为长沙马王堆千年不腐女尸手握绢包中的6种药材原品（国家一级文物）。",
@@ -6639,19 +5708,19 @@
         "name": "六合雨花石矿层剖面",
         "desc": "展示雨花石产于六合地区古长江砾石层中的地质剖面",
         "era": "地质年代",
-        "image": "https://img1.baidu.com/it/u=4182839281,953697102&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=643"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Rain-flower_stone%28f5811979854%29.jpg"
       },
       {
         "name": "玛瑙质雨花石精品",
         "desc": "色彩斑斓的玛瑙质雨花石，展示其化学成分和晶体结构",
         "era": "天然",
-        "image": "https://img0.baidu.com/it/u=2221557679,4085384512&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/b/be/Agat_wst%C4%99gowy%2C_grudka.jpg"
       },
       {
         "name": "雨花石成因模型",
         "desc": "展示雨花石历经火山喷发-搬运磨圆-沉积胶结的形成全过程",
         "era": "地质年代",
-        "image": "https://img2.baidu.com/it/u=3358525621,1435990699&fm=253&fmt=auto&app=138&f=JPEG?w=514&h=500"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/94/Agata%2C_da_idar-oberstein%2C_renania-palatinato%2C_germania.JPG"
       }
     ],
     "formatted_address": "江苏省南京市六合区山钟路",
@@ -6685,25 +5754,25 @@
         "name": "六合火山群模型",
         "desc": "六合地区新生代火山群的分布模型，展示25座火山的空间格局",
         "era": "新生代",
-        "image": "https://img1.baidu.com/it/u=3299915187,1998976678&fm=253&fmt=auto&app=138&f=JPEG?w=1067&h=800"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/4a/MtCleveland_ISS013-E-24184.jpg"
       },
       {
         "name": "石柱林标本",
         "desc": "桂子山石柱林标本，六边形玄武岩柱状节理，世界罕见",
         "era": "新生代",
-        "image": "https://img1.baidu.com/it/u=1318156054,4140831357&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=653"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Basalt_columns_in_Yellowstone_2.jpg/800px-Basalt_columns_in_Yellowstone_2.jpg"
       },
       {
         "name": "六合组地层剖面",
         "desc": "六合组标准地层剖面，记录古长江演化历史",
         "era": "新生代",
-        "image": "https://img2.baidu.com/it/u=607571162,3180230187&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=667"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/79/Stratum.JPG"
       },
       {
         "name": "橄榄岩包体",
         "desc": "火山喷发带出的地幔橄榄岩包体，研究地球深部的窗口",
         "era": "地质年代",
-        "image": "https://img2.baidu.com/it/u=1705730540,1994988647&fm=253&fmt=auto&app=138&f=JPEG?w=583&h=500"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Peridotite_%28Dunite%29_4.jpg/800px-Peridotite_%28Dunite%29_4.jpg"
       }
     ],
     "id": 141,
@@ -6731,20 +5800,7 @@
     "website": "",
     "wechat": "",
     "level": "",
-    "collections": [
-      {
-        "name": "昆虫邮票展",
-        "desc": "展出世界各国以昆虫为主题的珍稀邮票及邮品",
-        "era": "近现代",
-        "image": "https://img0.baidu.com/it/u=559709812,224924834&fm=253&fmt=auto&app=138&f=JPEG?w=573&h=374"
-      },
-      {
-        "name": "蝴蝶邮票展",
-        "desc": "展出世界各国蝴蝶主题珍稀邮票及极限明信片",
-        "era": "近现代",
-        "image": "https://img2.baidu.com/it/u=834562837,950767261&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=548"
-      }
-    ],
+    "collections": [],
     "formatted_address": "江苏省南京市溧水区石湫街道镇上方村葫芦坝村76号",
     "id": 142,
     "desc": "我国首座昆虫主题邮票博物馆，2023年4月在南京溧水石湫开馆。馆中陈列南京农业大学王荫长教授60多年收藏的近2万枚来自200多个国家和地区的昆虫邮票。隶属\"彩蝶飞舞\"昆虫世界生态园（占地500亩），配套昆虫标本制作、蝶翅画DIY等互动体验。2024年入选中国昆虫学会全国科普教育基地。",
@@ -6771,20 +5827,7 @@
     "website": "",
     "wechat": "",
     "level": "",
-    "collections": [
-      {
-        "name": "梅文化与廉洁展",
-        "desc": "展示梅花精神与历代清官廉洁事迹",
-        "era": "古代-现代",
-        "image": "https://img0.baidu.com/it/u=3999803118,364599697&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=934"
-      },
-      {
-        "name": "梅文化展",
-        "desc": "展示梅花品种、栽培历史及历代咏梅诗词书画",
-        "era": "古代-现代",
-        "image": "https://img0.baidu.com/it/u=2709487311,2226268237&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500"
-      }
-    ],
+    "collections": [],
     "formatted_address": "江苏省南京市江宁区201县道交叉口",
     "id": 143,
     "desc": "位于溧水区和凤镇秦淮梅园内，建筑面积3000平方米，由梅文化展厅、文博区、农耕区、纪念馆等部分组成。以梅为媒介、廉洁文化为主题，深度挖掘梅花品格精神，讲述历史上以梅花精神为人格追求的能人志士、开国功勋的勤廉佳话。2025年入选江苏省\"新型公共文化空间\"。",
@@ -6811,20 +5854,7 @@
     "website": "",
     "wechat": "",
     "level": "",
-    "collections": [
-      {
-        "name": "李剑晨水彩展",
-        "desc": "展出水彩画大师李剑晨先生代表性作品",
-        "era": "现代",
-        "image": "https://img2.baidu.com/it/u=3868294129,1818982743&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=1067"
-      },
-      {
-        "name": "水彩教学展",
-        "desc": "展示李剑晨水彩画教学体系及弟子作品",
-        "era": "现代",
-        "image": "https://img2.baidu.com/it/u=2093141067,1413816581&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=911"
-      }
-    ],
+    "collections": [],
     "formatted_address": "江苏省南京市鼓楼区清凉山83号清凉山公园",
     "id": 144,
     "desc": "位于清凉山公园内，2004年建成开放，建筑面积720平方米。由李剑晨之女、著名园林建筑设计师李蕾设计，建筑古朴大方、古中见新。李剑晨被誉为\"中国水彩画之父\"。展馆分两层，一层为生平简介厅、画廊及艺术教研室，二层主展厅展示其各时期作品。",
@@ -6851,20 +5881,7 @@
     "website": "https://www.jswyw.com/org/xiehui/xdmsg/",
     "wechat": "",
     "level": "",
-    "collections": [
-      {
-        "name": "现代艺术展",
-        "desc": "展出国内外现代艺术代表性作品",
-        "era": "现代",
-        "image": "https://img0.baidu.com/it/u=3127233517,3302360423&fm=253&fmt=auto&app=138&f=JPEG?w=686&h=500"
-      },
-      {
-        "name": "装置艺术展",
-        "desc": "展出当代装置艺术及新媒体艺术作品",
-        "era": "现代",
-        "image": "https://img0.baidu.com/it/u=1911774813,3459244419&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500"
-      }
-    ],
+    "collections": [],
     "formatted_address": "江苏省南京市江宁区天元西路199号",
     "id": 145,
     "desc": "江苏省\"十三五\"重点文化工程项目，展馆室内总面积约2900平方米。南拥高湖水库，傍依将军山，既是现当代架上艺术展示场所，也是雕塑、装置、影像艺术等综合艺术展陈空间。由中央美术学院赵力教授策展，开馆展\"往来成古今\"汇聚20余位中国当代知名艺术家作品。",
@@ -6915,20 +5932,7 @@
     "website": "http://www.gcgcxz.com",
     "wechat": "",
     "level": "国家三级博物馆",
-    "collections": [
-      {
-        "name": "高淳陶瓷精品",
-        "desc": "展出高淳窑历代陶瓷精品及国宴用瓷",
-        "era": "古代-现代",
-        "image": "https://img2.baidu.com/it/u=3233166565,1128122974&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667"
-      },
-      {
-        "name": "国宴瓷展",
-        "desc": "展出2014年APEC峰会等国宴专用高淳陶瓷餐具",
-        "era": "现代",
-        "image": "https://img1.baidu.com/it/u=955022374,1627445442&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=653"
-      }
-    ],
+    "collections": [],
     "formatted_address": "江苏省南京市高淳区淳溪街道中山大街2号",
     "id": 146,
     "desc": "中国首座陶瓷企业博物馆，国家三级博物馆（南京市现代陶瓷博物馆）。位于高淳经济开发区，建筑面积近1.5万平方米，展厅面积6000平方米。设中国历史名瓷展、中国当代国家用瓷展（含APEC/G20峰会等国宴用瓷）、中国陶瓷艺术大师作品展、高淳陶瓷品牌馆四大展区。另设拉坯、泥塑、釉下彩绘等DIY体验区。",
@@ -6997,16 +6001,28 @@
     "level": "",
     "collections": [
       {
-        "name": "赛珍珠与南京",
-        "desc": "展出赛珍珠在南京的生活物品、著作及获奖史料",
-        "era": "近代",
-        "image": "https://img0.baidu.com/it/u=1556285999,629497056&fm=253&fmt=auto&app=138&f=JPEG?w=686&h=500"
+        "name": "赛珍珠纪念馆",
+        "era": "",
+        "desc": "赛珍珠纪念馆",
+        "image": ""
       },
       {
-        "name": "《大地》文化展",
-        "desc": "展出赛珍珠获诺贝尔奖作品《大地》及在华创作史料",
-        "era": "近代",
-        "image": "https://img2.baidu.com/it/u=4155653140,3568903494&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500"
+        "name": "南京赛珍珠故居 藏品 2",
+        "era": "",
+        "desc": "",
+        "image": ""
+      },
+      {
+        "name": "中国建筑主题",
+        "era": "",
+        "desc": "中国建筑主题",
+        "image": ""
+      },
+      {
+        "name": "南京赛珍珠故居 藏品 4",
+        "era": "",
+        "desc": "",
+        "image": ""
       }
     ],
     "formatted_address": "江苏省南京市鼓楼区中山北路南京大学鼓楼校区(东北门)",
@@ -7041,13 +6057,31 @@
         "name": "傅抱石故居傅厚岗傅抱石旧居",
         "era": "",
         "desc": "傅抱石故居傅厚岗傅抱石旧居，2010年3月南京市文物保护单位地址玄武区傅厚岗6号分类近代重要史迹及代表性建筑时代民国编号3-117认定时间2006年6月傅抱石故居是中国美术家傅抱石在江苏省南京市的住所",
-        "image": "https://img1.baidu.com/it/u=4077827518,1406638207&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=651"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Former_Residence_of_Fu_Baoshi_in_Fuhougang_2010-03.JPG"
       },
       {
-        "name": "抱石皴法展",
-        "desc": "展示傅抱石独创抱石皴山水画技法及代表作品",
-        "era": "现代",
-        "image": "https://img2.baidu.com/it/u=939766307,3926330773&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667"
+        "name": "傅抱石故居 藏品 2",
+        "era": "",
+        "desc": "",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/26/Former_Residence_of_Fu_Baoshi_in_Hankouxi_Road_01_2012-09.JPG"
+      },
+      {
+        "name": "傅抱石故居 藏品 3",
+        "era": "",
+        "desc": "",
+        "image": ""
+      },
+      {
+        "name": "傅抱石故居 藏品 4",
+        "era": "",
+        "desc": "",
+        "image": ""
+      },
+      {
+        "name": "傅抱石故居 藏品 5",
+        "era": "",
+        "desc": "",
+        "image": ""
       }
     ],
     "formatted_address": "江苏省南京市玄武区傅厚岗6号",
@@ -7077,20 +6111,7 @@
     "website": "",
     "wechat": "",
     "level": "",
-    "collections": [
-      {
-        "name": "徐悲鸿艺术展",
-        "desc": "展出徐悲鸿画作复制品、手稿及生平史料",
-        "era": "现代",
-        "image": "https://img0.baidu.com/it/u=3868879155,830522862&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=653"
-      },
-      {
-        "name": "美术教育展",
-        "desc": "展示徐悲鸿在中央大学艺术系的美术教育实践及影响",
-        "era": "现代",
-        "image": "https://img1.baidu.com/it/u=1020924524,2475337596&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=666"
-      }
-    ],
+    "collections": [],
     "formatted_address": "江苏省南京市玄武区傅厚岗4号",
     "id": 149,
     "desc": "位于玄武区傅厚岗4号，1932年落成的二层西式小楼。徐悲鸿在此生活创作，绘就《九方皋》《牧童与牛》等传世之作。寓所被命名为\"危巢\"，取\"居安思危\"之意。院内原有徐悲鸿手植白杨两株。现已修缮为\"梧桐语\"小型城市客厅及艺术展览空间，不定期举办\"悲鸿画坛\"系列展览。",
@@ -7117,20 +6138,7 @@
     "website": "",
     "wechat": "",
     "level": "",
-    "collections": [
-      {
-        "name": "幕燕滨江·一苇渡达摩石窟光影艺术馆馆藏精品",
-        "desc": "展出幕燕滨江·一苇渡达摩石窟光影艺术馆代表性藏品",
-        "era": "现代",
-        "image": "https://img1.baidu.com/it/u=3166701130,1210854585&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667"
-      },
-      {
-        "name": "石窟艺术展",
-        "desc": "展示达摩古窟的佛教石窟造像及摩崖石刻",
-        "era": "古代",
-        "image": "https://img0.baidu.com/it/u=3872282237,128342086&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=648"
-      }
-    ],
+    "collections": [],
     "formatted_address": "江苏省南京市栖霞区永济大道/佛灵门路",
     "id": 150,
     "desc": "位于南京幕燕滨江风貌区达摩古洞景区内，以幕府山生态修复的\"百态达摩\"石窟为天然载体（101个窟龛供奉形态各异达摩雕像）。采用3D Mapping+AIGC+全景音频技术打造全国首个达摩主题洞窟实景光影秀，设置八大\"光\"空间，超24米巨幅达摩像。传承达摩\"一苇渡江\"传奇故事。",
@@ -7157,20 +6165,7 @@
     "website": "",
     "wechat": "",
     "level": "",
-    "collections": [
-      {
-        "name": "雨花茶文化展",
-        "desc": "展示南京雨花茶的历史渊源、制作工艺与茶道文化",
-        "era": "1958-现代",
-        "image": "https://img2.baidu.com/it/u=569513451,1259181894&fm=253&fmt=auto&app=120&f=JPEG?w=1200&h=800"
-      },
-      {
-        "name": "茶道体验展",
-        "desc": "展示南京雨花茶茶道文化及茶器茶具",
-        "era": "现代",
-        "image": "https://img2.baidu.com/it/u=1476706888,3567969991&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=659"
-      }
-    ],
+    "collections": [],
     "formatted_address": "江苏省南京市雨花台区雨花路215-1号",
     "id": 151,
     "desc": "位于南京雨花台景区雨花茶文化区内，是一座古典园林式二层小楼，建筑面积820平方米。中国唯一以单项品牌茶叶为主题的专业性博物馆。一楼展示中国茶文化和雨花茶历史，周围被茶田竹林环绕。雨花茶为南京特产，中国十大名茶之一，20世纪50年代末创制。",
