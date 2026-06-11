@@ -8,6 +8,7 @@ from flask_cors import CORS
 from dotenv import load_dotenv
 import requests
 from services.museum_service import get_all_museums
+from services.amap_tools import TOOLS, execute_tool
 
 load_dotenv()
 
@@ -96,7 +97,8 @@ SYSTEM_PROMPT_BASE = """你是「博物金陵」的AI导览员，热情专业地
 4. 如果用户想预约或查看某个博物馆，主动提醒可以使用下方的预约按钮
 5. 回答结尾可以追问引导用户了解更多（例如：需要我帮您查看南京博物院的预约信息吗？）
 6. 当用户询问位于南京市之外的博物馆信息时，主动提醒用户该博物馆不在南京市范围内，不提供详细信息
-请严格基于下面提供的博物馆数据库来回答，不要编造不存在的信息。"""
+7. 当用户询问"XX附近有哪些博物馆"、"从XX怎么去XX博物馆"、交通路线、地址坐标等需要实时数据的问题时，请调用对应的高德地图API工具函数获取最新信息，然后基于工具返回的数据进行回答
+请严格基于下面提供的博物馆数据库和工具返回的数据来回答，不要编造不存在的信息。"""
 
 
 @app.route('/api/museums', methods=['GET'])
@@ -205,12 +207,15 @@ def ask_ai():
         "Content-Type": "application/json; charset=utf-8"
     }
 
+    messages = [
+        {"role": "system", "content": system_prompt},
+        {"role": "user", "content": question}
+    ]
+
     payload = {
         "model": "deepseek-chat",
-        "messages": [
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": question}
-        ],
+        "messages": messages,
+        "tools": TOOLS,
         "temperature": 0.7,
         "max_tokens": 600
     }
@@ -223,18 +228,46 @@ def ask_ai():
         if 'usage' in result and 'total_tokens' in result['usage']:
             _add_token_usage(result['usage']['total_tokens'])
 
-        if 'choices' in result and len(result['choices']) > 0:
-            answer = result['choices'][0]['message']['content']
-            actions = extract_museum_actions(answer, museums)
-            return _json_response({"answer": answer, "actions": actions})
+        if 'choices' not in result or len(result['choices']) == 0:
+            return _json_response({"answer": f"AI 返回格式异常: {json.dumps(result, ensure_ascii=True)}", "actions": []}, 500)
+
+        message = result['choices'][0]['message']
+
+        # ---- 处理 Tool Calls ----
+        if message.get('tool_calls'):
+            tool_results = _handle_tool_calls(message['tool_calls'], messages, message, headers)
+            if tool_results:
+                messages.extend(tool_results)
+                payload2 = {
+                    "model": "deepseek-chat",
+                    "messages": messages,
+                    "temperature": 0.7,
+                    "max_tokens": 600
+                }
+                body2 = json.dumps(payload2, ensure_ascii=False).encode('utf-8')
+                response2 = requests.post(GROQ_API_URL, headers=headers, data=body2, timeout=30)
+                result2 = json.loads(response2.content)
+
+                if 'usage' in result2 and 'total_tokens' in result2['usage']:
+                    _add_token_usage(result2['usage']['total_tokens'])
+
+                if 'choices' in result2 and len(result2['choices']) > 0:
+                    answer = result2['choices'][0]['message'].get('content', '')
+                else:
+                    answer = "抱歉，AI 处理工具数据时遇到问题，请稍后重试"
+            else:
+                answer = "抱歉，工具执行失败，请稍后重试"
         else:
-            return _json_response({"answer": f"AI \u8fd4\u56de\u683c\u5f0f\u5f02\u5e38: {json.dumps(result, ensure_ascii=True)}", "actions": []}, 500)
+            answer = message.get('content', '')
+
+        actions = extract_museum_actions(answer, museums)
+        return _json_response({"answer": answer, "actions": actions})
 
     except requests.exceptions.Timeout:
-        return _json_response({"answer": "AI \u670d\u52a1\u54cd\u5e94\u8d85\u65f6\uff0c\u8bf7\u7a0d\u540e\u91cd\u8bd5", "actions": []}, 504)
+        return _json_response({"answer": "AI 服务响应超时，请稍后重试", "actions": []}, 504)
     except Exception as e:
         traceback.print_exc(file=sys.stderr)
-        return _json_response({"answer": f"AI \u670d\u52a1\u51fa\u9519: {repr(e)}", "actions": []}, 500)
+        return _json_response({"answer": f"AI 服务出错: {repr(e)}", "actions": []}, 500)
 
 
 def extract_museum_actions(answer_text, museums):
@@ -279,6 +312,37 @@ def extract_museum_actions(answer_text, museums):
             actions.append(action)
 
     return actions
+
+
+def _handle_tool_calls(tool_calls, messages, assistant_message, headers):
+    """执行 AI 请求的工具调用，将结果封装为 messages 返回"""
+    # 先追加 assistant 的 tool_calls 消息到历史
+    messages.append({
+        "role": "assistant",
+        "content": assistant_message.get('content'),
+        "tool_calls": tool_calls
+    })
+
+    tool_results = []
+    for tc in tool_calls:
+        tool_id = tc.get('id', '')
+        func = tc.get('function', {})
+        func_name = func.get('name', '')
+        try:
+            arguments = json.loads(func.get('arguments', '{}'))
+        except json.JSONDecodeError:
+            arguments = {}
+
+        print(f"[Tool] 调用 {func_name}({arguments})", file=sys.stderr)
+        result_text = execute_tool(func_name, arguments)
+
+        tool_results.append({
+            "role": "tool",
+            "tool_call_id": tool_id,
+            "content": result_text
+        })
+
+    return tool_results
 
 
 def get_baidu_access_token():

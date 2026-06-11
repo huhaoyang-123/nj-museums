@@ -17,7 +17,8 @@ EL.demo 3.0/
 │   └── token_usage.json                # AI Token 累计用量记录（上限 20M）
 │
 ├── services/                           # 服务层
-│   └── museum_service.py               # 博物馆数据加载、字段转换、坐标回填、分类映射
+│   ├── museum_service.py               # 博物馆数据加载、字段转换、坐标回填、分类映射
+│   └── amap_tools.py                   # 高德地图工具封装（POI搜索、路径规划、地理编码，供AI Tool Calls调用）
 │
 ├── templates/                          # 前端模板（原生 HTML + CSS + JavaScript，无框架依赖）
 │   ├── index.html                      # 主页（Hero + 博物馆卡片 + 地图 + 聊天侧边栏 + 收藏面板）
@@ -119,17 +120,27 @@ EL.demo 3.0/
 
 ### 5. AI 智能导览
 
-**实现位置**：`app.py` `/api/ask` + `templates/index.html`（侧边聊天面板）
+**实现位置**：`app.py` `/api/ask` + `services/amap_tools.py`（工具层） + `templates/index.html`（侧边聊天面板）
 
-- **AI 服务**：DeepSeek Chat API（`api.deepseek.com/v1/chat/completions`）
+- **AI 服务**：DeepSeek Chat API（`deepseek-chat` 模型）
 - **系统提示词**：`SYSTEM_PROMPT_BASE` + `build_museum_context()` 拼接全部博物馆概况（名称|类型|区域|门票|预约|简介），每条记录约 120 字符
+- **Tool Calls（函数调用）**：通过 DeepSeek 原生 Function Calling 机制，AI 可在需要时自动调用高德地图 API 获取实时数据：
+
+  | 工具函数                | 对应高德 API               | 触发场景                         |
+  | ----------------------- | -------------------------- | -------------------------------- |
+  | `search_nearby_museums` | POI 周边搜索               | "新街口附近有哪些博物馆？"       |
+  | `get_route_info`        | 路径规划（驾车/步行/公交） | "从南京站怎么去南京博物院？"     |
+  | `geocode_address`       | 地理编码                   | "帮我查一下江宁织造博物馆在哪儿" |
+
+  Tool Calls 流程：用户提问 → DeepSeek 判断需调用工具 → 后端执行高德 API → 结果返回 DeepSeek → 生成最终回复
+
 - **智能动作匹配**：`extract_museum_actions(answer_text, museums)` 解析 AI 回复中的 `【博物馆名称】`、别名、分类关键词，匹配数据库后生成三类操作按钮：
   - "查看详情"：`openMuseumDetailById(id)` 打开详情弹窗
   - "预约"：`openReserveLink()` 打开预约链接或弹窗提示
   - "地图查看"：`navigateToMuseum(lat, lng)` 地图定位 + 自动打开详情
-- **Token 用量追踪**：每次 API 调用累加 `total_tokens` 至 `data/token_usage.json`，超过 20M 上限返回 503
+- **Token 用量追踪**：每次 API 调用（含 Tool Calls 二次请求）累加 `total_tokens` 至 `data/token_usage.json`，超过 20M 上限返回 503
 - **聊天面板**：
-  - 首页浮动按钮：右下角 💬 按钮，`toggleChatPanel()` 控制侧边面板滑入/滑出
+  - 首页浮动按钮：右下角 按钮，`toggleChatPanel()` 控制侧边面板滑入/滑出
   - 快捷提问：4 个快捷芯片（必去推荐、免费参观、如何预约、亲子游玩）
   - 对话历史：用户消息红色气泡、AI 回复金色边框气泡，自动滚底
 - **独立页面**：`/chat` 提供全屏沉浸式 AI 导览，设计语言与首页一致
@@ -175,27 +186,27 @@ EL.demo 3.0/
 
 ## 技术栈
 
-| 层次       | 技术                                    |
-| ---------- | --------------------------------------- |
-| 后端框架   | Flask 3.x + Flask-CORS                  |
-| AI 服务    | DeepSeek Chat API（deepseek-chat 模型） |
-| 语音识别   | 百度语音识别 API（dev_pid=1537）        |
-| 地图服务   | 高德地图 JS API v2.0 + DistrictSearch   |
-| 前端       | 原生 HTML + CSS + JavaScript（零框架）  |
-| 客户端存储 | localStorage（收藏/打卡/笔记）          |
-| 数据存储   | 单一 JSON 文件（museums.json）          |
-| 环境管理   | python-dotenv                           |
+| 层次       | 技术                                                                             |
+| ---------- | -------------------------------------------------------------------------------- |
+| 后端框架   | Flask 3.x + Flask-CORS                                                           |
+| AI 服务    | DeepSeek Chat API（deepseek-chat 模型，Tool Calls 函数调用）                     |
+| 语音识别   | 百度语音识别 API（dev_pid=1537）                                                 |
+| 地图服务   | 高德地图 JS API v2.0 + DistrictSearch + REST API（POI 搜索、路径规划、地理编码） |
+| 前端       | 原生 HTML + CSS + JavaScript（零框架）                                           |
+| 客户端存储 | localStorage（收藏/打卡/笔记）                                                   |
+| 数据存储   | 单一 JSON 文件（museums.json）                                                   |
+| 环境管理   | python-dotenv                                                                    |
 
 ## API 接口
 
-| 方法 | 路径                               | 说明                                                        |
-| ---- | ---------------------------------- | ----------------------------------------------------------- |
-| GET  | `/api/museums`                     | 获取全部博物馆列表（含转换后字段）                          |
-| GET  | `/api/reserve-info`                | 获取所有有预约链接的博物馆信息                              |
-| GET  | `/api/reserve-info?id=<museum_id>` | 获取指定博物馆预约信息                                      |
-| POST | `/api/ask`                         | AI 对话（body: `{"question": "..."}`）返回 answer + actions |
-| POST | `/api/speech-to-text`              | 语音识别（multipart: audio=wav）                            |
-| GET  | `/api/amap-config`                 | 获取高德 Web 端 Key（动态提供）                             |
+| 方法 | 路径                               | 说明                                                                 |
+| ---- | ---------------------------------- | -------------------------------------------------------------------- |
+| GET  | `/api/museums`                     | 获取全部博物馆列表（含转换后字段）                                   |
+| GET  | `/api/reserve-info`                | 获取所有有预约链接的博物馆信息                                       |
+| GET  | `/api/reserve-info?id=<museum_id>` | 获取指定博物馆预约信息                                               |
+| POST | `/api/ask`                         | AI 对话（body: `{"question": "..."}`），集成 Tool Calls 高德地图能力 |
+| POST | `/api/speech-to-text`              | 语音识别（multipart: audio=wav）                                     |
+| GET  | `/api/amap-config`                 | 获取高德 Web 端 Key（动态提供）                                      |
 
 ### AI 对话返回值格式
 
@@ -235,7 +246,7 @@ cp .env.example .env
 | `AMAP_WEB_KEY`         | 高德地图 Web端Key（用于前端地图渲染） | 是       |
 | `AMAP_WEB_SECRET_KEY`  | Web端安全密钥（可选）                 | 否       |
 | `GROQ_API_KEY`         | DeepSeek AI API密钥                   | 是       |
-| `TOKEN_LIMIT`          | AI总Token用量上限（默认20000000）      | 否       |
+| `TOKEN_LIMIT`          | AI总Token用量上限（默认20000000）     | 否       |
 | `BAIDU_ASR_API_KEY`    | 百度语音识别 API Key                  | 否       |
 | `BAIDU_ASR_SECRET_KEY` | 百度语音识别 Secret Key               | 否       |
 | `PORT`                 | 服务器端口（默认5000）                | 否       |
@@ -316,6 +327,7 @@ python app.py
 - 坐标：高德地理编码 API
 - 预约链接：各博物馆官网
 - 文物数据：南京博物院官网、人民画报、知乎专栏等权威来源
+- AI 实时数据：高德 POI 周边搜索、路径规划、地理编码（通过 Tool Calls 按需调用）
 
 ## 维护脚本
 
