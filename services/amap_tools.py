@@ -11,6 +11,12 @@ import os
 import json
 import logging
 import re
+from typing import Any, Optional
+
+import requests
+from dotenv import load_dotenv
+
+load_dotenv()
 
 logger = logging.getLogger(__name__)
 
@@ -105,7 +111,7 @@ TOOLS = [
 # 核心 API 调用
 # ============================================================
 
-def _amap_get(path, params):
+def _amap_get(path: str, params: dict) -> Any:
     """通用高德 REST API GET 请求"""
     params['key'] = AMAP_KEY
     try:
@@ -116,11 +122,11 @@ def _amap_get(path, params):
         return {"status": "0", "info": str(e)}
 
 
-def _geocode(address, city="南京"):
+def _geocode(address: str, city: str = "南京") -> Optional[dict]:
     """地理编码：地址 → 坐标"""
     result = _amap_get("/geocode/geo", {"address": address, "city": city})
     if result.get("status") == "1" and result.get("geocodes"):
-        geo = result["geocodes"][0]
+        geo: dict = result["geocodes"][0]
         lng, lat = geo["location"].split(",")
         return {
             "lng": float(lng),
@@ -130,7 +136,7 @@ def _geocode(address, city="南京"):
     return None
 
 
-def _search_poi_around(lng, lat, radius=5000):
+def _search_poi_around(lng: float, lat: float, radius: int = 5000) -> list:
     """周边 POI 搜索：查找博物馆类地点"""
     result = _amap_get("/place/around", {
         "location": f"{lng},{lat}",
@@ -146,7 +152,7 @@ def _search_poi_around(lng, lat, radius=5000):
     return []
 
 
-def _search_poi_text(keywords, city="南京"):
+def _search_poi_text(keywords: str, city: str = "南京") -> list:
     """文本 POI 搜索"""
     result = _amap_get("/place/text", {
         "keywords": keywords,
@@ -160,7 +166,7 @@ def _search_poi_text(keywords, city="南京"):
     return []
 
 
-def _get_direction(origin_lng, origin_lat, dest_lng, dest_lat, mode="transit"):
+def _get_direction(origin_lng: float, origin_lat: float, dest_lng: float, dest_lat: float, mode: str = "transit") -> Optional[dict]:
     """路径规划"""
     origin = f"{origin_lng},{origin_lat}"
     destination = f"{dest_lng},{dest_lat}"
@@ -192,7 +198,6 @@ def _get_direction(origin_lng, origin_lat, dest_lng, dest_lat, mode="transit"):
 
 def execute_tool(tool_name, arguments):
     """根据工具名称执行对应功能，返回 JSON 字符串供 AI 阅读"""
-    import requests as _requests  # 延迟导入，避免循环依赖
     try:
         if tool_name == "search_nearby_museums":
             return _do_search_nearby(arguments)
